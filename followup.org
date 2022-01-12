@@ -1,0 +1,17 @@
+#+TITLE:Followup
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:Followup for CSC330 Database Theory & Applications Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* What is this?
+
+  Instead of bugging you with emails, I opt to summarize my course
+  observations regarding content, process, in this file. These often
+  contain additional links, articles, and musings.
+
+  I usually update it after each class - it also contains the homework
+  (if any). The first point of call for any questions should be the
+  FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
+  [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
+  
+
