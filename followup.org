@@ -13,5 +13,57 @@
   (if any). The first point of call for any questions should be the
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
-  
+
+* Homework (until Friday, 14 Jan)
+
+  (See Schoology assignment)
+
+  * [[https://github.com][Create a GitHub account]]
+  * [[https://docs.github.com/en/get-started/quickstart/hello-world][Complete the GitHub Hello World exercise]]
+  * [[https://github.com/birkenkrahe/cc100/issues][Submit an issue to the ~cc100~ GitHub repo to confirm completion.]]
+
+  Let me know if you encounter any problems. This shouldn't take more
+  than 20 minutes of your time. Bring any questions that you may have
+  with you to class!
+
+  If you are in another one of my courses, you don't have to do the
+  exercise again, but you should submit an issue for every course that
+  you attend. When I receive the issue, I will close it and give you
+  the points!
+
+  Purpose of this exercise:
+  * Engage with the GitHub software development platform
+  * Understand how to submit issues (aka corrections, suggestions etc.)
+  * Understand how software developers work in the cloud using the Git
+    version control software
+
+    
+Victor Noppe11:07 AM
+dxdiag
+harry rodriguez11:08 AM
+a couple of us were waiting in the class and we didnt know we were on zoom, could we get a quick run down?
+You11:17 AM
+wrapper
+You11:18 AM
+cygwin
+ubuntu linux app
+You11:21 AM
+library of functions
+You11:31 AM
+Command line interface (CLI) = terminal = command line = shell
+Anna Griffith11:34 AM
+should we get the first or second edition textbook?
+Alexandrea Banag11:34 AM
+there is an online link to the 2nd edition
+just google the title
+You11:37 AM
+https://github.com/birkenkrahe
+You11:42 AM
+literate programming = doc + code + output
+Phillip Brown11:50 AM
+it asks what specific features are you interested in, what do we put?
+harry rodriguez11:51 AM
+username: harryrdz11
+You11:58 AM
+https://docs.github.com/en/get-started/quickstart/hello-world  
 

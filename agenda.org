@@ -9,7 +9,7 @@
   [[./img/fivearmies.jpg]]
 
   * Introduction to the course & the lecturer
-  * Homework assignments: *GitHub*, DataCamp, Emacs
+  * Homework assignment: GitHub Hello World  
   * What's next?
 
 ** Entry survey ([[https://docs.google.com/forms/d/1OYm9fMBi8LNAlbRSo3hiRzsLL0psOuF7TmyoYj9U4kM/edit#responses][Google Forms]])
@@ -33,15 +33,12 @@
 
    * Syllabus for this course ([[https://lyon.schoology.com/course/5516220826/materials/gp/5523144577][Schoology]])
 
-** Homework assignments week 1 (12/14-Jan-2022)
+** Homework assignments week 1 (14-Jan-2022)
 
    #+attr_html: :width 600px
    [[./img/homework.png]]
 
    * *GitHub Hello World Exercise ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][Info: FAQ]]) - by Friday 14-Jan!*
-
-   * GNU Emacs installation ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][Info: FAQ]]) - you need this for an
-     assignment next week.
 
 *** GitHub
 
@@ -116,10 +113,25 @@
      #+attr_html: :width 800px
      [[./img/gh.png]]
 
-*** Install a compiler
+** What's next?
 
-    
-    
+   #+attr_html: :width 500px
+   [[./img/sunflowers.jpg]]
+
+   * See schedule ([[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][GitHub]])
+   * Watch online lecture on "Systems" (to be done)
+   * Later: online summary (~followup.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
+   * Sometimes: diary notes (~diary.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
+   * Class on Friday 14-Jan will be online!
+   * Hope to see you at school next Monday!
+
+* Week 2 - Infrastructure
+
+   * Installing a C compiler on your laptop ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][Info: FAQ]]).
+   * GNU Emacs installation ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][Info: FAQ]]) - you need this for an
+     assignment next week.
+
+*** Install a compiler     
 *** GNU Emacs (1976...1985)
 
     #+attr_html: :width 400px
@@ -136,22 +148,10 @@
 
     * What will you have to do?
 
-** What's next?
-
-   #+attr_html: :width 500px
-   [[./img/sunflowers.jpg]]
-
-   * See schedule ([[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][GitHub]])
-   * Watch online lecture on "Systems" (to be done)
-   * Later: online summary (~followup.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
-   * Sometimes: diary notes (~diary.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
-   * Class on Friday 14-Jan will be online!
-   * Hope to see you at school next Monday!
-
    #+caption: Victor N. installs Emacs @10:50 AM
    #+attr_html: :width 600px
    [[./img/victor.png]]
-
+ 
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
