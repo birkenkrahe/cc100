@@ -14,7 +14,7 @@
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
-* Week 1 - first session (Wed 12-Jan-2022)  
+* Week 1 - first session (Wed 12-Jan-2022)
 ** Homework (until Friday, 14 Jan)
 
    (See [[https://lyon.schoology.com/assignment/5555682785][Schoology assignment]])
@@ -56,10 +56,25 @@
 
     I showed a few books that explain different aspects of C - because
     so many devices contain C! All of these are interesting, none are
-    necessary (or even recommended) for beginners.
+    necessary (or even recommended) for beginners, and all are brand
+    new - demonstrating the continued interest in C.
 
-    
-    
+    #+attr_html: :width 200px
+    #+caption: Numerical C by Philip Joyce (Apress, 2019)
+    [[./img/joyce.png]]
+
+    #+attr_html: :width 200px
+    #+caption: Effective C by Robert C Seacord (NoStarch, 2020)
+    [[./img/seacord.png]]
+
+    #+attr_html: :width 200px
+    #+caption: Modern C by Jens Gustedt (Manning, 2020)
+    [[./img/gustedt.jpg]]
+
+    #+attr_html: :width 200px
+    #+caption: Raspberry Pi IoT in C by Henry Fairhead (I/O Press, 2016)
+    [[./img/fairhead.jpg]]
+
 *** Wrapper
 
     This term refers to the fact that not all software runs on all
@@ -77,7 +92,7 @@
     2) "ubuntu linux app" - This is a wrapper for a complete Linux
        system for Windows. [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-install-linux-under-windows-10][See this FAQ]] for how to install it on your
        computer (worth doing). It's another way to get a C compiler.
-    
+
 *** [[https://en.wikipedia.org/wiki/Library_(computing)][(Software) library of functions]]
 
     #+attr_html: :width 500px
@@ -107,7 +122,7 @@
     I have just made a screencast to show the difference between shell
     and notebooks, not using C but the database query language SQLite
     instead (Birkenkrahe, 2022). [[https://youtu.be/8HJGz3IYoHI][Check it out]].
-    
+
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
