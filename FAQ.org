@@ -7,3 +7,19 @@
 
   This is a Frequently Asked Questions (FAQ) file for this course. For
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
+
+* Should we get the first or the second edition of the textbook by King?
+
+  The second edition (King, 2008).
+
+* When registering with GitHub...
+** ...what if we cannot get verified (as a human)?
+
+   Well, are you sure what you are? Seriously though, just try another captcha.
+** ...what should we put as special interest?
+
+   It does not matter. Anything.
+  
+* References  
+
+  King (2008). C Programming (2e). Norton. [[http://knking.com/books/c2/index.html][URL: knking.com.]]
