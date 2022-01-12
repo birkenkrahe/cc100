@@ -8,26 +8,15 @@
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
 
-  * Aspiration and ambition (Lyon Data Science program)
   * Introduction to the course & the lecturer
   * Homework assignments: *GitHub*, DataCamp, Emacs
   * What's next?
 
-** My new didactic credo    
-  #+attr_html: :width 600px
-  [[./img/credo.png]]
+** Entry survey ([[https://docs.google.com/forms/d/1OYm9fMBi8LNAlbRSo3hiRzsLL0psOuF7TmyoYj9U4kM/edit#responses][Google Forms]])
 
-** Aspirations and ambitions (DS program 2021-2023)
-
-   | CLASS                                 | CODE    | TERM        | Topics                              |
-   |---------------------------------------+---------+-------------+-------------------------------------|
-   | Data Science Tools and Methods        | DSC 101 | Fall 2021   | R, Basic EDA, Base R                |
-   | Introduction to Advanced Data Science | DSC 205 | Spring 2022 | R, Advanced EDA, Tidyverse          |
-   | Database Theory and Applications      | CSC 330 | Spring 2022 | SQL, SQLite                         |
-   | Operating Systems                     | CSC 420 | Spring 2022 | Bash, awk, sed, regular expressions |
-   | Data Visualization                    | DSC 302 | Fall 2022   | D3, Processing, Javascript          |
-   | Machine Learning                      | DSC 305 | Spring 2023 | Predictive algorithms, neural nets  |
-   | Digital Humanities                    | CSC 105 | Spring 2023 | Data science applications           |
+   #+attr_html: :width 600px
+   #+caption: What's your operating system? (Spring 2022 survey)
+   [[./img/os.png]]
 
 ** Introduction to the course & the lecturer
 
@@ -36,13 +25,13 @@
 
    * PhD theoretical particle physics / WWW development
 
-   * C/C++ since ca. 1990
+   * C/C++ since ca. 1990 (created multigrid library)
 
    * Professor, [[https://en.wikipedia.org/wiki/Business_informatics#:~:text=Business%20informatics%20(BI)%20is%20a,and%20concepts%20of%20computer%20science.&text=The%20focus%20on%20programming%20and,of%20economics%20and%20information%20technology.][Business Informatics]] @Berlin Univ
 
    * Visiting Assoc Prof for Data Science @Lyon (2021-23)
 
-   * Syllabus for this course ([[https://lyon.schoology.com/course/5516220926/materials][Schoology]])
+   * Syllabus for this course ([[https://lyon.schoology.com/course/5516220826/materials/gp/5523144577][Schoology]])
 
 ** Homework assignments week 1 (12/14-Jan-2022)
 
@@ -50,9 +39,6 @@
    [[./img/homework.png]]
 
    * *GitHub Hello World Exercise ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][Info: FAQ]]) - by Friday 14-Jan!*
-
-   * DataCamp platform registration ([[https://lyon.schoology.com/course/5516220833/materials][Link: Schoology]]) - first
-     assignment due Jan 31, 2022.
 
    * GNU Emacs installation ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][Info: FAQ]]) - you need this for an
      assignment next week.
@@ -77,7 +63,7 @@
 **** Why are we using it?
 
      /Image: Org-mode file in GitHub/
-     #+attr_html: :width 500px
+     #+attr_html: :width 700px
      [[./img/org.png]]
 
      * It's free
@@ -90,18 +76,15 @@
 **** What will you have to do?
 
      * [[https://github.com][Sign up with GitHub]] - use Lyon Email
-     * Pick an available username *using your own first and last name*,
-       e.g. ~MarcusBirkenkrahe~, or ~DonaldTrump~
+     * Pick an available username *using your own first and last name*
      * [[https://docs.github.com/en/get-started/quickstart/hello-world][Complete the "Hello World" exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.md#completing-the-github-hello-world-exercise][FAQ]])
-     * Give me your GitHub username so that I can add you as a
-       collaborator to my private ~db330~ repository
-     * [[https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository][Create an issue]] from the [[https://github.com/birkenkrahe/cc100/issues][~db330~ repository]] like in the example
+     * [[https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository][Create an issue]] from the [[https://github.com/birkenkrahe/cc100/issues][~cc100~ repository]] like in the example
        below (except from your account instead of mine).
-     -----
+
      /Image: Issue "Assignment completed"/
      #+attr_html: :width 500px
      [[./img/issue.png]]
-     -----
+
      #+begin_quote
      If you do have a GitHub account already, do the exercise anyway
      using your existing account (it takes 10 min)! Make sure you
@@ -111,10 +94,10 @@
 
 **** What else can you do?
 
-     * You can [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][fork]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~db330~]] repository
-     * You can [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions][watch]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~db330~]] repository - and set [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications][~Notifications~]] to
-       ~Participating and @mentions~ so that you see my comments (see
-       image below).
+     * You can [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][fork]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~cc100~]] repository
+     * You can [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions][watch]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~cc100~]] repository - and set [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications][~Notifications~]]
+       to ~Participating and @mentions~ so that you see my comments
+       (see image below).
 
      #+attr_html: :width 300px
      [[./img/watch.png]]
@@ -125,7 +108,6 @@
      * You can participate in [[https://github.com/birkenkrahe/cc100/discussions][discussions]] (sometimes I will make you)
      * You can add to the [[https://github.com/birkenkrahe/cc100/wiki][wiki]] (e.g. comments and links to interesting
        resources)
-     * You can install the [[https://github.com/mobile][mobile app]] on your smartphone[fn:3]
      * You can use it as a platform for [[https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects][projects]] or [[https://github.com/features/codespaces][coding]]
      * You can download the [[https://desktop.github.com/][desktop client]] to manage repos on your PC
        (see image below).
@@ -134,15 +116,10 @@
      #+attr_html: :width 800px
      [[./img/gh.png]]
 
-*** DataCamp
+*** Install a compiler
 
-    #+attr_html: :width 400px
-    [[./img/datacamp.png]]
-
-    * Why are we using it?
-    * How are we using it?
-    * What will you have to do?
-
+    
+    
 *** GNU Emacs (1976...1985)
 
     #+attr_html: :width 400px
@@ -153,16 +130,29 @@
         (1984)
       - It's the same thing as an interactive computing notebook
         (Jupyter) ... except open to ALL languages and outputs
-    * How are we using it?
+      - check out my [[https://youtu.be/8HJGz3IYoHI][screencast demo video]] (Birkenkrahe, 2022)
+
+    * How are we going to use it?
+
     * What will you have to do?
 
 ** What's next?
 
-   * See schedule ([[https://github.com/birkenkrahe/os420/blob/main/schedule.org][GitHub]])
-   * Watch online lecture on "Systems"
-   * Everything else = online summary
-   * See you (hopefully) Thursday in class! (Lyon 104)
+   #+attr_html: :width 500px
+   [[./img/sunflowers.jpg]]
+
+   * See schedule ([[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][GitHub]])
+   * Watch online lecture on "Systems" (to be done)
+   * Later: online summary (~followup.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
+   * Sometimes: diary notes (~diary.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
+   * Class on Friday 14-Jan will be online!
+   * Hope to see you at school next Monday!
 
    #+caption: Victor N. installs Emacs @10:50 AM
    #+attr_html: :width 600px
    [[./img/victor.png]]
+
+* References
+
+  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
