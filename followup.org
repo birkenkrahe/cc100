@@ -52,6 +52,14 @@
     to run other programs. You may imagine it as a system of roads to
     get you where you want to go.
 
+*** Books
+
+    I showed a few books that explain different aspects of C - because
+    so many devices contain C! All of these are interesting, none are
+    necessary (or even recommended) for beginners.
+
+    
+    
 *** Wrapper
 
     This term refers to the fact that not all software runs on all
