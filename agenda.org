@@ -3,14 +3,14 @@
 #+SUBTITLE: CSC 100 - Spring 2022
 #+OPTIONS: toc:1 num:nil fig:nil
 #+STARTUP: overview hideblocks
-* Week 1 - January 12, 2022
+* Week 1 - Wed January 12, 2022
 ** Welcome
-  #+attr_html: :width 500px
-  [[./img/fivearmies.jpg]]
+   #+attr_html: :width 500px
+   [[./img/fivearmies.jpg]]
 
-  * Introduction to the course & the lecturer
-  * Homework assignment: GitHub Hello World  
-  * What's next?
+   * Introduction to the course & the lecturer
+   * Homework assignment: GitHub Hello World
+   * What's next?
 
 ** Entry survey ([[https://docs.google.com/forms/d/1OYm9fMBi8LNAlbRSo3hiRzsLL0psOuF7TmyoYj9U4kM/edit#responses][Google Forms]])
 
@@ -120,12 +120,12 @@
 
    * See schedule ([[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][GitHub]])
    * Watch online lecture on "Systems" (to be done)
-   * Later: online summary (~followup.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
+   * Later: online summary (~notes.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
    * Sometimes: diary notes (~diary.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
    * Class on Friday 14-Jan will be online!
    * Hope to see you at school next Monday!
 
-* Week 1 - January 14, 2022
+* Week 1 - Fri January 14, 2022
 ** Overview
 
    | HOW      | WHAT                                  |
@@ -138,9 +138,9 @@
 
 ** Objectives
 
-   * [ ] Review the basics of Git and GitHub
+   * [X] Review the basics of Git and GitHub
 
-   * [ ] Understand what C is, and why you learn it
+   * [X] Understand what C is, and why you learn it
 
    * [ ] Install the GNU C and C++ compiler (~gcc~)
 
@@ -148,34 +148,24 @@
 
    * [ ] Test the C compiler
 
-* Week 2 - Infrastructure
+* Week 2 - Wed January 19, 2022
 
-   * Installing a C compiler on your laptop ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][Info: FAQ]]).
-   * GNU Emacs installation ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][Info: FAQ]]) - you need this for an
-     assignment next week.
+** Overview
 
-*** Install a compiler     
-*** GNU Emacs (1976...1985)
+   | HOW      | WHAT                          |
+   |----------+-------------------------------|
+   | Review   | Quiz on last week's content   |
+   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]] (cont'd)    |
+   | Practice | Install C compiler ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]])  |
+   |          | Set PATH environment variable |
+   |          | Test C compiler               |
 
-    #+attr_html: :width 400px
-    [[./img/emacs.png]]
+** Objectives
 
-    * Why are we using it?
-      - To mix documentation + code + output = literate programming
-        (1984)
-      - It's the same thing as an interactive computing notebook
-        (Jupyter) ... except open to ALL languages and outputs
-      - check out my [[https://youtu.be/8HJGz3IYoHI][screencast demo video]] (Birkenkrahe, 2022)
+   * [ ] Install the GNU C and C++ compiler (~gcc~)
 
-    * How are we going to use it?
+   * [ ] Set ~PATH~ environment variable under Windows
 
-    * What will you have to do?
+   * [ ] Test the C compiler
 
-   #+caption: Victor N. installs Emacs @10:50 AM
-   #+attr_html: :width 600px
-   [[./img/victor.png]]
- 
 * References
-
-  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
