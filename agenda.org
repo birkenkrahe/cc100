@@ -3,8 +3,8 @@
 #+SUBTITLE: CSC 100 - Spring 2022
 #+OPTIONS: toc:1 num:nil fig:nil
 #+STARTUP: overview hideblocks
-* Week 1 - January 12, 11:00-11:50
-
+* Week 1 - January 12, 2022
+** Welcome
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
 
@@ -124,6 +124,29 @@
    * Sometimes: diary notes (~diary.org~ in [[https://github.com/birkenkrahe/cc100][GitHub]])
    * Class on Friday 14-Jan will be online!
    * Hope to see you at school next Monday!
+
+* Week 1 - January 14, 2022
+** Overview
+
+   | HOW      | WHAT                              |
+   |----------+-----------------------------------|
+   | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]]) |
+   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]]                 |
+   | Practice | Install C compiler ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]])      |
+   |          | Set PATH environment variable     |
+   |          | Test C compiler                   |
+
+** Objectives
+
+   * [ ] Review the basics of Git and GitHub
+
+   * [ ] Understand what C is, and why you learn it
+
+   * [ ] Install the GNU C and C++ compiler (~gcc~)
+
+   * [ ] Set ~PATH~ environment variable under Windows
+
+   * [ ] Test the C compiler
 
 * Week 2 - Infrastructure
 
