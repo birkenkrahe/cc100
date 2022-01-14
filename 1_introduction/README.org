@@ -19,66 +19,27 @@
   -----
 * What is C?
 
-  #+attr_html: :width 500px
-  [[./img/unix.png]]
-  /Image: Thompson & Ritchie & DEC PDP-11, 1970. (Brock, 2019)/
-
   | C is a programming language created in the early 1970s. |
 
-  * Usage: cp. [[https://data-flair.training/blogs/applications-of-c/][Data Flair]]
-  * Popularity: cp. [[https://www.tiobe.com/tiobe-index/c/][TIOBE Index]]
-  * Standard: cp. [[https://blog.ansi.org/2018/11/c-language-standard-iso-iec-9899-2018-c18/#gref][ANSI]]
+  #+caption: Thompson & Ritchie & DEC PDP-11, 1970. (Brock, 2019)
+  #+attr_html: :width 600px
+  [[./img/unix.png]]
 
-  | Challenge: How popular do you think C is today? | [fn:2] |
+* How popular is C?
 
-** What is a programming language?
+  | C consistently ranks among the top 3 programming languages |
 
-   #+begin_quote
-   "A programming language is a formal language comprising a set of
-   strings that produce various kinds of machine code output. Programming
-   languages are one kind of computer language, and are used in computer
-   programming to implement algorithms." (Source: [[https://en.wikipedia.org/wiki/Programming_language][Wikipedia]])
-   #+end_quote
+  #+caption: TIOBE Index for C, 2002-2022 (Source: TIOBE)
+  #+attr_html: :width 600px
+  [[./img/tiobe.png]]
 
-   * Formal language?
-   * Set of strings?
-   * Machine code?
-   * Algorithm?
-
-   #+attr_html: :width 700px
-   [[./img/real_programmers.png]]
-
-* Where does C come from?
-
-  #+attr_html: :width 300px
-  [[./img/kr.png]]
-  /Image: "K&R" (Kernighan/Ritchie, 1978)/
-
-  * By-product of the UNIX operating system 1969 [fn:3]
-  * Developed on DEC PDP-7 (computer with 8K words of main memory)
-  * Written originally in assembly language
-  * UNIX rewritten in C by 1973 for [[https://en.wikipedia.org/wiki/PDP-11][DEC PDP-11]]
-  * Standardization of C, 1973-2018
-
-  | Challenge: what does "8K words of main memory" mean? | [fn:4]) |
-
-  Since we're talking about "standardization":
-  [[./img/standards.png]]
-  /Image source: [[https://xkcd.com/927/][xkcd]]/
-  
-** Looks matter
-
-   #+attr_html: :width 500px
-   [[./img/pdp11.jpg]]
-   /Image: PDP-11/70 ([[https://www.flickr.com/photos/mratzloff/9169358863][Source]])/
-
-   | Challenge: was C the first programming language? | [fn:5] |
+  Popularity contest: cp. [[https://www.tiobe.com/tiobe-index/][TIOBE Index]][fn:2]
 
 * How important is C?
 
-  #+attr_html: :width 500px
+  #+caption: Real world applications of C (Source: DataFlair)
+  #+attr_html: :width 600px
   [[./img/usage.jpg]]
-  /Image: Usage of C. Source: Data Flair/
 
   Some well-known programs written in C:
   * The Linux kernel (and therefore, Android)
@@ -92,48 +53,118 @@
 
   See also: "[[https://youtu.be/smGalmxPVYc][Why C programming is awesome]]" (Hawkes, 2016).
 
-** The Latin of programming languages
+* What is a programming language?
 
-   The following languages are C-based:
-   * C++ (OOP extension of C, games)
-   * Java (OOP, VM-portable, and no pointers)
-   * C# (Microsoft, games)
-   * Perl (scripting, text mining)
+  #+begin_quote
+  "A programming language is a formal language comprising a set of
+  strings that produce various kinds of machine code output. Programming
+  languages are one kind of computer language, and are used in computer
+  programming to implement algorithms." (Source: [[https://en.wikipedia.org/wiki/Programming_language][Wikipedia]])
+  #+end_quote
 
-   #+begin_quote
-   "C is to programming languages what Latin is to Western natural
-   languages." (Anonymous)
-   #+end_quote
+  * *Formal* language?
+  * Set of *strings*?
+  * *Machine* code?
+  * *Algorithm*?
 
-** Lightning fast and terribly tiny
+    | Fortunately, computer (and data) science isn't really a science at all! |
 
-   #+begin_quote
-   "C is fast because it's the speed of light, and relativity?"
-   ([[https://stackoverflow.com/questions/418914/why-is-c-so-fast-and-why-arent-other-languages-as-fast-or-faster][Stackoverflow]])
-   #+end_quote
+    Right, it's more of a craft like mining, knitting, or pottering.
 
-   [[./img/fast.png]]
+    #+caption: Scientific fields arranged by "purity" (xkcd)
+    #+attr_html: :width 700px
+    [[./img/purity.png]]
 
-   ...
+* Where does C come from?
 
-   [[./img/slow.png]]
-   /Image source: [[https://github.com/kostya/benchmarks][Kostya benchmark, GitHub, Nov 2021]]/
+  #+caption: "K&R" (Kernighan/Ritchie, 1978)
+  #+attr_html: :width 300px
+  [[./img/kr.png]]
 
-   * Excerpts for parsing and printing a Mandelbrot set
-   * Benchmarks depend on algorithm implementation
-   * C always wins the size battle (memory allocation)
-   * Some very specialized languages are even faster
+  * By-product of the UNIX operating system 1969 [fn:3]
+  * Developed on DEC PDP-7 (computer with 8K words of main memory)
+  * Written originally in assembly language
+  * UNIX rewritten in C by 1973 for [[https://en.wikipedia.org/wiki/PDP-11][DEC PDP-11]]
+  * Standardization of C, 1973-2018
 
-** Strengths and weaknesses
+  | Challenge: what does "8K words of main memory" mean? [fn:4] |
 
-   | STRENGTH              | WEAKNESS                     |
-   |-----------------------+------------------------------|
-   | Efficiency            | Permissiveness (Error-prone) |
-   | Portability           | Terseness and Understanding  |
-   | Power                 | Large program maintenance    |
-   | Flexibility           |                              |
-   | Standard library      |                              |
-   | Integration with UNIX |                              |
+* Standardization
+
+  #+caption: How standards proliferate (Source: xkcd)
+  #+attr_html: :width 500px
+  [[./img/standards.png]]
+
+  Details: see [[https://blog.ansi.org/2018/11/c-language-standard-iso-iec-9899-2018-c18/#gref][ANSI]] (American National Standards Institute)
+
+* How computers work
+
+  Well, at least this is one way of looking at it.
+
+  #+caption: Computer architecture (simplified)
+  #+attr_html: :width 700px
+  [[./img/computer.png]]
+
+  | What happens when you write a program in C? |
+
+* How programs are processed
+
+  #+caption: How programs are processed (simplified)
+  #+attr_html: :width 700px
+  [[./img/program.png]]
+
+* Looks matter
+
+  She's a beauty.
+
+  #+attr_html: :width 500px
+  [[./img/pdp11.jpg]]
+  /Image: PDP-11/70 ([[https://www.flickr.com/photos/mratzloff/9169358863][Source]])/
+
+  | Challenge: was C the first programming language? [fn:5] |
+
+* The Latin of programming languages
+
+  The following languages are C-based:
+  * C++ (OOP extension of C, games)
+  * Java (OOP, VM-portable, and no pointers)
+  * C# (Microsoft, games)
+  * Perl (scripting, text mining)
+
+  #+begin_quote
+  "C is to programming languages what Latin is to Western natural
+  languages." (Anonymous)
+  #+end_quote
+
+* C is lightning fast and terribly tiny
+
+  #+begin_quote
+  "C is fast because it's the speed of light, and relativity?"
+  ([[https://stackoverflow.com/questions/418914/why-is-c-so-fast-and-why-arent-other-languages-as-fast-or-faster][Stackoverflow]])
+  #+end_quote
+
+  [[./img/fast.png]]
+
+  ...
+
+  [[./img/slow.png]]
+  /Image source: [[https://github.com/kostya/benchmarks][Kostya benchmark, GitHub, Nov 2021]]/
+
+  * Excerpts for parsing and printing a Mandelbrot set
+  * Benchmarks depend on algorithm implementation
+  * C always wins the size battle (memory allocation)
+  * Some very specialized languages are even faster
+
+* Strengths and weaknesses of C
+
+  | STRENGTH              | WEAKNESS                     |
+  |-----------------------+------------------------------|
+  | Efficiency            | Permissiveness (Error-prone) |
+  | Portability           | Terseness and Understanding  |
+  | Power                 | Large program maintenance    |
+  | Flexibility           |                              |
+  | Standard library      |                              |
+  | Integration with UNIX |                              |
 
 * What is the difference between C and C++?
 
@@ -157,33 +188,32 @@
   * System programming is pure power (C)
   * C is simpler, smaller, and faster
 
+  #+caption: Computer Landscape. (Modified from: Steinhart)
   #+attr_html: :width 500px
   [[./img/power2.png]]
 
-  /Figure: Computer Landscape. Modified from: Steinhart, 2019/
 
   - Bjarne Stroustrup (2011): "[[https://youtu.be/KlPC3O1DVcg][C is obsolete]]"[fn:6]
   - Linus Torvalds (2007): "[[http://harmful.cat-v.org/software/c++/linus][C++ is a horrible language]]"[fn:7].
 
   Also, there's this:
-  
+
   #+begin_quote
   "Languages are tools. Memorizing them no more makes you a computer
-  scientist than studying hammers makes you a carpenter." ([[https://qr.ae/pGzZ9z][Charles
-  Neilsen]])
+  scientist than studying hammers makes you a carpenter." -[[https://qr.ae/pGzZ9z][Neilsen]]
   #+end_quote
 
-  * Easy to pick up additional languages
+  * It's easy to pick up additional languages
   * Data structures and algorithms are key to understanding
   * First language could be anything[fn:8]
-  
+
 * Why am I teaching C/C++?
 
   It's personal.
-  
+
+  #+caption: The C++ Virtual Library, 1993-1995 (DESY)
   #+attr_html: :width 500px
   [[./img/desy.png]]
-  /Image: The C++ Virtual Library, 1993-1995 ([[https://www.desy.de/user/projects/C++.html][Source]])/
 
   #+begin_quote
   I used C++ during my PhD studies at DESY, Germany, to write a
@@ -193,11 +223,11 @@
 
 * Summary
 
-  | The C programming language was created 50 years ago           |
-  | C is small, simple, very fast, and close to the computer      |
-  | Linux (and Android) are largely written in C                  |
-  | The object-oriented programming (OOP) language C++ contains C |
-  | System programming is a powerful skill set                    |
+  * The C programming language was created 50 years ago           
+  * C is small, simple, very fast, and close to the computer      
+  * Linux (and Android) are largely written in C                 
+  * The object-oriented programming (OOP) language C++ contains C
+  * System programming is a powerful skill set                    
 
 ** Concept glossary
 
@@ -236,6 +266,7 @@
   [[./img/river.gif]]
 
 * References
+
   * Big Think (Jun 13, 2011). Bjarne Stroustrup: Why the Programming
     Language C Is Obsolete | Big Think [video]. [[https://youtu.be/KlPC3O1DVcg][URL:
     youtu.be/KlPC3O1DVcg]].
@@ -248,6 +279,7 @@
     Cham. https://doi.org/10.1007/978-3-319-91908-9_15
   * Data Flair (n.d.). Applications of C Programming That Will Make
     You Fall In Love With C [Tutorial]. URL: d[[https://data-flair.training/blogs/applications-of-c/][ata-flair.training.]]
+  * DESY (Oct 25, 1995). The C++ Virtual Library. URL: [[https://www.desy.de/user/projects/C++.html][desy.de]]
   * Gustedt (2019). Modern C. Manning.
   * King (2008). C Programming - A Modern Approach. Norton. [[http://knking.com/books/c2/index.html][Online:
     knking.com]].
@@ -258,8 +290,11 @@
   * Neilsen (Aug 14, 2020). Quora. URL: [[https://qr.ae/pGzZ9z][qr.ae/pGzZ9z]].
   * Steinhart (2019). The Secret Life of Programs. NoStarch
     Press. [[https://nostarch.com/foundationsofcomp][URL: nostarch.com.]]
+  * TIOBE (Jan 2022). TIOBE Index for January 2022 [website]. [[https://www.tiobe.com/tiobe-index/][URL:
+    tiobe.com]].
   * Torvalds (6 Sep 2007). Linus Torvalds on C++ [blog]. [[http://harmful.cat-v.org/software/c++/linus][URL:
     harmful.cat-v.org]].
+  * xkcd(n.d.) Purity [cartoon]. [[https://xkcd.com/435/][URL: xkcd.com/]].
 
 * Footnotes
 
@@ -297,7 +332,7 @@ C++ is still too complex for many ("We have to clean it up").
 
 [fn:7]Torvalds (who wrote the Linux kernel in C) argues here in favor
 of writing his hugely successful version control program ~git~ in C
-instead of C++. He highlights sme of the strengths of C: efficient,
+instead of C++. He highlights some of the strengths of C: efficient,
 system-level, portable code.
 
 [fn:8]My first real programming language was FORTRAN (specialized on
