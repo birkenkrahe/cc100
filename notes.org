@@ -1,6 +1,6 @@
-#+TITLE:Followup
+#+TITLE:Class Notes
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:Followup for CSC330 Database Theory & Applications Spring 2022
+#+SUBTITLE:Followup class notes for CSC100 Intro to Programming in C/C++ Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * What is this?
@@ -123,6 +123,35 @@
     and notebooks, not using C but the database query language SQLite
     instead (Birkenkrahe, 2022). [[https://youtu.be/8HJGz3IYoHI][Check it out]].
 
+* Week 1 - Fri 14-Jan-2022
+
+  Andrei Cristian Galca Mitran11:10 AM
+what is going to be the quiz about 
+You11:14 AM
+The Importance Of Being Earnest
+TIOBE
+Oscar Wilde
+You11:15 AM
+https://www.tiobe.com/tiobe-index/
+You11:27 AM
+STRING
+You11:28 AM
+heuristics
+human resilience
+You11:32 AM
+10,000
+You11:36 AM
+kernel
+kernel = part of the operating system that is like the "heart" 
+You11:42 AM
+COBOL
+You11:47 AM
+https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos
+Anna Griffith11:47 AM
+I just wanted to make sure I was marked for attendance I joined a couple minutes late
+You11:48 AM
+https://github.com/birkenkrahe/cc100/issues
+  
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
