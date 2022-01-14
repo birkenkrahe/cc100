@@ -30,7 +30,7 @@
   | C consistently ranks among the top 3 programming languages |
 
   #+caption: TIOBE Index for C, 2002-2022 (Source: TIOBE)
-  #+attr_html: :width 600px
+  #+attr_html: :width 700px
   [[./img/tiobe.png]]
 
   Popularity contest: cp. [[https://www.tiobe.com/tiobe-index/][TIOBE Index]][fn:2]
@@ -56,7 +56,7 @@
 * What is a programming language?
 
   #+begin_quote
-  "A programming language is a formal language comprising a set of
+  "A programming language is a formal language comprising of a set of
   strings that produce various kinds of machine code output. Programming
   languages are one kind of computer language, and are used in computer
   programming to implement algorithms." (Source: [[https://en.wikipedia.org/wiki/Programming_language][Wikipedia]])
@@ -110,7 +110,7 @@
 * How programs are processed
 
   #+caption: How programs are processed (simplified)
-  #+attr_html: :width 700px
+  #+attr_html: :width 00px
   [[./img/program.png]]
 
 * Looks matter
