@@ -128,13 +128,13 @@
 * Week 1 - January 14, 2022
 ** Overview
 
-   | HOW      | WHAT                              |
-   |----------+-----------------------------------|
-   | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]]) |
-   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]]                 |
-   | Practice | Install C compiler ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]])      |
-   |          | Set PATH environment variable     |
-   |          | Test C compiler                   |
+   | HOW      | WHAT                                  |
+   |----------+---------------------------------------|
+   | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] (see [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]]) |
+   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]]                     |
+   | Practice | Install C compiler ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]])          |
+   |          | Set PATH environment variable         |
+   |          | Test C compiler                       |
 
 ** Objectives
 
