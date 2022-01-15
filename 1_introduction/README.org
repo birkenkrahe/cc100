@@ -220,14 +220,21 @@
   library of multigrid functions (numerical method for lattice gauge
   theory simulations in theoretical particle physics).
   #+end_quote
+* What will happen to C/C++ in the next 20 years?
+
+  Whatever happens, good new for learning C.
+  
+  #+caption: One expert's opinion (Source: Quora)
+  #+attr_html: :width 500px
+  [[./img/future.png]]
 
 * Summary
 
-  * The C programming language was created 50 years ago           
-  * C is small, simple, very fast, and close to the computer      
-  * Linux (and Android) are largely written in C                 
+  * The C programming language was created 50 years ago
+  * C is small, simple, very fast, and close to the computer
+  * Linux (and Android) are largely written in C
   * The object-oriented programming (OOP) language C++ contains C
-  * System programming is a powerful skill set                    
+  * System programming is a powerful skill set
 
 ** Concept glossary
 
