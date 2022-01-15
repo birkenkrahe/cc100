@@ -3,7 +3,7 @@
 #+SUBTITLE: CSC 100 - Spring 2022
 #+OPTIONS: toc:1 num:nil fig:nil
 #+STARTUP: overview hideblocks
-* Week 1 - Wed January 12, 2022
+* 1.1 (01/12/22)
 ** Welcome
    #+attr_html: :width 500px
    [[./img/fivearmies.jpg]]
@@ -125,7 +125,7 @@
    * Class on Friday 14-Jan will be online!
    * Hope to see you at school next Monday!
 
-* Week 1 - Fri January 14, 2022
+* 1.2 (01/14/22)
 ** Overview
 
    | HOW      | WHAT                                  |
@@ -148,7 +148,11 @@
 
    * [ ] Test the C compiler
 
-* Week 2 - Wed January 19, 2022
+* 2.1 (01/19/22)
+** Emacs tip
+
+   Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
+   ~org-timer-stop~ (System Crafters, 2021)
 
 ** Overview
 
@@ -169,3 +173,6 @@
    * [ ] Test the C compiler
 
 * References
+
+  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
+  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
