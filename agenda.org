@@ -126,6 +126,11 @@
    * Hope to see you at school next Monday!
 
 * 1.2 (01/14/22)
+
+  #+caption: "I'm back, baby."
+  #+attr_html: :width 300px
+  [[./img/back.jpg]]
+
 ** Overview
 
    | HOW      | WHAT                                  |
