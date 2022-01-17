@@ -154,11 +154,6 @@
    * [ ] Test the C compiler
 
 * 2.1 (01/19/22)
-** Emacs tip
-
-   Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
-   ~org-timer-stop~ (System Crafters, 2021)
-
 ** Overview
 
    | HOW      | WHAT                          |
