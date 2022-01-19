@@ -172,9 +172,9 @@
 
 ** Objectives
 
-   * [ ] Review last week & discuss & get feedback on quiz 1
+   * [X] Review last week & discuss & get feedback on quiz 1
 
-   * [ ] Complete introduction to C (and C++)
+   * [X] Complete introduction to C (and C++)
 
    * [ ] Understand installation process (philosophy)
 

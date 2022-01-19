@@ -142,12 +142,71 @@
   
 * NEXT 2.1 (01/19/22)
 
+** Quiz feedback discussion
+
+   * Timing - 15 OK
+   * Content - no questions
+   * Schedule - weekly quiz as a recap of last week
+   * Grading - unlimited attempts after the first play (in class)
+
 ** Captain's Log
-  
+
+   * If you miss a class and would like it recorded, notify me
+     beforehand. I will do my best to create a recording, which will
+     then be uploaded to GDrive ([[https://lyon.schoology.com/link?a=&path=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F12abr-xo1Kbd5F-0zLRq_2KYbsCULHidL%3Fusp%3Dsharing][link in Schoology]])
+
+   * Whiteboard screenshots taken after class will be uploaded in
+     GDrive as well ([[https://lyon.schoology.com/link?a=&path=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F177ILNWKMQo2I_KlvXA97rZmVJsqh0jYp%3Fusp%3Dsharing][link in Schoology]]). You can submit GitHub issues
+     if you have questions, additions, etc
+
+   * If you miss a class, check content planned/covered through the
+     files ~agenda.org~ and ~notes.org~ [[https://github.com/birkenkrahe/cc100][in the GitHub repo]].
+
+   * You can add your GitHub skills to your resume and it might help
+     you when you try to get a job or an internship!
+
+   * This class will be offered in the Summer I program (June
+     2022). Same content and format, and likely better than this first
+     version (because I'll have learnt how to do it better). 
+
+   * My challenge: why should a liberal arts major (e.g. political
+     science) learn to program, and especially in C?
+     - "Meet The Newest Liberal Art: Coding" (Koenig, 2020)
+     - Greater employability is a general, traditional reason
+     - Coding can be fun. Kids know this.
+     - Data and computer literacy is a life and a professional
+       skill. Especially for political science/economics, see the
+       Economist newletter "[[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][Off the charts]]" (Segger, 2022).
+
+       #+caption: Plots from The Economist
+       #+attr_html: :width 500px
+       [[./img/graph.jpg]]
+
+   * [[https://en.wikipedia.org/wiki/Object-oriented_programming][Object-Oriented Programming (OOP)]] is a specialty of C++ over
+     C. Other modern languages share this paradigm (which is
+     conceptually quite difficult): Java, Python, R, are examples. OOP
+     is useful in the world especially for *reuse* of code, and it
+     makes maintaining large code repositories easier. Our
+     introduction to C++ at the end of the introductory class will
+     include a short tour of OOP, too.
+
+   * Glossaries are like dictionaries of important words. Knowing
+     words and definitions can help you learn new things much more
+     quickly and easily. I know whereof I speak - at this stage of my
+     life, I learn new things really quickly because I have such a
+     large - not necessarily deep - foundation of technical terms (and
+     thereby, concepts). Don't neglect your learning of (new) words!
+      
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
   notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
 
+  Koenig (Feb 4, 2020). Meet The Newest Liberal Art: Coding
+  [blog]. [[https://www.edsurge.com/news/2020-02-05-meet-the-newest-liberal-art-coding][URL: www.edsurge.com.]]
+  
   Lunduke (June 28,2019). Without a GUI--How to Live Entirely in a
   Terminal [article]. [[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][URL: linuxjournal.com]].
+
+  Segger(Jan 18, 2022). Off the Charts - The best of our data
+  journalism. [[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][URL: economist.com.]]

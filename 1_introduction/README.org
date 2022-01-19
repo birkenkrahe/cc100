@@ -190,7 +190,7 @@
   * C is simpler, smaller, and faster
 
   #+caption: Computer Landscape. (Modified from: Steinhart)
-  #+attr_html: :width 500px
+  #+attr_html: :width 800px
   [[./img/power2.png]]
 
   - Bjarne Stroustrup (2011): "[[https://youtu.be/KlPC3O1DVcg][C is obsolete]]"[fn:6]
@@ -239,7 +239,7 @@
   * Linux (and Android) are largely written in C
   * The object-oriented programming (OOP) language C++ contains C
   * System programming is a powerful skill set
-
+    
 ** Concept glossary
 
    | CONCEPT/TOPIC           | DEFINITION                                          |
