@@ -127,10 +127,6 @@
 
 * 1.2 (01/14/22)
 
-  #+caption: "I'm back, baby."
-  #+attr_html: :width 300px
-  [[./img/back.jpg]]
-
 ** Overview
 
    | HOW      | WHAT                                  |
@@ -162,15 +158,25 @@
 
 ** Overview
 
-   | HOW      | WHAT                          |
-   |----------+-------------------------------|
-   | Review   | Quiz on last week's content   |
-   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]] (cont'd)    |
-   | Practice | Install C compiler ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]])  |
-   |          | Set PATH environment variable |
-   |          | Test C compiler               |
+   | HOW      | WHAT                               | TIME |
+   |----------+------------------------------------+------|
+   | Review   | Quiz on last week's content        | 15'  |
+   |          | Quiz: feedback discussion          | 5'   |
+   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]] (cont'd)([[https://github.com/birkenkrahe/cc100/tree/main/1_introduction][gh]])     | 10'  |
+   |          | [[~/Documents/GitHub/cc100/2_installation/README.org::What are you going to learn?][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
+   | Practice | Install C compiler[fn:1] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
+   |          | Set PATH environment variable      |      |
+   |          | Test C compiler                    |      |
+
+   gh = GitHub link
 
 ** Objectives
+
+   * [ ] Review last week & discuss & get feedback on quiz 1
+
+   * [ ] Complete introduction to C (and C++)
+
+   * [ ] Understand installation process (philosophy)
 
    * [ ] Install the GNU C and C++ compiler (~gcc~)
 
@@ -182,3 +188,10 @@
 
   System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
   [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
+
+* Footnotes
+
+[fn:1]This requires system admin privileges, which you only have on
+your own PC. In the computer lab, I have such principles, and as soon
+as I managed to install our tools, you can also use them on the lab
+equipment.
