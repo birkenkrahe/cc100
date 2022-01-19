@@ -4,64 +4,64 @@
 
    | NO | WEEK | DATE       | TOPIC            | PURPOSE        | ASSIGNMENT            | GITHUB          | KING CHAPTER[fn:2]        | TEST[fn:1] |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   |  1 |    1 | Wed-12-Jan | Course / Systems | Orientation    | Survey                | org/systems     |                           |            |
-   |  2 |      | Fri-14-Jan | Introducing C    | Motivation     | GitHub Hello World    | 1_introduction  | 1 Introducing C           | Quiz 1     |
+   |  1 |    1 | Wed-12-Jan | Course / Systems | Orientation    | Survey                | org/systems     |                           | Entry survey |
+   |  2 |      | Fri-14-Jan | Introducing C    | Motivation     | GitHub Hello World    | 1_introduction  | 1 Introducing C           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   |  3 |    2 | Wed-19-Jan | Installation     | Infrastructure | Emacs online tutorial | 2_installation  |                           |            |
-   |  4 |      | Fri-21-Jan | Emacs, GCC       |                | Org-mode file         |                 |                           | Quiz 2     |
+   |  3 |    2 | Wed-19-Jan | Installation     | Infrastructure | Emacs online tutorial | 2_installation  |                           | Quiz 1     |
+   |  4 |      | Fri-21-Jan | Emacs, GCC       |                | Org-mode file         |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   |  4 |    3 | Mon-24-Jan |                  |                | Program  1            | 3_first_program | 2 C Fundamentals          |            |
+   |  4 |    3 | Mon-24-Jan |                  |                | Program  1            | 3_first_program | 2 C Fundamentals          | Quiz 2     |
    |  5 |      | Wed-26-Jan |                  |                |                       |                 |                           |            |
-   |  6 |      | Fri-28-Jan |                  |                |                       |                 |                           | Quiz 3     |
+   |  6 |      | Fri-28-Jan |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   |  7 |    4 | Mon-31-Jan |                  |                | Program 2             |                 | 3 Input/Output            |            |
+   |  7 |    4 | Mon-31-Jan |                  |                | Program 2             |                 | 3 Input/Output            | Quiz 3     |
    |  8 |      | Wed-02-Feb |                  |                |                       |                 |                           |            |
-   |  9 |      | Fri-04-Feb |                  |                |                       |                 |                           | Test 1     |
+   |  9 |      | Fri-04-Feb |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 10 |    5 | Mon-07-Feb |                  |                | Program 3             |                 | 4 Expressions             |            |
+   | 10 |    5 | Mon-07-Feb |                  |                | Program 3             |                 | 4 Expressions             | Test 1     |
    | 11 |      | Wed-09-Feb |                  |                |                       |                 |                           |            |
-   | 12 |      | Fri-11-Feb |                  |                |                       |                 |                           | Quiz 4     |
+   | 12 |      | Fri-11-Feb |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 13 |    6 | Mon-14-Feb |                  |                | Program 4             |                 | 5 Selection Statements    |            |
+   | 13 |    6 | Mon-14-Feb |                  |                | Program 4             |                 | 5 Selection Statements    | Quiz 4     |
    | 14 |      | Wed-16-Feb |                  |                |                       |                 |                           |            |
-   | 15 |      | Fri-18-Feb |                  |                |                       |                 |                           | Quiz 5     |
+   | 15 |      | Fri-18-Feb |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 16 |    7 | Mon-21-Feb |                  |                | Program 5             |                 | 6 Loops                   |            |
+   | 16 |    7 | Mon-21-Feb |                  |                | Program 5             |                 | 6 Loops                   | Quiz 5     |
    | 17 |      | Wed-23-Feb |                  |                |                       |                 |                           |            |
-   | 18 |      | Fri-25-Feb |                  |                |                       |                 |                           | Test 2     |
+   | 18 |      | Fri-25-Feb |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 19 |    8 | Mon-28-Feb |                  |                | Program 6             |                 | 7 Basic types             |            |
+   | 19 |    8 | Mon-28-Feb |                  |                | Program 6             |                 | 7 Basic types             | Quiz 6     |
    | 20 |      | Wed-02-Mar |                  |                |                       |                 |                           |            |
-   | 21 |      | Fri-04-Mar |                  |                |                       |                 |                           | Quiz 6     |
+   | 21 |      | Fri-04-Mar |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 22 |    9 | Mon-07-Mar |                  |                | Program 7             |                 | 8 Arrays                  |            |
+   | 22 |    9 | Mon-07-Mar |                  |                | Program 7             |                 | 8 Arrays                  | Test 2     |
    | 23 |      | Wed-09-Mar |                  |                |                       |                 |                           |            |
-   | 24 |      | Fri-11-Mar |                  |                |                       |                 |                           | Quiz 7     |
+   | 24 |      | Fri-11-Mar |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 25 |   10 | Mon-14-Mar |                  |                | Program 8             |                 | 9 Functions               |            |
+   | 25 |   10 | Mon-14-Mar |                  |                | Program 8             |                 | 9 Functions               | Quiz 8     |
    | 26 |      | Wed-16-Mar |                  |                |                       |                 |                           |            |
-   | 27 |      | Fri-18-Mar |                  |                |                       |                 |                           | Quiz 8     |
+   | 27 |      | Fri-18-Mar |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 28 |   11 | Mon-28-Mar |                  |                | Program 9             |                 | 10 Program Organization   |            |
+   | 28 |   11 | Mon-28-Mar |                  |                | Program 9             |                 | 10 Program Organization   | Quiz 9     |
    | 29 |      | Wed-30-Mar |                  |                |                       |                 |                           |            |
-   | 30 |      | Fri-01-Apr |                  |                |                       |                 |                           | Test 3     |
+   | 30 |      | Fri-01-Apr |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 31 |   12 | Mon-04-Apr |                  |                | Program 10            |                 | 11 Pointers               |            |
+   | 31 |   12 | Mon-04-Apr |                  |                | Program 10            |                 | 11 Pointers               | Quiz 10    |
    | 32 |      | Wed-06-Apr |                  |                |                       |                 |                           |            |
-   | 33 |      | Fri-08-Apr |                  |                |                       |                 |                           | Quiz 9     |
+   | 33 |      | Fri-08-Apr |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 34 |   13 | Mon-11-Apr |                  |                | Program 11            |                 | 12 Pointers and Arrays    |            |
-   | 35 |      | Wed-13-Apr |                  |                |                       |                 |                           | Quiz 10    |
+   | 34 |   13 | Mon-11-Apr |                  |                | Program 11            |                 | 12 Pointers and Arrays    | Test 3     |
+   | 35 |      | Wed-13-Apr |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 36 |   14 | Wed-20-Apr |                  |                | Program 12            |                 | 13 Strings                |            |
-   | 37 |      | Fri-22-Apr |                  |                |                       |                 |                           | Quiz 11    |
+   | 36 |   14 | Wed-20-Apr |                  |                | Program 12            |                 | 13 Strings                | Quiz 11    |
+   | 37 |      | Fri-22-Apr |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 38 |   15 | Mon-25-Apr |                  |                | Program 13            |                 | 14 The Preprocessor       |            |
+   | 38 |   15 | Mon-25-Apr |                  |                | Program 13            |                 | 14 The Preprocessor       | Quiz 12    |
    | 39 |      | Wed-27-Apr |                  |                |                       |                 |                           |            |
-   | 40 |      | Fri-29-Apr |                  |                |                       |                 |                           | Test 4     |
+   | 40 |      | Fri-29-Apr |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
-   | 41 |   16 | Mon-02-May |                  |                |                       |                 | 15 Writing Large Programs |            |
-   | 42 |      | Wed-04-May |                  |                |                       |                 |                           | Quiz 12    |
+   | 41 |   16 | Mon-02-May |                  |                |                       |                 | 15 Writing Large Programs | Quiz 13    |
+   | 42 |      | Wed-04-May |                  |                |                       |                 |                           |            |
    |----+------+------------+------------------+----------------+-----------------------+-----------------+---------------------------+------------|
 
 * Footnotes
@@ -69,5 +69,6 @@
 [fn:2]Chapter or subchapter in King, C Programming (2e), Norton
 (2008). 
 
-[fn:1]Quiz: covers the material of the past week. Usually 5 min at the
-beginning of class, multiple choice. Test: in class exercises.
+[fn:1]Quiz: covers the material of the past week. Usually 15 min at
+the beginning of the first class of a week, multiple choice. Test: in
+class exercises.
