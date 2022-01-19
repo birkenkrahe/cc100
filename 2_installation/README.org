@@ -21,9 +21,10 @@
   There are two BIG reasons - one is philosophical, the other is
   technical.
 
+  #+caption: Automation by xkcd.
   #+attr_html: :width 500px
   [[./img/automation.png]]
-  /Image: automation. Source: [[https://xkcd.com/1319/][xkcd]]/
+
 ** Philosophy
 
    #+begin_quote
@@ -41,6 +42,7 @@
    * Knowing low-level tools helps asking the right questions
    * Learning low-level tools helps you build new tools
    * Learning about computers enables you to craft better code
+
 ** Technology
 
    The other reason has to do with C itself:
@@ -51,9 +53,9 @@
    | C source code needs to be compiled, linked and debugged | compiler | [[https://gcc.gnu.org/][GNU CC]]    |
    | C object code needs to be run                           | shell    | [[https://www.gnu.org/software/bash/][GNU bash]]  |
 
+   #+caption: C programming workflow (BPMN model)
    #+attr_html: :width 600px
    [[./img/workflow.png]]
-   /Image: C programming workflow (BPMN model)/
 
    There are different routes to get C running on your computer,
    depending on your operating system (Linux, MacOS or Windows)[fn:1].
