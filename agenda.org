@@ -191,16 +191,12 @@
    | Lecture  | [[~/Documents/GitHub/cc100/2_installation/README.org::What are you going to learn?][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
    | Practice | Install C compiler[fn:3] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
    |          | Test C compiler ~gcc --version~    |      |
-   |          | GNU Emacs                          |      |
+   |          | GNU Emacs tutorial in class ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])   |      |
    | HOME     | Set PATH environment variable      |      |
 
    gh = GitHub link 
 
 ** Objectives
-
-   * [X] Review last week & discuss & get feedback on quiz 1
-
-   * [X] Complete introduction to C (and C++)
 
    * [ ] Understand installation process (philosophy)
 
@@ -210,6 +206,7 @@
 
    * [ ] Test the C compiler
 
+   * [ ] GNU Emacs tutorial
 
 * References
 
