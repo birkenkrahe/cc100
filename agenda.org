@@ -3,7 +3,7 @@
 #+SUBTITLE: CSC 100 - Spring 2022
 #+OPTIONS: toc:1 num:nil fig:nil
 #+STARTUP: overview hideblocks
-* 1.1 (01/12/22)
+* w1s1 (01/12/22)
 ** Welcome
    #+attr_html: :width 500px
    [[./img/fivearmies.jpg]]
@@ -125,7 +125,7 @@
    * Class on Friday 14-Jan will be online!
    * Hope to see you at school next Monday!
 
-* 1.2 (01/14/22)
+* w1s2 (01/14/22)
 
 ** Overview
 
@@ -149,7 +149,7 @@
 
    * [ ] Test the C compiler
 
-* 2.1 (01/19/22)
+* w2s3 (01/19/22)
 ** I'm back
 
    #+caption: "I'm back, baby."
@@ -183,6 +183,33 @@
    * [ ] Set ~PATH~ environment variable under Windows
 
    * [ ] Test the C compiler
+* w2s4 (01/19/22)
+** Overview
+
+   | HOW      | WHAT                               | TIME |
+   |----------+------------------------------------+------|
+   | Lecture  | [[~/Documents/GitHub/cc100/2_installation/README.org::What are you going to learn?][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
+   | Practice | Install C compiler[fn:3] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
+   |          | Test C compiler ~gcc --version~    |      |
+   |          | GNU Emacs                          |      |
+   | HOME     | Set PATH environment variable      |      |
+
+   gh = GitHub link 
+
+** Objectives
+
+   * [X] Review last week & discuss & get feedback on quiz 1
+
+   * [X] Complete introduction to C (and C++)
+
+   * [ ] Understand installation process (philosophy)
+
+   * [ ] Install the GNU C and C++ compiler (~gcc~)
+
+   * [ ] Set ~PATH~ environment variable under Windows
+
+   * [ ] Test the C compiler
+
 
 * References
 
@@ -190,6 +217,11 @@
   [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 
 * Footnotes
+
+[fn:3]I managed to install GCC on the lab computers and run it inside
+GNU Emacs. This is something that you should do at home with your own
+computer. I'm going to demonstrate the process in class and I will
+also make a short video showing how to do it (for Windows 10).
 
 [fn:1]This requires system admin privileges, which you only have on
 your own PC. In the computer lab, I have such principles, and as soon

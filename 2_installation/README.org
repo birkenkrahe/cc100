@@ -279,7 +279,7 @@
    * EDITOR to write source code,
    * NOTEBOOK to write literate programs, and
    * SHELL to build and run code.
-   -----
+
    #+begin_quote
    "Emacs outshines all other editing software in approximately the same
    way that the noonday sun does the stars. It is not just bigger and

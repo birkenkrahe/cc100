@@ -61,10 +61,9 @@
    | WHEN[fn:1]    | DESCRIPTION       | IMPACT |
    |---------------+-------------------+--------|
    | Every session | Class assignments |    10% |
-   | Weekly        | Quizzes           |    10% |
    | Monthly       | Tests             |    30% |
    | Biweekly      | Lab projects      |    30% |
-   | End of term   | Final exam        |    20% |
+   | End of term   | Final exam        |    30% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -102,11 +101,6 @@
     - Complete assignments outside of class (homework)
     - Be ready to present your results
 
-*** Weekly Quizzes (10%)
-    - Answer multiple choice questions
-    - Complete quiz online outside of class
-    - Use for drills thereafter
-
 *** Monthly tests (30%)
     - Complete 45 min online test in class
     - Recall last month of lectures and labs
@@ -117,7 +111,7 @@
     - Complete assignments outside of class if necessary
     - Be ready to present your solutions
 
-*** Final exam (20%)
+*** Final exam (30%)
     - 120 min multiple choice exam
     - Online in Schoology in the classroom
     - Sourced from the weekly quiz questions
