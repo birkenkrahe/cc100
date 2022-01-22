@@ -14,6 +14,8 @@
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
+  You find the whiteboard photos [[https://drive.google.com/drive/folders/177ILNWKMQo2I_KlvXA97rZmVJsqh0jYp?usp=sharing][here in GDrive]].
+
 * w1s1 (01/12/22)
 ** Homework (until Friday, 14 Jan)
 
