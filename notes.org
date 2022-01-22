@@ -196,8 +196,12 @@
      life, I learn new things really quickly because I have such a
      large - not necessarily deep - foundation of technical terms (and
      thereby, concepts). Don't neglect your learning of (new) words!
-      
+
 * w2s4 (01/21/22)
+
+  #+caption: GCC logo
+  #+attr_html: :width 200px
+  [[./img/gcc.png]]
 
   * Installed GCC, the compiler. For instructions, [[https://github.com/birkenkrahe/org/blob/master/emacs/install.org][see here]].
   * After the installation, you have to set the ~PATH~ to the compiler
@@ -205,19 +209,21 @@
   * You can test the successful installation in the terminal (Windows
     CMD prompt) with the command ~gcc --version~.
   * The documentation to this important, large (with > 10 mio lines of
-    source code) software program is massive ([[https://gcc.gnu.org/onlinedocs/gcc.pdf][PDF]]), though there are
-    also shorter introductions, if you're interested, [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]].
+    source code) software program is massive ([[https://gcc.gnu.org/onlinedocs/gcc.pdf][PDF]] - Stallman 2022),
+    though there are also shorter introductions, if you're interested,
+    [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] (Gough, .
     
 * References
+  * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
+    notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
+  * Gough (2004). An Introduction to GCC. [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][URL: tfetimes.com.]]
+  * Koenig (Feb 4, 2020). Meet The Newest Liberal Art: Coding
+    [blog]. [[https://www.edsurge.com/news/2020-02-05-meet-the-newest-liberal-art-coding][URL: www.edsurge.com.]]
+  * Lunduke (June 28,2019). Without a GUI--How to Live Entirely in a
+    Terminal [article]. [[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][URL: linuxjournal.com]].
+  * Segger(Jan 18, 2022). Off the Charts - The best of our data
+    journalism. [[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][URL: economist.com.]]
+  * Stallman et al (2022). Using the GNU Compiler Collection. [[https://gcc.gnu.org/onlinedocs/gcc.pdf][URL:
+    gcc.gnu.org.]]
 
-  Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-  notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
-
-  Koenig (Feb 4, 2020). Meet The Newest Liberal Art: Coding
-  [blog]. [[https://www.edsurge.com/news/2020-02-05-meet-the-newest-liberal-art-coding][URL: www.edsurge.com.]]
   
-  Lunduke (June 28,2019). Without a GUI--How to Live Entirely in a
-  Terminal [article]. [[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][URL: linuxjournal.com]].
-
-  Segger(Jan 18, 2022). Off the Charts - The best of our data
-  journalism. [[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][URL: economist.com.]]
