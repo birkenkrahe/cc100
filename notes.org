@@ -232,5 +232,3 @@
 
   * <<stallman>> Stallman et al (2022). Using the GNU Compiler
     Collection. [[https://gcc.gnu.org/onlinedocs/gcc.pdf][URL: gcc.gnu.org.]]
-
-  

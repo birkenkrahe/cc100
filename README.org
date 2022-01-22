@@ -6,7 +6,9 @@
 
   * Repository for CSC 100 - Introduction to Programming in C/C++
   * Emacs Org-mode files( ~.org~) are rendered as Markdown (not on
-    mobile app).
+    mobile app but works well in mobile browser).
+  * Reference links in the files lead to a 404 error. You always find
+    the references at the end of a file.
   * For a TOC, open the bullet point list menu 
 
 ** [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][Schedule]] of the course (up to date)
