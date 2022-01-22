@@ -14,7 +14,7 @@
   FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a
   [[https://github.com/birkenkrahe/cc100/blob/main/FAQ.org][FAQ for CSC 100]].
 
-* 1.1 (01/12/22)
+* w1s1 (01/12/22)
 ** Homework (until Friday, 14 Jan)
 
    (See [[https://lyon.schoology.com/assignment/5555682785][Schoology assignment]])
@@ -123,7 +123,7 @@
     and notebooks, not using C but the database query language SQLite
     instead (Birkenkrahe, 2022). [[https://youtu.be/8HJGz3IYoHI][Check it out]].
 
-* 1.2 (01/14/22)
+* w1s2 (01/14/22)
 
   * TIOBE = "[[https://en.wikipedia.org/wiki/The_Importance_of_Being_Earnest][The Importance of Being Earnest]]" - play by Oscar Wilde
     (1895).
@@ -140,7 +140,7 @@
     become a rare skill since the language is rarely taught. [[https://www.mainframestechhelp.com/tutorials/cobol/][Here is a
     free tutorial]].
   
-* NEXT 2.1 (01/19/22)
+* w2s3 (01/19/22)
 
 ** Quiz feedback discussion
 
@@ -197,6 +197,17 @@
      large - not necessarily deep - foundation of technical terms (and
      thereby, concepts). Don't neglect your learning of (new) words!
       
+* w2s4 (01/21/22)
+
+  * Installed GCC, the compiler. For instructions, [[https://github.com/birkenkrahe/org/blob/master/emacs/install.org][see here]].
+  * After the installation, you have to set the ~PATH~ to the compiler
+    so that it can be found.
+  * You can test the successful installation in the terminal (Windows
+    CMD prompt) with the command ~gcc --version~.
+  * The documentation to this important, large (with > 10 mio lines of
+    source code) software program is massive ([[https://gcc.gnu.org/onlinedocs/gcc.pdf][PDF]]), though there are
+    also shorter introductions, if you're interested, [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]].
+    
 * References
 
   Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive

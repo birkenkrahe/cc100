@@ -183,7 +183,8 @@
    * [ ] Set ~PATH~ environment variable under Windows
 
    * [ ] Test the C compiler
-* w2s4 (01/19/22)
+
+* w2s4 (01/21/22)
 ** Overview
 
    | HOW      | WHAT                               | TIME |
@@ -198,15 +199,15 @@
 
 ** Objectives
 
-   * [ ] Understand installation process (philosophy)
+   * [X] Understand installation process (philosophy)
 
-   * [ ] Install the GNU C and C++ compiler (~gcc~)
+   * [X] Install the GNU C and C++ compiler (~gcc~)
 
-   * [ ] Set ~PATH~ environment variable under Windows
+   * [X] Set ~PATH~ environment variable under Windows
 
-   * [ ] Test the C compiler
+   * [X] Test the C compiler
 
-   * [ ] GNU Emacs tutorial
+   * [X] GNU Emacs tutorial
 
 * References
 
