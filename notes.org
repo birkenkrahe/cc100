@@ -104,7 +104,7 @@
     Aka CLI, terminal, command line, or shell. Linux nerds and hackers
     thrive on the command line, and so will you, via this course.
 
-    Some live "[[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][entirely in a terminal]]" (Lunduke, 2019).
+    Some live "[[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][entirely in a terminal]]" ([[lunduke][Lunduke, 2019]]).
 
     #+attr_html: :width 500px
     #+caption: the other kind of shell (Source: Unsplash)
@@ -121,7 +121,7 @@
 
     I have just made a screencast to show the difference between shell
     and notebooks, not using C but the database query language SQLite
-    instead (Birkenkrahe, 2022). [[https://youtu.be/8HJGz3IYoHI][Check it out]].
+    instead ([[birkenkrahe][Birkenkrahe, 2022]]). [[https://youtu.be/8HJGz3IYoHI][Check it out]].
 
 * w1s2 (01/14/22)
 
@@ -171,12 +171,12 @@
 
    * My challenge: why should a liberal arts major (e.g. political
      science) learn to program, and especially in C?
-     - "Meet The Newest Liberal Art: Coding" (Koenig, 2020)
+     - "Meet The Newest Liberal Art: Coding" ([[<<koenig>>][Koenig, 2020]])
      - Greater employability is a general, traditional reason
      - Coding can be fun. Kids know this.
      - Data and computer literacy is a life and a professional
        skill. Especially for political science/economics, see the
-       Economist newletter "[[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][Off the charts]]" (Segger, 2022).
+       Economist newletter "[[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][Off the charts]]" ([[segger][Segger, 2022]]).
 
        #+caption: Plots from The Economist
        #+attr_html: :width 500px
@@ -209,21 +209,28 @@
   * You can test the successful installation in the terminal (Windows
     CMD prompt) with the command ~gcc --version~.
   * The documentation to this important, large (with > 10 mio lines of
-    source code) software program is massive ([[https://gcc.gnu.org/onlinedocs/gcc.pdf][PDF]] - Stallman 2022),
+    source code) software program is massive ([[https://gcc.gnu.org/onlinedocs/gcc.pdf][PDF]] - [[stallman][Stallman 2022]]),
     though there are also shorter introductions, if you're interested,
-    [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] (Gough, .
+    [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] ([[gough][Gough, 2014]]).
     
 * References
-  * Birkenkrahe (Jan 11, 2022). Interactive shell vs. interactive
-    notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL: youtu.be/8HJGz3IYoHI]].
-  * Gough (2004). An Introduction to GCC. [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][URL: tfetimes.com.]]
-  * Koenig (Feb 4, 2020). Meet The Newest Liberal Art: Coding
+
+  * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
+    vs. interactive notebook (literate programming demo). [[https://youtu.be/8HJGz3IYoHI][URL:
+    youtu.be/8HJGz3IYoHI]].
+
+  * <<gough>> Gough (2004). An Introduction to GCC. [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][URL: tfetimes.com.]]
+
+  * <<koenig>> Koenig (Feb 4, 2020). Meet The Newest Liberal Art: Coding
     [blog]. [[https://www.edsurge.com/news/2020-02-05-meet-the-newest-liberal-art-coding][URL: www.edsurge.com.]]
-  * Lunduke (June 28,2019). Without a GUI--How to Live Entirely in a
+
+  * <<lunduke>> Lunduke (June 28,2019). Without a GUI--How to Live Entirely in a
     Terminal [article]. [[https://www.linuxjournal.com/content/without-gui-how-live-entirely-terminal][URL: linuxjournal.com]].
-  * Segger(Jan 18, 2022). Off the Charts - The best of our data
+
+  * <<segger>> Segger(Jan 18, 2022). Off the Charts - The best of our data
     journalism. [[https://view.e.economist.com/?qs=656e8edd261819ad127632bd9fc89d2693ab5b810851ce4bd3c9b136783bf9a66449c77fa31064988ea46b682a0e8efeb56fca106d505a3dcf51d920dc5bcf1b6f2e2e72407034bde705c7cfc6af5ec4][URL: economist.com.]]
-  * Stallman et al (2022). Using the GNU Compiler Collection. [[https://gcc.gnu.org/onlinedocs/gcc.pdf][URL:
-    gcc.gnu.org.]]
+
+  * <<stallman>> Stallman et al (2022). Using the GNU Compiler
+    Collection. [[https://gcc.gnu.org/onlinedocs/gcc.pdf][URL: gcc.gnu.org.]]
 
   
