@@ -1,3 +1,8 @@
+#+TITLE:Org-Mode Coding Assignment 
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:For all courses in Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
 * Org-mode coding assignment
 
   This file contains the first ~Org-mode~ assignment, a glossary of
