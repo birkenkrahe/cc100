@@ -209,6 +209,27 @@
 
    * [X] GNU Emacs tutorial
 
+* w3s5 (01/24/22)
+
+** Overview
+
+   |------------------+----------------------------|
+   | HOW              | WHAT                       |
+   |------------------+----------------------------|
+   | Practice         | Emacs [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][training script]]      |
+   |                  | See also [[https://youtube.com/playlist?list=PLwgb17bzeNyiuQtvKtcZ_pvSSoO9ShXv8][video playlist]]    |
+   |------------------+----------------------------|
+   | [[https://lyon.schoology.com/assignment/5590403530][Assignment]]       | Set ~emacs~ init file      |
+   |                  | Create ~.org~ file         |
+   |                  | Run code in an ~.org~ file |
+   |------------------+----------------------------|
+
+* Objectives
+
+  * [X] Work through short tutorial for GNU Emacs
+
+  * [X] Explain Emacs assignment
+   
 * References
 
   System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??

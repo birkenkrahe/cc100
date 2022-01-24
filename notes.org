@@ -215,6 +215,11 @@
     though there are also shorter introductions, if you're interested,
     [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] ([[gough][Gough, 2014]]).
     
+* w3s5 (01/24/22)
+** IN PROGRESS Captain's Log
+   
+    What we did using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
