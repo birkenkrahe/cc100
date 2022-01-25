@@ -216,9 +216,20 @@
     [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] ([[gough][Gough, 2014]]).
     
 * w3s5 (01/24/22)
-** IN PROGRESS Captain's Log
+** Captain's Log
    
-    What we did using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
+    What you learnt using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
+    - Open, shut or suspend Emacs
+    - Open the Emacs tutorial
+    - Read a file into Emacs
+
+    These are the skills you need to complete the [[https://lyon.schoology.com/assignment/5598737597][assignment]] (for
+    extra credit until Wednesday 11 AM - for all others we'll do this
+    in class).
+
+    Here is the Emacs documentation on the initialization file
+    ~.emacs~ in the GNU Emacs manual: "[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Find-Init.html][How Emacs finds your init
+    file]]".
 
 * References
 
