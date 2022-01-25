@@ -210,25 +210,41 @@
    * [X] GNU Emacs tutorial
 
 * w3s5 (01/24/22)
-
 ** Overview
 
-   |------------------+----------------------------|
-   | HOW              | WHAT                       |
-   |------------------+----------------------------|
-   | Practice         | Emacs [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][training script]]      |
-   |                  | See also [[https://youtube.com/playlist?list=PLwgb17bzeNyiuQtvKtcZ_pvSSoO9ShXv8][video playlist]]    |
-   |------------------+----------------------------|
-   | [[https://lyon.schoology.com/assignment/5590403530][Assignment]]       | Set ~emacs~ init file      |
-   |                  | Create ~.org~ file         |
-   |                  | Run code in an ~.org~ file |
-   |------------------+----------------------------|
+   |------------+-----------------------------------------------|
+   | HOW        | WHAT                                          |
+   |------------+-----------------------------------------------|
+   | Practice   | Emacs [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][training script]]                         |
+   |            | See also [[https://youtube.com/playlist?list=PLwgb17bzeNyiuQtvKtcZ_pvSSoO9ShXv8][video playlist]]                       |
+   |------------+-----------------------------------------------|
+   | [[https://lyon.schoology.com/assignment/5590403530][Assignment]] | Set ~.emacs~ init file in your home directory |
+   |------------+-----------------------------------------------|
 
-* Objectives
+** Objectives
 
-  * [X] Work through short tutorial for GNU Emacs
+   * [X] Work through short tutorial for GNU Emacs
 
-  * [X] Explain Emacs assignment
+   * [X] Explain Emacs assignment
+   
+* w3s6 (01/26/22)
+** Overview
+
+   |------------+-----------------------------------------------------|
+   | HOW        | WHAT                                                |
+   |------------+-----------------------------------------------------|
+   | Practice   | Set ~.emacs~ init file in your home directory       |
+   |------------+-----------------------------------------------------|
+   | Demo       | Creating Emacs Org-mode file with C code and run it |
+   |------------+-----------------------------------------------------|
+   | Assignment | Create Emacs Org-mode file                          |
+   |------------+-----------------------------------------------------|
+
+** Objectives
+
+   * [ ] Learn how to create an Org-mode file
+
+   * [ ] Run a C program inside Emacs
    
 * References
 
