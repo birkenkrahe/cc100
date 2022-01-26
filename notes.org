@@ -216,7 +216,6 @@
     [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] ([[gough][Gough, 2014]]).
     
 * w3s5 (01/24/22)
-** Captain's Log
    
     What you learnt using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
     - Open, shut or suspend Emacs
@@ -231,6 +230,11 @@
     ~.emacs~ in the GNU Emacs manual: "[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Find-Init.html][How Emacs finds your init
     file]]".
 
+* w3s6 (01/26/22)
+
+  * Fixed the ~.emacs~ problem - this file must be located in the
+    directory that you find in Emacs with ~~/~. (See instruction.)
+  
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell

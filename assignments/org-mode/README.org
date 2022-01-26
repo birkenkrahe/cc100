@@ -3,7 +3,7 @@
 #+SUBTITLE: For CSC100 / Introduction to Programming with C/C++
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Org-mode coding class assignment
+* Creating and running code inside an Org-mode file
 
   This file contains the first ~Org-mode~ assignment and a *glossary*
   of terms. The main challenge is not the programming language but
@@ -12,15 +12,14 @@
   elements. Note that the sample solution also lists relevant
   references at the end[fn:1].
 
-** Assignment
-*** Create a working directory
+** Create a working directory
 
-    - Open Emacs and go to the directory ~/ (with ~C-x C-f~)
-    - In the ~Dired~ buffer, type ~+~, type the name of the new
-      directory ~org-mode~ after the ~/ and press RET.
-    - Go to the new directory (with ~C-x C-f~)
-    - This is now your ~default-directory~, which you can find out by
-      typing ~C-h v default-directory~
+   - Open Emacs and go to the directory "~~/~" (with ~C-x C-f~)
+   - In the ~Dired~ buffer, type ~+~, type the name of the new
+     directory ~org-mode~ after the ~/ and press RET.
+   - Go to the new directory (with ~C-x C-f~)
+   - This is now your ~default-directory~, which you can find out by
+     typing ~C-h v default-directory~
 
 *** Create Org-mode file
 
@@ -96,61 +95,61 @@
    #+attr_html: :width 700px
    [[./img/firstorg.png]]
     
-*** Create C source code file
+** Create C source code file
 
-    - Move the cursor back into the code block and type ~C-c C-v t~
-      (~org-babel-tangle).
+   - Move the cursor back into the code block and type ~C-c C-v t~
+     (~org-babel-tangle).
 
-    - In the echo area below, you should see the message:
-    #+begin_example
-    Tangled 1 code block from first.org
-    #+end_example
+   - In the echo area below, you should see the message:
+   #+begin_example
+   Tangled 1 code block from first.org
+   #+end_example
 
-    - Open the ~Dired~ buffer by typing ~C-x d~ and type ~g~ to
-      refresh the buffer. You should now see the files ~first.c~ and
-      ~first.org~.
+   - Open the ~Dired~ buffer by typing ~C-x d~ and type ~g~ to
+     refresh the buffer. You should now see the files ~first.c~ and
+     ~first.org~.
 
-   #+caption: sample solution "first.c"
-   #+attr_html: :width 700px
-   [[./img/firstc.png]]
+  #+caption: sample solution "first.c"
+  #+attr_html: :width 700px
+  [[./img/firstc.png]]
       
-*** Run C source file in the shell
+** Run C source file in the shell
 
-    - Inside Emacs, open a shell with ~C-x eshell RET~
+   - Inside Emacs, open a shell with ~C-x eshell RET~
 
-    - At the command prompt (~$~), enter the command ~ls~, and you
-      should see all a list of the files in the directory ~org-mode~.
+   - At the command prompt (~$~), enter the command ~ls~, and you
+     should see all a list of the files in the directory ~org-mode~.
 
-    - Compile the file by typing the following command at the prompt:
-      #+begin_example
-      gcc -o hello first.c
-      #+end_example
+   - Compile the file by typing the following command at the prompt:
+     #+begin_example
+     gcc -o hello first.c
+     #+end_example
 
-    - Enter ~ls~ again, and you should see a new file, ~hello.exe~
+   - Enter ~ls~ again, and you should see a new file, ~hello.exe~
 
-    - Run the file by entering ~hello.exe~ at the prompt
+   - Run the file by entering ~hello.exe~ at the prompt
 
-    - You should see the same output as before, ~hello world~.
+   - You should see the same output as before, ~hello world~.
 
-*** Submit your assignment         
+** Submit your assignment         
 
-    - In the shell, enter the following commands at the prompt to
-      rename your files (replace [YourName] by your actual name
-      without spaces):
+   - In the shell, enter the following commands at the prompt to
+     rename your files (replace [YourName] by your actual name
+     without spaces):
 
-    #+begin_example
-    cp first.c [YourName].c
-    cp first.org [YourName].org
-    #+end_example      
+   #+begin_example
+   cp first.c [YourName].c
+   cp first.org [YourName].org
+   #+end_example      
 
-    - Check with ~ls~ that all files are there
+   - Check with ~ls~ that all files are there
       
-    - Upload the files ~[YourName].org~ and ~[YourName].c~ to [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][this
-      GitHub repo]]: ~/birkenkrahe/cc100/assignments/org-mode~
+   - Upload the files ~[YourName].org~ and ~[YourName].c~ to [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][this
+     GitHub repo]]: ~/birkenkrahe/cc100/assignments/org-mode~
 
-   #+caption: sample solution "first.c"
-   #+attr_html: :width 700px
-   [[./img/eshell.png]]
+  #+caption: sample solution "first.c"
+  #+attr_html: :width 700px
+  [[./img/eshell.png]]
     
 ** Glossary
 
