@@ -235,7 +235,9 @@
   * Fixed the ~.emacs~ problem - this file must be located in the
     directory that you find in Emacs with ~~/~. (See [[https://lyon.schoology.com/assignment/5598737597/info][instruction]].)
 
-  * Started the Org-mode exercise.
+  * Started the [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][Org-mode exercise]]. Will finish it on Friday. Then you
+    can run C code inside Emacs as an Integrated Development
+    Environment (IDE).
   
 * References
 
