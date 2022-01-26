@@ -3,97 +3,97 @@
 #+SUBTITLE: For CSC100 / Introduction to Programming with C/C++
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Creating and running code inside an Org-mode file
+* Creating and running C inside an Org-mode file
 
-  This file contains the first ~Org-mode~ assignment and a *glossary*
-  of terms. The main challenge is not the programming language but
-  managing the complexity of writing a "literate" program ([[KN92][Knuth,
-  1992]]), which includes layout, documentation, source code and result
-  elements. Note that the sample solution also lists relevant
+  This file contains the first ~Org-mode~ *class assignment* and a
+  *glossary* of terms. The main challenge is not the programming
+  language but managing the complexity of writing a "literate" program
+  ([[KN92][Knuth, 1992]]), which includes layout, documentation, source code and
+  result elements. Note that the sample solution also lists relevant
   references at the end[fn:1].
 
 ** Create a working directory
 
-   - Open Emacs and go to the directory "~~/~" (with ~C-x C-f~)
+   - Open Emacs and go to your ~$HOME~ directory (with ~C-x C-f~)
    - In the ~Dired~ buffer, type ~+~, type the name of the new
-     directory ~org-mode~ after the ~/ and press RET.
+     directory ~org-mode~ after the ~/ and press ENTER (aka RET).
    - Go to the new directory (with ~C-x C-f~)
    - This is now your ~default-directory~, which you can find out by
      typing ~C-h v default-directory~
 
-*** Create Org-mode file
+** Create an Org-mode file
 
-    Create an Org-mode file named ~first.org~ with ~C-x C-f~ in your
-    default-directory ith the following characteristics:
+   Create an Org-mode file named ~first.org~ with ~C-x C-f~ in your
+   ~default-directory~ with the following characteristics:
 
-    - Two lines with meta information:
+   - Two lines with meta information:
 
-    #+begin_example
-    #+TITLE: First Org-file
-    #+AUTHOR: [yourname]
-    #+end_example
+   #+begin_example
+   #+TITLE: First Org-file
+   #+AUTHOR: [yourname]
+   #+end_example
       
-    - A *headline*: ~* My first Org-mode file~.
-    - A paragraph of *text* that explains what the following code
-      block does. Here is an example text that you may copy:
+   - A paragraph of *text* that explains what the following code
+     block does, starting with a headline. Here is an example text
+     that you may copy:
 
-    #+begin_example
-    * My first Org-mode file
+   #+begin_example
+   * My first Org-mode file
 
-    This Org-mode file prints ~hello world~ and creates a source file
-    ~first.c~ that can be compiled and executed on the command line.
-    #+end_example
-
-    (To align text in the buffer, type ~C-M-\~ and ~M-q~.)
-
-    - A C source *code block*, which looks like this:
-
-      #+begin_example
-      #+name: [name]
-      #+begin_src [header]
-        [statements]
-      #+end_src
-      #+end_example
-
-      - Replace ~[name]~ by ~hello_world_program~.
-      - Replace the code block ~[header]~ by the following
-        *arguments* (all on the same line, separated by 1 space):
-
-        #+begin_example
-	C
-	:main yes
-        :includes stdio.h
-        :tangle first.c
-        :exports both
-        :comments both
-        :results raw
+   This Org-mode file prints ~hello world~ and creates a source file
+   ~first.c~ that can be compiled and executed on the command line.
    #+end_example
 
-      - In the body of the code block, replace the ~[statements]~ by
-        the following two lines - a comment and a print command:
+   (To align text in the buffer, type ~C-M-\~ and ~M-q~.)
 
-        #+begin_example
-          // print a string
-          puts("hello world");
-        #+end_example
+   - A C source *code block*, which looks like this:
 
-*** Run Org-mode code block
+     #+begin_example
+       #+name: [name]
+       #+begin_src [header]  
+         [statements]  
+       #+end_src
+     #+end_example
 
-    - To run the code block, move the cursor anywhere in the block and
-      enter ~C-c C-c~[fn:2]
+     - Replace ~[name]~ by ~hello_world_program~.
+     - Replace the code block ~[header]~ by the following
+       *arguments* (all on the same line, separated by 1 space):
+
+       #+begin_example
+       C
+       :main yes
+       :includes stdio.h
+       :tangle first.c
+       :exports both
+       :comments both
+       :results raw
+  #+end_example
+
+     - In the body of the code block, replace the ~[statements]~ by
+       the following two lines - a comment and a print command:
+
+       #+begin_example
+         // print a string
+         puts("hello world");
+       #+end_example
+
+** Run Org-mode code block
+
+   - To run the code block, move the cursor anywhere in the block and
+     enter ~C-c C-c~[fn:2]
       
-    - You should now see this output appear below the code block:
+   - You should now see this output appear below the code block:
 
-            #+begin_example
-      #+RESULTS: hello_world_program
-      hello world
-      #+end_example
+           #+begin_example
+     #+RESULTS: hello_world_program
+     hello world
+     #+end_example
 
-    - Save the file with ~C-x C-s~.
+   - Save the file with ~C-x C-s~.
 
-   #+caption: sample solution "first.org"
-   #+attr_html: :width 700px
-   [[./img/firstorg.png]]
+  #+caption: sample solution "first.org"
+  #+attr_html: :width 700px
+  [[./img/firstorg.png]]
     
 ** Create C source code file
 
@@ -183,7 +183,7 @@
    <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
    stanford.edu]].
 
-   <<Org>> N.a. (n.d.). The ~Org~ Manual: 16 Working with Source Code
+   <<Org>> N.a. (n.d.). The Org Manual: 16 Working with Source Code
    [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
 
 * Footnotes

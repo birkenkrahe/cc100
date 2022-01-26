@@ -238,7 +238,20 @@
   * Started the [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][Org-mode exercise]]. Will finish it on Friday. Then you
     can run C code inside Emacs as an Integrated Development
     Environment (IDE).
-  
+
+* w3s7 (01/26/22)
+
+  * Explanation of the Org-mode C code block header arguments:
+    
+    | HEADER ARGUMENT     | MEANING                                                |
+    |---------------------+--------------------------------------------------------|
+    | ~:main yes~         | wrap ~puts~ statement in ~int main(void) { }~ function |
+    | ~:includes stdio.h~ | include standard input/output header file              |
+    | ~:tangle first.c~   | export source code as C file ~first.c~  ("tangle")     |
+    | ~:exports both~     | both result and source code will be exported           |
+    | ~:comments both~    | link source code and org files, add comments to source |
+    | ~:results raw~      | insert output directly in org format into org file     |
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
