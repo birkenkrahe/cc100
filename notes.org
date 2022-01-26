@@ -233,7 +233,9 @@
 * w3s6 (01/26/22)
 
   * Fixed the ~.emacs~ problem - this file must be located in the
-    directory that you find in Emacs with ~~/~. (See instruction.)
+    directory that you find in Emacs with ~~/~. (See [[https://lyon.schoology.com/assignment/5598737597/info][instruction]].)
+
+  * Started the Org-mode exercise.
   
 * References
 
