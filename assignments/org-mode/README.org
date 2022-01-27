@@ -32,7 +32,7 @@
    #+TITLE: First Org-file
    #+AUTHOR: [yourname]
    #+end_example
-      
+
    - A paragraph of *text* that explains what the following code
      block does, starting with a headline. Here is an example text
      that you may copy:
@@ -50,8 +50,8 @@
 
      #+begin_example
        #+name: [name]
-       #+begin_src [header]  
-         [statements]  
+       #+begin_src [header]
+         [statements]
        #+end_src
      #+end_example
 
@@ -81,20 +81,20 @@
 
    - To run the code block, move the cursor anywhere in the block and
      enter ~C-c C-c~[fn:2]
-      
+
    - You should now see this output appear below the code block:
 
-           #+begin_example
-     #+RESULTS: hello_world_program
-     hello world
-     #+end_example
+     #+begin_example
+#+RESULTS: hello_world_program
+hello world
+#+end_example
 
    - Save the file with ~C-x C-s~.
 
-  #+caption: sample solution "first.org"
-  #+attr_html: :width 700px
-  [[./img/firstorg.png]]
-    
+   #+caption: sample solution "first.org"
+   #+attr_html: :width 700px
+   [[./img/firstorg.png]]
+
 ** Create C source code file
 
    - Move the cursor back into the code block and type ~C-c C-v t~
@@ -109,10 +109,10 @@
      refresh the buffer. You should now see the files ~first.c~ and
      ~first.org~.
 
-  #+caption: sample solution "first.c"
-  #+attr_html: :width 700px
-  [[./img/firstc.png]]
-      
+   #+caption: sample solution "first.c"
+   #+attr_html: :width 700px
+   [[./img/firstc.png]]
+
 ** Run C source file in the shell
 
    - Inside Emacs, open a shell with ~C-x eshell RET~
@@ -131,7 +131,14 @@
 
    - You should see the same output as before, ~hello world~.
 
-** Submit your assignment         
+** Don't forget the references!
+
+   - Add a headline ~References~ at the end of the file
+
+   - Add references for the software packages that you used to
+     complete the assignment.
+
+** Submit your assignment
 
    - In the shell, enter the following commands at the prompt to
      rename your files (replace [YourName] by your actual name
@@ -140,17 +147,17 @@
    #+begin_example
    cp first.c [YourName].c
    cp first.org [YourName].org
-   #+end_example      
+   #+end_example
 
    - Check with ~ls~ that all files are there
-      
+
    - Upload the files ~[YourName].org~ and ~[YourName].c~ to [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][this
      GitHub repo]]: ~/birkenkrahe/cc100/assignments/org-mode~
 
-  #+caption: sample solution "first.c"
-  #+attr_html: :width 700px
-  [[./img/eshell.png]]
-    
+   #+caption: sample solution "first.c"
+   #+attr_html: :width 700px
+   [[./img/eshell.png]]
+
 ** Glossary
 
    Your org files and notebooks do not always have to have glossaries,
@@ -171,20 +178,13 @@
    | GitHub repo                | Cloud storage platform                           |
    | Uploading                  | Sending so that file exists locally and remotely |
 
-** References
+* References
 
-   <<gcc>> ~gcc~, the GNU Compiler Collection. [[https://gcc.gnu.org][URL: gcc.gnu.org.]]
+  /This reference section is missing some references - please find them
+  yourself/
 
-   <<github>> ~GitHub~: software hosting platform. [[https://github.com][URL: github.com]].
-
-   <<KR78>> Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~ Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
-   Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
-
-   <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
-   stanford.edu]].
-
-   <<Org>> N.a. (n.d.). The Org Manual: 16 Working with Source Code
-   [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
+  <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
+  stanford.edu]].
 
 * Footnotes
 
