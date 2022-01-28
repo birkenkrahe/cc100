@@ -12,6 +12,13 @@
   result elements. Note that the sample solution also lists relevant
   references at the end[fn:1].
 
+** Challenge: use terminal emacs (no mouse)
+
+   Open Emacs in a terminal (from your ~$HOME~ directory):
+   #+begin_example
+    > emacs -nw -q -l .emacs
+   #+end_example
+
 ** Create a working directory
 
    - Open Emacs and go to your ~$HOME~ directory (with ~C-x C-f~)
