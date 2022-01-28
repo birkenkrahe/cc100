@@ -4,7 +4,8 @@
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * Creating and running C inside an Org-mode file
-
+** Purpose
+   
   This file contains the first ~Org-mode~ *class assignment* and a
   *glossary* of terms. The main challenge is not the programming
   language but managing the complexity of writing a "literate" program
@@ -19,6 +20,14 @@
     > emacs -nw -q -l .emacs
    #+end_example
 
+   If your Emacs app is not found by Windows, you need to put the
+   entire path to the app on the command line, surround it with
+   apostrophs, and add the options afterwards:
+
+   #+begin_example
+    > "c:/Program Files/Emacs/x86_64/bin/emacs.exe" -nw -q -l .emacs
+   #+end_example   
+   
 ** Create a working directory
 
    - Open Emacs and go to your ~$HOME~ directory (with ~C-x C-f~)
