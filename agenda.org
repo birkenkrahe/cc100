@@ -235,7 +235,7 @@
    |------------+-----------------------------------------------------|
    | Practice   | Set ~.emacs~ init file in your home directory       |
    |------------+-----------------------------------------------------|
-   | Demo       | Creating Emacs Org-mode file with C code and run it |
+   | Demo       | Creating Emacs Org-mode with C code and run it      |
    |------------+-----------------------------------------------------|
    | Assignment | Create Emacs Org-mode file                          |
    |------------+-----------------------------------------------------|
