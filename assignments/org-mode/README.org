@@ -168,7 +168,7 @@ hello world
    - Check with ~ls~ that all files are there
 
    - Upload the files ~[YourName].org~ and ~[YourName].c~ as a ZIP
-     file to Schoology[fn:3].
+     file [[https://lyon.schoology.com/assignment/5606518666/info][to Schoology]][fn:3].
 
    #+caption: sample solution "first.c"
    #+attr_html: :width 700px
