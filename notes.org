@@ -261,6 +261,15 @@
     #+attr_html: :width 400px
     [[./img/issue1.png]]
 
+  * Feel free to bring your own laptop to the sessions. If you want me
+    to check installation because something did not work, come a
+    little earlier or stay a little later.
+
+  * This concludes our "Emacs week". To get more practice in GNU
+    Emacs, complete the onboard tutorial (~C-h t~).
+
+  * Solutions to the Org-mode assignment are posted on GitHub.
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
