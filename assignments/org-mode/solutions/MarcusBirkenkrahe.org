@@ -1,0 +1,32 @@
+#+TITLE: First Org-file
+#+AUTHOR: Marcus Birkenkrahe
+#+OPTIONS: toc:nil
+* My first Org-mode file
+
+  This code block This Org-mode file prints ~hello world~ and creates
+  a source file ~first.c~ that can be compiled and executed on the
+  command line.
+
+  #+name: hello_world_program
+  #+begin_src C :main yes :includes stdio.h :tangle first.c :exports both :comments both :results raw
+    // print a string
+    puts("hello world");
+  #+end_src
+
+  #+RESULTS: hello_world_program
+  hello world
+
+* References
+
+  <<gcc>> ~gcc~, the GNU Compiler Collection. [[https://gcc.gnu.org][URL: gcc.gnu.org.]]
+
+  <<github>> ~GitHub~: software hosting platform. [[https://github.com][URL: github.com]].
+
+  <<KR78>> Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~ Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
+  Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
+
+  <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
+  stanford.edu]].
+
+  <<Org>> N.a. (n.d.). The Org Manual: 16 Working with Source Code
+  [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL: orgmode.org]].
