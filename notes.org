@@ -141,7 +141,7 @@
     computers). To be able to understand, and fix COBOL programs has
     become a rare skill since the language is rarely taught. [[https://www.mainframestechhelp.com/tutorials/cobol/][Here is a
     free tutorial]].
-  
+
 * w2s3 (01/19/22)
 
 ** Quiz feedback discussion
@@ -169,7 +169,7 @@
 
    * This class will be offered in the Summer I program (June
      2022). Same content and format, and likely better than this first
-     version (because I'll have learnt how to do it better). 
+     version (because I'll have learnt how to do it better).
 
    * My challenge: why should a liberal arts major (e.g. political
      science) learn to program, and especially in C?
@@ -214,13 +214,13 @@
     source code) software program is massive ([[https://gcc.gnu.org/onlinedocs/gcc.pdf][PDF]] - [[stallman][Stallman 2022]]),
     though there are also shorter introductions, if you're interested,
     [[https://tfetimes.com/wp-content/uploads/2015/09/An_Introduction_to_GCC-Brian_Gough.pdf][like this one]] ([[gough][Gough, 2014]]).
-    
+
 * w3s5 (01/24/22)
-   
-    What you learnt using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
-    - Open, shut or suspend Emacs
-    - Open the Emacs tutorial
-    - Read a file into Emacs
+
+  What you learnt using the instructions from [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][tutor.org]]:
+  - Open, shut or suspend Emacs
+  - Open the Emacs tutorial
+  - Read a file into Emacs
 
     These are the skills you need to complete the [[https://lyon.schoology.com/assignment/5598737597][assignment]] (for
     extra credit until Wednesday 11 AM - for all others we'll do this
@@ -239,10 +239,10 @@
     can run C code inside Emacs as an Integrated Development
     Environment (IDE).
 
-* w3s7 (01/26/22)
+* w3s7 (01/28/22)
 
   * Explanation of the Org-mode C code block header arguments:
-    
+
     | HEADER ARGUMENT     | MEANING                                                |
     |---------------------+--------------------------------------------------------|
     | ~:main yes~         | wrap ~puts~ statement in ~int main(void) { }~ function |
@@ -251,6 +251,15 @@
     | ~:exports both~     | both result and source code will be exported           |
     | ~:comments both~    | link source code and org files, add comments to source |
     | ~:results raw~      | insert output directly in org format into org file     |
+
+  * Something you may have noticed in the GitHub issue submissions of
+    your resulting Org-mode file: the tilde (~) around a word strikes
+    it through on GitHub. On GitHub, `...` is the syntax for code (in
+    HTML, this is <code> ... </code>.
+
+    #+caption: screenshot from a GitHub Org-mode file submission
+    #+attr_html: :width 400px
+    [[./img/issue1.png]]
 
 * References
 
