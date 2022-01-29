@@ -167,8 +167,8 @@ hello world
 
    - Check with ~ls~ that all files are there
 
-   - Upload the files ~[YourName].org~ and ~[YourName].c~ to [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode][this
-     GitHub repo]]: ~/birkenkrahe/cc100/assignments/org-mode~
+   - Upload the files ~[YourName].org~ and ~[YourName].c~ as a ZIP
+     file to Schoology[fn:3].
 
    #+caption: sample solution "first.c"
    #+attr_html: :width 700px
@@ -203,6 +203,9 @@ hello world
   stanford.edu]].
 
 * Footnotes
+
+[fn:3]Schoology can only accept single files, which is why you must
+zip them up.
 
 [fn:2]If you have more than one code block and want to run them all
 from the top, type ~C-c C-v b~. You can find this key sequence with
