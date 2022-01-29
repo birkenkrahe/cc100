@@ -8,7 +8,7 @@
   This is a Frequently Asked Questions (FAQ) file for this course. For
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
 
-* Setting the path to GCC for Emacs
+* Setting the path to GCC for Emacs in ~.emacs~
 
   If you cannot set the path to the GCC compiler using the ~PATH~
   variable (e.g. when you work on a computer in the lab where you
