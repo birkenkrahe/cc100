@@ -261,14 +261,16 @@
     #+attr_html: :width 400px
     [[./img/issue1.png]]
 
-  * Feel free to bring your own laptop to the sessions. If you want me
-    to check installation because something did not work, come a
+  * Feel free to bring your own laptop to future sessions. If you want
+    me to check installation because something did not work, come a
     little earlier or stay a little later.
 
   * This concludes our "Emacs week". To get more practice in GNU
     Emacs, complete the onboard tutorial (~C-h t~).
 
-  * Solutions to the Org-mode assignment are posted on GitHub.
+  * Solutions to the Org-mode assignment are posted [[https://github.com/birkenkrahe/cc100/tree/main/assignments/org-mode/solutions][here on
+    GitHub]]. Note that submissions of programs as Org-mode files should
+    always also be accompanied by references and sources.
 
 * References
 
