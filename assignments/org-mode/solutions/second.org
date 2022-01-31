@@ -1,0 +1,29 @@
+#+TITLE: My second Org-mode file
+#+AUTHOR: Marcus Birkenkrahe
+#+OPTIONS: toc:nil
+#+STARTUP: overview hideblocks
+
+* My second Org-mode file
+
+** My second C code block
+
+   The following code block prints "hello world" using the C function
+   printf.
+
+   #+name: printf
+   #+begin_src C :main yes :includes stdio.h :comments org :tangle second.c
+     printf("hello world\n");
+   #+end_src
+
+   #+RESULTS: printf
+   : hello world
+   
+* References
+
+  * Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~
+    Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
+    Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org.]]
+    
+  

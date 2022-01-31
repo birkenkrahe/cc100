@@ -95,6 +95,11 @@
   If you like, you can add links to the references, too. To to this,
   use the key sequence ~C-c C-l~ (or ~M-x org-insert-link~).
 
+* Sample solution
+
+  You can compare your results with my sample solution in GDrive - to
+  see all of the code, download the file and open it in Emacs.
+  
 * Footnotes
 
 [fn:1]To add all of this automatically, you can use ~M-x
