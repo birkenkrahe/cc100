@@ -53,7 +53,7 @@
 
    * define a ~main~ function with ~:main yes~
    * include standard input/output library with ~:includes stdio.h~
-   * include comments with ~:comments both~ (see doc)
+   * include Org-mode file comments with ~:comments org~
    * allow for source code extraction with ~:tangle second.c~
 
 ** Run code block
@@ -69,19 +69,32 @@
    t~ or ~M-x org-babel-tangle~. You should get a confirmation in the
    echo area that 1 file was tangled.
 
-   Go to the current directory with ~C-x d
+   Check the file in your current directory with ~C-x d~ (you may have
+   to refresh the ~Dired~ buffer with ~g~).
+
+** Compile and run the C program in the Emacs shell
+
+   * Open an Emacs shell with ~M-x eshell~
+
+   * At the prompt, enter ~ls -la~ to make sure that the ~second.c~
+     file is there
+     
+   * At the prompt, compile the C source code file with ~gcc -o hello
+     second.c~
+
+   * At the prompt, run the file with ~hello~ or ~hello.exe~
 
 * Add references
 
-  I bet you thought you were done. You're not, because
-  documentation needs references if you used anybody else's
-  material - in this case
+  I bet you thought you were done. You're not, because documentation
+  needs references if you used anybody else's material - in this case
+  Org-mode and the C programming language. Find suitable references
+  and put them below the headline ~References~. Use bullet points to
+  separate the two entries.
 
-* References
+  If you like, you can add links to the references, too. To to this,
+  use the key sequence ~C-c C-l~ (or ~M-x org-insert-link~).
 
-  Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
-  orgmode.org.]]
-    
 * Footnotes
 
 [fn:1]To add all of this automatically, you can use ~M-x

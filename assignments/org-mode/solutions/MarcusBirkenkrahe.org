@@ -22,8 +22,9 @@
 
   <<github>> ~GitHub~: software hosting platform. [[https://github.com][URL: github.com]].
 
-  <<KR78>> Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~ Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
-  Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
+  <<KR78>> Kernighan, Brian W.; Ritchie, Dennis M. (February
+  1978). The ~C~ Programming Language (1st ed.). Englewood Cliffs, NJ:
+  Prentice Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
 
   <<KN92>> Knuth (1992). Literate Programming. Stanford: CSLI. [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][URL:
   stanford.edu]].
