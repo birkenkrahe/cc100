@@ -9,7 +9,7 @@
   * Open Emacs
 
   * Create a new directory named ~org-mode-2~ in the folder
-    ~c:/Users/[name]~ (replace ~[name]~ by your own user name)
+    ~c:/Users/[name]~ (replace ~[name]~ by your own user name)[fn:3]
 
   * Create an Org-mode file called ~second.org~
 
@@ -101,6 +101,9 @@
   see all of the code, download the file and open it in Emacs[fn:2].
   
 * Footnotes
+
+[fn:3]Note that this may not be your ~$HOME~ folder, in which case you
+have to navigate to it inside Emacs (with ~C-x d~).
 
 [fn:2]GitHub does not show most of the Org-mode meta information. 
 
