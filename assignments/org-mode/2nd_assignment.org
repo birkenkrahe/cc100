@@ -1,8 +1,9 @@
-#+TITLE:2nd Org-Mode Coding Assignment
+#+TITLE:2nd Org-Mode Coding Practice
 #+AUTHOR:2nd Org-Mode Coding Assignment
 #+SUBTITLE:2nd Org-Mode Coding Assignment
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+
 * Create working directory and file
 
   * Open Emacs
@@ -23,7 +24,7 @@
 
   The last two lines mean that no table of contents will be
   produced, and that, when the file is first opened, all headlines
-  and code blocks will be folded.
+  and code blocks will be folded[fn:1].
 
 * Add headlines
 
@@ -34,8 +35,64 @@
 
 * Add code block
 
-  Add a C code block below the 2nd order headline. The code block should:
+  Add a C code block below the 2nd order headline. You can expand the
+  predefined expression ~<s~ with ~TAB~. You can use the following
+  text (or write your own) before the code block:
 
-  * 
-  
-* Add references  
+  #+begin_example
+  The following code block prints "hello world" using the C function printf.
+  #+end_example
+
+  Remember that you can indent with ~C-M-\~ and wrap text with ~M-q~.
+
+  Name the code block and give it the name: ~printf~.
+
+** Code block header
+
+   The code block should have the following header information:
+
+   * define a ~main~ function with ~:main yes~
+   * include standard input/output library with ~:includes stdio.h~
+   * include comments with ~:comments both~ (see doc)
+   * allow for source code extraction with ~:tangle second.c~
+
+** Run code block
+
+   Move your cursor anywhere inside the code block and type ~C-c
+   C-c~. The results should appear in the Org-mode file.
+
+   Save the file.
+
+** Extract C source code
+
+   Move your cursor anywhere inside the code block and type ~C-c C-v
+   t~ or ~M-x org-babel-tangle~. You should get a confirmation in the
+   echo area that 1 file was tangled.
+
+   Go to the current directory with ~C-x d
+
+* Add references
+
+  I bet you thought you were done. You're not, because
+  documentation needs references if you used anybody else's
+  material - in this case
+
+* References
+
+  Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+  orgmode.org.]]
+    
+* Footnotes
+
+[fn:1]To add all of this automatically, you can use ~M-x
+org-skeleton~. You need to define this skeleton in your ~.emacs~ file:
+#+begin_src emacs-lisp
+  (define-skeleton org-skeleton
+    "#+TITLE:" str " \n"
+    "#+AUTHOR:" str " \n"
+    "#+SUBTITLE:" str " \n"
+    "#+STARTUP:overview hideblocks\n"
+    "#+OPTIONS: toc:nil num:nil ^:nil\n")
+#+end_src
+Whenever you make changes to ~.emacs~, you need to either restart
+Emacs or evaluate the changed buffer with ~M-x eval-buffer~.
