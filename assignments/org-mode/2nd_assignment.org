@@ -50,11 +50,10 @@
    The code block should have the following header information:
 
    * define a ~main~ function with ~:main yes~
-   * include standard input/output library with ~:includes stdio.h~
+   * include standard input/output library with ~:includes stdio.h~[fn:4]
    * include Org-mode file comments with ~:comments org~
    * allow for source code extraction with ~:tangle second.c~
-
-   Name the code block and give it the name: ~printf~.
+   * name the code block and give it the name: ~printf~
 
 ** Code block statements
 
@@ -107,6 +106,9 @@
   see all of the code, download the file and open it in Emacs[fn:2].
 
 * Footnotes
+
+[fn:4]A couple of students had compiler error messages here - change
+~#includes~ to ~#include~ and it should work. If not, contact me.
 
 [fn:3]Note that this may not be your ~$HOME~ folder, in which case you
 have to navigate to it inside Emacs (with ~C-x d~).
