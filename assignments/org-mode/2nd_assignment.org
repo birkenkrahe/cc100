@@ -1,12 +1,12 @@
 #+TITLE:2nd Org-Mode Coding Practice
 #+AUTHOR:2nd Org-Mode Coding Assignment
-#+SUBTITLE:2nd Org-Mode Coding Assignment
+#+SUBTITLE:CC100 - Introduction to programming in c/c++
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 
 * Create working directory and file
 
-  * Open Emacs
+  * Open Emacs (you must load [[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][the Lyon ~.emacs~ file]])
 
   * Create a new directory named ~org-mode-2~ in the folder
     ~c:/Users/[name]~ (replace ~[name]~ by your own user name)[fn:3]
@@ -45,8 +45,6 @@
 
   Remember that you can indent with ~C-M-\~ and wrap text with ~M-q~.
 
-  Name the code block and give it the name: ~printf~.
-
 ** Code block header
 
    The code block should have the following header information:
@@ -56,34 +54,42 @@
    * include Org-mode file comments with ~:comments org~
    * allow for source code extraction with ~:tangle second.c~
 
-** Run code block
+   Name the code block and give it the name: ~printf~.
 
-   Move your cursor anywhere inside the code block and type ~C-c
-   C-c~. The results should appear in the Org-mode file.
+** Code block statements
 
-   Save the file.
+   Inside the code block, put one C statement:
 
-** Extract C source code
+   #+begin_example
+   printf("hello world\n");
+   #+end_example
+* Run code block
 
-   Move your cursor anywhere inside the code block and type ~C-c C-v
-   t~ or ~M-x org-babel-tangle~. You should get a confirmation in the
-   echo area that 1 file was tangled.
+  Move your cursor anywhere inside the code block and type ~C-c
+  C-c~. The results should appear in the Org-mode file.
 
-   Check the file in your current directory with ~C-x d~ (you may have
-   to refresh the ~Dired~ buffer with ~g~).
+  Save the file.
 
-** Compile and run the C program in the Emacs shell
+* Extract C source code
 
-   * Open an Emacs shell with ~M-x eshell~
+  Move your cursor anywhere inside the code block and type ~C-c C-v
+  t~ or ~M-x org-babel-tangle~. You should get a confirmation in the
+  echo area that 1 file was tangled.
 
-   * At the prompt, enter ~ls -la~ to make sure that the ~second.c~
-     file is there
-     
-   * At the prompt, compile the C source code file with ~gcc -o hello
-     second.c~
+  Check the file in your current directory with ~C-x d~ (you may have
+  to refresh the ~Dired~ buffer with ~g~).
 
-   * At the prompt, run the file with ~hello~ or ~hello.exe~
+* Compile and run the C program in the Emacs shell
 
+  * Open an Emacs shell with ~M-x eshell~
+
+  * At the prompt, enter ~ls -la~ to make sure that the ~second.c~
+    file is there
+
+  * At the prompt, compile the C source code file with ~gcc -o hello
+    second.c~
+
+  * At the prompt, run the file with ~hello~ or ~hello.exe~
 * Add references
 
   I bet you thought you were done. You're not, because documentation
@@ -99,13 +105,13 @@
 
   You can compare your results with my [[https://drive.google.com/drive/folders/15LkNbby4ybj0mS11uHLeLjADOgucY4Yh?usp=sharing][sample solutions in GDrive]] - to
   see all of the code, download the file and open it in Emacs[fn:2].
-  
+
 * Footnotes
 
 [fn:3]Note that this may not be your ~$HOME~ folder, in which case you
 have to navigate to it inside Emacs (with ~C-x d~).
 
-[fn:2]GitHub does not show most of the Org-mode meta information. 
+[fn:2]GitHub does not show most of the Org-mode meta information.
 
 [fn:1]To add all of this automatically, you can use ~M-x
 org-skeleton~. You need to define this skeleton in your ~.emacs~ file:
