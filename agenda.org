@@ -256,7 +256,7 @@
 
   4) Submit results [[https://github.com/birkenkrahe/cc100/issues][to GitHub as issue]] (ZIP) - by 11.59PM tonight
 
-* NEXT w4s8 (01/31/22)
+* w4s8 (01/31/22)
 
   #+caption: Teaching Emacs on Dagobah
   #+attr_html: :width 400px
@@ -280,6 +280,9 @@
   at 11 AM - a short quiz will be available before.
   #+end_quote
 
+  For those who know or can do all of this already: here's a [[https://github.com/birkenkrahe/cc100/blob/main/assignments/org-mode/2nd_assignment.org][second
+  challenge]] (with solution).
+  
 * Footnotes
 
 [fn:4]There is actually a package ~restart-emacs~ that you can install
