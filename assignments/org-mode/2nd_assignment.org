@@ -97,10 +97,12 @@
 
 * Sample solution
 
-  You can compare your results with my sample solution in GDrive - to
-  see all of the code, download the file and open it in Emacs.
+  You can compare your results with my [[https://drive.google.com/drive/folders/15LkNbby4ybj0mS11uHLeLjADOgucY4Yh?usp=sharing][sample solutions in GDrive]] - to
+  see all of the code, download the file and open it in Emacs[fn:2].
   
 * Footnotes
+
+[fn:2]GitHub does not show most of the Org-mode meta information. 
 
 [fn:1]To add all of this automatically, you can use ~M-x
 org-skeleton~. You need to define this skeleton in your ~.emacs~ file:
