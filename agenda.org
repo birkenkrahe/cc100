@@ -246,7 +246,6 @@
 
    * [ ] Run a C program inside Emacs
 
-
 * w3s7 (01/28/22)
 
   1) We continue where we left it [[w3s6 (01/26/22)][on Wednesday]]
@@ -256,6 +255,18 @@
   3) Finish [[file:assignments/org-mode/README.org::Creating and running C inside an Org-mode file][Org-mode assignment]] ([[https://github.com/birkenkrahe/cc100/blob/main/assignments/org-mode/README.org][GitHub]])
 
   4) Submit results [[https://github.com/birkenkrahe/cc100/issues][to GitHub as issue]] (ZIP) - by 11.59PM tonight
+
+* NEXT w4s8 (01/31/22)
+
+  * Lab session: come to class to sort out your Emacs/GCC needs on
+    your personal PC, or to understand the solution to last week's
+    assignments.
+
+  * See also the [[https://www.youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][tutorial video playlist]] that I created, on YouTube.
+
+  * We will continue with learning C on Wednesday at 11 AM.
+
+  * You'll get quiz 3 before the session.
 
 * Footnotes
 
