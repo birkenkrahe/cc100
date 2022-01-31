@@ -1,0 +1,41 @@
+#+TITLE:2nd Org-Mode Coding Assignment
+#+AUTHOR:2nd Org-Mode Coding Assignment
+#+SUBTITLE:2nd Org-Mode Coding Assignment
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* Create working directory and file
+
+  * Open Emacs
+
+  * Create a new directory named ~org-mode-2~ in the folder
+    ~c:/Users/[name]~ (replace ~[name]~ by your own user name)
+
+  * Create an Org-mode file called ~second.org~
+
+* Header information
+
+  Add the following meta information in the file header:
+
+  | Title   | My second Org-mode file |
+  | Author  | [Your own name]         |
+  | Options | ~toc:nil~               |
+  | Startup | ~overview hideblocks~   |
+
+  The last two lines mean that no table of contents will be
+  produced, and that, when the file is first opened, all headlines
+  and code blocks will be folded.
+
+* Add headlines
+
+  Add three headlines
+  - 1st order headline with the content ~My second Org-mode file~
+  - 2nd order headline with the content ~My second C code block~
+  - 1st order headline with the content ~References~
+
+* Add code block
+
+  Add a C code block below the 2nd order headline. The code block should:
+
+  * 
+  
+* Add references  
