@@ -281,7 +281,7 @@
   #+end_quote
 
   For those who know or can do all of this already: here's a [[https://github.com/birkenkrahe/cc100/blob/main/assignments/org-mode/2nd_assignment.org][second
-  challenge]] (with solution).
+  challenge]] (with solution) to practice while I sort others out.
   
 * Footnotes
 
