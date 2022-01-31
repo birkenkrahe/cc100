@@ -5,7 +5,7 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 
 This is an ungraded assignment for you test your Emacs mettle. If you
-don't succeed, check out the video tutorials, and if you cannot fix it
+don't succeed, check out [[https://youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][the video tutorials]], and if you cannot fix it
 after that, contact me.
 
 * Create working directory and file
