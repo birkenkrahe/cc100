@@ -294,7 +294,7 @@
    look good on GitHub. 
 
    #+name: pun
-   #+begin_src C :main yes :include stdio.h :results raw
+   #+begin_src C :main yes :include stdio.h :results raw :exports both
      printf("To C, or not to C, that is the question.\n");
    #+end_src
 
@@ -302,7 +302,7 @@
    To C, or not to C, that is the question.
 
    #+name: pun1
-   #+begin_src C :results raw
+   #+begin_src C :results raw :exports both
      #include <stdio.h>
 
      int main(void)
@@ -316,7 +316,7 @@
    To C, or not to C, that is the question.
 
    #+name: newline
-   #+begin_src C :main yes :include stdio.h :results raw
+   #+begin_src C :main yes :include stdio.h :results raw :exports both
      printf("To C, or not to C,\nthat is the question.\n");
    #+end_src
 
@@ -332,13 +332,6 @@
      printf(" *       * \n");
      printf("   * * * \n");
    #+end_src
-
-   #+RESULTS: smiley
-   O         O
-	| 
-
-    *       * 
-      * * * 
 
    
 ** Comments
