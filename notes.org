@@ -290,15 +290,15 @@
 
 ** The ~pun.c~ program
 
-   Check the [[glossary]] for details.
+   Check the [[glossary]] for details. The output, by the way, does not
+   look good on GitHub. 
 
    #+name: pun
-   #+begin_src C :main yes :include stdio.h :results raw :exports both
+   #+begin_src C :main yes :include stdio.h :results raw
      printf("To C, or not to C, that is the question.\n");
    #+end_src
 
    #+RESULTS: pun
-   *    *
    To C, or not to C, that is the question.
 
    #+name: pun1
@@ -325,7 +325,7 @@
    that is the question.
 
    #+name: smiley
-   #+begin_src C :main yes :include stdio.h :results raw :exports both
+   #+begin_src C :main yes :include stdio.h :results raw
      printf("O         O\n");
      printf("     | \n");
      printf("\n");
@@ -334,6 +334,11 @@
    #+end_src
 
    #+RESULTS: smiley
+   O         O
+	| 
+
+    *       * 
+      * * * 
    O         O
 	| 
 
