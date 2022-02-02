@@ -260,7 +260,7 @@
   #+caption: Teaching Emacs on Dagobah
   #+attr_html: :width 400px
   [[./img/yoda.jpg]]
-  
+
   #+begin_quote
   We will hold a special lab session tomorrow, Monday 31 January
   11-11.50 AM, to sort out any issues related to Emacs or GCC. Bring
@@ -281,28 +281,36 @@
 
   For those who know or can do all of this already: here's a [[https://github.com/birkenkrahe/cc100/blob/main/assignments/org-mode/2nd_assignment.org][second
   challenge]] (with solution) to practice while I sort others out.
-  
 
-* w4s9 (01/26/22)
+* w4s9 (02/02/22)
 ** Overview
 
-   |------------+-----------------------------|
-   | HOW        | WHAT                        |
-   |------------+-----------------------------|
-   | Lecture    | C Fundamentals (King ch. 2) |
-   |------------+-----------------------------|
-   | Practice   | Write and execute ~pun.c~   |
-   |------------+-----------------------------|
-   | Assignment | Write a checkmarks program  |
-   |------------+-----------------------------|
+   |------------+-----------------------------+---------------------|
+   | HOW        | WHAT                        | WHEN                |
+   |------------+-----------------------------+---------------------|
+   | Lecture    | C Fundamentals (King ch. 2) |                     |
+   |------------+-----------------------------+---------------------|
+   | Practice   | Write and execute ~pun.c~   |                     |
+   |------------+-----------------------------+---------------------|
+   | Assignment | Write a checkmarks program  | Friday, 4 Feb, 11AM |
+   |------------+-----------------------------+---------------------|
 
 ** Objectives
 
    * [ ] Understand the basic structure of a C program
 
-   * [ ] Write a simple, complete C program
+   * [ ] Write a simple, complete C program (~pun.c~)
 
-   * [ ] 
+   * [ ] Submit simple assignment for Friday 4 Feb 11 AM
+
+** Assignment: checkmark program
+
+   Submit program and output as an Org-mode file. It should look like
+   this (code block is folded):
+
+   #+caption: Checkmarks solution (code block folded)
+   #+attr_html: :width 600px
+   [[./img/checkmarks.png]]
 
 * Footnotes
 
