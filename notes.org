@@ -277,12 +277,6 @@
     title of the file. If no such header is present, only the ~README~
     file is displayed (with the file name as title).
 
-* w4s8 (01/31/22)
-
-** TODO Lab session to catch up
-  
-
-   
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
