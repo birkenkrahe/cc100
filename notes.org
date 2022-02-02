@@ -277,6 +277,81 @@
     title of the file. If no such header is present, only the ~README~
     file is displayed (with the file name as title).
 
+* w4s8 (01/31/22)
+
+  Lab session - see whiteboards.
+
+* w4s9 (02/02/22)
+** Compiler flags
+
+   * Compilers come with a lot of options (check ~gcc --help~)
+   * For the assignment, add ~:flags -Wall~ to the header (~gcc~
+     option)[fn:1]
+
+** The ~pun.c~ program
+
+   Check the [[glossary]] for details.
+
+   #+name: pun
+   #+begin_src C :main yes :include stdio.h :results raw :exports both
+     printf("To C, or not to C, that is the question.\n");
+   #+end_src
+
+   #+RESULTS: pun
+   To C, or not to C, that is the question.
+
+   #+name: pun1
+   #+begin_src C :results raw
+     #include <stdio.h>
+
+     int main(void)
+     {
+       printf("To C, or not to C, that is the question.\n");
+       return 0;
+     }
+   #+end_src
+
+   #+RESULTS: pun1
+   To C, or not to C, that is the question.
+
+   #+name: newline
+   #+begin_src C :main yes :include stdio.h :results raw :exports both
+     printf("To C, or not to C,\nthat is the question.\n");
+   #+end_src
+
+   #+RESULTS: newline
+   To C, or not to C,
+   that is the question.
+
+** Comments
+
+   #+name: comments
+   #+begin_src C :main yes :include stdio.h :results raw :exports both
+     /* Comment on a line */
+     // Another type of comment on a line
+     printf("Nothing to see here.\n");  // on a statement line
+
+     /* You can also comment
+        over several lines */
+   #+end_src
+
+** Glossary
+   <<glossary>>
+
+   | TERM               | EXPLANATION                                        |
+   |--------------------+----------------------------------------------------|
+   | C program          | Directive + ~main~ function + statements           |
+   | Directive          | Pre-processor, e.g. ~#include~ + header            |
+   | Header             | Standard library functions, e.g. ~stdio.h~         |
+   | Function           | Named series of statements for execution           |
+   | Library function   | Pre-defined C function, e.g. for input/output      |
+   | Return value       | Returned value computed by a function              |
+   | ~main~ function    | Mandatory wrapper function, called automatically   |
+   | Status code        | Indicates program termination status, e.g. ~0~     |
+   | String literal     | List of characters in quotes, e.g. ~"Hello world"~ |
+   | End symbol         | Statements must have it at the end, in C: ~;~      |
+   | New-line character | ~\n~ moves the display by one line                 |
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
@@ -296,3 +371,12 @@
 
   * <<stallman>> Stallman et al (2022). Using the GNU Compiler
     Collection. [[https://gcc.gnu.org/onlinedocs/gcc.pdf][URL: gcc.gnu.org.]]
+
+* Footnotes
+
+[fn:1]From the GCC reference manual ([[stallman][Stallman et al, 2003]]):
+#+begin_quote
+~-Wall~ enables all the warnings about C constructions that some
+users consider questionable, and that are easy to avoid (or modify
+to prevent the warning).
+#+end_quote

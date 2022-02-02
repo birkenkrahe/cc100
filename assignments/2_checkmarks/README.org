@@ -1,0 +1,8 @@
+#+TITLE:Checkmarks assignment
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE: For CSC100 / Introduction to Programming with C/C++
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* Print a large checkmark on the screen
+
+  
