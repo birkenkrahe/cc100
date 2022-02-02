@@ -5,4 +5,10 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 * Print a large checkmark on the screen
 
-  
+   Submit program and output as an Org-mode file to [[https://lyon.schoology.com/assignment/5624884647][Schoology]]. It
+   should look like this (code block is folded):
+
+   #+caption: Checkmarks solution (code block folded)
+   #+attr_html: :width 600px
+   [[./img/checkmarks.png]]
+
