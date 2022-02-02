@@ -317,12 +317,13 @@
 
    #+name: newline
    #+begin_src C :main yes :include stdio.h :results raw
-     printf("To C, or not to C,\nthat is the question.\n");
+     printf("To C, or not to C,\n that is the question.\n");
    #+end_src
 
    #+RESULTS: newline
    To C, or not to C,
-   that is the question.
+    that is the question.
+
 
    #+name: smiley
    #+begin_src C :main yes :include stdio.h :results raw
