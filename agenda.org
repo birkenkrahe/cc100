@@ -245,7 +245,6 @@
    * [ ] Learn how to create an Org-mode file
 
    * [ ] Run a C program inside Emacs
-
 * w3s7 (01/28/22)
 
   1) We continue where we left it [[w3s6 (01/26/22)][on Wednesday]]
@@ -283,6 +282,28 @@
   For those who know or can do all of this already: here's a [[https://github.com/birkenkrahe/cc100/blob/main/assignments/org-mode/2nd_assignment.org][second
   challenge]] (with solution) to practice while I sort others out.
   
+
+* w4s9 (01/26/22)
+** Overview
+
+   |------------+-----------------------------|
+   | HOW        | WHAT                        |
+   |------------+-----------------------------|
+   | Lecture    | C Fundamentals (King ch. 2) |
+   |------------+-----------------------------|
+   | Practice   | Write and execute ~pun.c~   |
+   |------------+-----------------------------|
+   | Assignment | Write a checkmarks program  |
+   |------------+-----------------------------|
+
+** Objectives
+
+   * [ ] Understand the basic structure of a C program
+
+   * [ ] Write a simple, complete C program
+
+   * [ ] 
+
 * Footnotes
 
 [fn:4]There is actually a package ~restart-emacs~ that you can install
