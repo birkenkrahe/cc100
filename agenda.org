@@ -288,20 +288,20 @@
    |------------+-----------------------------+---------------------|
    | HOW        | WHAT                        | WHEN                |
    |------------+-----------------------------+---------------------|
-   | Lecture    | C Fundamentals (King ch. 2) |                     |
+   | [[https://lyon.schoology.com/link?a=&path=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1D0tYkE_bW-7stmbgN4dJlEFyg1DRUch0%3Fusp%3Dsharing][Lecture]]    | C Fundamentals (King ch. 2) |                     |
    |------------+-----------------------------+---------------------|
-   | Practice   | Write and execute ~pun.c~   |                     |
+   | [[https://github.com/birkenkrahe/cc100/blob/main/notes.org#the-punc-program][Practice]]   | Write and execute ~pun.c~   |                     |
    |------------+-----------------------------+---------------------|
-   | Assignment | Write a checkmarks program  | Friday, 4 Feb, 11AM |
+   | [[https://lyon.schoology.com/assignment/5624884647][Assignment]] | Write a checkmarks program  | Friday, 4 Feb, 11AM |
    |------------+-----------------------------+---------------------|
 
 ** Objectives
 
-   * [ ] Understand the basic structure of a C program
+   * [X] Understand the basic structure of a C program
 
-   * [ ] Write a simple, complete C program (~pun.c~)
+   * [X] Write a simple, complete C program (~pun.c~)
 
-   * [ ] Submit simple assignment for Friday 4 Feb 11 AM
+   * [X] Submit simple assignment for Friday 4 Feb 11 AM
 
 ** Assignment: checkmark program
 
