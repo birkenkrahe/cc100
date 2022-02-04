@@ -264,7 +264,7 @@
 
 ** Schedule and session content
 
-   Changes are possible - an [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][updated schedule with is available]].
+   Changes are possible - an [[https://github.com/birkenkrahe/cc100/blob/main/schedule.org][updated schedule is available on GitHub]].
 
    | NO | WEEK | DATE       | ASSIGNMENT            | TEXTBOOK CHAPTER          | TEST    |
    |----+------+------------+-----------------------+---------------------------+---------|
