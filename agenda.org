@@ -79,7 +79,7 @@
      * Upload assignments (esp. Emacs Org-files)
      * Discussion
      * Wiki for collaboration
-     * Complements Schoology[fn:2]
+     * Complements Schoology
 
 **** What will you have to do?
 
@@ -201,7 +201,7 @@
    | HOW      | WHAT                               | TIME |
    |----------+------------------------------------+------|
    | Lecture  | [[~/Documents/GitHub/cc100/2_installation/README.org::What are you going to learn?][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
-   | Practice | Install C compiler[fn:3] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
+   | Practice | Install C compiler[fn:2] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
    |          | Test C compiler ~gcc --version~    |      |
    |          | GNU Emacs tutorial in class ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])   |      |
    | HOME     | Set PATH environment variable      |      |
@@ -327,10 +327,7 @@
 
 * Footnotes
 
-[fn:4]There is actually a package ~restart-emacs~ that you can install
-from the Emacs package manager.
-
-[fn:3]I managed to install GCC on the lab computers and run it inside
+[fn:2]I managed to install GCC on the lab computers and run it inside
 GNU Emacs. This is something that you should do at home with your own
 computer. I'm going to demonstrate the process in class and I will
 also make a short video showing how to do it (for Windows 10).
