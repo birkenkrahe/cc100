@@ -19,6 +19,11 @@
   The companion file to this file, with the agenda and much of the
   course content, is the [[./agenda.org][agenda.org]] file.
 
+  Please note that all inline references like (King, 2011) are linked
+  within the file but will not render in GitHub (i.e. you'll end up on
+  a 404 page). You find all inline references completed at the end of
+  the file.
+
 * Welcome to the course - w1s1 (01/12/22)
 ** Homework (until Friday, 14 Jan)
 
@@ -176,7 +181,7 @@
 
    * My challenge: why should a liberal arts major (e.g. political
      science) learn to program, and especially in C?
-     - "Meet The Newest Liberal Art: Coding" ([[<<koenig>>][Koenig, 2020]])
+     - "Meet The Newest Liberal Art: Coding" ([[koenig][Koenig, 2020]])
      - Greater employability is a general, traditional reason
      - Coding can be fun. Kids know this.
      - Data and computer literacy is a life and a professional
