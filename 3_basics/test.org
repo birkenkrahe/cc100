@@ -1,0 +1,15 @@
+#+PROPERTY: header-args:C :main ye
+#+PROPERTY: header-args:C :includes stdio.h
+#+begin_src C
+  puts("hello again");
+#+end_src
+
+#+RESULTS:
+: hello again
+
+#+begin_src C
+printf("This is getting boring!\n");
+#+end_src
+
+#+RESULTS:
+: This is getting boring!
