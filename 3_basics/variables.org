@@ -1,0 +1,184 @@
+#+TITLE:Variables and Assignments
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:See also King chapter 2 - for CSC 100 Intro to Programming in C/C++
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both
+* README
+
+  * This file accompanies the lecture on variables and assignments in
+    C. To gain practice, you should type along in your own Org-mode
+    file.
+
+  * To make this easier, use the auto expansion (~<s~), add the
+    following two lines at the top of your file, and activate each
+    line with ~C-c C-c~ (you should get a confirmation in the
+    minibuffer):
+    #+begin_example
+    #+PROPERTY: header-args:C :main yes
+    #+PROPERTY: header-args:C :includes <stdio.h>
+    #+end_example
+
+  * Remember that ~C-M-\~ inside a code block indents syntactically
+
+* Variable types and declarations
+
+  * C computes using placeholders, or *variables*
+
+  * Each variable must have a *type* to specify the data it can hold
+
+  * E.g. ~int~ (integer), ~float~ (floating point), ~char~ (character)
+
+  * Variables must be *declared* before they can be used, see [[type
+    declaration examples]]
+
+  #+name: type declaration examples
+  #+begin_src C :results silent
+    int height;
+    float profit;
+    char name;
+  #+end_src
+
+  * Several variables of the same type can be declared together:
+
+  #+name: type declaration examples 1
+  #+begin_src C :results silent
+    int height, length, width, volume;
+    float profit, loss;
+    char first_name, last_name;
+  #+end_src
+
+  * Variable type declarations must precede statements that use the
+    variables
+  * The block with *declarations* comes before the statements[fn:1]
+
+* Variable assignment
+
+  * A variable gets its value through *assignment*
+
+  * In [[assignment example 1]], the variable ~height~ gets the value
+    ~8~[fn:4]
+    #+name: assignment example 1
+    #+begin_src C
+      height = 8;
+    #+end_src
+
+  * [ ] If you tried to run [[assignment example 1]], you got an
+    error. Can you see why?[fn:2]
+
+  * [ ] However, [[assignment example 2]] throws another error. What's
+    wrong this time?[fn:3]
+    #+name: assignment example 2
+    #+begin_src C
+      height = 8;
+      int height;
+    #+end_src
+
+    #+RESULTS: assignment example 2
+
+  * Code block [[assignment example fixed]] works.
+    #+name: assignment example fixed
+    #+begin_src C
+      int height;
+      height = 8;
+    #+end_src
+
+  * A constant assigned to a ~float~ variable contains a decimal point
+    and the letter ~f~, as shown in [[float point]].
+    #+name: float point
+    #+begin_src C :results silent
+      float profit;
+      profit = 2150.48f;
+    #+end_src
+
+  * Assigning a ~float~ to an ~int~ is possible but not safe
+
+  * Variables with values can be used to compute other values, as
+    shown in [[compute value]].
+    #+name: compute value
+    #+begin_src C :results silent
+      int height, length, width, volume;
+
+      height = 8;
+      length = 12;
+      width =10;
+      volume = height * length * width;
+    #+end_src
+
+    * To print these variables, we need to learn *formatting*
+
+
+
+
+
+
+
+* Formatting printout
+
+  * We use the built-in (via ~stdio.h~) function ~printf~ to print
+
+  * In the code [[int print]], ~%d~ is a placeholder for an ~int~:
+    #+name: int print
+    #+begin_src C
+      int height;  // type declaration
+      height = 8;  // variable assignment
+
+      printf("The height is: %d\n", height); // formatted printout
+    #+end_src
+
+    #+RESULTS: int print
+    : The height is: 8
+
+  * In [[float print]], ~%f~ is used to print a ~float~:
+      #+name: float print
+      #+begin_src C
+	float profit;       // type declaration
+	profit = 2150.48f;  // variable assignment
+
+	printf("The profit is: $%f\n", profit); // formatted printout
+      #+end_src
+
+      #+RESULTS: float print
+      : The profit is: $2150.479980
+
+  * By default, ~%f~ displays the result with six digits. To change
+      it to ~p~ digits, put ~.p~ between ~%~ and ~f~. E.g. to print it
+      with 2 digits, ~p=2~:
+      #+name: p digits
+      #+begin_src C
+	float profit;       // type declaration
+	profit = 2150.48f;  // variable assignment
+
+	printf("The profit is: $%.2f\n", profit); // formatted printout
+      #+end_src
+
+      #+RESULTS: p digits
+      : The profit is: $2150.48
+
+* Glossary
+
+  | TERM             | EXPLANATION |
+  |------------------+-------------|
+  | Variable         |             |
+  | Type             |             |
+  | Type declaration |             |
+  | ~int~            |             |
+  | ~float~          |             |
+  | ~char~           |             |
+  | Formatting       |             |
+  | ~%d~             |             |
+  | ~%f~             |             |
+
+* Footnotes
+
+[fn:4]The value ~8~ is called a ~constant~ because it cannot change
+
+[fn:3]The declaration must precede the use of the variable.
+
+[fn:2]Assignment is variable use. Variable types must be declared
+before they can be used.
+
+[fn:1]In the C99 standard, declarations don't have to come before
+statements.

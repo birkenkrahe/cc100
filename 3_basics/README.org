@@ -93,8 +93,6 @@
 
    #+RESULTS: hello2
 
-   #+RESULTS:
-
 ** Hello World Version 3
 
    The program could also have been written more complicated:
