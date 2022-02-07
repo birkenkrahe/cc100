@@ -33,25 +33,24 @@
 
   * Variables must be *declared* before they can be used, see [[type
     declaration examples]]
-
-  #+name: type declaration examples
-  #+begin_src C :results silent
-    int height;
-    float profit;
-    char name;
-  #+end_src
+    #+name: type declaration examples
+    #+begin_src C :results silent
+      int height;
+      float profit;
+      char name;
+    #+end_src
 
   * Several variables of the same type can be declared together:
-
-  #+name: type declaration examples 1
-  #+begin_src C :results silent
-    int height, length, width, volume;
-    float profit, loss;
-    char first_name, last_name;
-  #+end_src
+    #+name: type declaration examples 1
+    #+begin_src C :results silent
+      int height, length, width, volume;
+      float profit, loss;
+      char first_name, last_name;
+    #+end_src
 
   * Variable type declarations must precede statements that use the
     variables
+
   * The block with *declarations* comes before the statements[fn:1]
 
 * Variable assignment
@@ -65,7 +64,9 @@
       height = 8;
     #+end_src
 
-  * [ ] If you tried to run [[assignment example 1]], you got an
+    #+RESULTS: assignment example 1
+
+  * [X] If you tried to run [[assignment example 1]], you got an
     error. Can you see why?[fn:2]
 
   * [ ] However, [[assignment example 2]] throws another error. What's
@@ -80,7 +81,7 @@
 
   * Code block [[assignment example fixed]] works.
     #+name: assignment example fixed
-    #+begin_src C
+    #+begin_src C :results silent
       int height;
       height = 8;
     #+end_src
@@ -108,7 +109,6 @@
     #+end_src
 
     * To print these variables, we need to learn *formatting*
-
 
 
 
