@@ -325,6 +325,30 @@
    #+attr_html: :width 600px
    [[./img/checkmarks.png]]
 
+* NEXT w5s10 (02/07/22)
+** Overview
+
+   |----------+--------------------------------+----------------------|
+   | HOW      | WHAT                           | WHEN                 |
+   |----------+--------------------------------+----------------------|
+   | Review   | [[file:3_basics/README.org::What are you going to learn?][Structure of a program]]         |                      |
+   |----------+--------------------------------+----------------------|
+   | [[file:3_basics/variables.org][Lecture]]  | C Fundamentals ([[https://lyon.schoology.com/link?a=&path=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1D0tYkE_bW-7stmbgN4dJlEFyg1DRUch0%3Fusp%3Dsharing][King ch. 2]])    |                      |
+   |----------+--------------------------------+----------------------|
+   | Practice | Computing the weight of a box  |                      |
+   |----------+--------------------------------+----------------------|
+   | Test 1   | 10 from Quiz 1-3 + 10 new MPCs | Friday, 11 Feb, 11AM |
+   |----------+--------------------------------+----------------------|
+** Objectives
+
+   * [ ] Understand variable, data types and type declarations
+
+   * [ ] Understand variable assignments and print formats
+
+   * [ ] Write a program with variable declarations and assignments
+
+   * [ ] Understand the framework for the first test
+
 * Footnotes
 
 [fn:2]I managed to install GCC on the lab computers and run it inside
