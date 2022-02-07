@@ -1,0 +1,33 @@
+#+TITLE: C Programming
+#+AUTHOR: Marcus Birkenkrahe
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil num:nil
+* Checkmarks
+
+  The program [[checkmarks]] prints a checkmark consisting of stars on the
+  screen.
+
+  #+name: checkmarks
+  #+begin_src C :main yes :includes <stdio.h> :results output :flags -Wall :exports both :tangle checkmarks.c
+    printf("       *\n");
+    printf("      *\n");
+    printf("     *\n");
+    printf("*   *\n");
+    printf(" * *\n");
+    printf("  *\n");
+  #+end_src
+
+* My first Org-mode file
+
+  This code block This Org-mode file prints ~hello world~ and creates
+  a source file ~first.c~ that can be compiled and executed on the
+  command line.
+
+  #+name: hello_world_program
+  #+begin_src C :main yes :include stdio.h :tangle first.c :exports both :comments both :results raw
+    // print a string
+    puts("hello world");
+  #+end_src
+
+  #+RESULTS: hello_world_program
+  hello world
