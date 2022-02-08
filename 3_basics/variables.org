@@ -114,7 +114,6 @@
 
 
 
-
 * Formatting printout
 
   * We use the built-in (via ~stdio.h~) function ~printf~ to print
@@ -157,19 +156,21 @@
       #+RESULTS: p digits
       : The profit is: $2150.48
 
+* TODO Putting it all together (C program)
+  DEADLINE: <2022-02-09 Wed>
 * Glossary
 
-  | TERM             | EXPLANATION |
-  |------------------+-------------|
-  | Variable         |             |
-  | Type             |             |
-  | Type declaration |             |
-  | ~int~            |             |
-  | ~float~          |             |
-  | ~char~           |             |
-  | Formatting       |             |
-  | ~%d~             |             |
-  | ~%f~             |             |
+  | TERM             | EXPLANATION                                                          |
+  |------------------+----------------------------------------------------------------------|
+  | Variable         | Placeholder for a value, e.g. a number                               |
+  | Type             | Tells the computer to reserve memory, e.g. ~int~ for integer numbers |
+  | Type declaration | Combination of type and variable name - e.g. ~int height;~           |
+  | ~int~            | C type for integer numbers, e.g. 2                                   |
+  | ~float~          | C type for floating point numbers, e.g. 3.14                         |
+  | ~char~           | C type for characters, like "joey"                                   |
+  | Formatting       | Tells the computer how to print, e.g. ~%d~ for ~int~ types           |
+  | ~%d~             | Format for integers                                                  |
+  | ~%f~ and ~%.pf~  | Format for floating point numbers (with ~p~ digits after the point)  |
 
 * Footnotes
 

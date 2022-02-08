@@ -379,6 +379,23 @@
    | End symbol         | Statements must have it at the end, in C: ~;~      |
    | New-line character | ~\n~ moves the display by one line                 |
 
+* Variables and assignments - w5s10 (02/07/22)
+
+  * Difference between the output functions ~puts~ ("put string") and
+    ~printf~ ("print file"): ~puts~ automatically adds a newline
+    character (~\n~) at the end of the string - for ~printf~, you have
+    to add the character, if you want to move to the next line.
+
+  * Purpose of the Org-mode header arguments? Emacs automatically
+    inserts
+    - ~main~ function (~:main yes~)
+    - Standard library files as directives (~#inlude <stdio.h>~)
+    - Compiler flags (~-Wall~ for all warnings)
+
+  * Why do types have to be declared? So that the computer can manage
+    its memory better - volatile memory (RAM) is expensive and small
+    (compared to non-volatile memory, like a hard disk)
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
