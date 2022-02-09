@@ -1,0 +1,23 @@
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+
+#+begin_src C :results raw
+  int height;
+  height = 8;
+  printf("The height is: %d\n", height); // print an int
+
+  float weight;
+  weight = 8.0f;
+
+  printf("The weight is: %.2f\n", weight);  // print a float
+#+end_src
+
+#+RESULTS:
+The height is: 8
+The weight is: 8.00
+The height is: 8
+The weight is: 8.000000
+
+#+begin_src C
+   int int;  // int is a protected keyword
+#+end_src
