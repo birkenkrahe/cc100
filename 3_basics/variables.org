@@ -1,7 +1,7 @@
 #+TITLE:Variables and Assignments
-#+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:See also King chapter 2 - for CSC 100 Intro to Programming in C/C++
-#+STARTUP:overview hideblocks
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: See also King chapter 2 - for CSC 100 Intro to Programming in C/C++
+#+STARTUP: overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 #+PROPERTY: header-args:C :main yes
 #+PROPERTY: header-args:C :includes <stdio.h>
@@ -69,7 +69,7 @@
   * [X] If you tried to run [[assignment example 1]], you got an
     error. Can you see why?[fn:2]
 
-  * [ ] However, [[assignment example 2]] throws another error. What's
+  * [X] However, [[assignment example 2]] throws another error. What's
     wrong this time?[fn:3]
     #+name: assignment example 2
     #+begin_src C
@@ -94,7 +94,8 @@
       profit = 2150.48f;
     #+end_src
 
-  * Assigning a ~float~ to an ~int~ is possible but not safe
+  * Assigning a ~float~ to an ~int~ and vice versa is possible but not
+    safe.
 
   * Variables with values can be used to compute other values, as
     shown in [[compute value]].
@@ -108,11 +109,7 @@
       volume = height * length * width;
     #+end_src
 
-    * To print these variables, we need to learn *formatting*
-
-
-
-
+  * To print these variables, we need to learn *formatting*
 
 * Formatting printout
 
@@ -127,37 +124,116 @@
       printf("The height is: %d\n", height); // formatted printout
     #+end_src
 
-    #+RESULTS: int print
-    : The height is: 8
-
   * In [[float print]], ~%f~ is used to print a ~float~:
-      #+name: float print
-      #+begin_src C
-	float profit;       // type declaration
-	profit = 2150.48f;  // variable assignment
+    #+name: float print
+    #+begin_src C
+      float profit;       // type declaration
+      profit = 2150.48f;  // variable assignment
 
-	printf("The profit is: $%f\n", profit); // formatted printout
-      #+end_src
-
-      #+RESULTS: float print
-      : The profit is: $2150.479980
+      printf("The profit is: $%f\n", profit); // formatted printout
+    #+end_src
 
   * By default, ~%f~ displays the result with six digits. To change
-      it to ~p~ digits, put ~.p~ between ~%~ and ~f~. E.g. to print it
-      with 2 digits, ~p=2~:
-      #+name: p digits
-      #+begin_src C
-	float profit;       // type declaration
-	profit = 2150.48f;  // variable assignment
+    it to ~p~ digits, put ~.p~ between ~%~ and ~f~. E.g. to print it
+    with 2 digits, ~p=2~:
+    #+name: p digits
+    #+begin_src C
+      float profit;       // type declaration
+      profit = 2150.48f;  // variable assignment
 
-	printf("The profit is: $%.2f\n", profit); // formatted printout
-      #+end_src
+      printf("The profit is: $%.2f\n", profit); // formatted printout
+    #+end_src
 
-      #+RESULTS: p digits
-      : The profit is: $2150.48
+  * What happens when you get the formatting wrong?  in [[format_test]],
+    we print a ~float~ first correctly, then with the wrong format
+    identifier, and then the other way around.
+    #+name: format_test
+    #+begin_src C
+      float foo;  // defined float
+      foo = 3.14f;   // assigned float
+      printf("%.2f\n",foo);  // formatted float as float
+      printf("%d\n",foo);  // formatted float as int
 
-* TODO Putting it all together (C program)
-  DEADLINE: <2022-02-09 Wed>
+      int bar;  // defined int
+      bar = 314;   // assigned int
+      printf("%d\n",bar);  // formatted int as int
+      printf("%.2f\n",bar);  // formatted int as float
+    #+end_src
+
+* Putting it all together (C program)
+
+  * Shipping fees are based on volume instead of weight. For the
+    conversion, the volume is divided by 166. If the result exceeds
+    the actual weight, the shipping fee is based on the "dimensional
+    weight"[fn:5].
+
+  * We write a program to compute the dimensional ~weight~ of a box of
+    given ~volume~ - we use ~/~ for division. Let's say the box is
+    12'' x 10'' x 8 ''. What does [[box_error]] need to run?
+    #+name: box_error
+    #+begin_src C
+      volume = 12 * 10 * 8
+        weight = volume / 166
+    #+end_src
+
+  * Fixed the errors in [[box]]. The compiler no longer complains, but
+    we don't see anything. How can we print the result?
+    #+name: box
+    #+begin_src C
+      int weight, volume;
+      volume = 12 * 10 * 8;
+      weight = volume / 166;
+    #+end_src
+
+  * The code in [[box_print]] prints the result of the computation.
+    #+name: box_print
+    #+begin_src C
+      int weight, volume;     // declare variable types
+      volume = 12 * 10 * 8;   // compute value
+      weight = volume / 166;  // assign and compute values
+      printf("The dimensional weight is %d\n",weight); // print result
+    #+end_src
+
+  * This is not what we need. When dividing one integer by another, C
+    "truncates" the answer - the result is rounded down, but the
+    shipping company wants us to round up. This can be achieved by
+    adding 165 to the volume before dividing by 166[fn:6] as shown in
+    [[dimweight]].
+    #+name: dweight
+    #+begin_src C
+      int weight, volume;     // declare variable types
+      volume = 12 * 10 * 8;   // compute value
+      weight = (volume + 165) / 166;  // assign and compute values
+      printf("The dimensional weight is %d\n",weight); // print result
+    #+end_src
+
+  * Now for the final program [[dweight_c]]. This time, we allow for
+    tangling the program as ~dweight.c~.
+    #+name: dweight_c
+    #+begin_src C :tangle dweight.c :results raw
+      #include <stdio.h>
+
+      int main(void)
+      {
+        // declare variable types
+        int height, length, width, volume, weight;
+
+        // variable assignments
+        height = 8;
+        length = 12;
+        width = 10;
+        volume = height * length * width;
+        weight = (volume + 165) / 166;
+
+        // print results
+        printf("Dimensions: %dx%dx%d\n", length, width, height);
+        printf("Volume (cubic inches): %d\n", volume);
+        printf("Dimensional weight (pounds): %d\n", weight);
+
+        return 0;
+      }
+    #+end_src
+
 * Glossary
 
   | TERM             | EXPLANATION                                                          |
@@ -172,7 +248,29 @@
   | ~%d~             | Format for integers                                                  |
   | ~%f~ and ~%.pf~  | Format for floating point numbers (with ~p~ digits after the point)  |
 
+* References
+  * <<unirelo>> N.a. (2020). What is dimensional weight of cargo and
+    why is it important? [blog]. [[https://www.unirelo.com/dimensional-weight/][URL: www.unirelo.com]].
 * Footnotes
+
+[fn:6] 165/166 is 0.9939759, so we've just messed with the actual
+volume.
+
+[fn:5]
+#+begin_quote
+"Cargo space has physical limits based on the volume of the cargo and
+the weight. The reason why both volume & weight are evaluated can be
+better understood if you consider the cost of shipping a large object
+with less weight.
+
+For example, a large box containing styrofoam cups weighs very less,
+i.e., the dimensional (volume) weight of that box will likely be more
+than its actual weight. It is for this reason that most airlines and
+other transport providers evaluate both dimensional weight & actual
+weight, and then use the greater of the two weights to bill you for
+the transportation costs. The greater of the two weights is also
+commonly referred to as ‘chargeable weight’." ([[unirelo][UniRelo, 2020]])
+#+end_quote
 
 [fn:4]The value ~8~ is called a ~constant~ because it cannot change
 
