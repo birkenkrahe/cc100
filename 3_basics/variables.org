@@ -198,7 +198,7 @@
     "truncates" the answer - the result is rounded down, but the
     shipping company wants us to round up. This can be achieved by
     adding 165 to the volume before dividing by 166[fn:6] as shown in
-    [[dimweight]].
+    [[dweight]].
     #+name: dweight
     #+begin_src C
       int weight, volume;     // declare variable types
