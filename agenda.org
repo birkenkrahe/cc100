@@ -325,7 +325,7 @@
    #+attr_html: :width 600px
    [[./img/checkmarks.png]]
 
-* NEXT w5s10 (02/07/22)
+* Variable type declarations and assignments -  w5s10 (02/07/22)
 ** Overview
 
    |----------+--------------------------------+----------------------|
@@ -341,13 +341,36 @@
    |----------+--------------------------------+----------------------|
 ** Objectives
 
-   * [ ] Understand variable, data types and type declarations
+   * [X] Understand the framework for the first test
 
-   * [ ] Understand variable assignments and print formats
+   * [X] Understand variable, data types and type declarations
+
+   * [X] Understand variable assignments
+
+   * [ ] Understand printing formats
 
    * [ ] Write a program with variable declarations and assignments
 
-   * [ ] Understand the framework for the first test
+   * [ ] Understand printing formats
+
+* Formatting printout -  w5s11 (02/09/22)
+** Overview
+
+   |----------+-------------------------------------------+----------------------|
+   | HOW      | WHAT                                      | WHEN                 |
+   |----------+-------------------------------------------+----------------------|
+   | [[file:3_basics/variables.org][Lecture]]  | C Fundamentals ([[https://lyon.schoology.com/link?a=&path=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1D0tYkE_bW-7stmbgN4dJlEFyg1DRUch0%3Fusp%3Dsharing][King ch. 2]])               |                      |
+   |----------+-------------------------------------------+----------------------|
+   | Practice | Interactive notebook: ~printf~ formatting |                      |
+   |----------+-------------------------------------------+----------------------|
+   | Test 1   | 10 from Quiz 1-3 + 10 new MPCs            | Friday, 11 Feb, 11AM |
+   |----------+-------------------------------------------+----------------------|
+** Objectives
+
+
+   * [ ] Understand printing formats
+
+   * [ ] Write a program with variable declarations and assignments
 
 * Footnotes
 
