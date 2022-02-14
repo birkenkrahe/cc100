@@ -583,6 +583,9 @@
     * ~printf("%.3d", x);~
     * ~printf("%3f", x);~
 
+    Feedback: As Victor noticed, ~printf("%.pf", x);~ does not result
+    in an error but in a strangely formatted output (without the
+    number).
 
 * References
 
