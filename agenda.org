@@ -441,7 +441,7 @@
    * Questions:
      - How did you study for this test?
      - If you didn't perform well, what will you change?
-     - What can I do to help?
+     - What can I do to help you help yourself?
 
    * See also: [[https://github.com/birkenkrahe/org/blob/master/diary.org#i-can-teach-it-to-you-but-i-cannot-learn-it-for-you]["I can teach it to you but I cannot learn it for you"]]
 
@@ -452,8 +452,31 @@
 ** Test questions and answers
 
    * We go through all questions together
-   * Everybody has an opportunity to contribute an answer
-   * Write down any questions that you might still have
+   * Everybody can contribute an answer
+   * Write down questions and ask them now!
+   
+** This week (6)
+
+   * Test review
+   * Defining constants
+   * Reading input
+   * Naming identifiers
+   * Program assignment
+
+** Program assignment (until Monday 21-Feb, 11AM)    
+
+   *Compute the volume of a sphere*
+   
+   * Write a program that computes the volume of a sphere with a
+     10-meter radius, using the formula $v=4/3\times\pi r^{3}$.
+   * Write the fraction $4/3$ as ~4.0f/3.0f~. (Try writing it as 4/3
+     and see what happens.)
+   * Remember that C does not have an exponentiation operator, so you
+     need to write $r^{3}$ as ~r*r*r~.
+   * Upload your solution program as a ~.c~ file or as a ~.org~ file
+     to Schoology not later than 11 AM on Monday, February 21st. Make
+     sure that your program actually runs without errors!
+   * Be prepared to present your solution in class.
    
 * Footnotes
 

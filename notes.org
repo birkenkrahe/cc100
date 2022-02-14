@@ -399,8 +399,14 @@
 * Test review - w6s12 (02/14/22)
 
 *** Known quiz questions
-    * Where does C come from
-    * Which of the following are strengths of the C programming language?
+    * WHERE DOES C COME FROM
+
+      UNIX
+    * WHICH OF THE FOLLOWING ARE STRENGTHS OF THE C PROGRAMMING LANGUAGE?
+
+      * Portability - runs on any computer
+      * Speed and efficiency - clever compilers
+      * Standard library - like ~stdio.h~ for input/output
     * WHAT DO YOU NEED TO CREATE AND RUN A C PROGRAM?
       | WHAT                                          | WHY                                                                                                                                    |
       |-----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------|
@@ -409,13 +415,21 @@
       | A compiler + linker (like GCC)                | To compile the source code to object code, and link it to libraries (e.g. stdio.h for input/output) to produce executable machine code |
       | A hosting platform (like GitHub)              | Cloud application - nice to have if you collaborate at a distance, not needed                                                          |
       | A learning management system (like Schoology) | Only if you want to learn and teach, not for programming                                                                               |
-    * C is an Object-oriented programming language
+    * C IS AN OBJECT-ORIENTED PROGRAMMING LANGUAGE
+
+      * NO
+      * C++, C#, Java, R, Python etc. are OOP languages
+      * C has no notion of a class that allows to define subclasses,
+        inheriting functions/methods etc.
     * KNOW YOUR CODE - MATCH THE TERM AND THE DEFINITION!
       | QUESTION     | ANSWER                      | EXAMPLE                                     |
       | Source code  | Human-readable program      | e.g. a program ~hello.c~                    |
       | Machine code | Program ready for execution | after compiling and linking                 |
       | Object code  | Code produced by a compiler | only ~main()~, but unable to produce output |
-    * What is GCC? Tip: We installed GCC on Windows as MinGW.
+    * WHAT IS GCC? TIP: WE INSTALLED GCC ON WINDOWS AS MINGW.
+
+      * A bundle of compilers for many different languages
+      * Includes ~gcc~ that we use on Windows, Linux and MacOS[fn:2]
     * MATCH THE EMACS ORG-MODE HEADER ARGUMENT AND THE MEANING
       - Emacs Org-mode is an application inside Emacs that allows you
         to run C programs without having to explicitly invoke GCC
@@ -479,8 +493,7 @@
       - /* */
       - //
 
-
-*** Which of these are valid type declarations?
+*** WHICH OF THESE ARE VALID TYPE DECLARATIONS?
 
     Tip: once a type is declared, it can be used in a program
     statement to be assigned values.
@@ -497,6 +510,13 @@
 
     TRUE
 
+    Feedback: Computers, and their languages, are very picky. That's
+    why computer languages are called "formal" rather than
+    "natural". Violation of the rules means (usually) instant program
+    failure. The spelling of keywords in C like ~main~ (or ~int~, or
+    ~printf~) or the demand for a semicolon after each statement, are
+    examples.
+    
 *** Which of these terminal commands will compile the file ~hello.c~ and create an executable file named ~hello~
 
     TRUE:
@@ -573,6 +593,16 @@
     Collection. [[https://gcc.gnu.org/onlinedocs/gcc.pdf][URL: gcc.gnu.org.]]
 
 * Footnotes
+
+[fn:2] Suggestion to install GCC under MacOS [[https://codeforces.com/blog/entry/88063][here]] - have not tried
+this yet myself. Perhaps you could, if you have a Mac, and let me know?
+#+begin_quote
+  * First, you need to install HomeBrew from https://brew.sh/
+  * Then, run ~brew install gcc~ in the terminal.
+  * Type ~g++-11~ in the terminal to see if successful.
+  * Type ~sudo ln -s /usr/local/bin/gcc-11 /usr/local/bin/gcc~
+#+end_quote
+ 
 
 [fn:1]From the GCC reference manual ([[stallman][Stallman et al, 2003]]):
 #+begin_quote
