@@ -299,7 +299,7 @@
 ** The ~pun.c~ program
 
    Check the [[glossary]] for details. The output, by the way, does not
-   look good on GitHub. 
+   look good on GitHub.
 
    #+name: pun
    #+begin_src C :main yes :include stdio.h :results raw
@@ -330,7 +330,7 @@
 
    #+RESULTS: newline
    To C, or not to C,
-    that is the question.
+   that is the question.
 
 
    #+name: smiley
@@ -344,12 +344,12 @@
 
    #+RESULTS: smiley
    O         O
-	| 
+   |
 
-    *       * 
-      * * * 
+   *       *
+     * * *
 
-   
+
 ** Comments
 
    #+name: comments
@@ -395,6 +395,116 @@
   * Why do types have to be declared? So that the computer can manage
     its memory better - volatile memory (RAM) is expensive and small
     (compared to non-volatile memory, like a hard disk)
+
+* Test review - w6s12 (02/14/22)
+  
+*** Known quiz questions
+    * Where does C come from
+    * Which of the following are strengths of the C programming language?
+    * What do you need to create and run a C program?
+
+      | WHAT                                          | WHY                                                                                                                                    |
+      |-----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------|
+      | An editor (like Emacs)                        | To write the source code (.c)                                                                                                          |
+      | An operating system (like Windows)            | To run the edior, the compiler, and display (or print) the results                                                                     |
+      | A compiler + linker (like GCC)                | To compile the source code to object code, and link it to libraries (e.g. stdio.h for input/output) to produce executable machine code |
+      | A hosting platform (like GitHub)              | Cloud application - nice to have if you collaborate at a distance, not needed                                                          |
+      | A learning management system (like Schoology) | Only if you want to learn and teach, not for programming                                                                               |
+    * C is an Object-oriented programming language
+    * Know your code - Match the term and the definition!
+
+      | QUESTION     | ANSWER                      | EXAMPLE                                     |
+      | Source code  | Human-readable program      | e.g. a program ~hello.c~                    |
+      | Machine code | Program ready for execution | after compiling and linking                 |
+      | Object code  | Code produced by a compiler | only ~main()~, but unable to produce output |
+
+    * What is GCC? Tip: We installed GCC on Windows as MinGW.
+    * Match the Emacs Org-mode header argument and the meaning
+    * Which of these are NOT valid PATH settings?
+    * The "binary" of a program (like gcc) is machine code that runs
+      on any type of computer.
+    * Which symbols mark Org-mode metadata?
+      - #+
+      - /* */
+      - //
+
+*** Match program element and definition!
+
+    | ~#include <stdio.h>~     | Directive (input/output library)       |
+    | ~int main(void) { ... }~ | Main function (without input argument) |
+    | ~printf("hello\n");~     | Program statement (screen display      |
+
+*** Which of these are valid type declarations?
+
+    Tip: once a type is declared, it can be used in a program
+    statement to be assigned values.
+
+    TRUE:
+    * ~int height;~
+    * ~float profit;~
+
+    FALSE:
+    * ~int profit~
+    * ~height = 8;~
+
+*** The name ~main~ in a C program is critical - it can't be ~MAIN~ or ~start~
+
+    TRUE
+
+*** Which of these terminal commands will compile the file ~hello.c~ and create an executable file named ~hello~
+
+    TRUE:
+    * ~gcc -o hello hello.c~
+
+    FALSE:
+    * ~gcc hello.c~
+    * ~compile hello.c -out hello~
+    * ~gcc -o hello.c hello~
+
+*** How can you tell the compiler to warn you if something's not quite right with your source code?
+
+    TRUE:
+    * gcc -Wall
+
+    FALSE:
+    * gcc --help
+    * gcc --version
+    * gcc --target-help
+
+*** ~:includes~ is for Org-mode, ~#include~ is for the C compiler preprocessor
+
+    TRUE
+
+*** The C function ~puts~ needs a newline character ~\n~ to display the next line
+
+    FALSE
+
+*** If the variable ~height~ is declared an ~int~, what's wrong with the following ~printf~ statement?
+
+    ~printf("My height is %f", height);~
+
+    TRUE:
+    * The format specifier should be ~%d~
+
+    FALSE:
+    * The format specifier should be ~.2f~
+    * There must be a newline character ~\n~ after ~%f~
+    * The statement does not need a semicolon (;) at the end
+
+*** When you print a variable with the wrong format, you get unpredictable numerical results
+
+    TRUE
+
+*** You want to display ~x = 234.5895484~ with 3-digit accuracy after the decimal point. Which formatting specifier is correct?
+
+    TRUE:
+    * ~printf("%.3f", x);~
+
+    FALSE
+    * ~printf("%.pf", x);~
+    * ~printf("%.3d", x);~
+    * ~printf("%3f", x);~
+
 
 * References
 
