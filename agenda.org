@@ -438,16 +438,38 @@
    * What surprised me most was that many of you did not use the
      available time.
 
+   * See also: [[https://github.com/birkenkrahe/org/blob/master/diary.org#i-can-teach-it-to-you-but-i-cannot-learn-it-for-you]["I can teach it to you but I cannot learn it for you"]]
+
    * Questions:
      - How did you study for this test?
      - If you didn't perform well, what will you change?
      - What can I do to help you help yourself?
 
-   * See also: [[https://github.com/birkenkrahe/org/blob/master/diary.org#i-can-teach-it-to-you-but-i-cannot-learn-it-for-you]["I can teach it to you but I cannot learn it for you"]]
+   * CHANGES TO BE APPLIED BY BIRKENKRAHE (FUTURE QUIZ/TESTS):
+     - Fewer choices for the multiple choice
+     - Announce if a question has > 1 answer (and how many)
 
    #+caption: Feynman (via Twitter)
    #+attr_html: :width 500px
    [[./img/feynman.png]]
+
+   * Post-mortem on a couple of questions
+     - comment format (last question)
+     - ~printf~ format
+   #+name: noppeprogram
+   #+begin_src C :main yes :includes stdio.h
+     /*     one line
+      *     multi line
+      */
+     float f = 4.0f;
+     printf("hello %.pf", f);
+     /* one line
+	or multi line
+     */
+   #+end_src
+
+     #+RESULTS: noppeprogram
+     : hello 00000000f
 
 ** Test questions and answers
 
