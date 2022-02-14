@@ -397,12 +397,11 @@
     (compared to non-volatile memory, like a hard disk)
 
 * Test review - w6s12 (02/14/22)
-  
+
 *** Known quiz questions
     * Where does C come from
     * Which of the following are strengths of the C programming language?
-    * What do you need to create and run a C program?
-
+    * WHAT DO YOU NEED TO CREATE AND RUN A C PROGRAM?
       | WHAT                                          | WHY                                                                                                                                    |
       |-----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------|
       | An editor (like Emacs)                        | To write the source code (.c)                                                                                                          |
@@ -411,15 +410,67 @@
       | A hosting platform (like GitHub)              | Cloud application - nice to have if you collaborate at a distance, not needed                                                          |
       | A learning management system (like Schoology) | Only if you want to learn and teach, not for programming                                                                               |
     * C is an Object-oriented programming language
-    * Know your code - Match the term and the definition!
-
+    * KNOW YOUR CODE - MATCH THE TERM AND THE DEFINITION!
       | QUESTION     | ANSWER                      | EXAMPLE                                     |
       | Source code  | Human-readable program      | e.g. a program ~hello.c~                    |
       | Machine code | Program ready for execution | after compiling and linking                 |
       | Object code  | Code produced by a compiler | only ~main()~, but unable to produce output |
-
     * What is GCC? Tip: We installed GCC on Windows as MinGW.
-    * Match the Emacs Org-mode header argument and the meaning
+    * MATCH THE EMACS ORG-MODE HEADER ARGUMENT AND THE MEANING
+      - Emacs Org-mode is an application inside Emacs that allows you
+        to run C programs without having to explicitly invoke GCC
+      - To make the magic happen, Org-mode parses the header arguments
+        and substitutes them in the code that GCC gets from Emacs
+      - When you tangle a file, you can see the result of this
+        substitution, and the tangled file can be compiled and run on
+        the command line
+      | HEADER-ARGS:C       | MEANING                                                |
+      |---------------------+--------------------------------------------------------|
+      | ~:main yes~         | wrap ~puts~ statement in ~int main(void) { }~ function |
+      | ~:includes stdio.h~ | include standard input/output header file              |
+      | ~:tangle first.c~   | export source code as C file ~first.c~  ("tangle")     |
+      | ~:exports both~     | both result and source code will be exported           |
+      | ~:comments both~    | link source code and org files, add comments to source |
+      | ~:results raw~      | insert output directly in org format into org file     |
+      #+begin_example
+      #+name: C example
+      #+begin_src [language] [header-args]
+        [statements]
+      #+end_src
+      #+end_example
+*** MATCH PROGRAM ELEMENT AND DEFINITION!
+
+    - The directive has to be at the top of the program
+    - The ~main~ function has to be there (there can be other
+      functions, but it has to run first)
+    - The statement is not necessary but it's what is executed
+
+    | C SOURCE CODE            | MEANING                                |
+    |--------------------------+----------------------------------------|
+    | ~#include <stdio.h>~     | Directive (input/output library)       |
+    | ~int main(void) { ... }~ | Main function (without input argument) |
+    | ~printf("hello\n");~     | Program statement (screen display)     |
+
+    - Here is a function definition outside of ~main()~ that does the
+      same job as our hello world program - print out ~hello
+      world~. To demonstrate the relationship between our own function
+      ~hello()~ and ~main()~, I am not using any ~header-args~ in the
+      block [[hello function]].
+      #+name: hello function
+      #+begin_src C :tangle hellof.c
+        #include <stdio.h>
+        hello() {
+          printf("hello function world\n");
+        }
+        int main(void){
+          hello();
+          return 0;
+        }
+      #+end_src
+
+      #+RESULTS: hello function
+      : hello function world
+
     * Which of these are NOT valid PATH settings?
     * The "binary" of a program (like gcc) is machine code that runs
       on any type of computer.
@@ -428,11 +479,6 @@
       - /* */
       - //
 
-*** Match program element and definition!
-
-    | ~#include <stdio.h>~     | Directive (input/output library)       |
-    | ~int main(void) { ... }~ | Main function (without input argument) |
-    | ~printf("hello\n");~     | Program statement (screen display      |
 
 *** Which of these are valid type declarations?
 
