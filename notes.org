@@ -541,9 +541,18 @@
 
     TRUE
 
+    Feedback: :includes and #include both are followed by the library
+    or libraries (usually more than one) that you wish to use in your
+    code. E.g. adding stdio.h enables you to print output and get
+    input.
+
 *** The C function ~puts~ needs a newline character ~\n~ to display the next line
 
     FALSE
+
+    Feedback: puts stands for "put string" and that's what this
+    function does. It does include a newline character unlike printf
+    (= formatted print).
 
 *** If the variable ~height~ is declared an ~int~, what's wrong with the following ~printf~ statement?
 
@@ -561,6 +570,10 @@
 
     TRUE
 
+    Feedback: I demonstrated this in class (in [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/variables.org#formatting-printout][~variables.org~]]). If
+    you are in doubt, make the test yourself: declare an integer
+    variable and print it with printf using the %f format specifier.
+    
 *** You want to display ~x = 234.5895484~ with 3-digit accuracy after the decimal point. Which formatting specifier is correct?
 
     TRUE:
