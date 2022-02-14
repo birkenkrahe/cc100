@@ -397,7 +397,6 @@
     (compared to non-volatile memory, like a hard disk)
 
 * Test review - w6s12 (02/14/22)
-
 *** Known quiz questions
     * WHERE DOES C COME FROM
 
