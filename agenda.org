@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE: CSC 100 - Spring 2022
 #+OPTIONS: toc:1 num:nil fig:nil
-#+STARTUP: overview hideblocks
+n#+STARTUP: overview hideblocks
 * README
 
   This file contains the agenda overview (what I had planned), the
