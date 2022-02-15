@@ -428,7 +428,7 @@
      #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
        ave <- mean(results)
        d <- density(results)
-       plot(d, col="steelblue",main="Test 1 Results DSC 205 Spring 2022")
+       plot(d, col="steelblue",main="Test 1 Results CSC 100 Spring 2022")
        abline(v=ave,col="red")
      #+end_src
 
