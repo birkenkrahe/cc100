@@ -2,19 +2,31 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil
-* What are you going to learn?
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both
+#+PROPERTY: header-args:C :results output
+* README
 
-  This script summarizes and adds to the treatment by King (2008),
-  chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]]
+  * This script summarizes and adds to the treatment by King (2008),
+    chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]]:
 
-  * Program structure
-  * Program: Printing a Pun
-  * Compiler workflow
-  * Shell execution
-  * Syntax highlighting
-  * Tangling code
-  -----
+  * You should type along in your own Org-mode file if you can. To
+    make this easier, use the auto expansion (~<s~), add the following
+    two lines at the top of your file, and activate each line with
+    ~C-c C-c~ (you should get a confirmation in the minibuffer):
+    #+begin_example
+    #+PROPERTY: header-args:C :main yes
+    #+PROPERTY: header-args:C :includes <stdio.h>
+    #+end_example
+
+  * Remember that ~C-M-\~ inside a code block indents syntactically
+
+  * You will find more class content in the ~agenda.org~ and
+    ~notes.org~ files.
+
 * Program structure
 
   #+attr_html: :width 600px
@@ -167,6 +179,7 @@
 
   * There is no highlighting standard - you should experiment with
     different themes[fn:1]
+
   * Display line numbers with ~display-line-numbers-mode~, and
     highlight lines with ~hl-line-mode~[fn:2]:
 
@@ -204,6 +217,364 @@
 
   #+RESULTS:
   : My cat has fleas
+
+* Variable types and declarations
+
+  * C computes using placeholders, or *variables*
+
+  * Each variable must have a *type* to specify the data it can hold
+
+  * E.g. ~int~ (integer), ~float~ (floating point), ~char~ (character)
+
+  * Variables must be *declared* before they can be used, see [[type
+    declaration examples]]
+    #+name: type declaration examples
+    #+begin_src C :results silent
+      int height;
+      float profit;
+      char name;
+    #+end_src
+
+  * Several variables of the same type can be declared together:
+    #+name: type declaration examples 1
+    #+begin_src C :results silent
+      int height, length, width, volume;
+      float profit, loss;
+      char first_name, last_name;
+    #+end_src
+
+  * Variable type declarations must precede statements that use the
+    variables
+
+  * The block with *declarations* comes before the statements[fn:1]
+
+* Variable assignment
+
+  * A variable gets its value through *assignment*
+
+  * In [[assignment example 1]], the variable ~height~ gets the value
+    ~8~[fn:4]
+    #+name: assignment example 1
+    #+begin_src C
+      height = 8;
+    #+end_src
+
+    #+RESULTS: assignment example 1
+
+  * [X] If you tried to run [[assignment example 1]], you got an
+    error. Can you see why?[fn:2]
+
+  * [X] However, [[assignment example 2]] throws another error. What's
+    wrong this time?[fn:3]
+    #+name: assignment example 2
+    #+begin_src C
+      height = 8;
+      int height;
+    #+end_src
+
+    #+RESULTS: assignment example 2
+
+  * Code block [[assignment example fixed]] works.
+    #+name: assignment example fixed
+    #+begin_src C :results silent
+      int height;
+      height = 8;
+    #+end_src
+
+  * A constant assigned to a ~float~ variable contains a decimal point
+    and the letter ~f~, as shown in [[float point]].
+    #+name: float point
+    #+begin_src C :results silent
+      float profit;
+      profit = 2150.48f;
+    #+end_src
+
+  * Assigning a ~float~ to an ~int~ and vice versa is possible but not
+    safe.
+
+  * Variables with values can be used to compute other values, as
+    shown in [[compute value]].
+    #+name: compute value
+    #+begin_src C :results silent
+      int height, length, width, volume;
+
+      height = 8;
+      length = 12;
+      width = 10;
+      volume = height * length * width;
+    #+end_src
+
+  * You can also initiate and declare variables at once. In [[initiate]],
+    the ~volume~ from before is computed inside ~printf~.
+    #+name: initiate
+    #+begin_src C
+      int height = 8, length = 12, width = 10;
+
+      printf("Volume: %d", height * length * width);
+    #+end_src
+
+  * To print these variables, we need to learn *formatting*
+
+* Formatting printout
+** ~printf~ vs. ~puts~
+
+   * We use the built-in (via ~stdio.h~) function ~printf~ to print.
+
+   * We also used ~puts~ in the past, which includes the newline
+     character ~\n~ that we need to add for ~printf~[fn:7].
+
+** Formatting integer numbers
+
+   * In the code [[int print]], ~%d~ is a placeholder for an ~int~:
+     #+name: int print
+     #+begin_src C
+       int height;  // type declaration
+       height = 8;  // variable assignment
+
+       printf("The height is: %d\n", height); // formatted printout
+     #+end_src
+
+** Formatting floating point numbers
+
+   * In [[float print]], ~%f~ is used to print a ~float~:
+     #+name: float print
+     #+begin_src C
+       float profit;       // type declaration
+       profit = 2150.48f;  // variable assignment
+
+       printf("The profit is: $%f\n", profit); // formatted printout
+     #+end_src
+
+** Change floating point precision
+
+   * By default, ~%f~ displays the result with six digits. To change
+     it to ~p~ digits, put ~.p~ between ~%~ and ~f~. E.g. to print it
+     with 2 digits, ~p=2~:
+     #+name: p digits
+     #+begin_src C
+       float profit;       // type declaration
+       profit = 2150.48f;  // variable assignment
+
+       printf("The profit is: $%.2f\n", profit); // formatted printout
+     #+end_src
+** Formatting errors
+
+   * What happens when you get the formatting wrong?  in [[format_test]],
+     we print a ~float~ first correctly, then with the wrong format
+     identifier, and then the other way around.
+     #+name: format_test
+     #+begin_src C :results raw
+       float foo;  // defined float
+       foo = 3.14f;   // assigned float
+       printf("%.2f\n",foo);  // formatted float as float
+       printf("%d\n",foo);  // formatted float as int
+
+       int bar;  // defined int
+       bar = 314;   // assigned int
+       printf("%d\n",bar);  // formatted int as int
+       printf("%.2f\n",bar);  // formatted int as float
+     #+end_src
+
+     #+RESULTS: format_test
+     3.14
+     0
+     314
+     0.00
+
+* Putting it all together (C program)
+
+  * Shipping fees are based on volume instead of weight. For the
+    conversion, the volume is divided by 166. If the result exceeds
+    the actual weight, the shipping fee is based on the "dimensional
+    weight"[fn:5].
+
+  * We write a program to compute the dimensional ~weight~ of a box of
+    given ~volume~ - we use ~/~ for division. Let's say the box is
+    12'' x 10'' x 8 ''. What does [[box_error]] need to run?
+    #+name: box_error
+    #+begin_src C
+      volume = 12 * 10 * 8
+        weight = volume / 166
+    #+end_src
+
+  * Fixed the errors in [[box]]. The compiler no longer complains, but
+    we don't see anything. How can we print the result?
+    #+name: box
+    #+begin_src C
+      int weight, volume;
+      volume = 12 * 10 * 8;
+      weight = volume / 166;
+    #+end_src
+
+  * The code in [[box_print]] prints the result of the computation.
+    #+name: box_print
+    #+begin_src C
+      int weight, volume;     // declare variable types
+      volume = 12 * 10 * 8;   // compute value
+      weight = volume / 166;  // assign and compute values
+      printf("The dimensional weight is %d\n",weight); // print result
+    #+end_src
+
+    #+RESULTS: box_print
+    : The dimensional weight is 5
+
+  * This is not what we need. When dividing one integer by another, C
+    "truncates" the answer - the result is rounded down, but the
+    shipping company wants us to round up. This can be achieved by
+    adding 165 to the volume before dividing by 166[fn:6] as shown in
+    [[dweight]].
+    #+name: dweight
+    #+begin_src C
+      int weight, volume;     // declare variable types
+      volume = 12 * 10 * 8;   // compute value
+      weight = (volume + 165) / 166;  // assign and compute values
+      printf("The dimensional weight is %d\n",weight); // print result
+    #+end_src
+
+  * Now for the final program [[dweight_c]]. This time, we allow for
+    tangling the program as ~dweight.c~.
+    #+name: dweight_c
+    #+begin_src C :tangle dweight.c :results raw
+      #include <stdio.h>
+
+      int main(void)
+      {
+        // declare variable types
+        int height, length, width, volume, weight;
+
+        // variable assignments
+        height = 8;
+        length = 12;
+        width = 10;
+        volume = height * length * width;
+        weight = (volume + 165) / 166;
+
+        // print results
+        printf("Dimensions: %dx%dx%d\n", length, width, height);
+        printf("Volume (cubic inches): %d\n", volume);
+        printf("Dimensional weight (pounds): %d\n", weight);
+
+        return 0;
+      }
+    #+end_src
+
+* Constants
+** Constant definition with the pre-processor
+
+   * If I don't want a value to change, I define a ~constant~. There
+     are different ways of doing that. The code in [[constant]] shows a
+     declarative constant definition for the pre-processor that blindly
+     substitutes the value everywhere in the program.
+     #+name: constant
+     #+begin_src C
+       #define PI 3.141593
+       printf("PI is %f\n",PI);
+     #+end_src
+
+   * So if I mistype my definition, I get errors. Take [[constant]] and
+     introduce an error: in [[constant_err_1]], ~= 3.141593~ is substituted
+     for ~PI~ everywhere - the program will not compile.
+     #+name: constant_err_1
+     #+begin_src C :results silent
+       #define PI = 3.141593
+       printf("PI is %f\n",PI);
+     #+end_src
+
+   * [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
+     see it at once, check the compiler error output!
+     #+name: constant_err_2
+     #+begin_src C :results silent
+       #define PI 3.141593;
+       printf("PI is %f\n",PI);
+     #+end_src
+
+** Constant definition with the math library
+   * Since mathematical constants are so important in scientific
+     computing, there is a library that contains them, ~math.h~. In
+     [[math]], it is included at the start to give us the value of Pi as
+     the constant ~M_PI~ with much greater precision than before.
+     #+name: math
+     #+begin_src C :includes <math.h>
+       printf("PI is %f\n",M_PI);
+       printf("PI is %.18f\n",M_PI);
+     #+end_src
+
+     #+RESULTS: math
+     : PI is 3.141593
+     : PI is 3.141592653589793116
+
+   * If you write source code outside of Emacs Org-mode, you have to
+     include this library file explicitly like this:
+     #+begin_example
+       #include <math.h>
+     #+end_example
+
+   * Here is more information on [[https://www.w3schools.in/c-tutorial/c-header-files/][C header files]] and on how ~#include~
+     works.
+
+   * In Linux, ~math.h~ and the other header files sit in
+     ~/usr/include/~. The screenshot shows the math constant section
+     of ~math.h~.
+     #+caption: Mathematical constants in /usr/include/math.h
+     #+attr_html: :width 500px
+     [[./img/math.png]]
+
+* Glossary
+
+  | TERM             | EXPLANATION                                                          |
+  |------------------+----------------------------------------------------------------------|
+  | Variable         | Placeholder for a value, e.g. a number                               |
+  | Type             | Tells the computer to reserve memory, e.g. ~int~ for integer numbers |
+  | Type declaration | Combination of type and variable name - e.g. ~int height;~           |
+  | ~int~            | C type for integer numbers, e.g. 2                                   |
+  | ~float~          | C type for floating point numbers, e.g. 3.14                         |
+  | ~char~           | C type for characters, like "joey"                                   |
+  | Formatting       | Tells the computer how to print, e.g. ~%d~ for ~int~ types           |
+  | ~%d~             | Format for integers                                                  |
+  | ~%f~ and ~%.pf~  | Format for floating point numbers (with ~p~ digits after the point)  |
+  | ~#define~        | Define a constant with the preprocessor                              |
+  | ~math.h~         | Math library, contains mathematical constants and functions          |
+  | ~stdio.h~        | Input/Output library, enables ~printf~ and ~scanf~                   |
+
+* References
+  * Collingbourne (2022). C Programming for Beginners
+    [course]. Udemy.org.
+  * King (2011). C Programming [book]. Wiley.
+  * <<unirelo>> N.a. (2020). What is dimensional weight of cargo and
+    why is it important? [blog]. [[https://www.unirelo.com/dimensional-weight/][URL: www.unirelo.com]].
+  * w3schools (n.d.). C Header Files [tutorial]. [[https://www.w3schools.in/c-tutorial/c-header-files/][URL: w3schools.in]].
+* Footnotes
+
+[fn:7][[https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/][See here]] for a comparison of ~printf()~ vs. ~puts()~.
+
+[fn:6]165/166 is 0.9939759, so we've just messed with the actual
+volume.
+
+[fn:5]
+#+begin_quote
+"Cargo space has physical limits based on the volume of the cargo and
+the weight. The reason why both volume & weight are evaluated can be
+better understood if you consider the cost of shipping a large object
+with less weight.
+
+For example, a large box containing styrofoam cups weighs very less,
+i.e., the dimensional (volume) weight of that box will likely be more
+than its actual weight. It is for this reason that most airlines and
+other transport providers evaluate both dimensional weight & actual
+weight, and then use the greater of the two weights to bill you for
+the transportation costs. The greater of the two weights is also
+commonly referred to as ‘chargeable weight’." ([[unirelo][UniRelo, 2020]])
+#+end_quote
+
+[fn:4]The value ~8~ is called a ~constant~ because it cannot change
+
+[fn:3]The declaration must precede the use of the variable.
+
+[fn:2]Assignment is variable use. Variable types must be declared
+before they can be used.
+
+[fn:1]In the C99 standard, declarations don't have to come before
+statements.
 
 * Concept summary
 
