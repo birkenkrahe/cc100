@@ -489,10 +489,10 @@ n#+STARTUP: overview hideblocks
 ** This week (6)
 
    * Test review
-   * Defining constants
-   * Reading input
-   * Naming identifiers
    * Program assignment
+   * Defining constants
+   * Naming identifiers
+   * Reading input
 
 ** Program assignment (until Monday 21-Feb, 11AM)    
 
@@ -509,11 +509,11 @@ n#+STARTUP: overview hideblocks
      sure that your program actually runs without errors!
    * Be prepared to present your solution in class.
    
-* C constants, naming conventions - w6s13 (02/16/22)
+* C constants, naming conventions - w6s13+s15 (02/16+18/22)
 ** Objectives
 
-   * [ ] Review: be the compiler / function challenge
-   * [ ] Understand different ways of defining C constants
+   * [X] Review: be the compiler / function challenge
+   * [X] Understand different ways of defining C constants
    * [ ] Practice constant definitions
    * [ ] Understand naming conventions for C programs
 
@@ -532,7 +532,7 @@ n#+STARTUP: overview hideblocks
   #+name: tax
   #+begin_src C :results output :flags -Wall
     float subtotal;
-    float tax;
+    int tax;
     float grandtotal;
     float taxrate;
 
@@ -541,7 +541,7 @@ n#+STARTUP: overview hideblocks
     tax = subtotal * taxrate;
     grandtotal = subtotal + tax;
 
-    printf("The tax on %.2f is %.2f, so the grandtotal is %.2f\n",
+    printf("The tax on %d is %d, so the grandtotal is %d\n",
            subtotal, tax, grandtotal);
   #+end_src
 
