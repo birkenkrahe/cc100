@@ -1,4 +1,4 @@
-#+TITLE:Variables and Assignments
+#+TITLE:C Fundamentals
 #+AUTHOR: Marcus Birkenkrahe
 #+SUBTITLE: See also King chapter 2 - for CSC 100 Intro to Programming in C/C++
 #+STARTUP: overview hideblocks
@@ -22,6 +22,9 @@
     #+end_example
 
   * Remember that ~C-M-\~ inside a code block indents syntactically
+
+  * You will find more class content in the ~agenda.org~ and
+    ~notes.org~ files.
 
 * Variable types and declarations
 
