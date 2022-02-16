@@ -357,13 +357,14 @@
 
        printf("The profit is: $%.2f\n", profit); // formatted printout
      #+end_src
+
 ** Formatting errors
 
    * What happens when you get the formatting wrong?  in [[format_test]],
      we print a ~float~ first correctly, then with the wrong format
      identifier, and then the other way around.
      #+name: format_test
-     #+begin_src C :results raw
+     #+begin_src C
        float foo;  // defined float
        foo = 3.14f;   // assigned float
        printf("%.2f\n",foo);  // formatted float as float
@@ -374,12 +375,6 @@
        printf("%d\n",bar);  // formatted int as int
        printf("%.2f\n",bar);  // formatted int as float
      #+end_src
-
-     #+RESULTS: format_test
-     3.14
-     0
-     314
-     0.00
 
 * Putting it all together (C program)
 
@@ -462,10 +457,10 @@
 ** Constant definition with the pre-processor
 
    * If I don't want a value to change, I define a ~constant~. There
-     are different ways of doing that. The code in [[constant]] shows a
+     are different ways of doing that. The code in [[define]] shows a
      declarative constant definition for the pre-processor that blindly
      substitutes the value everywhere in the program.
-     #+name: constant
+     #+name: define
      #+begin_src C
        #define PI 3.141593
        printf("PI is %f\n",PI);
@@ -518,6 +513,37 @@
      #+caption: Mathematical constants in /usr/include/math.h
      #+attr_html: :width 500px
      [[./img/math.png]]
+
+** Constant definition with ~const~
+
+   * It's easy to make mistakes with user-defined constants. Modern C
+     has the ~const~ identifier to protect constants. [[const]] shows an
+     example. Here, ~double~ is a higher precision floating point
+     number type.
+     #+name: const
+     #+begin_src C
+       const double taxrate = 0.175f;
+       double revenue = 200.0f;
+       double tax;
+
+       tax = revenue * taxrate;
+
+       printf("Tax on revenue %.2f is %.2f", revenue, tax);
+     #+end_src
+
+   * [ ] What happens if you try to redefine the constant ~taxrate~
+     after the type declaration? Modify [[const]] accordingly and run it.
+     #+name: const_err
+     #+begin_src C :results silent
+       const double taxrate = 0.175f;
+       double revenue = 200.0f;
+       double tax;
+       
+       taxrate = 0.2f;
+       tax = revenue * taxrate;
+
+       printf("Tax on revenue %.2f is %.2f", revenue, tax);
+     #+end_src
 
 * Glossary
 
