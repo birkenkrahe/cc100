@@ -631,9 +631,10 @@
   | Formatting       | Tells the computer how to print, e.g. ~%d~ for ~int~ types           |
   | ~%d~             | Format for integers                                                  |
   | ~%f~ and ~%.pf~  | Format for floating point numbers (with ~p~ digits after the point)  |
-  | ~#define~        | Define a constant with the preprocessor                              |
+  | ~#define~        | Define a constant with the preprocessor, e.g. ~#define PI 3.14~      |
   | ~math.h~         | Math library, contains mathematical constants and functions          |
   | ~stdio.h~        | Input/Output library, enables ~printf~ and ~scanf~                   |
+  | ~const~          | Constant identifier, e.g. ~const double PI = 3.14;~                  |
 
 * References
   * Collingbourne (2022). C Programming for Beginners
