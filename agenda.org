@@ -509,10 +509,10 @@ n#+STARTUP: overview hideblocks
      sure that your program actually runs without errors!
    * Be prepared to present your solution in class.
    
-* NEXT C constants - w6s13 (02/16/22)
+* C constants, naming conventions - w6s13 (02/16/22)
 ** Objectives
 
-   * [ ] 
+   * [ ] Understand different ways of defining C constants
    * [ ] 
 
 ** Warming up: be the compiler!
@@ -530,7 +530,7 @@ n#+STARTUP: overview hideblocks
   #+name: tax
   #+begin_src C
     float subtotal;
-    int tax;
+p    int tax;
     float grandtotal;
     float taxrate;
 
@@ -542,6 +542,21 @@ n#+STARTUP: overview hideblocks
     printf("The tax on %d is %d, so the grandtotal is %d.\n",
            subtotal, tax, grandtotal);
   #+end_src
+
+** Programming challenge: hello world function
+
+   * Things to remember:
+     - You need to declare stuff before you can use it in C.
+     - The function definition looks just like ~main~
+
+   * Challenge: Write a function ~hello()~ that prints out ~hello
+     world~ when called.
+
+   * You can do this in Emacs in one code block, which contains the
+     definition and the function call.
+
+   * This challenge carries extra credit! Submit Org-file or C file
+     via Schoology.
 
 * Footnotes
 

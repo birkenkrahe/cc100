@@ -454,12 +454,13 @@
     #+end_src
 
 * Constants
-** Constant definition with the pre-processor
+** Macro definition with ~#define~
 
    * If I don't want a value to change, I define a ~constant~. There
      are different ways of doing that. The code in [[define]] shows a
-     declarative constant definition for the pre-processor that blindly
-     substitutes the value everywhere in the program.
+     declarative constant definition for the pre-processor that
+     blindly substitutes the value everywhere in the program. This is
+     also called a *macro definition*.
      #+name: define
      #+begin_src C
        #define PI 3.141593
@@ -483,7 +484,23 @@
        printf("PI is %f\n",PI);
      #+end_src
 
-** Constant definition with the math library
+   * It's easy to make mistakes with user-defined constants. Constants
+     declared with ~#define~ can be redefined.
+
+   * [ ] Write a program that demonstrates how a constant declared
+     with ~#define~ can be redefined later with a second ~#define~
+     declaration.
+     #+name: redefined
+     #+begin_src C
+       #define WERT 1.0
+       printf("Constant is %.2f\n", WERT);
+
+       #define WERT 2.0
+       printf("Constant is %.2f\n", WERT);
+     #+end_src
+
+** Library definitions with ~#include~
+
    * Since mathematical constants are so important in scientific
      computing, there is a library that contains them, ~math.h~. In
      [[math]], it is included at the start to give us the value of Pi as
@@ -514,19 +531,21 @@
      #+attr_html: :width 500px
      [[./img/math.png]]
 
-** Constant definition with ~const~
+   * [ ] Where is ~math.h~ in Windows? Where in MacOS? Find the file,
+     open and look at it in Emacs (the file is read-only).
 
-   * It's easy to make mistakes with user-defined constants. Modern C
-     has the ~const~ identifier to protect constants. [[const]] shows an
-     example. Here, ~double~ is a higher precision floating point
-     number type.
+** Type definition with ~const~
+
+   * Modern C has the ~const~ identifier to protect constants. [[const]]
+     shows an example. Here, ~double~ is a higher precision floating
+     point number type.
      #+name: const
      #+begin_src C
-       const double taxrate = 0.175f;
+       const double TAXRATE_CONST = 0.175f;
        double revenue = 200.0f;
        double tax;
 
-       tax = revenue * taxrate;
+       tax = revenue * TAXRATE_CONST;
 
        printf("Tax on revenue %.2f is %.2f", revenue, tax);
      #+end_src
@@ -535,15 +554,69 @@
      after the type declaration? Modify [[const]] accordingly and run it.
      #+name: const_err
      #+begin_src C :results silent
-       const double taxrate = 0.175f;
+       const double TAXRATE_CONST = 0.175f;
        double revenue = 200.0f;
        double tax;
-       
-       taxrate = 0.2f;
-       tax = revenue * taxrate;
+
+       TAXRATE_CONST = 0.2f;
+       tax = revenue * TAXRATE_CONST;
 
        printf("Tax on revenue %.2f is %.2f", revenue, tax);
      #+end_src
+
+* Naming conventions
+
+   (The code blocks in this section are all silent - will give no
+   output - but because they're only snippets, they will not compile.)
+
+   * Use upper case letters for CONSTANTS
+     #+begin_src C :results silent
+       const double TAXRATE;
+     #+end_src
+
+   * Use lower case letters for variables
+     #+begin_src C :results silent
+       int tax;
+     #+end_src
+
+   * Use lower case letters for function names
+     #+begin_src C :results silent
+       hello();
+     #+end_src
+
+   * If names consist of more than one word, separate with ~_~ or
+     insert capital letters:
+     #+begin_src C :results silent
+       hello_world();
+       helloWorld();
+     #+end_src
+
+   * Names are sensitive towards spelling and capitalization:
+     ~helloWorld~ is different from ~HELLOWORLD~ or ~Helloworld~.
+
+   * Name according to function! In [[naming_example]], both functions are
+     identical from the point of view of the compiler, but one can be
+     understood, the other one cannot.
+     #+name: naming_example
+     #+begin_src C :results silent
+       const int SERVICE_CHARGE;
+       int v;
+
+       int myfunc(int z) {
+	 int t;
+	 t = z + v;
+	 return t;
+       }
+
+       int calculate_grand_total(int subtotal) {
+	 int grand_total;
+	 grand_total = subtotal + SERVICE_CHARGE;
+	 return grand_total;
+       }
+     #+end_src
+
+   * What about rules? The compiler will tell you if one of your names
+     is a mistake!
 
 * Glossary
 
