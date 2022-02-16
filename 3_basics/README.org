@@ -382,17 +382,17 @@
     conversion, the volume is divided by 166. If the result exceeds
     the actual weight, the shipping fee is based on the "dimensional
     weight"[fn:5].
-
-  * We write a program to compute the dimensional ~weight~ of a box of
+    
+  * [X] We write a program to compute the dimensional ~weight~ of a box of
     given ~volume~ - we use ~/~ for division. Let's say the box is
     12'' x 10'' x 8 ''. What does [[box_error]] need to run?
     #+name: box_error
     #+begin_src C
       volume = 12 * 10 * 8
-        weight = volume / 166
+      height = volume / 166
     #+end_src
 
-  * Fixed the errors in [[box]]. The compiler no longer complains, but
+  * [X] Fixed the errors in [[box]]. The compiler no longer complains, but
     we don't see anything. How can we print the result?
     #+name: box
     #+begin_src C
@@ -401,7 +401,7 @@
       weight = volume / 166;
     #+end_src
 
-  * The code in [[box_print]] prints the result of the computation.
+  * [ ] The code in [[box_print]] prints the result of the computation.
     #+name: box_print
     #+begin_src C
       int weight, volume;     // declare variable types
@@ -426,7 +426,10 @@
       printf("The dimensional weight is %d\n",weight); // print result
     #+end_src
 
-  * Now for the final program [[dweight_c]]. This time, we allow for
+    #+RESULTS: dweight
+    : The dimensional weight is 6
+
+  * [ ] Now for the final program [[dweight_c]]. This time, we allow for
     tangling the program as ~dweight.c~.
     #+name: dweight_c
     #+begin_src C :tangle dweight.c :results raw
@@ -462,10 +465,13 @@
      blindly substitutes the value everywhere in the program. This is
      also called a *macro definition*.
      #+name: define
-     #+begin_src C
+     #+begin_src C :main yes :includes <stdio.h>
        #define PI 3.141593
        printf("PI is %f\n",PI);
      #+end_src
+
+     #+RESULTS: define
+     : PI is 3.141593
 
    * So if I mistype my definition, I get errors. Take [[constant]] and
      introduce an error: in [[constant_err_1]], ~= 3.141593~ is substituted
@@ -476,7 +482,7 @@
        printf("PI is %f\n",PI);
      #+end_src
 
-   * [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
+   * [X] Can you see what went wrong in [[constant_err_2]] ? If you don't
      see it at once, check the compiler error output!
      #+name: constant_err_2
      #+begin_src C :results silent

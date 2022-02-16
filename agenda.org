@@ -512,8 +512,10 @@ n#+STARTUP: overview hideblocks
 * C constants, naming conventions - w6s13 (02/16/22)
 ** Objectives
 
+   * [ ] Review: be the compiler / function challenge
    * [ ] Understand different ways of defining C constants
-   * [ ] 
+   * [ ] Practice constant definitions
+   * [ ] Understand naming conventions for C programs
 
 ** Warming up: be the compiler!
 
@@ -528,9 +530,9 @@ n#+STARTUP: overview hideblocks
   Can you fix the program [[tax]]?.
 
   #+name: tax
-  #+begin_src C
+  #+begin_src C :results output :flags -Wall
     float subtotal;
-p    int tax;
+    float tax;
     float grandtotal;
     float taxrate;
 
@@ -539,9 +541,12 @@ p    int tax;
     tax = subtotal * taxrate;
     grandtotal = subtotal + tax;
 
-    printf("The tax on %d is %d, so the grandtotal is %d.\n",
+    printf("The tax on %.2f is %.2f, so the grandtotal is %.2f\n",
            subtotal, tax, grandtotal);
   #+end_src
+
+  #+RESULTS: tax
+  : The tax on 200.00 is 35.00, so the grandtotal is 235.00
 
 ** Programming challenge: hello world function
 
@@ -555,8 +560,10 @@ p    int tax;
    * You can do this in Emacs in one code block, which contains the
      definition and the function call.
 
-   * This challenge carries extra credit! Submit Org-file or C file
-     via Schoology.
+   * This challenge carries extra credit! Submit Org-file via
+     Schoology.
+
+   * Solution next week!
 
 * Footnotes
 
