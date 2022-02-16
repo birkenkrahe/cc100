@@ -396,6 +396,30 @@
     its memory better - volatile memory (RAM) is expensive and small
     (compared to non-volatile memory, like a hard disk)
 
+* C constants, naming conventions - w6s13 (02/16/22)
+
+  * "Warming Up: be the compiler!" - The solution to fix the output
+    was to change the format specifiers for the floating point
+    variables from ~%d~ to ~%f~, and to change the type declaration
+    for ~tax~ from ~int~ to ~float~ (since it's coerced into a ~float~
+    through the computing statement.
+  * The follow-up question was: how can we get rid of the 6 default
+    digits and print only two digits. The answer: use ~%.2f~ with
+    precision ~p=2~.
+
+  * Computers are unforgiving when it comes to neglect. It's like
+    talking to someone who doesn't understand you at all if you
+    cannot spell perfectly.
+
+  * When a program does not run, use classic compsci heuristics:
+    1) Try to understand the error message from Emacs or gcc.
+    2) If the compiler gcc complains: check the syntax - Emacs helps
+       you with Syntax highlighting (you might want to change the
+       Emacs theme for that with ~M-x custom-themes~).
+    3) Close the program and reopen it
+    4) Close Emacs and reopen it
+    5) Shut down the computer and restart it
+
 * Test review - w6s12 (02/14/22)
 *** Known quiz questions
     * WHERE DOES C COME FROM
@@ -515,7 +539,7 @@
     failure. The spelling of keywords in C like ~main~ (or ~int~, or
     ~printf~) or the demand for a semicolon after each statement, are
     examples.
-    
+
 *** Which of these terminal commands will compile the file ~hello.c~ and create an executable file named ~hello~
 
     TRUE:
@@ -572,7 +596,7 @@
     Feedback: I demonstrated this in class (in [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/variables.org#formatting-printout][~variables.org~]]). If
     you are in doubt, make the test yourself: declare an integer
     variable and print it with printf using the %f format specifier.
-    
+
 *** You want to display ~x = 234.5895484~ with 3-digit accuracy after the decimal point. Which formatting specifier is correct?
 
     TRUE:
@@ -612,12 +636,12 @@
 [fn:2] Suggestion to install GCC under MacOS [[https://codeforces.com/blog/entry/88063][here]] - have not tried
 this yet myself. Perhaps you could, if you have a Mac, and let me know?
 #+begin_quote
-  * First, you need to install HomeBrew from https://brew.sh/
-  * Then, run ~brew install gcc~ in the terminal.
-  * Type ~g++-11~ in the terminal to see if successful.
-  * Type ~sudo ln -s /usr/local/bin/gcc-11 /usr/local/bin/gcc~
-#+end_quote
- 
+* First, you need to install HomeBrew from https://brew.sh/
+* Then, run ~brew install gcc~ in the terminal.
+* Type ~g++-11~ in the terminal to see if successful.
+* Type ~sudo ln -s /usr/local/bin/gcc-11 /usr/local/bin/gcc~
+  #+end_quote
+
 
 [fn:1]From the GCC reference manual ([[stallman][Stallman et al, 2003]]):
 #+begin_quote
