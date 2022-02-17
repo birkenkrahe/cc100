@@ -509,7 +509,7 @@ n#+STARTUP: overview hideblocks
      sure that your program actually runs without errors!
    * Be prepared to present your solution in class.
    
-* C constants, naming conventions - w6s13+s15 (02/16+18/22)
+* C constants, naming, layout - w6s13+s15 (02/16/22+02/18/22)
 ** Objectives
 
    * [X] Review: be the compiler / function challenge
@@ -561,7 +561,7 @@ n#+STARTUP: overview hideblocks
      definition and the function call.
 
    * This challenge carries extra credit! Submit Org-file via
-     Schoology.
+     email.
 
    * Solution next week!
 
