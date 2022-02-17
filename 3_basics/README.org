@@ -572,7 +572,7 @@
 
 * Naming identifiers
 
-** Conventions
+** Naming conventions
 
    (The code blocks in this section are all silent - will give no
    output - but because they're only snippets, they will not compile.)
@@ -620,7 +620,7 @@
        }
      #+end_src
 
-** Rules
+** Naming rules
 
    * What about rules? The compiler will tell you if one of your names
      is a mistake! However, why waste the time, and the rules are
@@ -660,7 +660,26 @@
    * Your turn: name some illegal identifiers and see what the
      compiler says!
 
-* Program Layout
+** TODO Practice: which of these names are not allowed?
+
+* IN PROGRESS Program Layout
+
+  * You can think of a program statement as a series of tokens:
+
+  * You can have any amount of white (empty) space between program tokens
+
+  * You can divide statements over any number of lines
+
+  * Space between tokens makes identification easier
+
+  * Indentation makes nesting easier to spot
+
+  * Blank lines can divide a program into logical units
+
+  * C keywords must remain undivided
+
+** TODO Practice: improve the layout!
+
 * Glossary
 
   | TERM             | EXPLANATION                                                          |
