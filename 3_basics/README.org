@@ -382,14 +382,14 @@
     conversion, the volume is divided by 166. If the result exceeds
     the actual weight, the shipping fee is based on the "dimensional
     weight"[fn:5].
-    
+
   * [X] We write a program to compute the dimensional ~weight~ of a box of
     given ~volume~ - we use ~/~ for division. Let's say the box is
     12'' x 10'' x 8 ''. What does [[box_error]] need to run?
     #+name: box_error
     #+begin_src C
       volume = 12 * 10 * 8
-      height = volume / 166
+        height = volume / 166
     #+end_src
 
   * [X] Fixed the errors in [[box]]. The compiler no longer complains, but
@@ -570,7 +570,9 @@
        printf("Tax on revenue %.2f is %.2f", revenue, tax);
      #+end_src
 
-* Naming conventions
+* Naming identifiers
+
+** Conventions
 
    (The code blocks in this section are all silent - will give no
    output - but because they're only snippets, they will not compile.)
@@ -597,9 +599,6 @@
        helloWorld();
      #+end_src
 
-   * Names are sensitive towards spelling and capitalization:
-     ~helloWorld~ is different from ~HELLOWORLD~ or ~Helloworld~.
-
    * Name according to function! In [[naming_example]], both functions are
      identical from the point of view of the compiler, but one can be
      understood, the other one cannot.
@@ -609,21 +608,59 @@
        int v;
 
        int myfunc(int z) {
-	 int t;
-	 t = z + v;
-	 return t;
+         int t;
+         t = z + v;
+         return t;
        }
 
        int calculate_grand_total(int subtotal) {
-	 int grand_total;
-	 grand_total = subtotal + SERVICE_CHARGE;
-	 return grand_total;
+         int grand_total;
+         grand_total = subtotal + SERVICE_CHARGE;
+         return grand_total;
        }
      #+end_src
 
-   * What about rules? The compiler will tell you if one of your names
-     is a mistake!
+** Rules
 
+   * What about rules? The compiler will tell you if one of your names
+     is a mistake! However, why waste the time, and the rules are
+     interesting, too, at least syntactically, to a nerd.
+
+   * Names are sensitive towards spelling and capitalization:
+     ~helloWorld~ is different from ~HELLOWORLD~ or
+     ~Helloworld~. Confusingly, you could use all three in the same
+     program, and the compiler would distinguish them.
+
+   * Names cannot begin with a number, and they may not contain
+     dashes/minus signs. These are all illegal:
+     #+begin_example
+       10times  get-net-char 
+     #+end_example
+     These are good:
+     #+begin_example
+     times10    get_next_char
+     #+end_example
+
+   * There is no limit to the length of an identifier, so this name,
+     presumably by a German programmer, is okay:
+     #+begin_example
+     Voreingenommenheit_bedeutet_bias_auf_Deutsch
+     #+end_example
+
+   * The keywords in the table have special significance to the
+     compiler and cannot be used as identifiers:
+
+     | auto       | enum    | restrict | unsigned | break  | extern   |
+     | return     | void    | case     | float    | short  | volatile |
+     | char       | for     | signed   | while    | const  | goto     |
+     | sizeof     | _Bool   | continue | if       | static | _Complex |
+     | _Imaginary | default | union    | struct   | do     | int      |
+     | switch     | double  | long     | typedef  | else   | register |
+
+   * Your turn: name some illegal identifiers and see what the
+     compiler says!
+
+* Program Layout
 * Glossary
 
   | TERM             | EXPLANATION                                                          |
