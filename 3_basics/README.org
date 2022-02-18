@@ -459,7 +459,7 @@
 * Constants
 ** Macro definition with ~#define~
 
-   * If I don't want a value to change, I define a ~consatnt~. There
+   * If I don't want a value to change, I define a ~constant~. There
      are different ways of doing that. The code in [[define]] shows a
      declarative constant definition for the pre-processor that
      blindly substitutes the value everywhere in the program. This is
@@ -473,7 +473,7 @@
      #+RESULTS: define
      : PI is 3.141593
 
-   * So if I mistype my definition, I get errors. Take [[constant]] and
+   * So if I mistype my definition, I get errors. Take [[define]] and
      introduce an error: in [[constant_err_1]], ~= 3.141593~ is substituted
      for ~PI~ everywhere - the program will not compile.
      #+name: constant_err_1
