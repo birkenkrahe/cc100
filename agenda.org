@@ -398,10 +398,10 @@ n#+STARTUP: overview hideblocks
      #+end_src
 
      #+RESULTS: test 1 results
-     : 
+     :
      : [1] 3.288485
-     : 
-     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     :
+     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
      :    8.07   11.64   14.43   13.81   15.19   19.36
 
    * Let's make some plots: histogram, boxplot and density plot. I'dd
@@ -468,24 +468,24 @@ n#+STARTUP: overview hideblocks
    #+name: noppeprogram
    #+begin_src C :main yes :includes stdio.h
      /*     one line
-      *     multi line
-      */
+      ,*     multi line
+      ,*/
      float f = 4.0f;
      printf("hello %.pf", f);
      /* one line
-	or multi line
-     */
+        or multi line
+     ,*/
    #+end_src
 
-     #+RESULTS: noppeprogram
-     : hello 00000000f
+   #+RESULTS: noppeprogram
+   : hello 00000000f
 
 ** Test questions and answers
 
    * We go through all questions together
    * Everybody can contribute an answer
    * Write down questions and ask them now!
-   
+
 ** This week (6)
 
    * Test review
@@ -494,10 +494,10 @@ n#+STARTUP: overview hideblocks
    * Naming identifiers
    * Reading input
 
-** Program assignment (until Monday 21-Feb, 11AM)    
+** Program assignment (until Monday 21-Feb, 11AM)
 
    *Compute the volume of a sphere*
-   
+
    * Write a program that computes the volume of a sphere with a
      10-meter radius, using the formula $v=4/3\times\pi r^{3}$.
    * Write the fraction $4/3$ as ~4.0f/3.0f~. (Try writing it as 4/3
@@ -508,8 +508,8 @@ n#+STARTUP: overview hideblocks
      to Schoology not later than 11 AM on Monday, February 21st. Make
      sure that your program actually runs without errors!
    * Be prepared to present your solution in class.
-   
-* C constants, naming, layout - w6s13+s15 (02/16/22+02/18/22)
+
+* Formatting, C constants - w6s13 (02/16/22)
 ** Objectives
 
    * [X] Review: be the compiler / function challenge
@@ -519,34 +519,34 @@ n#+STARTUP: overview hideblocks
 
 ** Warming up: be the compiler!
 
-  The output of [[tax]] should be
-  #+begin_example
-    : The tax on 200.00 is 35.00, so the grandtotal is 235.00.
-  #+end_example
-  but instead the output is
-  #+begin_example
-    : The tax on -1093221452 is 0, so the grandtotal is 1080623104.
-  #+end_example
-  Can you fix the program [[tax]]?.
+   The output of the program below should be:
+   #+begin_example
+     : The tax on 200.00 is 35.00, so the grandtotal is 235.00.
+   #+end_example
+   but instead the output is
+   #+begin_example
+     : The tax on -1093221452 is 0, so the grandtotal is 1080623104.
+   #+end_example
+   Can you fix the program [[tax]]?.
 
-  #+name: tax
-  #+begin_src C :results output :flags -Wall
-    float subtotal;
-    int tax;
-    float grandtotal;
-    float taxrate;
+   #+name: tax
+   #+begin_src C :results output :flags -Wall
+     float subtotal;
+     int tax;
+     float grandtotal;
+     float taxrate;
 
-    taxrate = 0.175;
-    subtotal = 200;
-    tax = subtotal * taxrate;
-    grandtotal = subtotal + tax;
+     taxrate = 0.175;
+     subtotal = 200;
+     tax = subtotal * taxrate;
+     grandtotal = subtotal + tax;
 
-    printf("The tax on %d is %d, so the grandtotal is %d\n",
-           subtotal, tax, grandtotal);
-  #+end_src
+     printf("The tax on %d is %d, so the grandtotal is %d\n",
+            subtotal, tax, grandtotal);
+   #+end_src
 
-  #+RESULTS: tax
-  : The tax on 200.00 is 35.00, so the grandtotal is 235.00
+   #+RESULTS: tax
+   : The tax on 0 is 1080623104, so the grandtotal is 34
 
 ** Programming challenge: hello world function
 
@@ -565,6 +565,59 @@ n#+STARTUP: overview hideblocks
 
    * Solution next week!
 
+* C constants, naming, layout - w6s15 (02/18/22)
+** News
+
+   * Invitation for an online data science seminar with the data
+     scientist of Stone Ward, Little Rock/Chicago, Matthew Ward: join
+     us at 3 pm via Google Meet (see Schoology) - incl INTERNSHIPS
+
+   * Great tips for getting better with Emacs quickly [[https://www.reddit.com/r/emacs/comments/splayn/how_to_start_learning_emacs_my_successful_method/][in this post]].
+     #+begin_quote
+     I started as a rank newbie 14 days ago, and I've learned enough
+     to "get started", kind of grok emacs beginner fundamentals and
+     simple navigation, and I feel VERY good about my progress. I
+     wanted to share how I got to this point. (Note that I happened to
+     have the time to read/watch/practice a few hours a day. If I only
+     had 30 min per day, it would have taken me a month or two to get
+     to this level.)
+     #+end_quote
+
+** Objectives
+
+   * [ ] Review: be the compiler / function challenge
+   * [ ] Learn more ways of defining C constants
+   * [ ] Practice constant definitions
+   * [ ] Understand naming conventions for C program
+   * [ ] Understand good C program layout
+
+** Warming up: be the compiler!
+
+   What's wrong with this program? (It won't even compile.)
+
+   #+name: 021822
+   #+begin_src C :results output
+     #include <stdio.h>
+     #define CONST 100;
+
+     int main(void) {
+       int value = CONST, newValue;
+
+       newValue = value + 1;
+
+       printf("%d %d %d\n", CONST, value, newValue);
+       return 0;
+     }
+   #+end_src
+
+   #+RESULTS: 021822
+
+** Next week
+
+   * Quiz 4 (play me once, then play me often!)
+   * Reading input with ~scanf~ (read me, baby!)
+   * Arithmetic operators (math, yay!)
+   
 * Footnotes
 
 [fn:2]I managed to install GCC on the lab computers and run it inside
