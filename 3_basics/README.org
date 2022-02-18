@@ -537,7 +537,7 @@
      #+attr_html: :width 500px
      [[./img/math.png]]
 
-   * [ ] Where is ~math.h~ in Windows? Where in MacOS? Find the file,
+   * [X] Where is ~math.h~ in Windows[fn:8]? Where in MacOS? Find the file,
      open and look at it in Emacs (the file is read-only).
 
 ** Type definition with ~const~
@@ -709,6 +709,9 @@
     why is it important? [blog]. [[https://www.unirelo.com/dimensional-weight/][URL: www.unirelo.com]].
   * w3schools (n.d.). C Header Files [tutorial]. [[https://www.w3schools.in/c-tutorial/c-header-files/][URL: w3schools.in]].
 * Footnotes
+
+[fn:8]Look for it in the MinGW directory - there's an ~/include~
+subdirectory that contains many header/library files ~.h~.
 
 [fn:7][[https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/][See here]] for a comparison of ~printf()~ vs. ~puts()~.
 
