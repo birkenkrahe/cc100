@@ -495,7 +495,7 @@
 
    * [ ] Write a program that demonstrates how a constant declared
      with ~#define~ can be redefined later with a second ~#define~
-     declaration.
+     declaration. Print out each constant after defining it.
      #+name: redefined
      #+begin_src C
        #define WERT 1.0
