@@ -589,7 +589,6 @@ n#+STARTUP: overview hideblocks
    * [ ] Learn more ways of defining C constants
    * [ ] Practice constant definitions
    * [ ] Understand naming conventions for C program
-   * [ ] Understand good C program layout
 
 ** Warming up: be the compiler!
 
@@ -615,6 +614,9 @@ n#+STARTUP: overview hideblocks
 ** Next week
 
    * Quiz 4 (play me once, then play me often!)
+   * Review of the volume programming challenge
+   * A new programming challenge!
+   * Good program layout
    * Reading input with ~scanf~ (read me, baby!)
    * Arithmetic operators (math, yay!)
    
