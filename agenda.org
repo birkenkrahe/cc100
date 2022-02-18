@@ -573,6 +573,7 @@ n#+STARTUP: overview hideblocks
      us at 3 pm via Google Meet (see Schoology) - incl INTERNSHIPS
 
    * Great tips for getting better with Emacs quickly [[https://www.reddit.com/r/emacs/comments/splayn/how_to_start_learning_emacs_my_successful_method/][in this post]].
+     See also my [[https://youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][Emacs for Beginners YouTube playlist]].
      #+begin_quote
      I started as a rank newbie 14 days ago, and I've learned enough
      to "get started", kind of grok emacs beginner fundamentals and
@@ -585,7 +586,6 @@ n#+STARTUP: overview hideblocks
 
 ** Objectives
 
-   * [ ] Review: be the compiler / function challenge
    * [ ] Learn more ways of defining C constants
    * [ ] Practice constant definitions
    * [ ] Understand naming conventions for C program
@@ -609,12 +609,10 @@ n#+STARTUP: overview hideblocks
      }
    #+end_src
 
-   #+RESULTS: 021822
-
 ** Next week
 
    * Quiz 4 (play me once, then play me often!)
-   * Review of the volume programming challenge
+   * Review of the volume/hello programming challenges
    * A new programming challenge!
    * Good program layout
    * Reading input with ~scanf~ (read me, baby!)
