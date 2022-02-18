@@ -1,0 +1,14 @@
+
+#+begin_src C :includes <stdio.h> :results output
+
+  #define PI 3.14
+  printf("PI is %.2f\n", PI);
+
+  #define PI 2.71
+  printf("PI is %.2f\n", PI);
+
+#+end_src
+
+#+RESULTS:
+: PI is 3.14
+: PI is 2.71

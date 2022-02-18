@@ -493,7 +493,7 @@
    * It's easy to make mistakes with user-defined constants. Constants
      declared with ~#define~ can be redefined.
 
-   * [ ] Write a program that demonstrates how a constant declared
+   * [X] Write a program that demonstrates how a constant declared
      with ~#define~ can be redefined later with a second ~#define~
      declaration. Print out each constant after defining it.
      #+name: redefined
@@ -556,7 +556,10 @@
        printf("Tax on revenue %.2f is %.2f", revenue, tax);
      #+end_src
 
-   * [ ] What happens if you try to redefine the constant ~taxrate~
+     #+RESULTS: const
+     : Tax on revenue 200.00 is 35.00
+
+   * [X] What happens if you try to redefine the constant ~taxrate~
      after the type declaration? Modify [[const]] accordingly and run it.
      #+name: const_err
      #+begin_src C :results silent
@@ -594,7 +597,7 @@
 
    * If names consist of more than one word, separate with ~_~ or
      insert capital letters:
-     #+begin_src C :results silent
+        #+begin_src C :results silent
        hello_world();
        helloWorld();
      #+end_src
