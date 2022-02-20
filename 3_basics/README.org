@@ -663,7 +663,6 @@
    * Your turn: name some illegal identifiers and see what the
      compiler says!
 
-** TODO Practice: which of these names are not allowed?
 
 * IN PROGRESS Program Layout
 
