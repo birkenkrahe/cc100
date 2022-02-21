@@ -269,7 +269,7 @@
 
   4) Submit results [[https://github.com/birkenkrahe/cc100/issues][to GitHub as issue]] (ZIP) - by 11.59PM tonight
 
-* GCC Lab session - 4s8 (01/31/22)
+* GCC Lab session - w4s8 (01/31/22)
 
   #+caption: Teaching Emacs on Dagobah
   #+attr_html: :width 400px
