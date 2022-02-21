@@ -621,9 +621,10 @@
    * Arithmetic operators (math, yay!)
 
 * Reading input - w7s16 (02/21/22)
+** Script in GitHub
 ** Objectives
 
-   * [ ] Review programming exercise "volume"
+   * [ ] Review programming assignment "volume"
    * [ ] Review programming challenge "hello world function"
    * [ ] New programming exercise "phone number conversion"
    * [ ] Understand reading input from the command line
@@ -638,7 +639,19 @@
        float int1=1.f, int2=2.f, int;
        printf("%.2f\n"; int = int 1 + int 2);
      #+end_src
-   
+
+** Programming assignment (until Monday, 28-Feb, 11 AM)
+
+   * Write a program that prompts the user to enter a telephone number
+     in the form ~(xxx) xxx-xxxx~, and then displays the number in the
+     form ~xxx.xxx.xxxx~.
+
+   * Example input/output:
+     #+begin_example
+     Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
+     You entered 870.456.7890
+     #+end_example
+     
 * Program layout, 
 * Footnotes
 
