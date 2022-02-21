@@ -1,13 +1,5 @@
+/* Compute the dimensional weight of a box */
 
-
-/*   #+RESULTS: dweight */
-/*   : The dimensional weight is 6 */
-
-/* * [X] Now for the final program [[dweight_c]]. This time, we allow for */
-/*   tangling the program as ~dweight.c~. */
-/*   #+name: dweight_c */
-
-/* [[file:../README.org::dweight_c][dweight_c]] */
 #include <stdio.h>
 
 int main(void)
