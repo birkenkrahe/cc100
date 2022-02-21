@@ -2,7 +2,8 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Followup class notes for CSC100 Intro to Programming in C/C++ Spring 2022
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :comments both
 * README
 
   Instead of bugging you with emails, I opt to summarize my course
@@ -630,6 +631,20 @@
         return 0;
       }
     #+end_src
+
+* Reading input - w7s16 (02/21/22)
+** Be the compiler - solution
+   * ~int~ is not an allowed name for a variable (protected keyword)
+   * The string is not followed by a comma but by a semi-colon
+   * The variables in ~printf~ are not recognized
+   #+name: 022122
+   #+begin_src C
+     float int1=1.f, int2=2.f, int3;
+     printf("%.2f\n", int3 = int1 + int2);
+   #+end_src
+
+   #+RESULTS: 022122
+   : 3.0
 
 * References
 
