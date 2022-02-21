@@ -611,6 +611,26 @@
     in an error but in a strangely formatted output (without the
     number).
 
+* C constants, naming - w6s15 (02/18/22)
+
+  * What's wrong with this program? (It won't even compile.)
+    *ANSWER*: there shouldn't be a semi-colon in the definition of
+    the constant ~CONST_~ with the preprocessor (using ~#define~).
+    #+name: 021822
+    #+begin_src C :results output
+      #include <stdio.h>
+      #define CONST_ 100;
+
+      int main(void) {
+        int value = CONST_, newValue;
+
+        newValue = value + 1;
+
+        printf("%d %d %d\n", CONST_, value, newValue);
+        return 0;
+      }
+    #+end_src
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell

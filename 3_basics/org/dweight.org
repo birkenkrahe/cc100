@@ -1,7 +1,7 @@
 * Version 1: print only
   
 #+name: dweight1
-#+begin_src C :results output
+#+begin_src C :results output :tangle ../src/dweight1.c
   #include <stdio.h>
 
   int main(void) {
