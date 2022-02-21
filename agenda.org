@@ -653,7 +653,7 @@
    * If you check your phone instead, you're *not* active
    * If you could not attend, submit *late*
 
-** Programing assignment review
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programing assignment review]]
 
    * I left detailed comments for most of you: use them or ask me! Use
      them by modifying your submission accordingly.
@@ -662,45 +662,64 @@
      but for accuracy (this includes following the instructions)
 
    * Please submit an Org-mode file if you have one so that I don't
-     have to check your results line-by-line but can just run it. 
+     have to check your results line-by-line but can just run it.
 
    * If you don't have an Org-mode file, submit a C file as a second
      choice.
 
-   *  Org-mode meta data were often not correct (file will still run)
-       #+begin_example
-       #+AUTHOR: name
+   * Org-mode meta data were often not correct (file will still run)
+    #+begin_example
+    #+AUTHOR: name
 
-       #+name: code
-       #+begin_src C
-       ...
-       #+end_src
-       #+end_example
+    #+name: code
+    #+begin_src C
+    ...
+    #+end_src
+    #+end_example
 
    * A couple of programs looked awfully similar (down to errors):
      - There is no need to bend the rules: this is not a rat race!
-     - If in doubt about cheating, check this syllabus section.
+     - If in doubt about "what is cheating", [[https://github.com/birkenkrahe/cc100/blob/main/syllabus.org#assignments-and-honor-codefn2][check the syllabus]].
+     - Add ~#+HONOR: pledged~ to the top of your Org-mode submissions
 
-   * You can find [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][examples and solutions]] in the class notes later.
+   * You can find examples and solutions in the class notes later.
 
    * You can find online REPLs (Read-Eval-Print-Loops) [[https://www.tutorialspoint.com/compile_c_online.php][like this one]]
      to try things out if you're flummoxed by Emacs Org-mode
-     
+
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Hello world function][Challenge review]]
-** Programming assignment (until Monday, 28-Feb, 11 AM)
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
      in the form ~(xxx) xxx-xxxx~, and then displays the number in the
      form ~xxx.xxx.xxxx~.
 
-   * Example input/output:
+   * Example input/output of the first program, ~phone1.c~:
      #+begin_example
      Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
      You entered 870.456.7890
      #+end_example
 
-   * This time, submit the C source code file (you can write it in
-     Org-mode and then tangle it, or just submit the C file as it is).
+   * Write another program that asks for the input format in the form
+     ~xxx\xxx\xxxx~, and then displays the number in the form
+     ~(xxx)xxx-xxx~.
+
+   * Example input/output of the second program, ~phone2.c~:
+     #+begin_example
+     Enter phone number [xxx\xxx\xxxx]: 870\456\7890
+     You entered (870) 456-7890
+     #+end_example
+
+   * Submit one Emacs Org-mode file ~phone.org~ with both programs in
+     it as code blocks that can be *tangled* as ~phone1.c~ and
+     ~phone2.c~, resp.
+
+   * The header information of your Org-mode file should look like this:
+     #+begin_example
+       #+TITLE: Phone number conversion
+       #+AUTHOR: [your name]
+       #+HONOR: pledged
+     #+end_example
 
 * References
   * For some of the programming projects, see: King (2011). C
