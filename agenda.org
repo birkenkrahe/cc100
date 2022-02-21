@@ -662,11 +662,12 @@
      but for accuracy (this includes following the instructions)
 
    * Please submit an Org-mode file if you have one so that I don't
-     have to check your results line-by-line but can just run it
+     have to check your results line-by-line but can just run it. 
 
-   * Selected issues:
-     - Submitted screenshot of Org-mode file without output
-     - Org-mode meta data not correct (file will still run)
+   * If you don't have an Org-mode file, submit a C file as a second
+     choice.
+
+   *  Org-mode meta data were often not correct (file will still run)
        #+begin_example
        #+AUTHOR: name
 
@@ -680,8 +681,12 @@
      - There is no need to bend the rules: this is not a rat race!
      - If in doubt about cheating, check this syllabus section.
 
-   * You can find examples and solutions in the class notes.
+   * You can find [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][examples and solutions]] in the class notes later.
+
+   * You can find online REPLs (Read-Eval-Print-Loops) [[https://www.tutorialspoint.com/compile_c_online.php][like this one]]
+     to try things out if you're flummoxed by Emacs Org-mode
      
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Hello world function][Challenge review]]
 ** Programming assignment (until Monday, 28-Feb, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
