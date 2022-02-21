@@ -703,10 +703,6 @@
   * If you don't have a copy on your computer, get it from GitHub (in
     [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~cc100/3_basics/src/dweight.c~]]
 
-* Input and output functions
-
-  * 
-  
 * Program Layout
 
   * You can think of a program statement as a series of tokens[fn:12]:
@@ -792,6 +788,9 @@
                     );
     #+end_src
 
+* More on ~printf~ and ~scanf~
+** ~printf~
+** ~scanf~
 * Glossary
 
   | TERM             | EXPLANATION                                                          |
