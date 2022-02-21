@@ -621,7 +621,7 @@
    * Arithmetic operators (math, yay!)
 
 * Reading input - w7s16 (02/21/22)
-** Script in GitHub
+** [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script in GitHub]]
 ** Objectives
 
    * [ ] Review programming assignment "volume"
