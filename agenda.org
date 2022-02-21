@@ -565,7 +565,7 @@ n#+STARTUP: overview hideblocks
 
    * Solution next week!
 
-* C constants, naming, layout - w6s15 (02/18/22)
+* C constants, naming - w6s15 (02/18/22)
 ** News
 
    * Invitation for an online data science seminar with the data
@@ -586,29 +586,30 @@ n#+STARTUP: overview hideblocks
 
 ** Objectives
 
-   * [ ] Learn more ways of defining C constants
-   * [ ] Practice constant definitions
-   * [ ] Understand naming conventions for C program
+   * [X] Learn more ways of defining C constants
+   * [X] Practice constant definitions
+   * [X] Understand naming conventions for C program
 
 ** Warming up: be the compiler!
 
-   What's wrong with this program? (It won't even compile.)
+   * What's wrong with this program? (It won't even compile.)
+     #+name: 021822
+     #+begin_src C :results output
+       #include <stdio.h>
+       #define CONST_ 100;
 
-   #+name: 021822
-   #+begin_src C :results output
-     #include <stdio.h>
-     #define CONST 100;
+       int main(void) {
+         int value = CONST_, newValue;
 
-     int main(void) {
-       int value = CONST, newValue;
+         newValue = value + 1;
 
-       newValue = value + 1;
+         printf("%d %d %d\n", CONST_, value, newValue);
+         return 0;
+       }
+     #+end_src
 
-       printf("%d %d %d\n", CONST, value, newValue);
-       return 0;
-     }
-   #+end_src
-
+     * Answer in the class notes file ~notes.org~.
+       
 ** Next week
 
    * Quiz 4 (play me once, then play me often!)
@@ -617,7 +618,7 @@ n#+STARTUP: overview hideblocks
    * Good program layout
    * Reading input with ~scanf~ (read me, baby!)
    * Arithmetic operators (math, yay!)
-   
+
 * Footnotes
 
 [fn:2]I managed to install GCC on the lab computers and run it inside

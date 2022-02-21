@@ -597,7 +597,7 @@
 
    * If names consist of more than one word, separate with ~_~ or
      insert capital letters:
-        #+begin_src C :results silent
+     #+begin_src C :results silent
        hello_world();
        helloWorld();
      #+end_src
@@ -637,7 +637,7 @@
    * Names cannot begin with a number, and they may not contain
      dashes/minus signs. These are all illegal:
      #+begin_example
-       10times  get-net-char 
+       10times  get-net-char
      #+end_example
      These are good:
      #+begin_example
@@ -663,24 +663,92 @@
    * Your turn: name some illegal identifiers and see what the
      compiler says!
 
+* Reading input
 
-* IN PROGRESS Program Layout
+  
+* Program Layout
 
-  * You can think of a program statement as a series of tokens:
+  * You can think of a program statement as a series of tokens[fn:9]:
+    #+name: tokenization
+    #+begin_example
+     printf ( "Height: %d\n"   ,   height )  ;
+       1    2        3         4     5    6  7
+    #+end_example
+    |   | TOKEN          | MEANING                              |
+    |---+----------------+--------------------------------------|
+    | 1 | identifier     | protected C keyword  (function)      |
+    | 2 | punctuation    | function call begins                 |
+    | 3 | string literal | text + formatting + escape character |
+    | 4 | punctuation    | separator                            |
+    | 5 | identifier     | integer variable                     |
+    | 6 | punctuation    | function call ends                   |
+    | 7 | punctuation    | statement closure                    |
 
-  * You can have any amount of white (empty) space between program tokens
+  * You can have any amount of white (empty) space between program
+    tokens (this is not so for all programming languages[fn:10]).
 
-  * You can divide statements over any number of lines
+  * [ ] As an example, here is a version of ~dweight~ that works just
+    as well, on one line, with almost all whitespace deleted. Only in
+    one place, the space is needed. Can you see where?
+    #+name: dweight_one_line
+    #+begin_src C
+      int height,length,width,volume,weight;height=8;length=12;width=10;volume=height*length*width;weight=(volume+165)/166;printf("Dimensions: %dx%dx%d\n",length,width,height);printf("Volume (cubic inches): %d\n",volume);printf("Dimensional weight (pounds): %d\n",weight);
+    #+end_src
 
-  * Space between tokens makes identification easier
+  * Another exception are the preprocessor directives - they need to
+    be on a line of their own.
+    #+name: preprocessor
+    #+begin_src C :results silent
+      #include "stdio.h"
+      #define  CONSTANT 5
+    #+end_src
 
-  * Indentation makes nesting easier to spot
+  * You can divide statements over any number of lines as long as you
+    don't divide keywords or tokens. This works:
+    #+begin_src C
+      int
+      height
+      = 5
+        ;
+      printf
+      (
+       "height %d\n" ,
+       height)
+      ;
+    #+end_src
+    But this does not:
+    #+begin_src C :results silent
+      int
+      hei ght
+      = 5
+        ;
+      print f
+      (
+       "height
+       %d\n" ,
+       height)
+        ;
+    #+end_src
+    - The variable ~height~ is not declared
+    - The ~printf~ function is not recognized
+    - The string literal is not complete
 
-  * Blank lines can divide a program into logical units
+  * Good practice:
+    - Space between tokens makes identification easier
+    - Indentation makes nesting easier to spot
+    - Blank lines can divide a program into logical units
 
-  * C keywords must remain undivided
+  * [ ] Practice: improve the layout of the program.
+    #+begin_src C
+		  int var1=1;int var2;var2=
+			    var1
+			    ,*100;
+      printf (      "Variable1=%d,variable2=%d\n",
+      var1,
 
-** TODO Practice: improve the layout!
+	            var2
+				    );
+    #+end_src
 
 * Glossary
 
@@ -708,6 +776,15 @@
     why is it important? [blog]. [[https://www.unirelo.com/dimensional-weight/][URL: www.unirelo.com]].
   * w3schools (n.d.). C Header Files [tutorial]. [[https://www.w3schools.in/c-tutorial/c-header-files/][URL: w3schools.in]].
 * Footnotes
+
+[fn:10]Python e.g. is white-space sensitive: the indentation level is
+significant, it denotes code blocks, and needs to be consistent. The
+same goes for Org-mode markdown and code blocks.
+
+[fn:9]The tokenization is an important sub-process of natural language
+processing, a data science discipline that is responsible for language
+assistants like Siri, robotic calls, auto-coding and machine
+translation (like Google translate).
 
 [fn:8]Look for it in the MinGW directory - there's an ~/include~
 subdirectory that contains many header/library files ~.h~.
