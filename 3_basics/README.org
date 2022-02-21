@@ -683,13 +683,23 @@
     the simulated ~eshell~ or the Emacs ~shell~, but on the Windows
     CMD terminal command line[fn:14].
     #+name: iscan
-    #+begin_src C :tangle ./src/iscan.c :includes <stdio.h> 
+    #+begin_src C :tangle iscan.c :includes <stdio.h> :main yes
       int i;
       puts("Enter an integer!");
       scanf("%d", &i);
       printf("You entered %d\n", i);
     #+end_src
 
+  * SOLUTION: change ~int~ to ~float~ in the declaration, and ~%d~ to
+    ~%f~ in the ~scanf~ function.
+    #+name: fscan
+    #+begin_src C :main yes :includes <stdio.h> :tangle fscan.c
+      float i;
+      puts("Enter an floating point number!");
+      scanf("%f", &i);
+      printf("You entered %f\n", i);
+    #+end_src
+  
   * [ ] Class assignment: modify the program [[iscan]] to read a ~float~ instead
     of an ~int~.
     
@@ -788,7 +798,7 @@
                     );
     #+end_src
 
-* More on ~printf~ and ~scanf~
+* More on ~printf~ and ~scanf~??
 ** ~printf~
 ** ~scanf~
 * Glossary

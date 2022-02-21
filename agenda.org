@@ -564,7 +564,8 @@
    * This challenge carries extra credit! Submit Org-file via
      email.
 
-   * Solution next week!
+   * Solution next week! (This implies that you send it to me before
+     the first class next week.)
 
 * C constants, naming - w6s15 (02/18/22)
 ** News
@@ -623,7 +624,7 @@
 * Reading input - w7s16 (02/21/22)
 ** News
 
-   * [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script is always in GitHub]]
+   * [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script is always in GitHub]] (use it for your class post mortem)
    * [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming: Empower Your Writing with Emacs Org-Mode]]
 
 ** Objectives
@@ -645,6 +646,14 @@
        printf("%.2f\n"; int = int 1 + int 2);
      #+end_src
 
+     #+begin_src C
+       float int1=1.f, int2=2.f, int3;
+       printf("%.2f\n", int3 = int1 + int2);
+     #+end_src
+
+     #+RESULTS:
+     : 3.0
+     
 ** How do class assignments work?
 
    * In-class assignments are *10%* of your total grade
