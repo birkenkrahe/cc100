@@ -1,8 +1,9 @@
 #+TITLE:CC Agenda
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE: CSC 100 - Spring 2022
-#+OPTIONS: toc:1 num:nil fig:nil
-n#+STARTUP: overview hideblocks
+#+OPTIONS: toc:1 
+#+STARTUP: overview hideblocks
+#+PROPERTY: header-args:C :main yes :includes <stdio.h>
 * README
 
   This file contains the agenda overview (what I had planned), the
@@ -593,7 +594,7 @@ n#+STARTUP: overview hideblocks
 ** Warming up: be the compiler!
 
    * What's wrong with this program? (It won't even compile.)
-     #+name: 021822
+     #+name: 021822_err
      #+begin_src C :results output
        #include <stdio.h>
        #define CONST_ 100;
@@ -615,10 +616,30 @@ n#+STARTUP: overview hideblocks
    * Quiz 4 (play me once, then play me often!)
    * Review of the volume/hello programming challenges
    * A new programming challenge!
-   * Good program layout
    * Reading input with ~scanf~ (read me, baby!)
+   * Good program layout
    * Arithmetic operators (math, yay!)
 
+* Reading input - w7s16 (02/21/22)
+** Objectives
+
+   * [ ] Review programming exercise "volume"
+   * [ ] Review programming challenge "hello world function"
+   * [ ] New programming exercise "phone number conversion"
+   * [ ] Understand reading input from the command line
+   * [ ] See how reading input works in Emacs Org-mode
+
+** Warming up: be the compiler!
+
+   * The following program should print out ~3.0~ but it does not even
+     compile! Find all mistakes, fix them and run the program in Emacs!
+     #+name: 022122_err
+     #+begin_src C
+       float int1=1.f, int2=2.f, int;
+       printf("%.2f\n"; int = int 1 + int 2);
+     #+end_src
+   
+* Program layout, 
 * Footnotes
 
 [fn:2]I managed to install GCC on the lab computers and run it inside
