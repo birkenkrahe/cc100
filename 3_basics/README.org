@@ -8,6 +8,7 @@
 #+PROPERTY: header-args:C :includes <stdio.h>
 #+PROPERTY: header-args:C :exports both
 #+PROPERTY: header-args:C :results output
+#+PROPERTY: header-args:C :comments both
 * README
 
   * This script summarizes and adds to the treatment by King (2008),
@@ -56,7 +57,7 @@
    * Since source code files should have comments, we add the header
      argument ~:comments both~: now, the most recent org block is used
      as a comment
-   * The workflow of "tangling" and "weaving"[fn:4] looks like this:
+   * The workflow of "tangling" and "weaving"[fn:1] looks like this:
 
      #+attr_html: :width 600px
      [[./img/cweb.png]]
@@ -150,7 +151,7 @@
 
   [[./img/files.png]]
 
-  | Challenge: are these executables portable?[fn:3] |
+  | Challenge: are these executables portable?[fn:2] |
 
 * Shell execution
 
@@ -178,10 +179,10 @@
     [[./img/replit.png]]
 
   * There is no highlighting standard - you should experiment with
-    different themes[fn:1]
+    different themes[fn:3]
 
   * Display line numbers with ~display-line-numbers-mode~, and
-    highlight lines with ~hl-line-mode~[fn:2]:
+    highlight lines with ~hl-line-mode~[fn:4]:
 
     #+attr_html: :width 600px
     [[./img/pun.png]]
@@ -246,14 +247,14 @@
   * Variable type declarations must precede statements that use the
     variables
 
-  * The block with *declarations* comes before the statements[fn:1]
+  * The block with *declarations* comes before the statements[fn:5]
 
 * Variable assignment
 
   * A variable gets its value through *assignment*
 
   * In [[assignment example 1]], the variable ~height~ gets the value
-    ~8~[fn:4]
+    ~8~. It is called a ~constant~ because it cannot change.
     #+name: assignment example 1
     #+begin_src C
       height = 8;
@@ -262,10 +263,10 @@
     #+RESULTS: assignment example 1
 
   * [X] If you tried to run [[assignment example 1]], you got an
-    error. Can you see why?[fn:2]
+    error. Can you see why?[fn:6]
 
   * [X] However, [[assignment example 2]] throws another error. What's
-    wrong this time?[fn:3]
+    wrong this time?[fn:7]
     #+name: assignment example 2
     #+begin_src C
       height = 8;
@@ -321,7 +322,7 @@
    * We use the built-in (via ~stdio.h~) function ~printf~ to print.
 
    * We also used ~puts~ in the past, which includes the newline
-     character ~\n~ that we need to add for ~printf~[fn:7].
+     character ~\n~ that we need to add for ~printf~[fn:8].
 
 ** Formatting integer numbers
 
@@ -381,7 +382,7 @@
   * Shipping fees are based on volume instead of weight. For the
     conversion, the volume is divided by 166. If the result exceeds
     the actual weight, the shipping fee is based on the "dimensional
-    weight"[fn:5].
+    weight"[fn:9].
 
   * [X] We write a program to compute the dimensional ~weight~ of a box of
     given ~volume~ - we use ~/~ for division. Let's say the box is
@@ -416,7 +417,7 @@
   * This is not what we need. When dividing one integer by another, C
     "truncates" the answer - the result is rounded down, but the
     shipping company wants us to round up. This can be achieved by
-    adding 165 to the volume before dividing by 166[fn:6] as shown in
+    adding 165 to the volume before dividing by 166[fn:10] as shown in
     [[dweight]].
     #+name: dweight
     #+begin_src C
@@ -432,7 +433,7 @@
   * [X] Now for the final program [[dweight_c]]. This time, we allow for
     tangling the program as ~dweight.c~.
     #+name: dweight_c
-    #+begin_src C :tangle dweight.c :results raw
+    #+begin_src C :tangle ./src/dweight.c :results raw
       #include <stdio.h>
 
       int main(void)
@@ -455,6 +456,11 @@
         return 0;
       }
     #+end_src
+
+    #+RESULTS: dweight_c
+    Dimensions: 12x10x8
+    Volume (cubic inches): 960
+    Dimensional weight (pounds): 6
 
 * Constants
 ** Macro definition with ~#define~
@@ -537,7 +543,7 @@
      #+attr_html: :width 500px
      [[./img/math.png]]
 
-   * [X] Where is ~math.h~ in Windows[fn:8]? Where in MacOS? Find the file,
+   * [X] Where is ~math.h~ in Windows[fn:11]? Where in MacOS? Find the file,
      open and look at it in Emacs (the file is read-only).
 
 ** Type definition with ~const~
@@ -665,10 +671,37 @@
 
 * Reading input
 
-  
+  * Before you can print output with ~printf~, you need to tell the
+    computer, which format it should prepare for.
+
+  * Just like ~printf~, the input function ~scanf~ needs to know what
+    format the input data will come in.
+
+  * The following statement reads an ~int~ value and stores it in the
+    variable ~i~. To run it, you have to tangle the code block (with
+    ~C-u C-c C-v t~), compile and run it on the command line - not on
+    the simulated ~eshell~ or the Emacs ~shell~, but on the Windows
+    CMD terminal command line[fn:14].
+    #+name: iscan
+    #+begin_src C :tangle ./src/iscan.c :includes <stdio.h> 
+      int i;
+      puts("Enter an integer!");
+      scanf("%d", &i);
+      printf("You entered %d\n", i);
+    #+end_src
+
+  * [ ] Modify the program [[iscan]] to read a ~float~ instead of an
+    ~int~.
+
+  * [ ] Let's modify the dimensional weight program so that the
+    ~height~, ~length~ and ~width~ of the box must be entered.
+
+  * If you don't have a copy on your computer, get it from GitHub (in
+    ~cc100/3_basics/src/dweight.c~
+    
 * Program Layout
 
-  * You can think of a program statement as a series of tokens[fn:9]:
+  * You can think of a program statement as a series of tokens[fn:12]:
     #+name: tokenization
     #+begin_example
      printf ( "Height: %d\n"   ,   height )  ;
@@ -685,7 +718,7 @@
     | 7 | punctuation    | statement closure                    |
 
   * You can have any amount of white (empty) space between program
-    tokens (this is not so for all programming languages[fn:10]).
+    tokens (this is not so for all programming languages[fn:13]).
 
   * [ ] As an example, here is a version of ~dweight~ that works just
     as well, on one line, with almost all whitespace deleted. Only in
@@ -739,15 +772,16 @@
     - Blank lines can divide a program into logical units
 
   * [ ] Practice: improve the layout of the program.
+    #+name: layout
     #+begin_src C
-		  int var1=1;int var2;var2=
-			    var1
-			    ,*100;
+      int var1=1;int var2;var2=
+                            var1
+                            ,*100;
       printf (      "Variable1=%d,variable2=%d\n",
-      var1,
+                    var1,
 
-	            var2
-				    );
+                    var2
+                    );
     #+end_src
 
 * Glossary
@@ -767,58 +801,6 @@
   | ~math.h~         | Math library, contains mathematical constants and functions          |
   | ~stdio.h~        | Input/Output library, enables ~printf~ and ~scanf~                   |
   | ~const~          | Constant identifier, e.g. ~const double PI = 3.14;~                  |
-
-* References
-  * Collingbourne (2022). C Programming for Beginners
-    [course]. Udemy.org.
-  * King (2011). C Programming [book]. Wiley.
-  * <<unirelo>> N.a. (2020). What is dimensional weight of cargo and
-    why is it important? [blog]. [[https://www.unirelo.com/dimensional-weight/][URL: www.unirelo.com]].
-  * w3schools (n.d.). C Header Files [tutorial]. [[https://www.w3schools.in/c-tutorial/c-header-files/][URL: w3schools.in]].
-* Footnotes
-
-[fn:10]Python e.g. is white-space sensitive: the indentation level is
-significant, it denotes code blocks, and needs to be consistent. The
-same goes for Org-mode markdown and code blocks.
-
-[fn:9]The tokenization is an important sub-process of natural language
-processing, a data science discipline that is responsible for language
-assistants like Siri, robotic calls, auto-coding and machine
-translation (like Google translate).
-
-[fn:8]Look for it in the MinGW directory - there's an ~/include~
-subdirectory that contains many header/library files ~.h~.
-
-[fn:7][[https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/][See here]] for a comparison of ~printf()~ vs. ~puts()~.
-
-[fn:6]165/166 is 0.9939759, so we've just messed with the actual
-volume.
-
-[fn:5]
-#+begin_quote
-"Cargo space has physical limits based on the volume of the cargo and
-the weight. The reason why both volume & weight are evaluated can be
-better understood if you consider the cost of shipping a large object
-with less weight.
-
-For example, a large box containing styrofoam cups weighs very less,
-i.e., the dimensional (volume) weight of that box will likely be more
-than its actual weight. It is for this reason that most airlines and
-other transport providers evaluate both dimensional weight & actual
-weight, and then use the greater of the two weights to bill you for
-the transportation costs. The greater of the two weights is also
-commonly referred to as ‘chargeable weight’." ([[unirelo][UniRelo, 2020]])
-#+end_quote
-
-[fn:4]The value ~8~ is called a ~constant~ because it cannot change
-
-[fn:3]The declaration must precede the use of the variable.
-
-[fn:2]Assignment is variable use. Variable types must be declared
-before they can be used.
-
-[fn:1]In the C99 standard, declarations don't have to come before
-statements.
 
 * Concept summary
 
@@ -864,31 +846,70 @@ statements.
   |--------------+----------------------------------------------|
   | Function     | a rule to compute something with arguments   |
   |--------------+----------------------------------------------|
-* What's next
-
 * References
   * Collingbourne (2019). The Little Book of C (Rev. 1.2). Dark Neon.
   * King (2008). C Programming - A Modern Approach. Norton. [[http://knking.com/books/c2/index.html][Online:
     knking.com]].
-  * tutorialspoint.com (n.d.). C Library - <stdio.h> [website]. [[https://www.tutorialspoint.com/c_standard_library/stdio_h.htm][URL:
-    tutorialspoint.com]].
 * Footnotes
 
-[fn:4] In our case, instead of weaving TeX files (~.tex~) to print, we
+[fn:14]You could try and run it in Emacs. Can you explain the result? 
+
+[fn:13]Python e.g. is white-space sensitive: the indentation level is
+significant, it denotes code blocks, and needs to be consistent. The
+same goes for Org-mode markdown and code blocks.
+
+[fn:12]The tokenization is an important sub-process of natural language
+processing, a data science discipline that is responsible for language
+assistants like Siri, robotic calls, auto-coding and machine
+translation (like Google translate).
+
+[fn:11]Look for it in the MinGW directory - there's an ~/include~
+subdirectory that contains many header/library files ~.h~.
+
+[fn:8][[https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/][See here]] for a comparison of ~printf()~ vs. ~puts()~.
+
+[fn:10]165/166 is 0.9939759, so we've just messed with the actual
+volume.
+
+[fn:9]
+#+begin_quote
+"Cargo space has physical limits based on the volume of the cargo and
+the weight. The reason why both volume & weight are evaluated can be
+better understood if you consider the cost of shipping a large object
+with less weight.
+
+For example, a large box containing styrofoam cups weighs very less,
+i.e., the dimensional (volume) weight of that box will likely be more
+than its actual weight. It is for this reason that most airlines and
+other transport providers evaluate both dimensional weight & actual
+weight, and then use the greater of the two weights to bill you for
+the transportation costs. The greater of the two weights is also
+commonly referred to as ‘chargeable weight’." ([[unirelo][UniRelo, 2020]])
+#+end_quote
+
+[fn:7]The declaration must precede the use of the variable.
+
+[fn:6]Assignment is variable use. Variable types must be declared
+before they can be used.
+
+[fn:5]In the C99 standard, declarations don't have to come before
+statements.
+
+[fn:1] In our case, instead of weaving TeX files (~.tex~) to print, we
 weave Markdown files (~.md~), or WORD (~*.odt~) files, or we dispense
 with the weaving altogether because Org-mode files (equivalent of the
 ~*.w~ or "web" files) look fine on GitHub.
 GitHub.
 
-[fn:3]Executables are the result of compilation for a specific
+[fn:2]Executables are the result of compilation for a specific
 computer architecture and OS. The ~.exe~ program was compiled for
 Windows, the ~.out~ program was compiled for Linux. They will only run
 on these OS.
 
-[fn:1]You can find [[https://emacsthemes.com/][themes for GNU Emacs]] here, and install them
+[fn:3]You can find [[https://emacsthemes.com/][themes for GNU Emacs]] here, and install them
 using ~M-x package-list-packages~.
 
-[fn:2]If you always want to have line numbers and highlight the line
+[fn:4]If you always want to have line numbers and highlight the line
 under the cursor, put these lines in your ~.emacs~ file: and restart
 Emacs:
 #+begin_src emacs-lisp

@@ -1,7 +1,7 @@
 #+TITLE:CC Agenda
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE: CSC 100 - Spring 2022
-#+OPTIONS: toc:1 
+#+OPTIONS: toc:1
 #+STARTUP: overview hideblocks
 #+PROPERTY: header-args:C :main yes :includes <stdio.h>
 * README
@@ -610,7 +610,7 @@
      #+end_src
 
      * Answer in the class notes file ~notes.org~.
-       
+
 ** Next week
 
    * Quiz 4 (play me once, then play me often!)
@@ -651,8 +651,10 @@
      Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
      You entered 870.456.7890
      #+end_example
-     
-* Program layout, 
+
+* References
+  * For some of the programming projects, see: King (2011). C
+    Programming. W Norton & Co.
 * Footnotes
 
 [fn:2]I managed to install GCC on the lab computers and run it inside
