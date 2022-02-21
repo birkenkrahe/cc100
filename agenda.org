@@ -653,19 +653,23 @@
    * If you check your phone instead, you're *not* active
    * If you could not attend, submit *late*
 
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programing assignment review]]
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programming assignment review]]
 
    * I left detailed comments for most of you: use them or ask me! Use
      them by modifying your submission accordingly.
 
-   * Future submissions will be properly graded not just for effort
-     but for accuracy (this includes following the instructions)
+   * You can find examples and solutions in the class notes later.
+
+   * Future submissions will be graded not just for effort but for
+     accuracy (this includes following the instructions). However, you
+     can (and should) always re-submit an improved version.
+
+   * Computer science is a craft like any other: (1) you keep at it
+     until you got it right, (2) you don't give up easily, and (3) you
+     ask for help when you're at the end of your wits.
 
    * Please submit an Org-mode file if you have one so that I don't
      have to check your results line-by-line but can just run it.
-
-   * If you don't have an Org-mode file, submit a C file as a second
-     choice.
 
    * Org-mode meta data were often not correct (file will still run)
     #+begin_example
@@ -682,10 +686,9 @@
      - If in doubt about "what is cheating", [[https://github.com/birkenkrahe/cc100/blob/main/syllabus.org#assignments-and-honor-codefn2][check the syllabus]].
      - Add ~#+HONOR: pledged~ to the top of your Org-mode submissions
 
-   * You can find examples and solutions in the class notes later.
-
    * You can find online REPLs (Read-Eval-Print-Loops) [[https://www.tutorialspoint.com/compile_c_online.php][like this one]]
-     to try things out if you're flummoxed by Emacs Org-mode
+     to try things out if you're flummoxed by Emacs Org-mode (at this
+     point, you shouldn't be but Windows can be toxic...)
 
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Hello world function][Challenge review]]
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
@@ -720,6 +723,12 @@
        #+AUTHOR: [your name]
        #+HONOR: pledged
      #+end_example
+
+* Next
+
+  * Program layout improvement
+  * More on ~scanf~ and ~printf~ formatting
+  * Arithmetic expressions and operators
 
 * References
   * For some of the programming projects, see: King (2011). C
