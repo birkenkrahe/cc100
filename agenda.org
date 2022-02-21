@@ -655,9 +655,20 @@
 
 ** Programing assignment review
 
-   * I left detailed comments for most of you: use them or ask me!
+   * I left detailed comments for most of you: use them or ask me! Use
+     them by modifying your submission accordingly.
 
-   * Please submit an Org-mode file if you have one. 
+   * Future submissions will be properly graded not just for effort
+     but for accuracy (this includes following the instructions)
+
+   * Please submit an Org-mode file if you have one so that I don't
+     have to check your results line-by-line but can just run it
+
+   * Selected issues:
+     - Submitted screenshot of Org-mode file without output
+     - Org-mode meta data not correct (file will still run)
+     - Constant defined but not used 
+     - Mixed integer and floats (accuracy issue)
    
 ** Programming assignment (until Monday, 28-Feb, 11 AM)
 
