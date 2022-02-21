@@ -621,7 +621,11 @@
    * Arithmetic operators (math, yay!)
 
 * Reading input - w7s16 (02/21/22)
-** [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script in GitHub]]
+** News
+   
+    * [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script is always in GitHub]]
+    * [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming: Empower Your Writing with Emacs Org-Mode]]
+      
 ** Objectives
 
    * [ ] Review programming assignment "volume"
@@ -641,6 +645,20 @@
        printf("%.2f\n"; int = int 1 + int 2);
      #+end_src
 
+** How do class assignments work?
+
+   * In-class assignments are *10%* of your total grade
+   * They are labeled *class assignments* in the Schoology gradebook
+   * You get the points if you attend and participate *actively*
+   * If you check your phone instead, you're *not* active
+   * If you could not attend, submit *late*
+
+** Programing assignment review
+
+   * I left detailed comments for most of you: use them or ask me!
+
+   * Please submit an Org-mode file if you have one. 
+   
 ** Programming assignment (until Monday, 28-Feb, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
@@ -653,14 +671,9 @@
      You entered 870.456.7890
      #+end_example
 
-** How do class assignments work?
-
-   * In-class assignments are *10%* of your total grade
-   * They are labeled *class assignments* in the Schoology gradebook
-   * You get the points if you attend and participate *actively*
-   * If you check your phone instead, you're *not* active
-   * If you could not attend, submit *late*
-
+   * This time, submit the C source code file (you can write it in
+     Org-mode and then tangle it, or just submit the C file as it is).
+   
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
