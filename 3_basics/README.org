@@ -690,15 +690,19 @@
       printf("You entered %d\n", i);
     #+end_src
 
-  * [ ] Modify the program [[iscan]] to read a ~float~ instead of an
-    ~int~.
-
-  * [ ] Let's modify the dimensional weight program so that the
-    ~height~, ~length~ and ~width~ of the box must be entered.
+  * [ ] Class assignment: modify the program [[iscan]] to read a ~float~ instead
+    of an ~int~.
+    
+  * [ ] Class assignment:
+    1) modify the dimensional weight program so that the ~height~,
+       ~length~ and ~width~ of the box must be entered
+    2) define ~166~ as a constant ~INCHES_PER_POUND~
+    3) compile and run the program on the CMD line using the test
+       values 8,12,10 whose results you know (volume: 960, weight: 6).
 
   * If you don't have a copy on your computer, get it from GitHub (in
-    ~cc100/3_basics/src/dweight.c~
-    
+    [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~cc100/3_basics/src/dweight.c~]]
+
 * Program Layout
 
   * You can think of a program statement as a series of tokens[fn:12]:
