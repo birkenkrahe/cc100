@@ -672,14 +672,14 @@
      have to check your results line-by-line but can just run it.
 
    * Org-mode meta data were often not correct (file will still run)
-    #+begin_example
-    #+AUTHOR: name
+     #+begin_example
+     #+AUTHOR: name
 
-    #+name: code
-    #+begin_src C
-    ...
-    #+end_src
-    #+end_example
+     #+name: code
+     #+begin_src C
+     ...
+     #+end_src
+     #+end_example
 
    * A couple of programs looked awfully similar (down to errors):
      - There is no need to bend the rules: this is not a rat race!
@@ -723,6 +723,24 @@
        #+AUTHOR: [your name]
        #+HONOR: pledged
      #+end_example
+
+   * Tip: some characters, like ~\~ are protected because they are
+     part of the file ~PATH~. If you want to use them, you have to
+     "escape" them with an extra ~\~, like the newline character
+     ~\n~. So to print the character ~\~, you use ~\\~.
+     #+name: escape
+     #+begin_src C :results output
+       printf("hi there\n");              // string output
+       printf(" \"hi there\" \n");        // escaped \" will print
+       printf("This is a slash: \ \n");   // slash will not print
+       printf("This is a slash: \\ \n");  // escaped slash\\  will print
+     #+end_src
+
+     #+RESULTS: escape
+     : hi there
+     :  "hi there" 
+     : This is a slash:  
+     : This is a slash: \ 
 
 * Next
 
