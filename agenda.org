@@ -621,7 +621,7 @@
    * Good program layout
    * Arithmetic operators (math, yay!)
 
-* Reading input - w7s16 (02/21/22)
+* Program assignment review, scanf - w7s16 (02/21/22)
 ** News
 
    * [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script is always in GitHub]] (use it for your class post mortem)
@@ -629,10 +629,11 @@
 
 ** Objectives
 
-   * [ ] Review programming assignment "volume"
-   * [ ] Review programming challenge "hello world function"
+   * [X] Review programming assignment "volume"
+   * [X] Review programming challenge "hello world function"
+   * [X] Understand reading input (from the command line)
+   * [ ] Understand how in-class assignments work
    * [ ] New programming exercise "phone number conversion"
-   * [ ] Understand reading input (from the command line)
    * [ ] Complete two in-class assignments
    * [ ] See how reading input works in Emacs Org-mode
 
@@ -646,13 +647,7 @@
        printf("%.2f\n"; int = int 1 + int 2);
      #+end_src
 
-     #+begin_src C
-       float int1=1.f, int2=2.f, int3;
-       printf("%.2f\n", int3 = int1 + int2);
-     #+end_src
-
-     #+RESULTS:
-     : 3.0
+   * SOLUTION: see class notes.
      
 ** How do class assignments work?
 
@@ -661,6 +656,57 @@
    * You get the points if you attend and participate *actively*
    * If you check your phone instead, you're *not* active
    * If you could not attend, submit *late*
+
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programming assignment review]]
+
+   * I left detailed comments for most of you: use them or ask me! Use
+     them by modifying your submission accordingly.
+
+   * You can find examples and solutions in the class notes later.
+
+   * Future submissions will be graded not just for effort but for
+     accuracy (this includes following the instructions). However, you
+     can (and should) always re-submit an improved version.
+
+   * Computer science is a craft like any other: (1) you keep at it
+     until you got it right, (2) you don't give up easily, and (3) you
+     ask for help when you're at the end of your wits.
+
+   * Please submit an Org-mode file if you have one so that I don't
+     have to check your results line-by-line but can just run it.
+
+   * Org-mode meta data were often not correct (file will still run)
+     #+begin_example
+     #+AUTHOR: name
+
+     #+name: code
+     #+begin_src C
+     ...
+     #+end_src
+     #+end_example
+
+   * A couple of programs looked awfully similar (down to errors):
+     - There is no need to bend the rules: this is not a rat race!
+     - If in doubt about "what is cheating", [[https://github.com/birkenkrahe/cc100/blob/main/syllabus.org#assignments-and-honor-codefn2][check the syllabus]].
+     - Add ~#+HONOR: pledged~ to the top of your Org-mode submissions
+
+   * You can find online REPLs (Read-Eval-Print-Loops) [[https://www.tutorialspoint.com/compile_c_online.php][like this one]]
+     to try things out if you're flummoxed by Emacs Org-mode (at this
+     point, you shouldn't be but Windows can be toxic...)
+
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Hello world function][Challenge review]]
+
+   * User-defined functions are where programming really begins
+
+   * See class notes for challenge solution
+
+* Reading input 2 - w7s16 (02/21/22)
+** Objectives
+
+   * [ ] Understand tangling C code from Org-mode
+   * [ ] Understand reading input (from the command line)
+   * [ ] Complete in-class assignment
+   * [ ] New programming exercise "phone number conversion"
 
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programming assignment review]]
 
