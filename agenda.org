@@ -622,16 +622,16 @@
 
 * Reading input - w7s16 (02/21/22)
 ** News
-   
-    * [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script is always in GitHub]]
-    * [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming: Empower Your Writing with Emacs Org-Mode]]
-      
+
+   * [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][Script is always in GitHub]]
+   * [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming: Empower Your Writing with Emacs Org-Mode]]
+
 ** Objectives
 
    * [ ] Review programming assignment "volume"
    * [ ] Review programming challenge "hello world function"
    * [ ] New programming exercise "phone number conversion"
-   * [ ] Understand reading input from the command line
+   * [ ] Understand reading input (from the command line)
    * [ ] Complete two in-class assignments
    * [ ] See how reading input works in Emacs Org-mode
 
@@ -667,9 +667,21 @@
    * Selected issues:
      - Submitted screenshot of Org-mode file without output
      - Org-mode meta data not correct (file will still run)
-     - Constant defined but not used 
-     - Mixed integer and floats (accuracy issue)
-   
+       #+begin_example
+       #+AUTHOR: name
+
+       #+name: code
+       #+begin_src C
+       ...
+       #+end_src
+       #+end_example
+
+   * A couple of programs looked awfully similar (down to errors):
+     - There is no need to bend the rules: this is not a rat race!
+     - If in doubt about cheating, check this syllabus section.
+
+   * You can find examples and solutions in the class notes.
+     
 ** Programming assignment (until Monday, 28-Feb, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
@@ -684,7 +696,7 @@
 
    * This time, submit the C source code file (you can write it in
      Org-mode and then tangle it, or just submit the C file as it is).
-   
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
