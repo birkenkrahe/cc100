@@ -1,4 +1,7 @@
+/*******************************************/
 /* Compute the dimensional weight of a box */
+/* Source: RN KING - C PROGRAMMING (2011)  */
+/*******************************************/
 
 #include <stdio.h>
 

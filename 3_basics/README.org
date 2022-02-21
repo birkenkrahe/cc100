@@ -433,7 +433,7 @@
   * [X] Now for the final program [[dweight_c]]. This time, we allow for
     tangling the program as ~dweight.c~.
     #+name: dweight_c
-    #+begin_src C :tangle ./src/dweight.c :results raw
+    #+begin_src C :tangle ./src/dweight1.c :results raw
       #include <stdio.h>
 
       int main(void)
