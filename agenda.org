@@ -700,7 +700,7 @@
 
    * See class notes for challenge solution
 
-* Reading input 2 - w7s16 (02/21/22)
+* Reading input - w7s16 (02/23/22)
 ** Objectives
 
    * [ ] How to use ~scanf~ inside Emacs (and other input)
