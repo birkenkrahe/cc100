@@ -820,6 +820,7 @@
    [[./3_basics/img/cweb.png]]
 
    See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
+#+options: toc:nil
 ** PRACTICE - dimensional weight reconsidered
 
    * [ ] If your neighbor does not get along, help him/her without
@@ -923,7 +924,8 @@
      :tangle dweight1.c
      #+end_example
 
-   * [ ] Tangle the file with the key sequence ~C-c C-v t~.
+   * [ ] Tangle the code block with the key sequence ~C-c C-v t~ to
+     get the C source code file ~dweight1.c~
 
    * [ ] Compile and run it on the Windows command line, and you're done!
      #+caption: sample result on the Windows CMD line
