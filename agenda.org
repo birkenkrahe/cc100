@@ -729,10 +729,10 @@
        1. 2.
      #+end_example
      
-   * [ ] Create and run the code block [[cmdline]] in Emacs. Make
-     sure that you have ~:main yes~ and ~:include <stdio.h>~ either on
-     the code block header line or in the ~#+PROPERTY:~ meta data of
-     your Emacs Org-mode file.
+   * [ ] Create and run the code block [[cmdline]] in Emacs in a Org-mode
+     file. Make sure that you have ~:main yes~ and ~:include
+     <stdio.h>~ either on the code block header line or in the
+     ~#+PROPERTY:~ meta data of your Emacs Org-mode file.
 
    * [ ] Tangle the code block and look at the file ~cmd.c~. To
      tangle, use the key sequence ~C-c C-v t~.
@@ -818,7 +818,7 @@
    * Tip: some characters, like ~\~ are protected because they are
      part of the file ~PATH~. If you want to use them, you have to
      "escape" them with an extra ~\~, like the newline character
-     ~\n~. So to print the character ~\~, you use ~\\~.
+     ~\n~. So to print or to scan the character ~\~, you use ~\\~.
      #+name: escape
      #+begin_src C :results output
        printf("hi there\n");              // string output

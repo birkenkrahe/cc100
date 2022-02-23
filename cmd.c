@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 
-int K = 3;
+
 
 
 
 int main() {
-float i,j,var=K;
+float i,j;
 scanf("%f %f\n",&i, &j);
-printf("cmdline: %f %f - var: %f\n",i,j, var);
+printf("input was: %f %f\n",i,j);
 return 0;
 }
