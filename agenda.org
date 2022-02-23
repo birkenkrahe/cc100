@@ -840,7 +840,7 @@
 
    * [ ] Your code block should now look like this (without the comments):
      #+name: dweight1
-     #+begin_src C :results output :cmdline < dweight_input :tangle dweight1.c
+     #+begin_src C 
        #include <stdio.h>
 
        int main(void)
@@ -869,11 +869,6 @@
        }
      #+end_src
 
-     #+RESULTS: dweight1
-     : Enter the box height: Enter the box length: Enter the box width: Dimensions: 10x12x8
-     : Volume (cubic inches): 960
-     : Dimensional weight (pounds): 6
-
    * [ ] Add the necessary tangle information to the code block header:
      #+begin_example
      :tangle dweight1.c
@@ -881,14 +876,16 @@
 
    * [ ] Tangle the file with the key sequence ~C-c C-v t~.
 
-   * [ ] Compile and run it on the Windows command line:
-     #+begin_src bash
-       gcc -o dweight dweight
+   * [ ] Compile and run it on the Windows command line, and you're done!
+     #+caption: sample result on the Windows CMD line
+     #+attr_html: :width 600px
+     [[./img/dweight.png]]
 
-     #+end_src
-
-     , or with redirection using an input file
-
+   * [ ] Alternatively, you can pass the input data to the file using
+     the redirection operator ~<~ - then you can run the file inside
+     Emacs (either on the shell, or using the code block header).
+     
+     
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
