@@ -731,19 +731,16 @@
      #+begin_example
        1. 2.
      #+end_example
-<<<<<<< Updated upstream
      
    * [ ] Create and run the code block [[cmdline]] in Emacs in a Org-mode
      file. Make sure that you have ~:main yes~ and ~:include
      <stdio.h>~ either on the code block header line or in the
      ~#+PROPERTY:~ meta data of your Emacs Org-mode file.
-=======
 
    * [ ] Create and run the code block [[cmdline]] in Emacs. Make
      sure that you have ~:main yes~ and ~:include <stdio.h>~ either on
      the code block header line or in the ~#+PROPERTY:~ meta data of
      your Emacs Org-mode file.
->>>>>>> Stashed changes
 
    * [ ] Tangle the code block and look at the file ~cmd.c~. To
      tangle, use the key sequence ~C-c C-v t~.
