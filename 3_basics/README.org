@@ -690,7 +690,7 @@
       printf("You entered %d\n", i);
     #+end_src
 
-  * [ ] Class assignment:
+  * [X] Class assignment:
     - modify the program [[iscan]] to read a ~float~ instead of an ~int~
     - tangle it as ~fscan.c~
     - compile and run it in the terminal: ~gcc -o fscan fscan.c~
