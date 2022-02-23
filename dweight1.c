@@ -1,16 +1,27 @@
-/* dweight.c (Orig. from King, Chapter 2, page 20) */
-/* Computes the dimensional weight of a 12" x 10" x 8" box */
+#include <stdio.h>
+
+
+
+
+
 
 #include <stdio.h>
 
 int main(void)
 {
+  // declare variables and constants
   const int INCHES_PER_POUND = 166;
   int height, length, width, volume, weight;
 
-  height = 8;
-  length = 12;
-  width = 10;
+  // Enter input
+  printf("Enter the box height: ");
+  scanf("%d", &height);
+  printf("Enter the box length: ");
+  scanf("%d", &length);
+  printf("Enter the box width: ");
+  scanf("%d", &width);
+
+  // compute volume and dimensional weight
   volume = height * length * width;
   weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
 
