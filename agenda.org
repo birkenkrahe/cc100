@@ -648,7 +648,7 @@
      #+end_src
 
    * SOLUTION: see class notes.
-     
+
 ** How do class assignments work?
 
    * In-class assignments are *10%* of your total grade
@@ -703,49 +703,57 @@
 * Reading input 2 - w7s16 (02/21/22)
 ** Objectives
 
+   * [ ] How to use ~scanf~ inside Emacs (and other input)
    * [ ] Understand tangling C code from Org-mode
    * [ ] Understand reading input (from the command line)
    * [ ] Complete in-class assignment
    * [ ] New programming exercise "phone number conversion"
 
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programming assignment review]]
+** How to use ~scanf~ inside Emacs (and another input method)
 
-   * I left detailed comments for most of you: use them or ask me! Use
-     them by modifying your submission accordingly.
-
-   * You can find examples and solutions in the class notes later.
-
-   * Future submissions will be graded not just for effort but for
-     accuracy (this includes following the instructions). However, you
-     can (and should) always re-submit an improved version.
-
-   * Computer science is a craft like any other: (1) you keep at it
-     until you got it right, (2) you don't give up easily, and (3) you
-     ask for help when you're at the end of your wits.
-
-   * Please submit an Org-mode file if you have one so that I don't
-     have to check your results line-by-line but can just run it.
-
-   * Org-mode meta data were often not correct (file will still run)
-     #+begin_example
-     #+AUTHOR: name
-
-     #+name: code
-     #+begin_src C
-     ...
+   * Emacs can fetch arguments via the header arguments ~:cmdline~ (as
+     input redirected from a file), or via ~:var~ through assignment.
+     #+name: cmdline
+     #+begin_src C :cmdline < input :var K=3.0 :tangle cmd.c
+       float i,j,k=K;
+       scanf("%f %f\n",&i, &j);
+       printf("%f %f %f\n",i,j, k);
      #+end_src
-     #+end_example
 
-   * A couple of programs looked awfully similar (down to errors):
-     - There is no need to bend the rules: this is not a rat race!
-     - If in doubt about "what is cheating", [[https://github.com/birkenkrahe/cc100/blob/main/syllabus.org#assignments-and-honor-codefn2][check the syllabus]].
-     - Add ~#+HONOR: pledged~ to the top of your Org-mode submissions
+   #+RESULTS: cmdline
+   : 1.000000 2.000000 3.000000
 
-   * You can find online REPLs (Read-Eval-Print-Loops) [[https://www.tutorialspoint.com/compile_c_online.php][like this one]]
-     to try things out if you're flummoxed by Emacs Org-mode (at this
-     point, you shouldn't be but Windows can be toxic...)
+** NEXT Understand tangling C code from Org-mode
 
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Hello world function][Challenge review]]
+   * Can you answer the following questions succinctly?[fn:3]
+     - What is Emacs?
+     - What is Org-mode?
+     - What does it mean to "tangle" C code?
+     - What does it mean to "weave" documentation (e.g. HTML)?
+
+   #+caption: literate programming processes
+   #+attr_html: :width 600px
+   [[./3_basics/img/cweb.png]]
+
+   See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
+
+*** PRACTICE
+
+    * Create an Org-mode file "tangle.org"
+
+    * Add one C code block (use <s [TAB])
+
+    * Add header arguments in the top line:
+      - :include <stdio.h>
+      - :tangle tangled.c
+
+    * 
+
+    #+name: tangled
+    #+begin_src 
+
+    #+end_src
+
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
@@ -793,9 +801,9 @@
 
      #+RESULTS: escape
      : hi there
-     :  "hi there" 
-     : This is a slash:  
-     : This is a slash: \ 
+     :  "hi there"
+     : This is a slash:
+     : This is a slash: \
 
 * Next
 
@@ -807,6 +815,13 @@
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
 * Footnotes
+
+[fn:3]GNU Emacs is an extensible text editor. Org-mode is a plain text
+environment in GNU Emacs for keeping notes, authoring documents,
+computational notebooks, and more. Tangling code means extracting
+(human readable) source code from an Org-mode file in order to run
+it. Weaving documentation means extracting a document from an Org-mode
+file in order to read it. 
 
 [fn:2]I managed to install GCC on the lab computers and run it inside
 GNU Emacs. This is something that you should do at home with your own
