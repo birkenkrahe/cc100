@@ -3,6 +3,7 @@
 
 # ignore all saved files
 *.*~
+*~
 
 # ignore all locks
 .~lock*#
