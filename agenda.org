@@ -700,30 +700,58 @@
 
    * See class notes for challenge solution
 
-* Reading input - w7s16 (02/23/22)
+* Reading input with Emacs, tangling code - w7s16 (02/23/22)
 ** Objectives
 
    * [ ] How to use ~scanf~ inside Emacs (and other input)
    * [ ] Understand tangling C code from Org-mode
    * [ ] Understand reading input (from the command line)
-   * [ ] Complete in-class assignment
+   * [ ] Complete in-class assignments
    * [ ] New programming exercise "phone number conversion"
 
-** How to use ~scanf~ inside Emacs (and another input method)
+** How to use ~scanf~ inside Emacs with redirection
 
    * Emacs can fetch arguments via the header arguments ~:cmdline~ (as
      input redirected from a file), or via ~:var~ through assignment.
      #+name: cmdline
-     #+begin_src C :cmdline < input :var K=3.0 :tangle cmd.c
-       float i,j,k=K;
+     #+begin_src C :cmdline < input :tangle cmd.c
+       float i,j;
        scanf("%f %f\n",&i, &j);
-       printf("%f %f %f\n",i,j, k);
+       printf("input was: %f %f\n",i,j);
      #+end_src
 
-   #+RESULTS: cmdline
-   : 1.000000 2.000000 3.000000
+     #+RESULTS: cmdline
+     : input was: 1.000000 2.000000
 
-** NEXT Understand tangling C code from Org-mode
+   * [ ] Create a file called ~input~ in the current working
+     directory. It contains only the numbers ~1.~ and ~2.~:
+     #+begin_example
+       1. 2.
+     #+end_example
+     
+   * [ ] Create and run the code block [[cmdline]] in Emacs. Make
+     sure that you have ~:main yes~ and ~:include <stdio.h>~ either on
+     the code block header line or in the ~#+PROPERTY:~ meta data of
+     your Emacs Org-mode file.
+
+   * [ ] Tangle the code block and look at the file ~cmd.c~. To
+     tangle, use the key sequence ~C-c C-v t~.
+
+   * [ ] Open a CMD terminal (or ~M-x shell~ inside Emacs), and
+     compile the program ~cmd.c~. Call the executable ~cmd~.
+
+   * [ ] Run the program on the command line like this:
+     #+begin_example
+     cmd < input
+     #+end_example
+
+   * [ ] If your neighbor does not get along, help him/her without
+     being asked explicitly!
+
+   * Shell "redirection" (directing the content of ~input~ into ~cmd~)
+     is an important shell process. It uses both ~stdin~ and ~stdout~.
+   
+** Understand tangling C code from Org-mode
 
    * Can you answer the following questions succinctly?[fn:3]
      - What is Emacs?
@@ -737,22 +765,24 @@
 
    See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
 
-*** PRACTICE
+*** PRACTICE - dimensional weight reconsidered
 
-    * Create an Org-mode file "tangle.org"
+    * [ ] Create an Org-mode file "dweight.org"
 
-    * Add one C code block (use <s [TAB])
+    * [ ] Add one named C code block (use <s [TAB] to do this)
 
-    * Add header arguments in the top line:
-      - :include <stdio.h>
-      - :tangle tangled.c
+    * [ ] Name the code block dweight
 
-    * 
+    * [ ] Start with the code that we created last week, or take this
+      code from GitHub: 
+      
+    #+end_example
 
-    #+name: tangled
-    #+begin_src 
+    * SOLUTION
+      #+name: dweight
+      #+begin_src :
 
-    #+end_src
+      #+end_src
 
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 

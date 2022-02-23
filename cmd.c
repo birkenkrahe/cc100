@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 
-double K = 3.000000;
+int K = 3;
 
 
 
 int main() {
-float i,j,k=K;
+float i,j,var=K;
 scanf("%f %f\n",&i, &j);
-printf("%f %f %f\n",i,j, k);
+printf("cmdline: %f %f - var: %f\n",i,j, var);
 return 0;
 }
