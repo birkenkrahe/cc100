@@ -776,8 +776,6 @@
     * [ ] Start with the code that we created last week, or take this
       code from GitHub: 
       
-    #+end_example
-
     * SOLUTION
       #+name: dweight
       #+begin_src :
