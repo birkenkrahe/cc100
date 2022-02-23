@@ -723,32 +723,32 @@
      #+RESULTS: cmdline
      : input was: 1.000000 2.000000
 
-   * [ ] If your neighbor does not get along, help him/her without
-     being asked explicitly!
+   * [X] If your neighbor does not get along, help him/her without
+     being asked explicitly! (Well done everyone!)
 
-   * [ ] Create a file called ~input~ in the current working
+   * [X] Create a file called ~input~ in the current working
      directory. It contains only the numbers ~1.~ and ~2.~:
      #+begin_example
        1. 2.
      #+end_example
      
-   * [ ] Create and run the code block [[cmdline]] in Emacs in a Org-mode
+   * [X] Create and run the code block [[cmdline]] in Emacs in a Org-mode
      file. Make sure that you have ~:main yes~ and ~:include
      <stdio.h>~ either on the code block header line or in the
      ~#+PROPERTY:~ meta data of your Emacs Org-mode file.
 
-   * [ ] Create and run the code block [[cmdline]] in Emacs. Make
+   * [X] Create and run the code block [[cmdline]] in Emacs. Make
      sure that you have ~:main yes~ and ~:include <stdio.h>~ either on
      the code block header line or in the ~#+PROPERTY:~ meta data of
      your Emacs Org-mode file.
 
-   * [ ] Tangle the code block and look at the file ~cmd.c~. To
+   * [X] Tangle the code block and look at the file ~cmd.c~. To
      tangle, use the key sequence ~C-c C-v t~.
 
-   * [ ] Open a CMD terminal (or ~M-x shell~ inside Emacs), and
+   * [X] Open a CMD terminal (or ~M-x shell~ inside Emacs), and
      compile the program ~cmd.c~. Call the executable ~cmd~.
 
-   * [ ] Run the program on the command line like this:
+   * [X] Run the program on the command line like this:
      #+begin_example
      cmd < input
      #+end_example
@@ -779,13 +779,13 @@
 
    * [ ] Add one named C code block (use <s [TAB] to do this)
 
-   * [ ] Name the code block ~dweight_input~
+   * [ ] Name the code block ~dweight~
 
    * [ ] Start with the code that we created last week, or take the
      code from [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~dweight.c~ from GitHub]] (in [[https://github.com/birkenkrahe/cc100/tree/main/3_basics/src][cc100/3_basics/src]]).
 
-   * Check: your code block should now look like this:
-     #+name: dweight_input
+   * [ ] Check: your code block should now look like this:
+     #+name: dweight
      #+begin_src C
        #include <stdio.h>
 
@@ -806,26 +806,65 @@
          return 0;
        }
      #+end_src
-     Results:
+
+   * [ ] You do not need any code block header arguments except ~C~!
+
+   * [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
+     is correct. You should get this output:
      #+begin_example
-     #+RESULTS: dweight_input
+     #+RESULTS: dweight
      : Dimensions: 12x10x8
      : Volume (cubic inches): 960
      : Dimensional weight (pounds): 6
      #+end_example     
 
-   * [ ] You do not need any code block header arguments except ~C~.
-
-   * [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
-     is correct.
+   * [ ] Copy the code block into a second code block, and name it
+     ~dweight1~.
 
    * [ ] Alter the code so that the three variables ~height~,
-     ~length~, and ~width~ have to be given as input.
+     ~length~, and ~width~ have to be given as input:
+     - Add three ~printf~ statements asking for these variables
+     - After each of these, add a ~scanf~ statement to take the input
+     - You must delete
 
-   * [ ] Add the necessary tangle information to the code block header
+   * [ ] Your code block should now look like this:
+     #+name: dweight1
+     #+begin_src C
+       #include <stdio.h>
 
-   * [ ] Tangle the file, compile and run it on the Windows command
-     line, or with redirection using an input file
+       int main(void)
+       {
+	 int height, length, width, volume, weight;
+
+	 height = 8;
+	 length = 12;
+	 width = 10;
+
+           volume = height * length * width;
+	 weight = (volume + 165) / 166;
+
+	 printf("Dimensions: %dx%dx%d\n", length, width, height);
+	 printf("Volume (cubic inches): %d\n", volume);
+	 printf("Dimensional weight (pounds): %d\n", weight);
+
+	 return 0;
+       }
+     #+end_src
+
+   * [ ] Add the necessary tangle information to the code block header:
+     #+begin_example
+     :tangle dweight1.c
+     #+end_example
+     
+   * [ ] Tangle the file with the key sequence ~C-c C-v t~.
+
+   * [ ] Compile and run it on the Windows command line:
+     #+begin_src bash
+     gcc -o dweight dweight
+
+     #+end_src
+
+     , or with redirection using an input file
 
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
