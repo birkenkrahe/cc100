@@ -700,14 +700,12 @@
 
    * See class notes for challenge solution
 
-* Reading input with Emacs, tangling code - w7s16 (02/23/22)
+* Reading input with Emacs, tangling code - w7s17 (02/23/22)
 ** Objectives
 
-   * [ ] How to use ~scanf~ inside Emacs (and other input)
-   * [ ] Understand tangling C code from Org-mode
-   * [ ] Understand reading input (from the command line)
-   * [ ] Complete two in-class assignments
-   * [ ] New programming exercise "phone number conversion"
+   * [X] New programming exercise "phone number conversion"
+   * [X] How to use ~scanf~ inside Emacs (and other input)
+   * [X] Understand reading input (from the command line)
 
 ** How to use ~scanf~ inside Emacs with redirection
 
@@ -756,7 +754,59 @@
    * Shell "redirection" (directing the content of ~input~ into ~cmd~)
      is an important shell process. It uses both ~stdin~ and
      ~stdout~. [[https://www.gnu.org/software/bash/manual/html_node/Redirections.html][See GNU bash manual for details]].
+        
+** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
+    * Write a program that prompts the user to enter a telephone number
+      in the form ~(xxx) xxx-xxxx~, and then displays the number in the
+      form ~xxx.xxx.xxxx~.
+
+    * Example input/output of the first program, ~phone1.c~:
+      #+begin_example
+      Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
+      You entered 870.456.7890
+      #+end_example
+
+    * Write another program that asks for the input format in the form
+      ~xxx\xxx\xxxx~, and then displays the number in the form
+      ~(xxx)xxx-xxx~.
+
+    * Example input/output of the second program, ~phone2.c~:
+      #+begin_example
+      Enter phone number [xxx\xxx\xxxx]: 870\456\7890
+      You entered (870) 456-7890
+      #+end_example
+
+    * Submit one Emacs Org-mode file ~phone.org~ with both programs in
+      it as code blocks that can be *tangled* as ~phone1.c~ and
+      ~phone2.c~, resp.
+
+    * The header information of your Org-mode file should look like this:
+      #+begin_example
+	#+TITLE: Phone number conversion
+	#+AUTHOR: [your name]
+	#+HONOR: pledged
+      #+end_example
+
+    * Tip: some characters, like ~\~ are protected because they are
+      part of the file ~PATH~. If you want to use them, you have to
+      "escape" them with an extra ~\~, like the newline character
+      ~\n~. So to print or to scan the character ~\~, you use ~\\~.
+      #+name: escape
+      #+begin_src C :results output
+	printf("hi there\n");              // string output
+	printf(" \"hi there\" \n");        // escaped \" will print
+	printf("This is a slash: \ \n");   // slash will not print
+	printf("This is a slash: \\ \n");  // escaped slash\\  will print
+      #+end_src
+
+      #+RESULTS: escape
+      : hi there
+      :  "hi there"
+      : This is a slash:
+      : This is a slash: \
+
+* Lab session: reading input - w7s18 (02/25/22)
 ** Understand tangling C code from Org-mode
 
    * Review: Can you answer the following questions?[fn:3]
@@ -770,7 +820,6 @@
    [[./3_basics/img/cweb.png]]
 
    See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
-
 ** PRACTICE - dimensional weight reconsidered
 
    * [ ] If your neighbor does not get along, help him/her without
@@ -883,59 +932,8 @@
 
    * [ ] Alternatively, you can pass the input data to the file using
      the redirection operator ~<~ - then you can run the file inside
-     Emacs (either on the shell, or using the code block header).
-     
-     
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
-
-   * Write a program that prompts the user to enter a telephone number
-     in the form ~(xxx) xxx-xxxx~, and then displays the number in the
-     form ~xxx.xxx.xxxx~.
-
-   * Example input/output of the first program, ~phone1.c~:
-     #+begin_example
-     Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
-     You entered 870.456.7890
-     #+end_example
-
-   * Write another program that asks for the input format in the form
-     ~xxx\xxx\xxxx~, and then displays the number in the form
-     ~(xxx)xxx-xxx~.
-
-   * Example input/output of the second program, ~phone2.c~:
-     #+begin_example
-     Enter phone number [xxx\xxx\xxxx]: 870\456\7890
-     You entered (870) 456-7890
-     #+end_example
-
-   * Submit one Emacs Org-mode file ~phone.org~ with both programs in
-     it as code blocks that can be *tangled* as ~phone1.c~ and
-     ~phone2.c~, resp.
-
-   * The header information of your Org-mode file should look like this:
-     #+begin_example
-       #+TITLE: Phone number conversion
-       #+AUTHOR: [your name]
-       #+HONOR: pledged
-     #+end_example
-
-   * Tip: some characters, like ~\~ are protected because they are
-     part of the file ~PATH~. If you want to use them, you have to
-     "escape" them with an extra ~\~, like the newline character
-     ~\n~. So to print or to scan the character ~\~, you use ~\\~.
-     #+name: escape
-     #+begin_src C :results output
-       printf("hi there\n");              // string output
-       printf(" \"hi there\" \n");        // escaped \" will print
-       printf("This is a slash: \ \n");   // slash will not print
-       printf("This is a slash: \\ \n");  // escaped slash\\  will print
-     #+end_src
-
-     #+RESULTS: escape
-     : hi there
-     :  "hi there"
-     : This is a slash:
-     : This is a slash: \
+     Emacs (either on the shell, or using the code block header). You
+     can find sample solutions for this here in GitHub (dweight_emacs.org).
 
 * Next
 
