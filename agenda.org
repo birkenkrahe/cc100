@@ -706,7 +706,7 @@
    * [ ] How to use ~scanf~ inside Emacs (and other input)
    * [ ] Understand tangling C code from Org-mode
    * [ ] Understand reading input (from the command line)
-   * [ ] Complete in-class assignments
+   * [ ] Complete two in-class assignments
    * [ ] New programming exercise "phone number conversion"
 
 ** How to use ~scanf~ inside Emacs with redirection
@@ -723,16 +723,27 @@
      #+RESULTS: cmdline
      : input was: 1.000000 2.000000
 
+   * [ ] If your neighbor does not get along, help him/her without
+     being asked explicitly!
+
    * [ ] Create a file called ~input~ in the current working
      directory. It contains only the numbers ~1.~ and ~2.~:
      #+begin_example
        1. 2.
      #+end_example
+<<<<<<< Updated upstream
      
    * [ ] Create and run the code block [[cmdline]] in Emacs in a Org-mode
      file. Make sure that you have ~:main yes~ and ~:include
      <stdio.h>~ either on the code block header line or in the
      ~#+PROPERTY:~ meta data of your Emacs Org-mode file.
+=======
+
+   * [ ] Create and run the code block [[cmdline]] in Emacs. Make
+     sure that you have ~:main yes~ and ~:include <stdio.h>~ either on
+     the code block header line or in the ~#+PROPERTY:~ meta data of
+     your Emacs Org-mode file.
+>>>>>>> Stashed changes
 
    * [ ] Tangle the code block and look at the file ~cmd.c~. To
      tangle, use the key sequence ~C-c C-v t~.
@@ -745,12 +756,9 @@
      cmd < input
      #+end_example
 
-   * [ ] If your neighbor does not get along, help him/her without
-     being asked explicitly!
-
    * Shell "redirection" (directing the content of ~input~ into ~cmd~)
      is an important shell process. It uses both ~stdin~ and ~stdout~.
-   
+
 ** Understand tangling C code from Org-mode
 
    * Can you answer the following questions succinctly?[fn:3]
@@ -765,22 +773,62 @@
 
    See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
 
-*** PRACTICE - dimensional weight reconsidered
+** PRACTICE - dimensional weight reconsidered
 
-    * [ ] Create an Org-mode file "dweight.org"
+   * [ ] If your neighbor does not get along, help him/her without
+     being asked explicitly!
 
-    * [ ] Add one named C code block (use <s [TAB] to do this)
+   * [ ] Create an Org-mode file "dweight.org"
 
-    * [ ] Name the code block dweight
+   * [ ] Add one named C code block (use <s [TAB] to do this)
 
-    * [ ] Start with the code that we created last week, or take this
-      code from GitHub: 
-      
-    * SOLUTION
-      #+name: dweight
-      #+begin_src :
+   * [ ] Name the code block ~dweight_input~
 
-      #+end_src
+   * [ ] Start with the code that we created last week, or take the
+     code from [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~dweight.c~ from GitHub]] (in [[https://github.com/birkenkrahe/cc100/tree/main/3_basics/src][cc100/3_basics/src]]).
+
+   * Check: your code block should now look like this:
+     #+name: dweight_input
+     #+begin_src C
+       #include <stdio.h>
+
+       int main(void)
+       {
+         int height, length, width, volume, weight;
+
+         height = 8;
+         length = 12;
+         width = 10;
+         volume = height * length * width;
+         weight = (volume + 165) / 166;
+
+         printf("Dimensions: %dx%dx%d\n", length, width, height);
+         printf("Volume (cubic inches): %d\n", volume);
+         printf("Dimensional weight (pounds): %d\n", weight);
+
+         return 0;
+       }
+     #+end_src
+     Results:
+     #+begin_example
+     #+RESULTS: dweight_input
+     : Dimensions: 12x10x8
+     : Volume (cubic inches): 960
+     : Dimensional weight (pounds): 6
+     #+end_example     
+
+   * [ ] You do not need any code block header arguments except ~C~.
+
+   * [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
+     is correct.
+
+   * [ ] Alter the code so that the three variables ~height~,
+     ~length~, and ~width~ have to be given as input.
+
+   * [ ] Add the necessary tangle information to the code block header
+
+   * [ ] Tangle the file, compile and run it on the Windows command
+     line, or with redirection using an input file
 
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
@@ -849,7 +897,7 @@ environment in GNU Emacs for keeping notes, authoring documents,
 computational notebooks, and more. Tangling code means extracting
 (human readable) source code from an Org-mode file in order to run
 it. Weaving documentation means extracting a document from an Org-mode
-file in order to read it. 
+file in order to read it.
 
 [fn:2]I managed to install GCC on the lab computers and run it inside
 GNU Emacs. This is something that you should do at home with your own
