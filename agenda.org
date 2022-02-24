@@ -809,7 +809,8 @@
 * Lab session: reading input - w7s18 (02/25/22)
 ** Understand tangling C code from Org-mode
 
-   * Review: Can you answer the following questions?[fn:3]
+   * Concept review: Can you answer the following questions?[fn:3]
+
      | What is Emacs?                             |
      | What is Org-mode?                          |
      | What does "tangle" C code mean?            |
@@ -820,7 +821,7 @@
    [[./3_basics/img/cweb.png]]
 
    See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
-#+options: toc:nil
+
 ** PRACTICE - dimensional weight reconsidered
 
    * [ ] If your neighbor does not get along, help him/her without
