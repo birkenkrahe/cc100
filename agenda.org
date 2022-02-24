@@ -807,6 +807,13 @@
       : This is a slash: \
 
 * Lab session: reading input - w7s18 (02/25/22)
+** Objectives
+
+   * [ ] Review: compile and run on the commandline (CLI)
+   * [ ] Understand tangling code once and for all
+   * [ ] Alter program to take input from the CLI
+   * [ ] Complete program from source to finish [PDF printout]
+
 ** Understand tangling C code from Org-mode
 
    * Concept review: Can you answer the following questions?[fn:3]
@@ -824,119 +831,119 @@
 
 ** PRACTICE - dimensional weight reconsidered
 
-   * [ ] If your neighbor does not get along, help him/her without
-     being asked explicitly!
+   1. [ ] If your neighbor does not get along, help him/her without
+      being asked explicitly!
 
-   * [ ] Checklist before you start coding:
-     - Go to a working directory where you are allowed to save files
-     - If you are in ~AppData/Roaming~, change to your home directory
-     - Open a terminal and navigate to your working directory
+   2. [ ] Checklist before you start coding:
+      - Go to a working directory where you are allowed to save files
+      - If you are in ~AppData/Roaming~, change to your home directory
+      - Open a terminal and navigate to your working directory
 
-   * [ ] Create an Org-mode file "dweight.org"
+   3. [ ] Create an Org-mode file "dweight.org"
 
-   * [ ] Add one named C code block (use <s [TAB] to do this)
+   4. [ ] Add one named C code block (use <s [TAB] to do this)
 
-   * [ ] Name the code block ~dweight~
+   5. [ ] Name the code block ~dweight~
 
-   * [ ] Start with the code that we created last week, or take the
-     code from [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~dweight.c~ from GitHub]] (in [[https://github.com/birkenkrahe/cc100/tree/main/3_basics/src][cc100/3_basics/src]]).
+   6. [ ] Start with the code that we created last week, or take the
+      code from [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~dweight.c~ from GitHub]] (in [[https://github.com/birkenkrahe/cc100/tree/main/3_basics/src][cc100/3_basics/src]]).
 
-   * [ ] Check: your code block should now look like this:
-     #+name: dweight
-     #+begin_src C :results output
-       #include <stdio.h>
+   7. [ ] Check: your code block should now look like this:
+      #+name: dweight
+      #+begin_src C :results output
+	#include <stdio.h>
 
-       int main(void)
-       {
-         const int INCHES_PER_POUND = 166;
-         int height, length, width, volume, weight;
+	int main(void)
+	{
+          const int INCHES_PER_POUND = 166;
+          int height, length, width, volume, weight;
 
-         height = 8;
-         length = 12;
-         width = 10;
-         volume = height * length * width;
-         weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
+          height = 8;
+          length = 12;
+          width = 10;
+          volume = height * length * width;
+          weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
 
-         printf("Dimensions: %dx%dx%d\n", length, width, height);
-         printf("Volume (cubic inches): %d\n", volume);
-         printf("Dimensional weight (pounds): %d\n", weight);
+          printf("Dimensions: %dx%dx%d\n", length, width, height);
+          printf("Volume (cubic inches): %d\n", volume);
+          printf("Dimensional weight (pounds): %d\n", weight);
 
-         return 0;
-       }
-     #+end_src
+          return 0;
+	}
+      #+end_src
 
-   * [ ] You do not need any code block header arguments except ~C~
-     and ~:results output~.
+   8. [ ] You do not need any code block header arguments except ~C~
+      and ~:results output~.
 
-   * [ ] Note that the number ~166~ is now defined as ~const~.
+   9. [ ] Note that the number ~166~ is now defined as ~const~.
 
-   * [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
-     is correct. You should get this output:
-     #+begin_example
-     #+RESULTS: dweight
-     : Dimensions: 12x10x8
-     : Volume (cubic inches): 960
-     : Dimensional weight (pounds): 6
-     #+end_example
+   10. [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
+       is correct. You should get this output:
+       #+begin_example
+       #+RESULTS: dweight
+       : Dimensions: 12x10x8
+       : Volume (cubic inches): 960
+       : Dimensional weight (pounds): 6
+       #+end_example
 
-   * [ ] Copy the code block into a second code block, and name it
-     ~dweight1~.
+   11. [ ] Copy the code block into a second code block, and name it
+       ~dweight1~.
 
-   * [ ] Alter the code so that the three variables ~height~,
-     ~length~, and ~width~ have to be given as input:
-     - Add three ~printf~ statements asking for these variables
-     - After each of these, add a ~scanf~ statement to take the input
-     - You must delete the assignments to these variables
-     - Make sure that you use the correct format identifier ~%d~
+   12. [ ] Alter the code so that the three variables ~height~,
+       ~length~, and ~width~ have to be given as input:
+       - Add three ~printf~ statements asking for these variables
+       - After each of these, add a ~scanf~ statement to take the input
+       - You must delete the assignments to these variables
+       - Make sure that you use the correct format identifier ~%d~
 
-   * [ ] Your code block should now look like this (without the comments):
-     #+name: dweight1
-     #+begin_src C 
-       #include <stdio.h>
+   13. [ ] Your code block should now look like this (without the comments):
+       #+name: dweight1
+       #+begin_src C 
+	 #include <stdio.h>
 
-       int main(void)
-       {
-         // declare variables and constants
-         const int INCHES_PER_POUND = 166;
-         int height, length, width, volume, weight;
+	 int main(void)
+	 {
+           // declare variables and constants
+           const int INCHES_PER_POUND = 166;
+           int height, length, width, volume, weight;
 
-         // Enter input
-         printf("Enter the box height: ");
-         scanf("%d", &height);
-         printf("Enter the box length: ");
-         scanf("%d", &length);
-         printf("Enter the box width: ");
-         scanf("%d", &width);
+           // Enter input
+           printf("Enter the box height: ");
+           scanf("%d", &height);
+           printf("Enter the box length: ");
+           scanf("%d", &length);
+           printf("Enter the box width: ");
+           scanf("%d", &width);
 
-         // compute volume and dimensional weight
-         volume = height * length * width;
-         weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
+           // compute volume and dimensional weight
+           volume = height * length * width;
+           weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
 
-         printf("Dimensions: %dx%dx%d\n", length, width, height);
-         printf("Volume (cubic inches): %d\n", volume);
-         printf("Dimensional weight (pounds): %d\n", weight);
+           printf("Dimensions: %dx%dx%d\n", length, width, height);
+           printf("Volume (cubic inches): %d\n", volume);
+           printf("Dimensional weight (pounds): %d\n", weight);
 
-         return 0;
-       }
-     #+end_src
+           return 0;
+	 }
+       #+end_src
 
-   * [ ] Add the necessary tangle information to the code block header:
-     #+begin_example
-     :tangle dweight1.c
-     #+end_example
+   14. [ ] Add the necessary tangle information to the code block header:
+       #+begin_example
+       :tangle dweight1.c
+       #+end_example
 
-   * [ ] Tangle the code block with the key sequence ~C-c C-v t~ to
-     get the C source code file ~dweight1.c~
+   15. [ ] Tangle the code block with the key sequence ~C-c C-v t~ to
+       get the C source code file ~dweight1.c~
 
-   * [ ] Compile and run it on the Windows command line, and you're done!
-     #+caption: sample result on the Windows CMD line
-     #+attr_html: :width 600px
-     [[./img/dweight.png]]
+   16. [ ] Compile and run it on the Windows command line, and you're done!
+       #+caption: sample result on the Windows CMD line
+       #+attr_html: :width 600px
+       [[./img/dweight.png]]
 
-   * [ ] Alternatively, you can pass the input data to the file using
-     the redirection operator ~<~ - then you can run the file inside
-     Emacs (either on the shell, or using the code block header). You
-     can find sample solutions for this here in GitHub (dweight_emacs.org).
+   17. [ ] Alternatively, you can pass the input data to the file using
+       the redirection operator ~<~ - then you can run the file inside
+       Emacs (either on the shell, or using the code block header). You
+       can find sample solutions for this here in GitHub (dweight_emacs.org).
 
 * Next
 
