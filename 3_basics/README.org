@@ -683,7 +683,7 @@
     the simulated ~eshell~ or the Emacs ~shell~, but on the Windows
     CMD terminal command line[fn:14].
     #+name: iscan
-    #+begin_src C :tangle iscan.c :includes <stdio.h> :main yes
+    #+begin_src C :tangle iscan.c :main yes :includes <stdio.h>
       int i;
       puts("Enter an integer!");
       scanf("%d", &i);
