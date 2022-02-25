@@ -683,7 +683,6 @@
     the simulated ~eshell~ or the Emacs ~shell~, but on the Windows
     CMD terminal command line[fn:14].
     #+name: iscan
-<<<<<<< Updated upstream
     #+begin_src C :tangle iscan.c :main yes :includes <stdio.h>
       int i;
       puts("Enter an integer!");
@@ -692,8 +691,8 @@
     #+end_src
 
     #+RESULTS: iscan
-    | Enter | an      | integer! |
-    | You   | entered |     1000 |
+    : Enter an integer!
+    : You entered 1000
 
   * [X] Class assignment:
     - modify the program [[iscan]] to read a ~float~ instead of an ~int~
