@@ -261,11 +261,11 @@
    * [ ] Run a C program inside Emacs
 * GNU Emacs initialization file - w3s7 (01/28/22)
 
-  1) We continue where we left it [[w3s6 (01/26/22)][on Wednesday]]
+  1) We continue where we left it on Wednesday (w3s6)
 
   2) [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem on Windows lab computers][Fixing the .emacs problem]] (FAQ)
 
-  3) Finish [[file:assignments/org-mode/README.org::Creating and running C inside an Org-mode file][Org-mode assignment]] ([[https://github.com/birkenkrahe/cc100/blob/main/assignments/org-mode/README.org][GitHub]])
+  3) Finish [[file:assignments/1_orgmode/README.org::Creating and running C inside an Org-mode file][Org-mode assignment]] ([[https://github.com/birkenkrahe/cc100/blob/main/assignments/1_org-mode/README.org][GitHub]])
 
   4) Submit results [[https://github.com/birkenkrahe/cc100/issues][to GitHub as issue]] (ZIP) - by 11.59PM tonight
 
@@ -332,7 +332,7 @@
    |----------+--------------------------------+----------------------|
    | HOW      | WHAT                           | WHEN                 |
    |----------+--------------------------------+----------------------|
-   | Review   | [[file:3_basics/README.org::What are you going to learn?][Structure of a program]]         |                      |
+   | Review   | [[file:3_basics/README.org::README][Structure of a program]]         |                      |
    |----------+--------------------------------+----------------------|
    | [[file:3_basics/variables.org][Lecture]]  | C Fundamentals ([[https://lyon.schoology.com/link?a=&path=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1D0tYkE_bW-7stmbgN4dJlEFyg1DRUch0%3Fusp%3Dsharing][King ch. 2]])    |                      |
    |----------+--------------------------------+----------------------|
@@ -814,7 +814,7 @@
    * [ ] Alter program to take input from the CLI
    * [ ] Complete program from source to finish [PDF printout]
 
-** Understand tangling C code from Org-mode
+** Understand weaving doc and tangling C code from Org-mode
 
    * Concept review: Can you answer the following questions?[fn:3]
 
@@ -823,11 +823,33 @@
      | What does "tangle" C code mean?            |
      | What does it mean to "weave" documentation |
 
-   #+caption: literate programming processes
+   #+caption: overview literate programming process
    #+attr_html: :width 600px
-   [[./3_basics/img/cweb.png]]
+   [[./img/litprogshort.png]]
 
-   See: [[file:3_basics/README.org::"What a Tangled Web We Weave..."]["What a Tangled Web We Weave..."]]
+   #+caption: complete literate programming processes
+   #+attr_html: :width 600px
+   [[./img/litprog_cheat_sheet.png]]
+
+   #+caption: Org mode file ("literate code" or "program")
+   #+attr_html: :width 400px
+   [[./img/code.png]]
+
+   #+caption: Tangled file (C source code, or compilable program)
+   #+attr_html: :width 400px
+   [[./img/tangle.png]]
+
+   #+caption: Woven file (readable documentation)
+   #+attr_html: :width 400px
+   [[./img/weave.png]]
+
+   #+caption: Display output in Emacs Org mode file
+   #+attr_html: :width 400px
+   [[./img/orgmode.png]]
+   
+   #+caption: Compile source code and run program in terminal
+   #+attr_html: :width 400px
+   [[./img/cmd.png]]
 
 ** PRACTICE - dimensional weight reconsidered
 
@@ -850,7 +872,7 @@
 
    7. [ ] Check: your code block should now look like this:
       #+name: dweight
-      #+begin_src C :results output
+      #+begin_src C
 	#include <stdio.h>
 
 	int main(void)
