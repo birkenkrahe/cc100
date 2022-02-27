@@ -754,65 +754,110 @@
    * Shell "redirection" (directing the content of ~input~ into ~cmd~)
      is an important shell process. It uses both ~stdin~ and
      ~stdout~. [[https://www.gnu.org/software/bash/manual/html_node/Redirections.html][See GNU bash manual for details]].
-        
+
 ** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until Monday, 28-Feb, 11 AM)
 
-    * Write a program that prompts the user to enter a telephone number
-      in the form ~(xxx) xxx-xxxx~, and then displays the number in the
-      form ~xxx.xxx.xxxx~.
+   * Write a program that prompts the user to enter a telephone number
+     in the form ~(xxx) xxx-xxxx~, and then displays the number in the
+     form ~xxx.xxx.xxxx~.
 
-    * Example input/output of the first program, ~phone1.c~:
-      #+begin_example
-      Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
-      You entered 870.456.7890
-      #+end_example
+   * Example input/output of the first program, ~phone1.c~:
+     #+begin_example
+     Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
+     You entered 870.456.7890
+     #+end_example
 
-    * Write another program that asks for the input format in the form
-      ~xxx\xxx\xxxx~, and then displays the number in the form
-      ~(xxx)xxx-xxx~.
+   * Write another program that asks for the input format in the form
+     ~xxx\xxx\xxxx~, and then displays the number in the form
+     ~(xxx)xxx-xxx~.
 
-    * Example input/output of the second program, ~phone2.c~:
-      #+begin_example
-      Enter phone number [xxx\xxx\xxxx]: 870\456\7890
-      You entered (870) 456-7890
-      #+end_example
+   * Example input/output of the second program, ~phone2.c~:
+     #+begin_example
+     Enter phone number [xxx\xxx\xxxx]: 870\456\7890
+     You entered (870) 456-7890
+     #+end_example
 
-    * Submit one Emacs Org-mode file ~phone.org~ with both programs in
-      it as code blocks that can be *tangled* as ~phone1.c~ and
-      ~phone2.c~, resp.
+   * Submit one Emacs Org-mode file ~phone.org~ with both programs in
+     it as code blocks that can be *tangled* as ~phone1.c~ and
+     ~phone2.c~, resp.
 
-    * The header information of your Org-mode file should look like this:
-      #+begin_example
-	#+TITLE: Phone number conversion
-	#+AUTHOR: [your name]
-	#+HONOR: pledged
-      #+end_example
+   * The header information of your Org-mode file should look like this:
+     #+begin_example
+       #+TITLE: Phone number conversion
+       #+AUTHOR: [your name]
+       #+HONOR: pledged
+     #+end_example
 
-    * Tip: some characters, like ~\~ are protected because they are
-      part of the file ~PATH~. If you want to use them, you have to
-      "escape" them with an extra ~\~, like the newline character
-      ~\n~. So to print or to scan the character ~\~, you use ~\\~.
-      #+name: escape
-      #+begin_src C :results output
-	printf("hi there\n");              // string output
-	printf(" \"hi there\" \n");        // escaped \" will print
-	printf("This is a slash: \ \n");   // slash will not print
-	printf("This is a slash: \\ \n");  // escaped slash\\  will print
-      #+end_src
+   * Tip: some characters, like ~\~ are protected because they are
+     part of the file ~PATH~. If you want to use them, you have to
+     "escape" them with an extra ~\~, like the newline character
+     ~\n~. So to print or to scan the character ~\~, you use ~\\~.
+     #+name: escape
+     #+begin_src C :results output
+       printf("hi there\n");              // string output
+       printf(" \"hi there\" \n");        // escaped \" will print
+       printf("This is a slash: \ \n");   // slash will not print
+       printf("This is a slash: \\ \n");  // escaped slash\\  will print
+     #+end_src
 
-      #+RESULTS: escape
-      : hi there
-      :  "hi there"
-      : This is a slash:
-      : This is a slash: \
+     #+RESULTS: escape
+     : hi there
+     :  "hi there"
+     : This is a slash:
+     : This is a slash: \
 
 * Lab session: reading input - w7s18 (02/25/22)
 ** Objectives
 
    * [ ] Review: compile and run on the commandline (CLI)
+   * [ ] Review: quiz questions
    * [ ] Understand tangling code once and for all
    * [ ] Alter program to take input from the CLI
    * [ ] Complete program from source to finish [PDF printout]
+
+** Be the compiler! (From Quiz 5)
+
+   The following program compiles and runs but it does not print the
+   right results - it always prints ~1~, no matter what is
+   entered. What is the problem?
+
+   #+begin_src C :cmdline < input
+     int val, input;
+     val = scanf("%d", &input);
+     printf("%d\n", val);
+   #+end_src
+
+   Explanation: if you look at the ~scanf~ manual page, you read that
+   it "returns the number of input items successfully matched and
+   assigned." For ~val=scanf("%d",&input);~ only ~1~ ~int~ was
+   scanned, not the integer value of the scanned character (~input~).
+
+   Examples:
+   #+begin_src C :results output :tangle scanf.c
+     int x, y, z, u, n;
+     n = scanf("%d", &x);
+     printf("n = %d\n", n);                 // prints 1
+     n = scanf("%d%d", &x, &y);
+     printf("n = %d\n", n);                 // prints 2
+     n = scanf("%d%d%d", &x, &y,&z);
+     printf("n = %d\n", n);                 // prints 3
+     n = scanf("%d%d%d%d", &x, &y,&z, &u);
+     printf("n = %d\n", n);                 // prints 3
+   #+end_src
+
+   Results:
+   #+begin_example
+     C:\Users\birkenkrahe>scan
+     100
+     n = 1
+     200
+     300
+     n = 2
+     400
+     500
+     600
+     n = 3
+   #+end_example
 
 ** Understand weaving doc and tangling C code from Org-mode
 
@@ -846,7 +891,7 @@
    #+caption: Display output in Emacs Org mode file
    #+attr_html: :width 400px
    [[./img/orgmode.png]]
-   
+
    #+caption: Compile source code and run program in terminal
    #+attr_html: :width 400px
    [[./img/cmd.png]]
@@ -873,10 +918,10 @@
    7. [ ] Check: your code block should now look like this:
       #+name: dweight
       #+begin_src C
-	#include <stdio.h>
+        #include <stdio.h>
 
-	int main(void)
-	{
+        int main(void)
+        {
           const int INCHES_PER_POUND = 166;
           int height, length, width, volume, weight;
 
@@ -891,7 +936,7 @@
           printf("Dimensional weight (pounds): %d\n", weight);
 
           return 0;
-	}
+        }
       #+end_src
 
    8. [ ] You do not need any code block header arguments except ~C~
@@ -920,11 +965,11 @@
 
    13. [ ] Your code block should now look like this (without the comments):
        #+name: dweight1
-       #+begin_src C 
-	 #include <stdio.h>
+       #+begin_src C
+         #include <stdio.h>
 
-	 int main(void)
-	 {
+         int main(void)
+         {
            // declare variables and constants
            const int INCHES_PER_POUND = 166;
            int height, length, width, volume, weight;
@@ -946,7 +991,7 @@
            printf("Dimensional weight (pounds): %d\n", weight);
 
            return 0;
-	 }
+         }
        #+end_src
 
    14. [ ] Add the necessary tangle information to the code block header:

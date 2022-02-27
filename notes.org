@@ -961,14 +961,11 @@
 * Footnotes
 
 [fn:2] Suggestion to install GCC under MacOS [[https://codeforces.com/blog/entry/88063][here]] - have not tried
-this yet myself. Perhaps you could, if you have a Mac, and let me know?
-#+begin_quote
-* First, you need to install HomeBrew from https://brew.sh/
-* Then, run ~brew install gcc~ in the terminal.
-* Type ~g++-11~ in the terminal to see if successful.
-* Type ~sudo ln -s /usr/local/bin/gcc-11 /usr/local/bin/gcc~
-  #+end_quote
-
+this yet myself. Perhaps you could, if you have a Mac, and let me
+know? (1) First, you need to install HomeBrew from https://brew.sh/,
+(2) Then, run ~brew install gcc~ in the terminal. (3) Type ~g++-11~ in
+the terminal to see if successful. (4) Type ~sudo ln -s
+/usr/local/bin/gcc-11 /usr/local/bin/gcc~.
 
 [fn:1]From the GCC reference manual ([[stallman][Stallman et al, 2003]]):
 #+begin_quote
