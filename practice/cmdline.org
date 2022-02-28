@@ -6,10 +6,14 @@
   * But Emacs will not stop program execution to take input.
 
   * To pass input data to a file, we can use the ~:cmdline~ code block
-    header argument
+    header argument:
+    #+begin_example
+    #+begin_src C :main yes :includes <stdio.h> :cmdline < inputfile
+    #+end_example
 
   * For the code block [[cmdline]] below to work, you need a file named
-    ~inputfile~ in the same directory as the Org-mode file
+    ~inputfile~ in the same directory as the Org-mode file (check this
+    in Emacs with ~C-x d~)
 
   * Org-mode will compile and run the code block with ~C-c C-c~
 
