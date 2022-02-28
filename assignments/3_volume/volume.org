@@ -1,0 +1,214 @@
+* Volume
+** Problem
+
+   * Write a program that computes the volume of a sphere with a
+     10-meter radius, using the formula $v=4/3\times\pi r^{3}$.
+   * Write the fraction $4/3$ as ~4.0f/3.0f~. (Try writing it as 4/3
+     and see what happens.)
+   * Remember that C does not have an exponentiation operator, so you
+     need to write $r^{3}$ as ~r*r*r~.
+   * Upload your solution program as a ~.c~ file or as a ~.org~ file
+     to Schoology not later than 11 AM on Monday, February 21st. Make
+     sure that your program actually runs without errors!
+   * Be prepared to present your solution in class.
+
+** Solutions and pseudo solutions
+
+   * In the first solution, we define the constant as a macro using
+     ~#define~.
+     #+name: volume1
+     #+begin_src C :tangle volume1.c :includes <stdio.h>
+       #define PI_CONST 3.141593 // macro declaration
+
+       float volume, radius=10.0f; // type declaration
+
+       volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
+
+       printf("The volume of a sphere of radius %.2f is %.2f\n",
+              radius, volume); // display output
+     #+end_src
+
+     #+RESULTS: volume1
+     : The volume of a sphere of radius 10.00 is 4188.79
+
+   * What happens when you use ~4/3~ instead of ~4.0f/3.0f~ in the
+     formula?
+     #+name: volume_err1
+     #+begin_src C
+       #define PI_CONST 3.141593 // macro declaration
+
+       float volume, radius=10.0f; // type declaration
+
+       volume = 4/3 * PI_CONST * radius * radius * radius; // statement
+
+       printf("The volume of a sphere of radius %.2f is %.2f\n",
+              radius, volume); // display output
+     #+end_src
+
+     #+RESULTS: volume_err
+     : The volume of a sphere of radius 10.00 is 3141.59
+
+   * What happens when you use integers instead of floating point numbers?
+     #+name: volume_err2
+     #+begin_src C
+       #define PI_CONST 3.141593 // macro declaration
+
+       int volume, radius=10; // type declaration
+
+       volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
+
+       printf("The volume of a sphere of radius %d is %d\n",
+              radius, volume); // display output
+     #+end_src
+
+     #+RESULTS: volume_err2
+     : The volume of a sphere of radius 10 is 4188
+
+   * What happens when you use a less accurate PI constant?
+     #+name: volume_err3
+     #+begin_src C
+       #define PI_CONST 3.14 // macro declaration
+
+       int volume, radius=10; // type declaration
+
+       volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
+
+       printf("The volume of a sphere of radius %d is %d\n",
+              radius, volume); // display output
+     #+end_src
+
+     #+RESULTS: volume_err3
+     : The volume of a sphere of radius 10 is 4186
+
+   * In the second solution, we include the constant using the math
+     library ~math.h~.
+     #+name: volume2
+     #+begin_src C :tangle volume2.c :includes <stdio.h>
+       #include <math.h>  // include math library with PI=M_PI
+
+       float volume, radius=10.0f; // type declaration
+
+       volume = 4.0f/3.0f * M_PI * radius * radius * radius; // statement
+
+       printf("The volume of a sphere of radius %.2f is %.2f\n",
+              radius, volume); // display output
+     #+end_src
+
+     #+RESULTS: volume2
+     : The volume of a sphere of radius 10.00 is 4188.79
+
+** Reading input
+
+   * For the expanded problem, we use the input function ~scanf~ for
+     the ~radius~. Unfortunately, Emacs Org-mode will not wait for us
+     to enter the input. You have to tangle the code block, compile
+     and run the C file outside of Emacs, on the CMD shell (terminal).
+
+   * In the code below, I'm using a trick - the Org-mode header
+     argument ~cmdline~ will accept input from a file. This file,
+     ~in.txt~, contains my "interactive" input - the number ~10~
+     #+name: cmdline
+     #+begin_src C :tangle volume3.c :includes <stdio.h> :cmdline < in.txt :results silent
+       #include <math.h> // include math library
+
+       float volume, radius; // declare types
+
+       printf("Enter radius of sphere: \n");  // ask for input
+       scanf("%f", &radius);                  // read input
+
+       volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
+
+       printf("Volume (cubic meters): %.1f\n", volume); // display result
+     #+end_src
+
+   * This does not seem to work.
+     #+name: cmdline
+     #+begin_src C :tangle volume3.c :includes <stdio.h> :var USER_INPUT=(read-string "radius: ") :results silent
+       #include <math.h> // include math library
+       #include <stdlib.h> // include standard library
+
+       float volume, radius; // declare types
+
+       printf("Enter radius of sphere: \n");  // ask for input
+       //       scanf("%f", &USER_INPUT);                  // read input
+       radius = atof(USER_INPUT);
+       volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
+
+       printf("Volume (cubic meters): %.1f\n", volume); // display result
+     #+end_src
+
+   * To pass arguments to source code blocks, use ~var~ ([[https://orgmode.org/org.html#var][cp. manual]]).
+     #+name: var
+     #+begin_src C :var INPUT=10
+       int radius = INPUT;
+       printf("Input: %d", radius);
+     #+end_src
+
+     #+RESULTS: var
+     : Input: 10
+
+   * We can use this for a better solution: this code block can be run
+     again and again like the compiled program, and we enter the
+     variable ~radius~ as header ~:var RADIUS~.
+     #+name: volume4
+     #+begin_src C :tangle volume4.c :includes <stdio.h> :var RADIUS=12
+       #include <math.h> // include math library
+
+       float volume, radius; // declare types
+
+       radius = RADIUS;
+
+       volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
+
+       printf("Volume (cubic meters): %.1f\n", volume); // display result
+     #+end_src
+
+     #+RESULTS: volume4
+     : Volume (cubic meters): 7238.2
+
+   * See also:
+     - [[https://emacs.stackexchange.com/questions/20001/is-it-possible-to-read-user-input-from-stdin-while-tangling-a-source-block][stackexchange (2018)]]
+     - [[https://emacs.stackexchange.com/questions/15065/org-mode-babel-interactive-code-block-evaluation/15087#15087?newreg=2631f695948842baa572e7a89ded84be][stackexchange (2015)]]
+     - [[https://stackoverflow.com/questions/12129038/how-to-pipe-input-to-a-src-block-as-stdin][stackoverflow (2017)]]
+
+** Review (class notes)
+*** Examples - can you see how these could be improved?
+
+    * Exhibit 1
+      #+name: exhibit_1
+      #+begin_src C :tangle svolume.c :results raw
+        #include <stdio.h>
+
+        int main(void) {
+
+          int radius, volume;
+          radius = 10;
+          volume = 4.0f/3.0f * 3.14 * radius * radius * radius;
+
+          printf("Dimensions: %d\n", radius);
+          printf("Volume (cubic meters): %d\n", volume);
+
+          return 0;
+        }
+      #+end_src
+
+      #+RESULTS: exhibit_1
+      Dimensions: 10
+      Volume (cubic meters): 4186
+
+    * Exhibit 2
+      #+name: exhibit_2
+      #+begin_src C :include <stdio.h> :main yes :exports both
+        #define PI 3.14;
+        int main()
+        {
+          int r = 10;
+          int v = 4.0f/3.0f * 3.141592 * r*r*r;
+
+          printf("volume = %d",v);
+        }
+      #+end_src
+
+      #+RESULTS: exhibit_2
+      : volume = 4188
+
