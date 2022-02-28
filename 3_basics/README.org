@@ -675,7 +675,8 @@
     computer, which format it should prepare for.
 
   * Just like ~printf~, the input function ~scanf~ needs to know what
-    format the input data will come in.
+    format the input data will come in, otherwise it will print
+    nonsense (or rather, memory fragments from God knows where).
 
   * The following statement reads an ~int~ value and stores it in the
     variable ~i~. To run it, you have to tangle the code block (with
@@ -704,7 +705,7 @@
       scanf("%f", &i);
       printf("You entered %f\n", i);
     #+end_src
-    
+
 * Program Layout
 
   * You can think of a program statement as a series of tokens[fn:12]:
@@ -777,7 +778,8 @@
     - Indentation makes nesting easier to spot
     - Blank lines can divide a program into logical units
 
-  * [ ] Practice: improve the layout of this program (GitHub), then run it.
+  * [ ] Practice: improve the layout of this program ([[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org#program-layout][from GitHub]]),
+    then run it.
     #+name: layout
     #+begin_src C
       int var1=1;int var2;var2=
@@ -790,10 +792,12 @@
                     );
     #+end_src
 
-* TODO More on ~printf~ and ~scanf~??
-** ~printf~
-** ~scanf~
-* Glossary
+* Formatted I/O
+
+  Download this interactive notebook (io.org) for instruction and
+  class practice.
+   
+* Glossary of terms and commands
 
   | TERM             | EXPLANATION                                                          |
   |------------------+----------------------------------------------------------------------|
@@ -818,6 +822,8 @@
   * C directives begin with a hash mark (~#~)
   * C statements end with a semicolon (~;~)
   * C functions begin and end with parentheses ~{~ and ~}~
+  * C programs should be readable
+  * Input and output has to be formatted correctly
 
 * Code summary
 
@@ -832,6 +838,7 @@
   | ~printf~                      | printing function                        |
   | ~\n~                          | escape character (new-line)              |
   | ~/* ... */~  ~//...~          | comments                                 |
+  | ~scanf~                       | input pattern function                   |
 
 * Jargon
 
