@@ -936,6 +936,7 @@
    #+attr_html: :width 400px
    [[./img/cmd.png]]
 
+
 ** PRACTICE - dimensional weight reconsidered
 
    1. [ ] If your neighbor does not get along, help him/her without
