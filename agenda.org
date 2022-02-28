@@ -809,14 +809,51 @@
 * Lab session: reading input - w7s18 (02/28/22)
 ** Objectives
 
-   * [ ] Review: compile and run on the commandline (CLI)
-   * [ ] Review: quiz questions
+   * [ ] Review: quiz questions 4 + 5 (complete them/ask)
+   * [ ] Review: compile and run C on the command line
+   * [ ] Be the compiler: ~scanf~ formatting
    * [ ] Understand tangling code once and for all
-   * [ ] Alter program to take input from the CLI
-   * [ ] Understand reading input with ~scanf~
-   * [ ] Complete program from source to finish [PDF printout]
+   * [ ] Optional for extra credit: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~dweight_new.pdf~]]
 
-** 2 Tips for the programming assignment
+** Compile and run C in the shell
+
+   * [ ] Create a minimum C file, e.g. a hello world program ~hw.c~- either
+     in Emacs or in any other editor you like:
+     #+name: helloworld
+     #+begin_src C :tangle practice/hw.c
+       #include <stdio.h>
+
+       int main() {
+         puts("hello world");
+       }
+     #+end_src
+
+   * [ ] Open a terminal (or ~M-x shell~ or ~M-x eshell~ in Emacs).
+
+   * [ ] Convince yourself that the file can be found with ~DIR hw.c~
+
+   * [ ] Compile the file with ~gcc -o hello hw.c~
+
+   * [ ] The ~-o hello~ means "name the executable ~hello~"
+
+   * [ ] Run the file by entering the name of the executable
+
+   * [ ] As you can see via ~dir hello*~, the executable is actually
+     called ~hello.exe~ in Windows. 
+
+   #+caption: Compile and run C program on the shell
+   #+attr_html: :width 500px
+   [[./img/compileandrun.png]]
+
+** Be the compiler: ~scanf~ formatting
+
+   * Download ~scanf.zip~ from GitHub
+   * The ZIP file contains an interactive notebook ~scanf.org~ and
+     several prepared input files
+   * Work through the notebook at your own pace
+   * If you cannot finish in class, finish it at home
+
+** 2 Tips for the programming assignment (Schoology
 
    1) (02/25/2022) If you want to test and run your file *inside*
       Emacs, which saves a lot of time, just add this to the header
@@ -855,50 +892,6 @@
       #+RESULTS:
       : 444 555
 
-** Be the compiler! (From Quiz 5)
-
-   The following program compiles and runs but it does not print the
-   right results - it always prints ~1~, no matter what is
-   entered. What is the problem?
-
-   #+begin_src C :cmdline < practice/input
-     int val, input;
-     val = scanf("%d", &input);
-     printf("%d\n", val);
-   #+end_src
-
-   Explanation: if you look at the ~scanf~ manual page, you read that
-   it "returns the number of input items successfully matched and
-   assigned." For ~val=scanf("%d",&input);~ only ~1~ ~int~ was
-   scanned, not the integer value of the scanned character (~input~).
-
-   Examples:
-   #+begin_src C :results output :tangle scanf.c
-     int x, y, z, u, n;
-     n = scanf("%d", &x);
-     printf("n = %d\n", n);                 // prints 1
-     n = scanf("%d%d", &x, &y);
-     printf("n = %d\n", n);                 // prints 2
-     n = scanf("%d%d%d", &x, &y,&z);
-     printf("n = %d\n", n);                 // prints 3
-     n = scanf("%d%d%d%d", &x, &y,&z, &u);
-     printf("n = %d\n", n);                 // prints 3
-   #+end_src
-
-   Results:
-   #+begin_example
-     C:\Users\birkenkrahe>scan
-     100
-     n = 1
-     200
-     300
-     n = 2
-     400
-     500
-     600
-     n = 3
-   #+end_example
-
 ** Understand weaving doc and tangling C code from Org-mode
 
    * Concept review: Can you answer the following questions?[fn:3]
@@ -936,127 +929,21 @@
    #+attr_html: :width 400px
    [[./img/cmd.png]]
 
-** PRACTICE (FOR HOME) - dimensional weight reconsidered
-#+options: toc:nil
-   1. [ ] Checklist before you start coding:
-      - Go to a working directory where you are allowed to save files
-      - If you are in ~AppData/Roaming~, change to your home directory
-      - Open a terminal and navigate to your working directory
+** Extra credit: dimensional weight reconsidered
 
-   2. [ ] Create an Org-mode file "dweight.org"
+  * [ ] Alternatively, you can pass the input data to the file
+    using the redirection operator ~<~ - then you can run the file
+    inside Emacs (either on the shell, or using the code block
+    header). Examples in GitHub: cc100/practice/[[https://github.com/birkenkrahe/cc100/blob/main/practice/cmdline.org#commandline-input-in-emacs-org-mode][cmdline.org]].
 
-   3. [ ] Add one named C code block (use <s [TAB] to do this)
-
-   4. [ ] Name the code block ~dweight~
-
-   5. [ ] Start with the code that we created last week, or take the
-      code from [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~dweight.c~ from GitHub]] (in [[https://github.com/birkenkrahe/cc100/tree/main/3_basics/src][cc100/3_basics/src]]).
-
-   6. [ ] Check: your code block should now look like this:
-      #+name: dweight
-      #+begin_src C
-	#include <stdio.h>
-
-	int main(void)
-	{
-          const int INCHES_PER_POUND = 166;
-          int height, length, width, volume, weight;
-
-          height = 8;
-          length = 12;
-          width = 10;
-          volume = height * length * width;
-          weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
-
-          printf("Dimensions: %dx%dx%d\n", length, width, height);
-          printf("Volume (cubic inches): %d\n", volume);
-          printf("Dimensional weight (pounds): %d\n", weight);
-
-          return 0;
-	}
-      #+end_src
-
-   7. [ ] You do not need any code block header arguments except ~C~
-      and ~:results output~.
-
-   8. [ ] Note that the number ~166~ is now defined as ~const~.
-
-   9. [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
-      is correct. You should get this output:
-      #+begin_example
-      #+RESULTS: dweight
-      : Dimensions: 12x10x8
-      : Volume (cubic inches): 960
-      : Dimensional weight (pounds): 6
-      #+end_example
-
-   10. [ ] Copy the code block into a second code block, and name it
-       ~dweight1~.
-
-   11. [ ] Alter the code so that the three variables ~height~,
-       ~length~, and ~width~ have to be given as input:
-       - Add three ~printf~ statements asking for these variables
-       - After each of these, add a ~scanf~ statement to take the input
-       - You must delete the assignments to these variables
-       - Make sure that you use the correct format identifier ~%d~
-
-   12. [ ] Your code block should now look like this (without the comments):
-       #+name: dweight1
-       #+begin_src C
-	 #include <stdio.h>
-
-	 int main(void)
-	 {
-           // declare variables and constants
-           const int INCHES_PER_POUND = 166;
-           int height, length, width, volume, weight;
-
-           // Enter input
-           printf("Enter the box height: ");
-           scanf("%d", &height);
-           printf("Enter the box length: ");
-           scanf("%d", &length);
-           printf("Enter the box width: ");
-           scanf("%d", &width);
-
-           // compute volume and dimensional weight
-           volume = height * length * width;
-           weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;
-
-           printf("Dimensions: %dx%dx%d\n", length, width, height);
-           printf("Volume (cubic inches): %d\n", volume);
-           printf("Dimensional weight (pounds): %d\n", weight);
-
-           return 0;
-	 }
-       #+end_src
-
-   13. [ ] Add the necessary tangle information to the code block header:
-       #+begin_example
-       :tangle dweight1.c
-       #+end_example
-
-   14. [ ] Tangle the code block with the key sequence ~C-c C-v t~ to
-       get the C source code file ~dweight1.c~
-
-   15. [ ] Compile and run it on the Windows command line, and you're done!
-       #+caption: sample result on the Windows CMD line
-       #+attr_html: :width 600px
-       [[./img/dweight.png]]
-
-   16. [ ] Alternatively, you can pass the input data to the file
-       using the redirection operator ~<~ - then you can run the file
-       inside Emacs (either on the shell, or using the code block
-       header). Examples in GitHub: birkenkrahe/cc100/cmdline.org.
-
-   17. [ ] You can submit the Org-file to me *via Email* for extra
-       credit - with the three lines at the header to identify your
-       work:
-       #+begin_example
-	 #+TITLE: Dimensional weight
-	 #+AUTHOR: your name
-	 #+HONOR: pledged
-       #+end_example
+  * [ ] You can submit the Org-file to me *via Email* for extra
+    credit - with the three lines at the header to identify your
+    work:
+    #+begin_example
+      #+TITLE: Dimensional weight
+      #+AUTHOR: your name
+      #+HONOR: pledged
+    #+end_example
 
 * Next
 
