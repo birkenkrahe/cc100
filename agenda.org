@@ -712,7 +712,7 @@
    * Emacs can fetch arguments via the header arguments ~:cmdline~ (as
      input redirected from a file), or via ~:var~ through assignment.
      #+name: cmdline
-     #+begin_src C :cmdline < input :tangle cmd.c
+     #+begin_src C :cmdline < input :tangle practice/cmd.c
        float i,j;
        scanf("%f %f\n",&i, &j);
        printf("input was: %f %f\n",i,j);
@@ -846,7 +846,7 @@
 
       Example: the file ~inputfile~ contains only: ~444==++//555~. We
       want to only print out ~444~ and ~555~.
-      #+begin_src C :main yes :includes <stdio.h> :cmdline < inputfile
+      #+begin_src C :main yes :includes <stdio.h> :cmdline < practice/inputfile
         int a,b;
         scanf("%d==++//%d", &a, &b);
         printf("%d %d", a,  b);
@@ -861,7 +861,7 @@
    right results - it always prints ~1~, no matter what is
    entered. What is the problem?
 
-   #+begin_src C :cmdline < input
+   #+begin_src C :cmdline < practice/input
      int val, input;
      val = scanf("%d", &input);
      printf("%d\n", val);
@@ -936,33 +936,29 @@
    #+attr_html: :width 400px
    [[./img/cmd.png]]
 
-
-** PRACTICE - dimensional weight reconsidered
-
-   1. [ ] If your neighbor does not get along, help him/her without
-      being asked explicitly!
-
-   2. [ ] Checklist before you start coding:
+** PRACTICE (FOR HOME) - dimensional weight reconsidered
+#+options: toc:nil
+   1. [ ] Checklist before you start coding:
       - Go to a working directory where you are allowed to save files
       - If you are in ~AppData/Roaming~, change to your home directory
       - Open a terminal and navigate to your working directory
 
-   3. [ ] Create an Org-mode file "dweight.org"
+   2. [ ] Create an Org-mode file "dweight.org"
 
-   4. [ ] Add one named C code block (use <s [TAB] to do this)
+   3. [ ] Add one named C code block (use <s [TAB] to do this)
 
-   5. [ ] Name the code block ~dweight~
+   4. [ ] Name the code block ~dweight~
 
-   6. [ ] Start with the code that we created last week, or take the
+   5. [ ] Start with the code that we created last week, or take the
       code from [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/src/dweight.c][~dweight.c~ from GitHub]] (in [[https://github.com/birkenkrahe/cc100/tree/main/3_basics/src][cc100/3_basics/src]]).
 
-   7. [ ] Check: your code block should now look like this:
+   6. [ ] Check: your code block should now look like this:
       #+name: dweight
       #+begin_src C
-        #include <stdio.h>
+	#include <stdio.h>
 
-        int main(void)
-        {
+	int main(void)
+	{
           const int INCHES_PER_POUND = 166;
           int height, length, width, volume, weight;
 
@@ -977,40 +973,40 @@
           printf("Dimensional weight (pounds): %d\n", weight);
 
           return 0;
-        }
+	}
       #+end_src
 
-   8. [ ] You do not need any code block header arguments except ~C~
+   7. [ ] You do not need any code block header arguments except ~C~
       and ~:results output~.
 
-   9. [ ] Note that the number ~166~ is now defined as ~const~.
+   8. [ ] Note that the number ~166~ is now defined as ~const~.
 
-   10. [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
-       is correct. You should get this output:
-       #+begin_example
-       #+RESULTS: dweight
-       : Dimensions: 12x10x8
-       : Volume (cubic inches): 960
-       : Dimensional weight (pounds): 6
-       #+end_example
+   9. [ ] Run the code block in Emacs with ~C-c C-c~ to make sure it
+      is correct. You should get this output:
+      #+begin_example
+      #+RESULTS: dweight
+      : Dimensions: 12x10x8
+      : Volume (cubic inches): 960
+      : Dimensional weight (pounds): 6
+      #+end_example
 
-   11. [ ] Copy the code block into a second code block, and name it
+   10. [ ] Copy the code block into a second code block, and name it
        ~dweight1~.
 
-   12. [ ] Alter the code so that the three variables ~height~,
+   11. [ ] Alter the code so that the three variables ~height~,
        ~length~, and ~width~ have to be given as input:
        - Add three ~printf~ statements asking for these variables
        - After each of these, add a ~scanf~ statement to take the input
        - You must delete the assignments to these variables
        - Make sure that you use the correct format identifier ~%d~
 
-   13. [ ] Your code block should now look like this (without the comments):
+   12. [ ] Your code block should now look like this (without the comments):
        #+name: dweight1
        #+begin_src C
-         #include <stdio.h>
+	 #include <stdio.h>
 
-         int main(void)
-         {
+	 int main(void)
+	 {
            // declare variables and constants
            const int INCHES_PER_POUND = 166;
            int height, length, width, volume, weight;
@@ -1032,26 +1028,35 @@
            printf("Dimensional weight (pounds): %d\n", weight);
 
            return 0;
-         }
+	 }
        #+end_src
 
-   14. [ ] Add the necessary tangle information to the code block header:
+   13. [ ] Add the necessary tangle information to the code block header:
        #+begin_example
        :tangle dweight1.c
        #+end_example
 
-   15. [ ] Tangle the code block with the key sequence ~C-c C-v t~ to
+   14. [ ] Tangle the code block with the key sequence ~C-c C-v t~ to
        get the C source code file ~dweight1.c~
 
-   16. [ ] Compile and run it on the Windows command line, and you're done!
+   15. [ ] Compile and run it on the Windows command line, and you're done!
        #+caption: sample result on the Windows CMD line
        #+attr_html: :width 600px
        [[./img/dweight.png]]
 
-   17. [ ] Alternatively, you can pass the input data to the file using
-       the redirection operator ~<~ - then you can run the file inside
-       Emacs (either on the shell, or using the code block header). You
-       can find sample solutions for this here in GitHub (dweight_emacs.org).
+   16. [ ] Alternatively, you can pass the input data to the file
+       using the redirection operator ~<~ - then you can run the file
+       inside Emacs (either on the shell, or using the code block
+       header). Examples in GitHub: birkenkrahe/cc100/cmdline.org.
+
+   17. [ ] You can submit the Org-file to me *via Email* for extra
+       credit - with the three lines at the header to identify your
+       work:
+       #+begin_example
+	 #+TITLE: Dimensional weight
+	 #+AUTHOR: your name
+	 #+HONOR: pledged
+       #+end_example
 
 * Next
 
