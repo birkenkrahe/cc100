@@ -1,0 +1,121 @@
+* Be the compiler: reading input
+** Preliminaries
+
+   * [X] Work through this notebook at your own pace. When you're done,
+     check a task off by typing ~C-c C-c~ on the line with the ~[
+     ]~. Check this task off for practice! You can close bullet points
+     with the ~<TAB>~  key on your keyboard
+
+   * [X] Make sure that you can run C where you are by executing the
+     code block below (~C-c C-c~) and then saving the file (~C-x C-s~)
+     #+name: helloworld
+     #+begin_src C :main yes :includes <stdio.h>
+       puts("hello world");
+     #+end_src
+
+   * [X] If this does not lead to the output ~hello world~, try to
+     analyze the problem by yourself first. Typical sources of errors:
+     - Can you write to the directory?
+     - Is this file an Org-file?
+     - Did you use the correct key sequence?
+     - Do you have the right code block header arguments?
+
+   * [X] Now, we're going to do some ~scanf~ function drills.
+
+** Theory
+
+   * [X] First, the basics:
+     - ~scanf~ requires formatting, e.g. ~%d~ for an integer
+     - The formatting is wrapped in a string and followed by the input
+       variable, e.g. ~"%d", &i~ for an ~int~ variable ~i~
+     - The formatting string must be matched to the input exactly,
+       e.g. when you enter the input ~5$~, the formatting string must
+       be ~%d$-~ (~"%d $"~ or ~"%d"~ will not work)
+
+   * [X] Do you have any questions or corrections for me about this? If
+     there's anything you don't understand, ask your neighbor or talk
+     to me!
+
+** Simple integer input
+
+   * [X] In the prepared code block [[input1]] below, write a statement
+     that takes input in the form of an ~int i~, using ~scanf~.
+
+   * [X] Print the input using ~printf~. Remember that you must
+     declare variables before you can use them.
+
+   * [X] Tip: the file should have three lines!
+
+   * [X] When you're done, run the file with ~C-c C-c~.
+
+   * [X] Code now:
+     #+name: input1
+     #+begin_src C :main yes :includes <stdio.h> :tangle input1.c :cmdline < input1
+       int i;
+       scanf("%d", &i);
+       printf("%d\n", i);
+     #+end_src
+
+     #+RESULTS: input1
+     : 1000
+
+   * [X] The file ~input1~ contains the integer ~1000~, which is what
+     you should see as output if everything is correct. If you see
+     some other number, you made a mistake.
+
+** Simple floating point input
+
+   * [X] Modify the code from [[input1]] in the prepared code block [[input2]] below
+     so that the program takes input in the form of a ~float x~.
+
+   * [X] Print the input using ~printf~.
+
+   * [X] Tip: the file should still have three lines!
+
+   * [X] When you're done, run the file with ~C-c C-c~.
+
+   * [X] Code now:
+     #+name: input2
+     #+begin_src C :main yes :includes <stdio.h> :tangle input2.c :cmdline < input2
+       float x;
+       scanf("%f", &x);
+       printf("%f\n", x);
+     #+end_src
+
+     #+RESULTS: input2
+     : 3.141593
+
+   * [X] The file ~input2~ contains the floating point number ~pi =
+     3.141593~, which is what you should see as output if everything
+     is correct. If you see some other number, you made a mistake.
+     
+** General input
+
+   * [X] In the prepared code block [[input3]] below, write a statement
+     that takes input of the form ~US$ y~ where ~y~ is an ~float~.
+
+   * [X] Print the input using ~printf~ with the exact output:
+     #+begin_example
+     \You entered "US$ 100.34.\
+     #+end_example
+
+   * [X] Tip: To print ~\~, you need to "escape" it with ~\~. Notice
+     that ~\"~ escapes the apostroph.
+
+   * [X] When you're done, run the file with ~C-c C-c~.
+
+   * [X] Code now:
+     #+name: input3
+     #+begin_src C :main yes :includes <stdio.h> :tangle input3.c :cmdline < input3
+       int j;
+       scanf("US$ %d", &j);
+       printf("\\You entered US$ %d.\\\n", j);
+     #+end_src
+
+     #+RESULTS: input3
+     : \You entered US$ 100.\
+   
+   * [X] The file ~input3~ contains the input string ~US$ 100.34~, which is what
+     you should see as output if everything is correct. If you see
+     some other number, you made a mistake.
+
