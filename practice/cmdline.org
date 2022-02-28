@@ -6,7 +6,8 @@
   * But Emacs will not stop program execution to take input.
 
   * To pass input data to a file, we can use the ~:cmdline~ code block
-    header argument:
+    header argument (the arguments shown are the minimum for the file
+    to compile and run):
     #+begin_example
     C :main yes :includes <stdio.h> :cmdline < inputfile
     #+end_example
