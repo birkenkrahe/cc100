@@ -1,5 +1,5 @@
 * Be the compiler: reading input
-** Preliminaries
+** README
 
    * [X] Work through this notebook at your own pace. When you're done,
      check a task off by typing ~C-c C-c~ on the line with the ~[
@@ -115,7 +115,7 @@
      #+RESULTS: input3
      : \You entered US$ 100.\
    
-   * [X] The file ~input3~ contains the input string ~US$ 100.34~, which is what
-     you should see as output if everything is correct. If you see
-     some other number, you made a mistake.
+   * [X] The file ~input3~ contains the input string ~US$ 100.34~,
+     which is what you should see as output if everything is
+     correct. If you see some other number, you made a mistake.
 

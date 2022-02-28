@@ -806,7 +806,7 @@
      : This is a slash:
      : This is a slash: \
 
-* Lab session: reading input - w7s18 (02/28/22)
+* Lab session: scanf.org, reading input - w7s18 (02/28/22)
 ** Objectives
 
    * [ ] Review: quiz questions 4 + 5 (complete them/ask)
@@ -848,7 +848,7 @@
    * [ ] Run the file by entering the name of the executable
 
    * [ ] As you can see via ~dir hello*~, the executable is actually
-     called ~hello.exe~ in Windows. 
+     called ~hello.exe~ in Windows.
 
    #+caption: Compile and run C program on the shell
    #+attr_html: :width 500px
@@ -932,19 +932,24 @@
 
 ** Extra credit: dimensional weight reconsidered
 
-  * [ ] Alternatively, you can pass the input data to the file
-    using the redirection operator ~<~ - then you can run the file
-    inside Emacs (either on the shell, or using the code block
-    header). Examples in GitHub: cc100/practice/[[https://github.com/birkenkrahe/cc100/blob/main/practice/cmdline.org#commandline-input-in-emacs-org-mode][cmdline.org]].
+   * [ ] Alternatively, you can pass the input data to the file
+     using the redirection operator ~<~ - then you can run the file
+     inside Emacs (either on the shell, or using the code block
+     header). Examples in GitHub: cc100/practice/[[https://github.com/birkenkrahe/cc100/blob/main/practice/cmdline.org#commandline-input-in-emacs-org-mode][cmdline.org]].
 
-  * [ ] You can submit the Org-file to me *via Email* for extra
-    credit - with the three lines at the header to identify your
-    work:
-    #+begin_example
-      #+TITLE: Dimensional weight
-      #+AUTHOR: your name
-      #+HONOR: pledged
-    #+end_example
+   * [ ] You can submit the Org-file to me *via Email* for extra
+     credit - with the three lines at the header to identify your
+     work:
+     #+begin_example
+       #+TITLE: Dimensional weight
+       #+AUTHOR: your name
+       #+HONOR: pledged
+     #+end_example
+
+* NEXT w7s19 (03/02/22)
+** News
+
+   * PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
 
 * Next
 
