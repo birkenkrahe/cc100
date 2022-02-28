@@ -8,7 +8,7 @@
   * To pass input data to a file, we can use the ~:cmdline~ code block
     header argument:
     #+begin_example
-    #+begin_src C :main yes :includes <stdio.h> :cmdline < inputfile
+    C :main yes :includes <stdio.h> :cmdline < inputfile
     #+end_example
 
   * For the code block [[cmdline]] below to work, you need a file named
