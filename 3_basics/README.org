@@ -777,7 +777,7 @@
     - Indentation makes nesting easier to spot
     - Blank lines can divide a program into logical units
 
-  * [ ] Practice: improve the layout of the program.
+  * [ ] Practice: improve the layout of this program (GitHub), then run it.
     #+name: layout
     #+begin_src C
       int var1=1;int var2;var2=
