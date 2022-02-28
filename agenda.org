@@ -815,6 +815,15 @@
    * [ ] Understand tangling code once and for all
    * [ ] Optional for extra credit: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~dweight_new.pdf~]]
 
+** Be the compiler: ~scanf~ formatting
+
+   * Download ~reading_input.zip~ from GitHub (cc100/practice)
+   * The ZIP file contains an interactive notebook ~scanf.org~ and
+     several prepared input files
+   * Work through the notebook at your own pace
+   * If you cannot finish in class, finish it at home!
+   * Help thy neighbour and/or ask me for help!
+
 ** Compile and run C in the shell
 
    * [ ] Create a minimum C file, e.g. a hello world program ~hw.c~- either
@@ -844,14 +853,6 @@
    #+caption: Compile and run C program on the shell
    #+attr_html: :width 500px
    [[./img/compileandrun.png]]
-
-** Be the compiler: ~scanf~ formatting
-
-   * Download ~scanf.zip~ from GitHub
-   * The ZIP file contains an interactive notebook ~scanf.org~ and
-     several prepared input files
-   * Work through the notebook at your own pace
-   * If you cannot finish in class, finish it at home
 
 ** 2 Tips for the programming assignment (Schoology
 
