@@ -809,9 +809,9 @@
 * Lab session: scanf.org, reading input - w7s18 (02/28/22)
 ** Objectives
 
-   * [ ] Review: quiz questions 4 + 5 (complete them/ask)
+   * [X] Review: quiz questions 4 + 5 (complete them/ask)
+   * [X] Be the compiler: ~scanf~ formatting
    * [ ] Review: compile and run C on the command line
-   * [ ] Be the compiler: ~scanf~ formatting
    * [ ] Understand tangling code once and for all
    * [ ] Optional for extra credit: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~dweight_new.pdf~]]
 
@@ -950,6 +950,9 @@
 ** News
 
    * PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
+** Notebook
+
+   * Download from Schoology folder Notebooks
 
 * Next
 
