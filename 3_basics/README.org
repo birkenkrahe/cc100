@@ -715,6 +715,7 @@
      printf ( "Height: %d\n"   ,   height )  ;
        1    2        3         4     5    6  7
     #+end_example
+
     |   | TOKEN          | MEANING                              |
     |---+----------------+--------------------------------------|
     | 1 | identifier     | protected C keyword  (function)      |
@@ -784,7 +785,7 @@
     - Indentation makes nesting easier to spot
     - Blank lines can divide a program into logical units
 
-  * [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
+  * [X] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
     GDrive]]), then run it.
 
     #+name: layout
