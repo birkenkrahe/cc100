@@ -709,7 +709,8 @@
 * Program Layout
 
   * You can think of a program statement as a series of tokens[fn:12]:
-    #+name: tokenization
+
+        #+name: tokenization
     #+begin_example
      printf ( "Height: %d\n"   ,   height )  ;
        1    2        3         4     5    6  7
@@ -730,6 +731,7 @@
   * [ ] As an example, here is a version of ~dweight~ that works just
     as well, on one line, with almost all whitespace deleted. Only in
     one place, the space is needed. Can you see where?
+
     #+name: dweight_one_line
     #+begin_src C
       int height,length,width,volume,weight;height=8;length=12;width=10;volume=height*length*width;weight=(volume+165)/166;printf("Dimensions: %dx%dx%d\n",length,width,height);printf("Volume (cubic inches): %d\n",volume);printf("Dimensional weight (pounds): %d\n",weight);
@@ -737,6 +739,7 @@
 
   * Another exception are the preprocessor directives - they need to
     be on a line of their own.
+
     #+name: preprocessor
     #+begin_src C :results silent
       #include "stdio.h"
@@ -745,7 +748,8 @@
 
   * You can divide statements over any number of lines as long as you
     don't divide keywords or tokens. This works:
-    #+begin_src C
+
+        #+begin_src C
       int
       height
       = 5
@@ -756,7 +760,9 @@
        height)
       ;
     #+end_src
-    But this does not:
+
+  * But this does not:
+
     #+begin_src C :results silent
       int
       hei ght
@@ -778,10 +784,11 @@
     - Indentation makes nesting easier to spot
     - Blank lines can divide a program into logical units
 
-  * [ ] Practice: improve the layout of this program ([[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org#program-layout][from GitHub]]),
-    then run it.
+  * [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
+    GDrive]]), then run it.
+
     #+name: layout
-    #+begin_src C
+    #+begin_src C :tangle src/layout.c
       int var1=1;int var2;var2=
                             var1
                             ,*100;
@@ -793,9 +800,10 @@
     #+end_src
 
 * Formatted I/O
-
-  Download this interactive notebook (io.org) for instruction and
-  class practice.
+  
+  * There is more to ~scanf~ and ~printf~.
+    
+  * Download this interactive notebook (io.org) for self study
    
 * Glossary of terms and commands
 

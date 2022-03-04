@@ -1,0 +1,39 @@
+#+TITLE: Phone number conversion
+* Solution
+
+  * To run the first program, I took the input number from ~input1~:
+    #+begin_example  file: ./input1
+    (501) 422 4725
+    #+end_example
+
+  * Program 1
+    #+name: phone1
+    #+begin_src C :cmdline < ./input1 :main yes :includes <stdio.h> :tangle phone1.c :results output
+      int area, prefix, suffix;
+      printf("Enter phone number [(xxx) xxx-xxxx]:\n");
+      scanf("(%d) %d-%d", &area, &prefix, &suffix);
+      printf("You entered: %d.%d.%d\n", area, prefix, suffix);
+    #+end_src
+
+    #+RESULTS: phone1
+    : Enter phone number [(xxx) xxx-xxxx]:
+    : You entered: 501.422.4725
+
+  * To run the first program, I took the input number from ~input1~:
+    #+begin_example  file: ./input2
+    501\422\4275
+    #+end_example
+
+  * Program 2: in both functions, the ~\~ character has to be escaped
+    as ~\\~.
+    #+name: phone2
+    #+begin_src C :cmdline < ./input2 :main yes :includes <stdio.h> :tangle phone1.c :results output
+      int area, prefix, suffix;
+      printf("Enter phone number [xxx\\xxx\\xxxx]:\n");
+      scanf("%d\\%d\\%d", &area, &prefix, &suffix);
+      printf("You entered: (%d) %d-%d\n", area, prefix, suffix);
+    #+end_src
+
+    #+RESULTS: phone2
+    : Enter phone number [xxx\xxx\xxxx]:
+    : You entered: (501) 422-4725
