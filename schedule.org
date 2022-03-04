@@ -2,7 +2,7 @@
 #+startup: hideblocks overview
 * Schedule
 
-   | NO | WEEK | DATE         | TOPIC                         | CLASS ASSIGNMENT       | GITHUB         | ASSIGNMENT (LAB PROJECT) | TEST[fn:1]   |
+   | NO | WEEK | DATE         | TOPIC                         | CLASS ASSIGNMENT       | GITHUB         | ASSIGNMENT (LAB PROJECT)[fn:3] | TEST[fn:1]   |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------+--------------|
    |  1 |    1 | Wed-12-Jan   | Welcome                       |                        | org/systems    | Survey                   | Entry survey |
    |  2 |      | Fri-14-Jan   | Git, GitHub, History of C     | GitHub Hello World     | 1_introduction | GitHub Hello World       |              |
@@ -18,7 +18,7 @@
    |  8 |      | Wed-02-Feb   | Structure of a C program      |                        |                |                          | Quiz 3       |
    |  9 |      | Fri-04-Feb   | CANCELLED (weather)           |                        |                |                          |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------+--------------|
-   | 10 |    5 | Mon-07-Feb   | Variable types, assignments   |                        |                | Program 3 (dweight)      |              |
+   | 10 |    5 | Mon-07-Feb   | Variable types, assignments   |                        |                | Program 3 (dweight) X    |              |
    | 11 |      | Wed-09-Feb   | Formatting printout           |                        |                |                          |              |
    | 12 |      | Fri-11-Feb   | Writing test 1                |                        |                |                          | Test 1       |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------+--------------|
@@ -32,7 +32,7 @@
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------+--------------|
    | 19 |    8 | Mon-28-Feb   | Reading input lab session     | scanf.org              |                |                          | Quiz 5       |
    | 20 |      | +Wed-02-Mar+ | CANCELLED                     |                        |                |                          |              |
-   | 21 |      | Fri-04-Mar   | Program layout and tangling   | addfrac.c              |                |                          |              |
+   | 21 |      | Fri-04-Mar   | Program layout and tangling   |                        |                |                          |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------+--------------|
    | 22 |    9 | Mon-07-Mar   |                               |                        |                | Program 6                | Quiz 6       |
    | 23 |      | Wed-09-Mar   |                               |                        |                |                          |              |
@@ -65,6 +65,8 @@
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------+--------------|
 
 * Footnotes
+
+[fn:3] X = Extra Credit 
 
 [fn:2]Chapter or subchapter in King, C Programming (2e), Norton
 (2008). 
