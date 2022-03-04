@@ -4,3 +4,4 @@
 #+SUBTITLE:CSC 100 Introduction to programming in C/C++
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+* README
