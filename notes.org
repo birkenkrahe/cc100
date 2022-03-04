@@ -635,13 +635,13 @@
 * Program assignment review, scanf - w7s16 (02/21/22)
 ** Compute the volume of a sphere
 
-  * This is a fairly long set of solutions - I'm also explaining how
-    to tackle reading input in Org-mode, which you don't need to know.
-  * Below is also the solution to the extra credit problem (reading
-    the radius input from the commandline).
-  * Included are also a couple of exhibits with small mistakes -
-    anonymized student submissions.
-  
+   * This is a fairly long set of solutions - I'm also explaining how
+     to tackle reading input in Org-mode, which you don't need to know.
+   * Below is also the solution to the extra credit problem (reading
+     the radius input from the commandline).
+   * Included are also a couple of exhibits with small mistakes -
+     anonymized student submissions.
+
 *** Problem
 
     * Write a program that computes the volume of a sphere with a
@@ -661,13 +661,13 @@
       ~#define~.
       #+name: volume1
       #+begin_src C :tangle volume1.c :includes <stdio.h>
-	#define PI_CONST 3.141593 // macro declaration
+        #define PI_CONST 3.141593 // macro declaration
 
-	float volume, radius=10.0f; // type declaration
+        float volume, radius=10.0f; // type declaration
 
-	volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
+        volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
 
-	printf("The volume of a sphere of radius %.2f is %.2f\n",
+        printf("The volume of a sphere of radius %.2f is %.2f\n",
                radius, volume); // display output
       #+end_src
 
@@ -678,13 +678,13 @@
       formula?
       #+name: volume_err1
       #+begin_src C
-	#define PI_CONST 3.141593 // macro declaration
+        #define PI_CONST 3.141593 // macro declaration
 
-	float volume, radius=10.0f; // type declaration
+        float volume, radius=10.0f; // type declaration
 
-	volume = 4/3 * PI_CONST * radius * radius * radius; // statement
+        volume = 4/3 * PI_CONST * radius * radius * radius; // statement
 
-	printf("The volume of a sphere of radius %.2f is %.2f\n",
+        printf("The volume of a sphere of radius %.2f is %.2f\n",
                radius, volume); // display output
       #+end_src
 
@@ -694,13 +694,13 @@
     * What happens when you use integers instead of floating point numbers?
       #+name: volume_err2
       #+begin_src C
-	#define PI_CONST 3.141593 // macro declaration
+        #define PI_CONST 3.141593 // macro declaration
 
-	int volume, radius=10; // type declaration
+        int volume, radius=10; // type declaration
 
-	volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
+        volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
 
-	printf("The volume of a sphere of radius %d is %d\n",
+        printf("The volume of a sphere of radius %d is %d\n",
                radius, volume); // display output
       #+end_src
 
@@ -710,13 +710,13 @@
     * What happens when you use a less accurate PI constant?
       #+name: volume_err3
       #+begin_src C
-	#define PI_CONST 3.14 // macro declaration
+        #define PI_CONST 3.14 // macro declaration
 
-	int volume, radius=10; // type declaration
+        int volume, radius=10; // type declaration
 
-	volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
+        volume = 4.0f/3.0f * PI_CONST * radius * radius * radius; // statement
 
-	printf("The volume of a sphere of radius %d is %d\n",
+        printf("The volume of a sphere of radius %d is %d\n",
                radius, volume); // display output
       #+end_src
 
@@ -727,13 +727,13 @@
       library ~math.h~.
       #+name: volume2
       #+begin_src C :tangle volume2.c :includes <stdio.h>
-	#include <math.h>  // include math library with PI=M_PI
+        #include <math.h>  // include math library with PI=M_PI
 
-	float volume, radius=10.0f; // type declaration
+        float volume, radius=10.0f; // type declaration
 
-	volume = 4.0f/3.0f * M_PI * radius * radius * radius; // statement
+        volume = 4.0f/3.0f * M_PI * radius * radius * radius; // statement
 
-	printf("The volume of a sphere of radius %.2f is %.2f\n",
+        printf("The volume of a sphere of radius %.2f is %.2f\n",
                radius, volume); // display output
       #+end_src
 
@@ -752,39 +752,39 @@
       ~in.txt~, contains my "interactive" input.
       #+name: cmdline
       #+begin_src C :tangle volume3.c :includes <stdio.h> :cmdline < in.txt :results silent
-	#include <math.h> // include math library
+        #include <math.h> // include math library
 
-	float volume, radius; // declare types
+        float volume, radius; // declare types
 
-	printf("Enter radius of sphere: \n");  // ask for input
-	scanf("%f", &radius);                  // read input
+        printf("Enter radius of sphere: \n");  // ask for input
+        scanf("%f", &radius);                  // read input
 
-	volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
+        volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
 
-	printf("Volume (cubic meters): %.1f\n", volume); // display result
+        printf("Volume (cubic meters): %.1f\n", volume); // display result
       #+end_src
 
     * This does not seem to work.
       #+name: cmdline
       #+begin_src C :tangle volume3.c :includes <stdio.h> :var USER_INPUT=(read-string "radius: ") :results silent
-	#include <math.h> // include math library
-	#include <stdlib.h> // include standard library
+        #include <math.h> // include math library
+        #include <stdlib.h> // include standard library
 
-	float volume, radius; // declare types
+        float volume, radius; // declare types
 
-	printf("Enter radius of sphere: \n");  // ask for input
-	//       scanf("%f", &USER_INPUT);                  // read input
-	radius = atof(USER_INPUT);
-	volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
+        printf("Enter radius of sphere: \n");  // ask for input
+        //       scanf("%f", &USER_INPUT);                  // read input
+        radius = atof(USER_INPUT);
+        volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
 
-	printf("Volume (cubic meters): %.1f\n", volume); // display result
+        printf("Volume (cubic meters): %.1f\n", volume); // display result
       #+end_src
 
     * To pass arguments to source code blocks, use ~var~ ([[https://orgmode.org/org.html#var][cp. manual]]).
       #+name: var
       #+begin_src C :var INPUT=10
-	int radius = INPUT;
-	printf("Input: %d", radius);
+        int radius = INPUT;
+        printf("Input: %d", radius);
       #+end_src
 
       #+RESULTS: var
@@ -795,15 +795,15 @@
       variable ~radius~ as header ~:var RADIUS~.
       #+name: volume4
       #+begin_src C :tangle volume4.c :includes <stdio.h> :var RADIUS=12
-	#include <math.h> // include math library
+        #include <math.h> // include math library
 
-	float volume, radius; // declare types
+        float volume, radius; // declare types
 
-	radius = RADIUS;
+        radius = RADIUS;
 
-	volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
+        volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
 
-	printf("Volume (cubic meters): %.1f\n", volume); // display result
+        printf("Volume (cubic meters): %.1f\n", volume); // display result
       #+end_src
 
       #+RESULTS: volume4
@@ -816,43 +816,43 @@
 
 *** Volume Assignment review (class notes)
 
-     * Exhibit 1
-       #+name: exhibit_1
-       #+begin_src C :tangle svolume.c :results raw
-         #include <stdio.h>
+    * Exhibit 1
+      #+name: exhibit_1
+      #+begin_src C :tangle svolume.c :results raw
+        #include <stdio.h>
 
-         int main(void) {
+        int main(void) {
 
-           int radius, volume;
-           radius = 10;
-           volume = 4.0f/3.0f * 3.14 * radius * radius * radius;
+          int radius, volume;
+          radius = 10;
+          volume = 4.0f/3.0f * 3.14 * radius * radius * radius;
 
-           printf("Dimensions: %d\n", radius);
-           printf("Volume (cubic meters): %d\n", volume);
+          printf("Dimensions: %d\n", radius);
+          printf("Volume (cubic meters): %d\n", volume);
 
-           return 0;
-         }
-       #+end_src
+          return 0;
+        }
+      #+end_src
 
-       #+RESULTS: exhibit_1
-       Dimensions: 10
-       Volume (cubic meters): 4186
+      #+RESULTS: exhibit_1
+      Dimensions: 10
+      Volume (cubic meters): 4186
 
-     * Exhibit 2
-       #+name: exhibit_2
-       #+begin_src C :include <stdio.h> :main yes :exports both
-         #define PI 3.14;
-         int main()
-         {
-           int r = 10;
-           int v = 4.0f/3.0f * 3.141592 * r*r*r;
+    * Exhibit 2
+      #+name: exhibit_2
+      #+begin_src C :include <stdio.h> :main yes :exports both
+        #define PI 3.14;
+        int main()
+        {
+          int r = 10;
+          int v = 4.0f/3.0f * 3.141592 * r*r*r;
 
-           printf("volume = %d",v);
-         }
-       #+end_src
+          printf("volume = %d",v);
+        }
+      #+end_src
 
-       #+RESULTS: exhibit_2
-       : volume = 4188
+      #+RESULTS: exhibit_2
+      : volume = 4188
 
 ** Hello world function
 
@@ -937,6 +937,22 @@
 
    #+RESULTS: 022122
    : 3.0
+
+* Compiling, LitProg, Program Layout - w7s19 (03/04/22)
+
+  * You can add packages to Emacs using its package manager with ~M-x
+    package-list-packages~. In the ~*Packages*~ buffer, add a package
+    with ~i~, install it with ~x~, update packages with ~U x~.
+
+  * For my notes and presentations, I use ~org-beautify-theme~ and
+    ~org-bullets~, two layout themes. For ~org-bullets~ to run, you
+    need to put the following code in your ~.emacs~ initialization
+    file.
+    #+name: org-bullets
+    #+begin_src emacs-lisp
+      (require 'org-bullets)
+      (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+    #+end_src
 
 * References
 
