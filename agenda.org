@@ -806,7 +806,7 @@
      : This is a slash:
      : This is a slash: \
 
-* Lab session: scanf.org, reading input - w7s18 (02/28/22)
+* Lab session: scanf.org, reading input - w8s18 (02/28/22)
 ** Objectives
 
    * [X] Review: quiz questions 4 + 5 (complete them/ask)
@@ -892,7 +892,7 @@
       #+RESULTS:
       : 444 555
 
-* Compiling, LitProg, Program Layout - w7s19 (03/04/22)
+* Compiling, LitProg, Program Layout - w8s19 (03/04/22)
 ** News
 
    * [X] Mid-term grade speech / Improve grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
@@ -1011,6 +1011,10 @@
    * Arithmetic expressions and operators (lecture)
    * Lab session (in-class assignment notebook)
    * Program assignment no. 6
+
+* w9s20 (03/07/22)
+
+   * Warming up: layout solution / NoppeLayout / NoppeLayoutModified
 
 * References
   * For some of the programming projects, see: King (2011). C

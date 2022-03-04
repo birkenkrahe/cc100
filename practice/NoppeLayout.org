@@ -1,0 +1,29 @@
+#+TITLE: Homework
+#+AUTHOR: Vicotr Noppe
+#+HONOR: Pledged
+
+#+name: layout
+#+begin_src C :tangle layout.c  
+
+ int main() {
+
+ int var1 = 1 , var2 = var1 * 100;
+
+ printf( "Variable1 = %d, variable2 = %d\n", var1, var2);
+
+ return 0;
+
+ }
+
+#+end_src
+
+#+RESULTS:
+| Variable1 = 1 | variable2 = 100 |
+
+* References
+
+  * Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~
+    Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
+    Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]

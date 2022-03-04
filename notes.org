@@ -940,6 +940,9 @@
 
 * Compiling, LitProg, Program Layout - w7s19 (03/04/22)
 
+  * [[https://man7.org/linux/man-pages/man1/gcc.1.html][GCC has a long UNIX manual page]], which contains all options for
+    the command line.
+
   * You can add packages to Emacs using its package manager with ~M-x
     package-list-packages~. In the ~*Packages*~ buffer, add a package
     with ~i~, install it with ~x~, update packages with ~U x~.
