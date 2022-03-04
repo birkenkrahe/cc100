@@ -96,7 +96,7 @@
 
    * [X] Print the input using ~printf~ with the exact output:
      #+begin_example
-     \You entered "US$ 100.34.\
+     \You entered US$ 100.34.\
      #+end_example
 
    * [X] Tip: To print ~\~, you need to "escape" it with ~\~. Notice

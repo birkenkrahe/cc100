@@ -813,7 +813,6 @@
    * [X] Be the compiler: ~scanf~ formatting
    * [ ] Review: compile and run C on the command line
    * [ ] Understand tangling code once and for all
-   * [ ] Optional for extra credit: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~dweight_new.pdf~]]
 
 ** Be the compiler: ~scanf~ formatting
 
@@ -854,7 +853,7 @@
    #+attr_html: :width 500px
    [[./img/compileandrun.png]]
 
-** 2 Tips for the programming assignment (Schoology
+** 2 Tips for the programming assignment
 
    1) (02/25/2022) If you want to test and run your file *inside*
       Emacs, which saves a lot of time, just add this to the header
@@ -893,72 +892,106 @@
       #+RESULTS:
       : 444 555
 
-** Understand weaving doc and tangling C code from Org-mode
+* NEXT w7s19 (03/04/22)
+** News
 
-   * Concept review: Can you answer the following questions?[fn:3]
+   * [ ] PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
+   * [ ] Mid-term grade speech &Improve your grade with a project (FAQ)
+   * [ ] Practice material/notebooks now [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]] (~reading_input~)
+   * [ ] Program assignment *for extra credit*: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~dweight_new.pdf~]]
 
-     | What is Emacs?                             |
-     | What is Org-mode?                          |
-     | What does "tangle" C code mean?            |
-     | What does it mean to "weave" documentation |
+** Improve your grade with a project
 
-   #+caption: overview literate programming process
+   If you want to improve your grade, you can talk to me about doing
+   a small, independent research project leading to a writeup in the
+   form of a notebook, or a short (10-15 min) presentation. The topic
+   must be related to the topic of this course.
+
+** Objectives
+
+   * [ ] Understand how to compile and run C in the shell
+   * [ ] Understand literate programming once and for all
+   * [ ] Understand what good program layout means (practice)
+
+** Compile and run C in the shell
+
+   * [ ] Create a minimum C file, e.g. a hello world program ~hw.c~-
+     either in Emacs or in any other editor you like:
+
+     #+name: helloworld
+     #+begin_src C :tangle practice/hw.c
+       #include <stdio.h>
+
+       int main() {
+         puts("hello world");
+       }
+     #+end_src
+
+
+   * [ ] Open a terminal (or ~M-x shell~ or ~M-x eshell~ in Emacs).
+
+   * [ ] Convince yourself that the file can be found with ~DIR hw.c~
+
+   * [ ] Compile the file with ~gcc -o hello hw.c~
+
+   * [ ] The ~-o hello~ means "name the executable ~hello~"
+
+   * [ ] Run the file by entering the name of the executable
+
+   * [ ] As you can see via ~dir hello*~, the executable is actually
+     called ~hello.exe~ in Windows.
+
+   #+caption: Compile and run C program on the shell
+   #+attr_html: :width 600px
+   [[./img/compileandrun.png]]
+
+** Understand tangling code once and for all
+
+   * Concept review: make sure that you can answer these questions:[fn:3]
+     
+     | What is Emacs?                          |
+     | What is Org-mode?                       |
+     | What does "tangle" C code mean?         |
+     | What does "weaving" documentation mean? |
+
+   #+caption: Short explanation of literate programming
    #+attr_html: :width 600px
    [[./img/litprogshort.png]]
 
-   #+caption: complete literate programming processes
+   #+caption: Detailed description of literate programming for C
    #+attr_html: :width 600px
    [[./img/litprog_cheat_sheet.png]]
 
-   #+caption: Org mode file ("literate code" or "program")
-   #+attr_html: :width 400px
+   #+caption: Code block and comment in Org-mode
+   #+attr_html: :width 600px
    [[./img/code.png]]
 
-   #+caption: Tangled file (C source code, or compilable program)
-   #+attr_html: :width 400px
+   #+caption: Tangled source code C file with comment
+   #+attr_html: :width 600px
    [[./img/tangle.png]]
 
-   #+caption: Woven file (readable documentation)
-   #+attr_html: :width 400px
+   #+caption: Documentation woven as HTML file in browser
+   #+attr_html: :width 600px
    [[./img/weave.png]]
 
-   #+caption: Display output in Emacs Org mode file
-   #+attr_html: :width 400px
+   #+caption: Executable C code block in Org-mode with results
+   #+attr_html: :width 600px
    [[./img/orgmode.png]]
 
-   #+caption: Compile source code and run program in terminal
-   #+attr_html: :width 400px
-   [[./img/cmd.png]]
+** Phone assignment solutions
 
-** Extra credit: dimensional weight reconsidered
+   * See GitHub folder [[https://github.com/birkenkrahe/cc100/tree/main/assignments][assignments]]/
 
-   * [ ] Alternatively, you can pass the input data to the file
-     using the redirection operator ~<~ - then you can run the file
-     inside Emacs (either on the shell, or using the code block
-     header). Examples in GitHub: cc100/practice/[[https://github.com/birkenkrahe/cc100/blob/main/practice/cmdline.org#commandline-input-in-emacs-org-mode][cmdline.org]].
+** Program layout
 
-   * [ ] You can submit the Org-file to me *via Email* for extra
-     credit - with the three lines at the header to identify your
-     work:
-     #+begin_example
-       #+TITLE: Dimensional weight
-       #+AUTHOR: your name
-       #+HONOR: pledged
-     #+end_example
+   * See GitHub folder [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org#program-layout][3_basics/]]
 
-* NEXT w7s19 (03/02/22)
-** News
+** Next
 
-   * PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
-** Notebook
-
-   * Download from Schoology folder Notebooks
-
-* Next
-
-  * Program layout improvement
-  * More on ~scanf~ and ~printf~ formatting
-  * Arithmetic expressions and operators
+   * More on ~scanf~ and ~printf~ formatting (DIY notebook)
+   * Arithmetic expressions and operators (lecture)
+   * Lab session (in-class assignment notebook)
+   * Program assignment no. 6
 
 * References
   * For some of the programming projects, see: King (2011). C
