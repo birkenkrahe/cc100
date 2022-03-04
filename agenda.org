@@ -896,7 +896,7 @@
 ** News
 
    * [ ] PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
-   * [ ] Mid-term grade speech &Improve your grade with a project (FAQ)
+   * [ ] Mid-term grade speech / Improve grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
    * [ ] Practice material/notebooks now [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]] (~reading_input~)
    * [ ] Program assignment *for extra credit*: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~dweight_new.pdf~]]
 
