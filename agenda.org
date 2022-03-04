@@ -915,8 +915,11 @@
 
 ** Compile and run C in the shell
 
-   * Three shells are at your disposal: Microsoft shell (MacOS
-     terminal), Emacs eshell, Emacs shell (= terminal) = CMD line
+   * Three shells[fn:4] are at your disposal: Microsoft shell (MacOS
+     terminal), Emacs eshell, Emacs shell (= terminal) = CMD line:
+     - Start Windows CMDline from the the Windows Search (~CMD~)
+     - Start Emacs shell (Windows CMDline in Emacs): ~M-x shell~
+     - Start Emacs eshell with ~M-x eshell~
 
    * Files you run in the terminal: Windows ~*.exe~ files - executable
      in binary format = machine code
@@ -925,7 +928,7 @@
      either in Emacs or in any other editor you like:
 
      #+name: helloworld
-     #+begin_src C :tangle practice/hw.c
+     #+begin_src C :tangle practice/hw.c :exports both
        #include <stdio.h>
 
        int main() {
@@ -933,8 +936,11 @@
        }
      #+end_src
 
+     You should see the output:
+   #+begin_example
      #+RESULTS: helloworld
      : hello world
+   #+end_example
 
    * [X] Tangle the code block above with ~C-c C-v t~ (if you have
      more than one code block in an Org file, use ~C-u C-c C-v t~)
@@ -1020,6 +1026,10 @@
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
 * Footnotes
+
+[fn:4]In other Operating Systems but Windows, there is a fourth shell,
+the terminal (~M-x terminal~), and in Windows, you also have
+PowerShell. All of these are ways of interacting with the OS.
 
 [fn:3]GNU Emacs is an extensible text editor. Org-mode is a plain text
 environment in GNU Emacs for keeping notes, authoring documents,
