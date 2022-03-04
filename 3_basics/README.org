@@ -807,7 +807,7 @@
   
   * There is more to ~scanf~ and ~printf~.
     
-  * Interactive notebook for self study in GDrive.
+  * Interactive notebook [[file:org/io.org::README][~io.org~]] for self study in GDrive.
    
 * Glossary of terms and commands
 
