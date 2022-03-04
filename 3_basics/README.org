@@ -807,7 +807,7 @@
   
   * There is more to ~scanf~ and ~printf~.
     
-  * Download this interactive notebook (io.org) for self study
+  * Interactive notebook for self study in GDrive.
    
 * Glossary of terms and commands
 
