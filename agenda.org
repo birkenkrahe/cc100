@@ -896,9 +896,9 @@
 ** News
 
    * [X] Mid-term grade speech / Improve grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
-   * [ ] PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
    * [X] Program assignment *for extra credit*: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~PDF~]] ([[https://github.com/birkenkrahe/cc100/tree/main/assignments/3_dweight][GitHub]])
    * [X] Practice material/notebooks now [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]] (~reading_input~)
+   * [ ] PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
 
 ** Improve your grade with a project
 
@@ -911,7 +911,7 @@
 
    * [X] Understand how to compile and run C in the shell
    * [X] Understand literate programming once and for all
-   * [ ] Understand what good program layout means (practice)
+   * [X] Understand what good program layout means (practice)
 
 ** Compile and run C in the shell
 
