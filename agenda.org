@@ -1019,10 +1019,11 @@
    * Program assignment no. 6
 
 * NEXT w9s20 (03/07/22)
-** News
+** To do
 
-   * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
-   * Warming up: layout solution / NoppeLayout / NoppeLayoutModified
+   * [ ] Waking up in AppData/Roaming? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+   * [ ] Warming up: layout solution / NoppeLayout / NoppeLayoutModified
+   * [ ] Getting more deeply into formatting I/O with printf and scanf
 
 * Program Layout practice exercise
 
@@ -1031,6 +1032,10 @@
   * Make use of these examples for the next program assignment
 
     See program examples [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayout.org][NoppeLayout]] and [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified]]. 
+
+* Formatting I/O
+
+  * Interactive notebook to code along (GDrive)
 
 * References
   * For some of the programming projects, see: King (2011). C

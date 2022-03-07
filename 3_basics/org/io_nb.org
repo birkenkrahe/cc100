@@ -12,9 +12,7 @@
 
   * I/O is where the pedal hits the metal - where man meets machine
 
-  * In this notebook:
-    1) Conversion specifications for printf
-    2)
+  * In this notebook: conversion specifications for printf
 
 ** printf
 
@@ -41,13 +39,9 @@
 
       #+name: mpx
       #+begin_src C
-        printf("%4d\n", 123);
-        printf("%.3f\n", 3.141593);
-      #+end_src
 
-      #+RESULTS: mpx
-      |   123 |
-      | 3.142 |
+
+      #+end_src
 
     * The precision p depends on the conversion specifier X
 
@@ -64,11 +58,11 @@
 
       #+name: spec
       #+begin_src C
-        printf("%d %.1d %.5d %.2d\n", 1, 1, 100, 10000);
-      #+end_src
 
-      #+RESULTS: spec
-      : 1 1 00100 10000
+
+
+
+      #+end_src
 
     * Floating point exponential "e"
 
@@ -82,17 +76,11 @@
       expression on its own line.
 
     #+begin_src C
-      printf("%e\n", 1);
-      printf("%e\n", 1.);
-      printf("%e\n", 1000.);
-      printf("%e\n", 1000000000000000.);
-    #+end_src
 
-    #+RESULTS:
-    | 1.421737e-312 |
-    |           1.0 |
-    |        1000.0 |
-    |         1e+15 |
+
+
+
+    #+end_src
 
     * Floating point fixed decimal "f"
 
@@ -114,12 +102,8 @@
       3.142574654 with p=8, 2.71 - each on a line of its own.
 
     #+begin_src C
-      printf("%g\n", 200.);
-      printf("%.8g\n", 3.142574654);
-      printf("%g\n", 2.71);
+
+
+
     #+end_src
 
-    #+RESULTS:
-    |       200 |
-    | 3.1425747 |
-    |      2.71 |
