@@ -1,13 +1,31 @@
 #+TITLE: Homework
-#+AUTHOR: Victor Noppe, Marcus Birkenkrahe
+#+AUTHOR: Victor Noppe (code), Marcus Birkenkrahe (text)
 #+HONOR: Pledged
+* README
 
-* Assignment
+  Program layout is an important program design factor, especially in
+  C, which tends to be hard to read because of its terseness and
+  effectiveness.
 
-  Improve the layout of [[layout_problem]], then run it.
+  Effectiveness has two sides: a human side, and a machine side. The
+  machine only cares about accuracy and speed. The human cares about
+  readability, which is a function of layout and structure.
 
-  #+name: layout_problem
-  #+begin_example
+* Problem
+
+  * The code in [[layout_problem]] was provided as is. Assuming that the
+    code is correct (something to be checked), the task was to improve
+    the layout of [[layout_problem]] without changing the code, and then
+    to run the program.
+
+** Code description
+
+   * The code declares two integer variables ~var1~ and ~var2~.
+   * The value of ~var1~ is fixed. The value of ~var2~ is computed.
+   * Both variables are printed out.
+
+   #+name: layout_problem
+   #+begin_example
       int var1=1;int var2;var2=
                             var1
                             ,*100;
@@ -16,13 +34,14 @@
 
                     var2
                     );
-  #+end_example
+   #+end_example
 
 * Solution
 
   - Space between tokens makes identification easier
   - Indentation makes nesting easier to spot
   - Blank lines can divide a program into logical units
+  - Align format string and output variables
 
   #+name: layout
   #+begin_src C :tangle layout.c
@@ -34,12 +53,10 @@
       int var2 = var1 * 100;
 
       printf( "Variable1 = %d, variable2 = %d\n",
-              var1,           var2);
+              var1, var2);
 
       return 0;
-
     }
-
   #+end_src
 
   #+RESULTS: layout

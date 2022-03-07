@@ -1019,12 +1019,18 @@
    * Program assignment no. 6
 
 * NEXT w9s20 (03/07/22)
-
 ** News
 
    * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
-
    * Warming up: layout solution / NoppeLayout / NoppeLayoutModified
+
+* Program Layout practice exercise
+
+  * Don't be stingy with text when it comes to documenting your work
+  * Documenting now will save you lots of time later
+  * Make use of these examples for the next program assignment
+
+    See program examples [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayout.org][NoppeLayout]] and [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified]]. 
 
 * References
   * For some of the programming projects, see: King (2011). C
