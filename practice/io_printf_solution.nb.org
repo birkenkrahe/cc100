@@ -1,0 +1,127 @@
+#+TITLE:Formatted I/O
+#+AUTHOR:Marcus Birkenkrahe
+#+Source: KN King C Programming
+#+SUBTITLE:CSC 100 Introduction to programming in C/C++
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both :comments both
+* README
+
+  * There is much more to ~scanf~ and ~printf~ than we've seen
+
+  * I/O is where the pedal hits the metal - where man meets machine
+
+  * In this notebook: conversion specifications for printf
+
+** printf
+
+   When it is called, ~printf~ must be supplied with
+   1) a format string, like ~"The output is: %d\n~
+   2) any number of values to be inserted into the string at printing
+
+*** Conversion specification
+
+    * A *conversion specification* is a placeholder like ~d~
+
+    * Binary (machine) format is converted to printed (human) format
+
+    * General form: ~%m.pX~ where
+
+      |   | WHAT                  | EXAMPLE                             |
+      |---+-----------------------+-------------------------------------|
+      | m | minimum field width   | ~%4d~ prints ~123~ as ~_123~        |
+      | p | precision after point | ~%.3f~ prints ~3.141593~ as ~3.142~ |
+      | X | conversion specifier  | ~d~, ~e~, ~f~, ~g~                  |
+
+    * [X] Let's check! Add the examples from the first two lines of
+      the table in the code block [[mpx]] and run it.
+
+      #+name: mpx
+      #+begin_src C
+        printf("%4d\n", 123);
+        printf("%.3f\n", 3.141593);
+      #+end_src
+
+      #+RESULTS: mpx
+      |   123 |
+      | 3.142 |
+
+
+    * The precision p depends on the conversion specifier X
+
+**** INTEGER DECIMAL "d"
+
+     #+begin_quote
+     ~d~ displays an integer in decimal (= base 10) form. p is the
+     minimum number of digits to display the integer. Default p=1.
+     #+end_quote
+
+     * [X] Get coding! Show that the default for ~d~ is p=1. Print the
+       numbers 1, 1, 100 and 10000 with the specifiers ~%d~, ~%.1d~,
+       ~%.5d~, ~%.2d~. Print each expression on its own line.
+
+       #+name: spec
+       #+begin_src C
+         printf("%d\n %.1d\n %.5d\n %.2d\n", 1, 1, 100, 10000);
+       #+end_src
+
+       #+RESULTS: spec
+       |     1 |
+       |     1 |
+       |   100 |
+       | 10000 |
+
+**** FLOATING POINT EXPONENTIAL "e"
+
+     #+begin_quote
+     ~e~ displays a floating-point number in exponential
+     ("scientific") notation.  p = digits after decimal point. If
+     p=0, no decimal point is displayed.
+     #+end_quote
+
+     * [X] Get coding! Print 1, 1000, and 1000000000000000 using
+       %e%. Print each expression on its own line with its own print
+       function.
+
+       #+begin_src C
+         printf("%e\n", 1); // forgot the decimal point
+         printf("%e\n", 1.);
+         printf("%e\n", 1000.);
+         printf("%e\n", 1000000000000000.);
+       #+end_src
+
+       #+RESULTS:
+       | 1.421737e-312 |
+       |           1.0 |
+       |        1000.0 |
+       |         1e+15 |
+
+**** FLOATING POINT FIXED DECIMAL "f"
+
+     That's ~f~ as we already know it from many other examples. The
+     precision p is defined as for ~e~. Trailing zeroes are shown.
+
+**** VARIABLE FLOATING POINT "g"
+
+     #+begin_quote
+     ~g~ displays a floating point number in either exponential
+     format or fixed decimal format depending on the number's size. p
+     is the maximum number of *significant* digits (*not* digits
+     after the decimal point!) to be displayed. No trailing zeroes
+     are shown. If there are no decimal digits after the decimal
+     point, no decimal point is shown.
+     #+end_quote
+
+     * [ ] Get coding! Use ~g~ to display the numbers: 200, 3.142574654
+       with p=8, 2.71 - print each on a line of its own, but use only
+       *one* ~printf~ statement to do it!
+
+       #+begin_src C
+         printf("%g\n %.8g\n %g\n", 200., 3.142574654, 2.71);
+       #+end_src
+
+       #+RESULTS:
+       |       200 |
+       | 3.1425747 |
+       |      2.71 |
