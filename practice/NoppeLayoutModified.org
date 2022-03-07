@@ -3,7 +3,7 @@
 #+HONOR: Pledged
 * README
 
-  Program layout is an important program design factor, especially in
+  [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org#program-layout][Program layout]] is an important program design factor, especially in
   C, which tends to be hard to read because of its terseness and
   effectiveness.
 
