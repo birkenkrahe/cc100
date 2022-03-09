@@ -1093,10 +1093,19 @@
      pledged~ in the header. The code blocks should be run and the
      ~#+Result:~ should show the correct answer.
 
+   * To get full points, submit the Org file with some comments
+     outside of the code blocks - explaining what you do, what the
+     code is about, or anything else really that you want to
+     share[fn:5]. Use [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified.org]] as an inspiration.
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
 * Footnotes
+
+[fn:5]It's a notebook, so you could for example write a paragraph
+reflecting on how easy or difficult you found this. Or you could add
+code blocks that didn't work and comment on why not.
 
 [fn:4]In other Operating Systems but Windows, there is a fourth shell,
 the terminal (~M-x terminal~), and in Windows, you also have
