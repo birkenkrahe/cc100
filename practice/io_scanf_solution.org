@@ -1,0 +1,85 @@
+#+TITLE:Formatted I/O: scanf
+#+AUTHOR:Marcus Birkenkrahe
+#+Source: KN King C Programming
+#+SUBTITLE:CSC 100 Introduction to programming in C/C++
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both :comments both
+* README
+
+  * There is much more to ~scanf~ and ~printf~ than we've seen
+
+  * I/O is where the pedal hits the metal - where man meets machine
+
+  * In this notebook: conversion specifications for scanf
+
+* scanf
+
+  * A ~scanf~ format string may contain ordinary characters and
+    conversion specifications like ~d~, ~e~, ~f~, ~g~
+
+  * The conversions allowed with ~scanf~ are essentially the same as
+    those used with ~printf~
+
+  * The ~scanf~ format string tends to contain only conversion specs
+
+  * [ ] What will this sample input assign to the variables in [[tscanf]]
+    below?
+
+    #+begin_example
+      1  -20  .3   -4.0e3
+    #+end_example
+    
+    #+name: tscanf
+    #+begin_src C :cmdline < io_scanf_input :results output
+      int i, j;
+      float x, y;
+
+      scanf("%d%d%f%f", &i, &j, &x, &y);
+
+      printf("|%5d|%5d|%5.1f|%5.1f|\n", i, j, x, y);
+     #+end_src
+
+     #+RESULTS: tscanf
+     : |    1|  -20|  0.3|-4000.0|
+
+* Traps
+
+  * The compiler will not check that specs and input match
+
+  * The & symbol may not miss in front of the input variable
+
+* How scanf works
+
+  * ~scanf~ tries to math input groups with specs
+
+  * For each spec, it tries to locate an item in input
+
+  * It reads the item, and stops when it can't match
+
+  * If an item is not read successfully, ~scanf~ aborts
+
+  #+caption: How scanf works
+  #+attr_html: :width 400px
+  [[./img/scanf.png]]
+
+  * White-space characters are ignored: SPC, TAB, new-line
+
+  * In [[tscanf]] above, the lines can be on one line or spread over
+    several lines:
+
+  #+caption: Input file for tscanf
+  #+attr_html: :width 300px
+  [[./img/input.png]]
+
+  * ~scanf~ sees a stream of characters (¤ is new-line):
+
+    #+begin_example
+    ••1¤-20•••.3¤•••-4.0e3¤
+    #+end_example
+    
+    
+
+    
+

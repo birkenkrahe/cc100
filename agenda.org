@@ -923,7 +923,7 @@
 
    * Files you run in the terminal: Windows ~*.exe~ files - executable
      in binary format = machine code
-     
+
    * [X] Create a minimum C file, e.g. a hello world program ~hw.c~-
      either in Emacs or in any other editor you like:
 
@@ -966,7 +966,7 @@
    #+begin_example
      gcc -o [outfile] [infile]
    #+end_example
-     
+
 ** Understand tangling code once and for all
 *** Concepts
     Concept review: make sure that you can answer these questions:[fn:3]
@@ -1031,7 +1031,7 @@
    * Documenting now will save you lots of time later
    * Make use of these examples for the next program assignment
 
-     See program examples [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayout.org][NoppeLayout]] and [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified]]. 
+     See program examples [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayout.org][NoppeLayout]] and [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified]].
 
 ** Formatting I/O - printf
 
@@ -1041,12 +1041,35 @@
 ** Preparations for test 2 (Thu 17-Mar)
 
    * Test 2 will only cover questions from quiz 4-6 + new questions.
-   * You can find quiz 4-6 with solutions + feedback as PDF ([[https://github.com/birkenkrahe/os420/tree/main/quiz][in /quiz]])
+   * You can find quiz 4-6 with solutions + feedback as PDF
    * I will create an update of content Org files ([[https://github.com/birkenkrahe/os420/tree/main/pdf][in pdf/]])
+
+** Warming up: ~tprintf.c~
+
+   * Remember conversion specifiers m.pX
+
+   * New: a negative m left aligns a number: 123 as %-d => |123 |
+
+   * [ ] Guess the output before running [[tprintf]]
+     - how many spaces m are reserved?
+     - how many decimal places after the point?
+     - is the number left or right aligned?
+
+     #+name: tprintf
+     #+begin_src C :results output
+       int i;
+       float x;
+
+       i = 40;
+       x = 839.21f;
+
+       printf("|%d|%5d|%-5d|%5.3d|\n", i, i, i, i);
+       printf("|%10.3f|%10.3e|%-10g|\n", x, x, x);
+     #+end_src
 
 ** Formatting I/O - scanf
 
-   * Interactive notebook to code along (GDrive) - ~io_printf_nb.org~
+   * Interactive notebook to code along ([[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][GDrive]]) - ~io_scanf.org~
 
 * References
   * For some of the programming projects, see: King (2011). C
