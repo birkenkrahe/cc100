@@ -1071,6 +1071,9 @@
 
    * Interactive notebook to code along ([[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][GDrive]]) - ~io_scanf.org~
 
+   * Download the ZIP file and unpack it anywhere. All the files for
+     the session are inside.
+
 ** Programming assignment 6:
 
    * Write a program ~div3~ that reads in three floating point
