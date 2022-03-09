@@ -1071,6 +1071,28 @@
 
    * Interactive notebook to code along ([[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][GDrive]]) - ~io_scanf.org~
 
+** Programming assignment 6:
+
+   * Write a program ~div3~ that reads in three floating point
+     numbers, adds the first two and divides the total by the third
+     number. Test with these data:
+     #+begin_example
+     (1610 + 2004) / 2365
+     #+end_example
+
+   * Bonus program for extra credit points: change the program to
+     ~div4~. This program should read in four floating point
+     numbers. Add the first two together, then add the second two
+     together. Divide your first sum by your second sum. Test with
+     these data:
+     #+begin_example
+     (1610 + 2004) / (2005 + 360)
+     #+end_example
+
+   * Submit in Schoology as an Org file with your name and ~#+HONOR:
+     pledged~ in the header. The code blocks should be run and the
+     ~#+Result:~ should show the correct answer.
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
