@@ -25,7 +25,8 @@
   * The ~scanf~ format string tends to contain only conversion specs
 
   * [ ] What will this sample input assign to the variables in [[tscanf]]
-    below?
+    below? *Write down* what you think the output will be before
+    running it. These sample data are already stored in the input file.
 
     #+begin_example
       1  -20  .3   -4.0e3
@@ -40,9 +41,6 @@
 
       printf("|%5d|%5d|%5.1f|%5.1f|\n", i, j, x, y);
     #+end_src
-
-    #+RESULTS: tscanf
-    : |    1|  -20|  0.3|-4000.0|
 
 * Main traps
 
@@ -93,13 +91,13 @@
     the next input item or the next call of ~scanf~
 
   * The extended example below has the same spec as [[tscanf]] -
-    ~"%d%d%f%f",&i,&j&x&y~
+    ~"%d%d%f%f",&i,&j&x&y~.
 
     #+name: sampleInput
     #+begin_example C
       1-20.3-4.0e3¤
     #+end_example
-    
+
     1) ~%d~. Stores ~1~ in ~i~, returns ~-~
 
     2) ~%d~. Stores ~-20~ in ~j~, returns ~.~
@@ -130,6 +128,9 @@
     - the input file ~ord1~ contains ~•5/•96~ and should succeed
     - the input file ~ord2~ contains ~•5 /•96~ and should fail
 
+    To use different input files, you need to change ~ord1~ in the code
+    block header to ~ord2~.
+
     #+name: ordTest
     #+begin_src C :cmdline < ord1
       int i,j;
@@ -139,19 +140,18 @@
       printf("|%5d|%5d|\n", i, j);
     #+end_src
 
-  * [ ] Next, fix the ~scanf~ format string below to allow input from ~ord2~:
+   
+  * [ ] Next, fix the ~scanf~ format string below to allow input from
+    ~ord2~ and run the file to see if it worked.
 
     #+name: ordTest1
     #+begin_src C :cmdline < ord2
       int i,j;
 
-      scanf("%d / %d", &i, &j);
+      scanf("    ", &i, &j);
 
       printf("|%5d|%5d|\n", i, j);
     #+end_src
-
-    #+RESULTS: ordTest1
-    |   | 5 | 96 |
 
 * Confusing printf with scanf
 
@@ -177,11 +177,11 @@
          next input character. If it's a SPC, it will abort.x
        - Only this input will work: ~100, 100~ but not ~100 100~
 
-    3. putting a ~\n~ character at the end of ~scanf~ string
+    3. putting a ~\n~ character at the end of ~scanf~ string. 
 
        #+name: noNewline
        #+begin_example
-        scanf("%d\n", &i);
+	 scanf("%d\n", &i);
        #+end_example
 
        - To ~scanf~, the new-line is a SPC. It will advance to the
@@ -204,22 +204,18 @@
     intended! The sample input is already stored in the
     ~addfrac_input~ file in the format shown.
 
-    #+name: addfrac
     #+begin_src C :cmdline < addfrac_input :results output
       int num1, denom1, num2, denom2, result_num, result_denom;
 
       printf("Enter first fraction: ");
-      scanf("%d/%d", &num1, &denom1);
+      scanf("", &num1, &denom1);
 
       printf("Enter second fraction: ");
-      scanf("%d/%d", &num2, &denom2);
+      scanf("", &num2, &denom2);
 
       result_num = num1 * denom2 + num2 *denom1;
       result_denom = denom1 * denom2;
 
-      printf("\nThe sum is %d/%d\n",result_num, result_denom);
+      printf("\nThe sum is \n",result_num, result_denom);
     #+end_src
 
-    #+RESULTS:
-    : Enter first fraction: Enter second fraction: 
-    : The sum is 38/24
