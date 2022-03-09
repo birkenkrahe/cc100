@@ -1038,16 +1038,15 @@
    * Interactive notebook to code along (GDrive) - ~io_printf_nb.org~
 
 * Scanf conversion - w921 (03/09/22)
-** Preparations for test 2 (Thu 17-Mar)
+** Preparations for test 2 (Monday, 14-Mar)
 
-   * Test 2 will only cover questions from quiz 4-6Â + new questions.
+   * Test 2 will only cover questions from quiz 4-6 + new questions.
    * You can find quiz 4-6 with solutions + feedback as PDF
    * I will create an update of content Org files ([[https://github.com/birkenkrahe/os420/tree/main/pdf][in pdf/]])
 
 ** Warming up: ~tprintf.c~
 
    * Remember conversion specifiers m.pX
-
    * New: a negative m left aligns a number: 123 as %-d => |123 |
 
    * [ ] Guess the output before running [[tprintf]]
@@ -1066,6 +1065,10 @@
        printf("|%d|%5d|%-5d|%5.3d|\n", i, i, i, i);
        printf("|%10.3f|%10.3e|%-10g|\n", x, x, x);
      #+end_src
+
+     #+RESULTS: tprintf
+     : |40|   40|40   |  040|
+     : |   839.210|8.392e+002|839.21    |
 
 ** Formatting I/O - scanf
 
@@ -1100,6 +1103,9 @@
      outside of the code blocks - explaining what you do, what the
      code is about, or anything else really that you want to
      share[fn:5]. Use [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified.org]] as an inspiration.
+
+   * A comment could look this is: I absolutely, and unreservedly LOVE
+     this class!
 
 * References
   * For some of the programming projects, see: King (2011). C
