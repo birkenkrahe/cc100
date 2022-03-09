@@ -42,6 +42,9 @@
       printf("|%5d|%5d|%5.1f|%5.1f|\n", i, j, x, y);
     #+end_src
 
+    #+RESULTS: tscanf
+    : |    1|  -20|  0.3|-4000.0|
+
 * Main traps
 
   * The compiler will not check that specs and input match
@@ -124,7 +127,7 @@
 
   * To allow spaces after the first number, use ~"%d /%d"~ instead
 
-  * [ ] Let's try it. Run the block [[ordTest]] first with two input files:
+  * [X] Let's try it. Run the block [[ordTest]] first with two input files:
     - the input file ~ord1~ contains ~•5/•96~ and should succeed
     - the input file ~ord2~ contains ~•5 /•96~ and should fail
 
@@ -132,13 +135,16 @@
     block header to ~ord2~.
 
     #+name: ordTest
-    #+begin_src C :cmdline < ord1
+    #+begin_src C :cmdline < ord2
       int i,j;
 
       scanf("%d/%d", &i, &j);
 
       printf("|%5d|%5d|\n", i, j);
     #+end_src
+
+    #+RESULTS: ordTest
+    |   | 5 | 67 |
 
    
   * [ ] Next, fix the ~scanf~ format string below to allow input from
@@ -148,10 +154,13 @@
     #+begin_src C :cmdline < ord2
       int i,j;
 
-      scanf("    ", &i, &j);
+      scanf("%d /%d    ", &i, &j);
 
       printf("|%5d|%5d|\n", i, j);
     #+end_src
+
+    #+RESULTS: ordTest1
+    |   | 5 | 96 |
 
 * Confusing printf with scanf
 
@@ -208,14 +217,18 @@
       int num1, denom1, num2, denom2, result_num, result_denom;
 
       printf("Enter first fraction: ");
-      scanf("", &num1, &denom1);
+      scanf("%d/%d", &num1, &denom1);
 
       printf("Enter second fraction: ");
-      scanf("", &num2, &denom2);
+      scanf("%d/%d", &num2, &denom2);
 
       result_num = num1 * denom2 + num2 *denom1;
       result_denom = denom1 * denom2;
 
-      printf("\nThe sum is \n",result_num, result_denom);
+      printf("\nThe sum is %d divided by %d\n",result_num, result_denom);
     #+end_src
+
+    #+RESULTS:
+    : Enter first fraction: Enter second fraction: 
+    : The sum is 38 divided by 24
 
