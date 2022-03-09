@@ -915,7 +915,7 @@
 
 ** Compile and run C in the shell
 
-   * Three shells[fn:4] are at your disposal: Microsoft shell (MacOS
+   * Three shells[fn:3] are at your disposal: Microsoft shell (MacOS
      terminal), Emacs eshell, Emacs shell (= terminal) = CMD line:
      - Start Windows CMDline from the the Windows Search (~CMD~)
      - Start Emacs shell (Windows CMDline in Emacs): ~M-x shell~
@@ -969,7 +969,7 @@
 
 ** Understand tangling code once and for all
 *** Concepts
-    Concept review: make sure that you can answer these questions:[fn:3]
+    Concept review: make sure that you can answer these questions:[fn:4]
 
     | What is Emacs?                          |
     | What is Org-mode?                       |
@@ -1107,20 +1107,23 @@
    * A comment could look this is: I absolutely, and unreservedly LOVE
      this class!
 
+   * This exercise originally came from Joyce (2018).
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
+  * Joyce (2018). Numerics in C. Springer Apress.
 * Footnotes
 
 [fn:5]It's a notebook, so you could for example write a paragraph
 reflecting on how easy or difficult you found this. Or you could add
 code blocks that didn't work and comment on why not.
 
-[fn:4]In other Operating Systems but Windows, there is a fourth shell,
+[fn:3]In other Operating Systems but Windows, there is a fourth shell,
 the terminal (~M-x terminal~), and in Windows, you also have
 PowerShell. All of these are ways of interacting with the OS.
 
-[fn:3]GNU Emacs is an extensible text editor. Org-mode is a plain text
+[fn:4]GNU Emacs is an extensible text editor. Org-mode is a plain text
 environment in GNU Emacs for keeping notes, authoring documents,
 computational notebooks, and more. Tangling code means extracting
 (human readable) source code from an Org-mode file in order to run
