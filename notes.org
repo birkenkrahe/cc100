@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Followup class notes for CSC100 Intro to Programming in C/C++ Spring 2022
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :comments both
 * README
 
@@ -688,7 +688,7 @@
                radius, volume); // display output
       #+end_src
 
-      #+RESULTS: volume_err
+      #+RESULTS: volume_err1
       : The volume of a sphere of radius 10.00 is 3141.59
 
     * What happens when you use integers instead of floating point numbers?
@@ -759,22 +759,6 @@
         printf("Enter radius of sphere: \n");  // ask for input
         scanf("%f", &radius);                  // read input
 
-        volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
-
-        printf("Volume (cubic meters): %.1f\n", volume); // display result
-      #+end_src
-
-    * This does not seem to work.
-      #+name: cmdline
-      #+begin_src C :tangle volume3.c :includes <stdio.h> :var USER_INPUT=(read-string "radius: ") :results silent
-        #include <math.h> // include math library
-        #include <stdlib.h> // include standard library
-
-        float volume, radius; // declare types
-
-        printf("Enter radius of sphere: \n");  // ask for input
-        //       scanf("%f", &USER_INPUT);                  // read input
-        radius = atof(USER_INPUT);
         volume = (4.0f / 3.0f) * M_PI * radius * radius * radius; // statement
 
         printf("Volume (cubic meters): %.1f\n", volume); // display result

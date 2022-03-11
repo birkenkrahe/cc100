@@ -96,7 +96,7 @@
      of Org-mode, it will (with a warning). Try it!
 
    #+NAME: hello2
-   #+begin_src C :exports both :tangle ./src/hello2.c :comments both
+   #+begin_src C :exports both :tangle ./src/hello2.c :comments both :main no
      #include <stdio.h>
      main()
      {
@@ -105,6 +105,7 @@
    #+end_src
 
    #+RESULTS: hello2
+   : Hello world
 
 ** Hello World Version 3
 
@@ -229,6 +230,7 @@
 
   * Variables must be *declared* before they can be used, see [[type
     declaration examples]]
+
     #+name: type declaration examples
     #+begin_src C :results silent
       int height;
@@ -237,6 +239,7 @@
     #+end_src
 
   * Several variables of the same type can be declared together:
+
     #+name: type declaration examples 1
     #+begin_src C :results silent
       int height, length, width, volume;
@@ -255,10 +258,11 @@
 
   * In [[assignment example 1]], the variable ~height~ gets the value
     ~8~. It is called a ~constant~ because it cannot change.
+
     #+name: assignment example 1
-    #+begin_src C
+    #+begin_example C
       height = 8;
-    #+end_src
+    #+end_example
 
     #+RESULTS: assignment example 1
 
@@ -267,11 +271,12 @@
 
   * [X] However, [[assignment example 2]] throws another error. What's
     wrong this time?[fn:7]
+
     #+name: assignment example 2
-    #+begin_src C
+    #+begin_example C
       height = 8;
       int height;
-    #+end_src
+    #+end_example
 
     #+RESULTS: assignment example 2
 
@@ -284,6 +289,7 @@
 
   * A constant assigned to a ~float~ variable contains a decimal point
     and the letter ~f~, as shown in [[float point]].
+
     #+name: float point
     #+begin_src C :results silent
       float profit;
@@ -295,6 +301,7 @@
 
   * Variables with values can be used to compute other values, as
     shown in [[compute value]].
+
     #+name: compute value
     #+begin_src C :results silent
       int height, length, width, volume;
@@ -307,12 +314,16 @@
 
   * You can also initiate and declare variables at once. In [[initiate]],
     the ~volume~ from before is computed inside ~printf~.
+
     #+name: initiate
     #+begin_src C
       int height = 8, length = 12, width = 10;
 
       printf("Volume: %d", height * length * width);
     #+end_src
+
+    #+RESULTS: initiate
+    : Volume: 960
 
   * To print these variables, we need to learn *formatting*
 
@@ -327,6 +338,7 @@
 ** Formatting integer numbers
 
    * In the code [[int print]], ~%d~ is a placeholder for an ~int~:
+
      #+name: int print
      #+begin_src C
        int height;  // type declaration
@@ -335,9 +347,13 @@
        printf("The height is: %d\n", height); // formatted printout
      #+end_src
 
+     #+RESULTS: int print
+     : The height is: 8
+
 ** Formatting floating point numbers
 
    * In [[float print]], ~%f~ is used to print a ~float~:
+
      #+name: float print
      #+begin_src C
        float profit;       // type declaration
@@ -346,11 +362,15 @@
        printf("The profit is: $%f\n", profit); // formatted printout
      #+end_src
 
+     #+RESULTS: float print
+     : The profit is: $2150.479980
+
 ** Change floating point precision
 
    * By default, ~%f~ displays the result with six digits. To change
      it to ~p~ digits, put ~.p~ between ~%~ and ~f~. E.g. to print it
      with 2 digits, ~p=2~:
+
      #+name: p digits
      #+begin_src C
        float profit;       // type declaration
@@ -359,11 +379,15 @@
        printf("The profit is: $%.2f\n", profit); // formatted printout
      #+end_src
 
+     #+RESULTS: p digits
+     : The profit is: $2150.48
+
 ** Formatting errors
 
    * What happens when you get the formatting wrong?  in [[format_test]],
      we print a ~float~ first correctly, then with the wrong format
      identifier, and then the other way around.
+
      #+name: format_test
      #+begin_src C
        float foo;  // defined float
@@ -377,6 +401,12 @@
        printf("%.2f\n",bar);  // formatted int as float
      #+end_src
 
+     #+RESULTS: format_test
+     |       3.14 |
+     | 1610612736 |
+     |        314 |
+     |       3.14 |
+
 * Putting it all together (C program)
 
   * Shipping fees are based on volume instead of weight. For the
@@ -387,22 +417,25 @@
   * [X] We write a program to compute the dimensional ~weight~ of a box of
     given ~volume~ - we use ~/~ for division. Let's say the box is
     12'' x 10'' x 8 ''. What does [[box_error]] need to run?
+
     #+name: box_error
-    #+begin_src C
+    #+begin_example C
       volume = 12 * 10 * 8
-        height = volume / 166
-    #+end_src
+      height = volume / 166
+    #+end_example
 
   * [X] Fixed the errors in [[box]]. The compiler no longer complains, but
     we don't see anything. How can we print the result?
+
     #+name: box
-    #+begin_src C
+    #+begin_src C :results silent
       int weight, volume;
       volume = 12 * 10 * 8;
       weight = volume / 166;
     #+end_src
 
   * [X] The code in [[box_print]] prints the result of the computation.
+
     #+name: box_print
     #+begin_src C
       int weight, volume;     // declare variable types
@@ -419,6 +452,7 @@
     shipping company wants us to round up. This can be achieved by
     adding 165 to the volume before dividing by 166[fn:10] as shown in
     [[dweight]].
+
     #+name: dweight
     #+begin_src C
       int weight, volume;     // declare variable types
@@ -432,8 +466,9 @@
 
   * [X] Now for the final program [[dweight_c]]. This time, we allow for
     tangling the program as ~dweight.c~.
+
     #+name: dweight_c
-    #+begin_src C :tangle ./src/dweight1.c :results raw
+    #+begin_src C :tangle ./src/dweight1.c :results output
       #include <stdio.h>
 
       int main(void)
@@ -458,9 +493,9 @@
     #+end_src
 
     #+RESULTS: dweight_c
-    Dimensions: 12x10x8
-    Volume (cubic inches): 960
-    Dimensional weight (pounds): 6
+    : Dimensions: 12x10x8
+    : Volume (cubic inches): 960
+    : Dimensional weight (pounds): 6
 
 * Constants
 ** Macro definition with ~#define~
@@ -470,6 +505,7 @@
      declarative constant definition for the pre-processor that
      blindly substitutes the value everywhere in the program. This is
      also called a *macro definition*.
+
      #+name: define
      #+begin_src C :main yes :includes <stdio.h>
        #define PI 3.141593
@@ -482,19 +518,21 @@
    * So if I mistype my definition, I get errors. Take [[define]] and
      introduce an error: in [[constant_err_1]], ~= 3.141593~ is substituted
      for ~PI~ everywhere - the program will not compile.
+
      #+name: constant_err_1
-     #+begin_src C :results silent
+     #+begin_example C
        #define PI = 3.141593
        printf("PI is %f\n",PI);
-     #+end_src
+     #+end_example
 
    * [X] Can you see what went wrong in [[constant_err_2]] ? If you don't
      see it at once, check the compiler error output!
+
      #+name: constant_err_2
-     #+begin_src C :results silent
+     #+begin_example C
        #define PI 3.141593;
        printf("PI is %f\n",PI);
-     #+end_src
+     #+end_example
 
    * It's easy to make mistakes with user-defined constants. Constants
      declared with ~#define~ can be redefined.
@@ -502,8 +540,9 @@
    * [X] Write a program that demonstrates how a constant declared
      with ~#define~ can be redefined later with a second ~#define~
      declaration. Print out each constant after defining it.
+
      #+name: redefined
-     #+begin_src C
+     #+begin_src C :exports both :results output
        #define WERT 1.0
        printf("Constant is %.2f\n", WERT);
 
@@ -511,25 +550,31 @@
        printf("Constant is %.2f\n", WERT);
      #+end_src
 
+     #+RESULTS: redefined
+     : Constant is 1.00
+     : Constant is 2.00
+
 ** Library definitions with ~#include~
 
    * Since mathematical constants are so important in scientific
      computing, there is a library that contains them, ~math.h~. In
      [[math]], it is included at the start to give us the value of Pi as
      the constant ~M_PI~ with much greater precision than before.
+
      #+name: math
-     #+begin_src C :includes <math.h>
+     #+begin_src C :includes <math.h> :exports both :results output
        printf("PI is %f\n",M_PI);
        printf("PI is %.18f\n",M_PI);
      #+end_src
 
      #+RESULTS: math
      : PI is 3.141593
-     : PI is 3.141592653589793116
+     : PI is 3.141592653589793100
 
    * If you write source code outside of Emacs Org-mode, you have to
      include this library file explicitly like this:
-     #+begin_example
+
+     #+begin_example C
        #include <math.h>
      #+end_example
 
@@ -539,8 +584,9 @@
    * In Linux, ~math.h~ and the other header files sit in
      ~/usr/include/~. The screenshot shows the math constant section
      of ~math.h~.
-     #+caption: Mathematical constants in /usr/include/math.h
+
      #+attr_html: :width 500px
+     #+caption: Mathematical constants in /usr/include/math.h
      [[./img/math.png]]
 
    * [X] Where is ~math.h~ in Windows[fn:11]? Where in MacOS? Find the file,
@@ -551,6 +597,7 @@
    * Modern C has the ~const~ identifier to protect constants. [[const]]
      shows an example. Here, ~double~ is a higher precision floating
      point number type.
+
      #+name: const
      #+begin_src C
        const double TAXRATE_CONST = 0.175f;
@@ -567,8 +614,9 @@
 
    * [X] What happens if you try to redefine the constant ~taxrate~
      after the type declaration? Modify [[const]] accordingly and run it.
+
      #+name: const_err
-     #+begin_src C :results silent
+     #+begin_example C
        const double TAXRATE_CONST = 0.175f;
        double revenue = 200.0f;
        double tax;
@@ -577,7 +625,7 @@
        tax = revenue * TAXRATE_CONST;
 
        printf("Tax on revenue %.2f is %.2f", revenue, tax);
-     #+end_src
+     #+end_example
 
 * Naming identifiers
 
@@ -695,7 +743,7 @@
     - modify the program [[iscan]] to read a ~float~ instead of an ~int~
     - tangle it as ~fscan.c~
     - compile and run it in the terminal: ~gcc -o fscan fscan.c~
-  
+
   * SOLUTION: change ~int~ to ~float~ in the declaration, and ~%d~ to
     ~%f~ in the ~scanf~ function.
     #+name: fscan
@@ -750,7 +798,7 @@
   * You can divide statements over any number of lines as long as you
     don't divide keywords or tokens. This works:
 
-        #+begin_src C
+    #+begin_src C
       int
       height
       = 5
@@ -762,9 +810,12 @@
       ;
     #+end_src
 
+    #+RESULTS:
+    : height 5
+
   * But this does not:
 
-    #+begin_src C :results silent
+    #+begin_example C :results silent
       int
       hei ght
       = 5
@@ -775,7 +826,7 @@
        %d\n" ,
        height)
         ;
-    #+end_src
+    #+end_example
     - The variable ~height~ is not declared
     - The ~printf~ function is not recognized
     - The string literal is not complete
@@ -791,22 +842,23 @@
     #+name: layout
     #+begin_src C :tangle src/layout.c :results output
       int var1=1;int var2;var2=
-			    var1
-			    ,*100;
+                            var1
+                            ,*100;
       printf (      "Variable1=%d,variable2=%d\n",
-		    var1,
+                    var1,
 
-		    var2
-		    );
+                    var2
+                    );
     #+end_src
 
     #+RESULTS: layout
     : Variable1=1,variable2=100
 
 * Formatted I/O
-     
-  * Interactive notebook [[file:org/io.org::README][~io.org~]] for self study in GDrive.
-   
+
+  * Interactive notebooks ~io_printf.org~ and ~io_scanf.org~ for self
+    study in GDrive.
+
 * Glossary of terms and commands
 
   | TERM             | EXPLANATION                                                          |
@@ -878,7 +930,7 @@
     knking.com]].
 * Footnotes
 
-[fn:14]You could try and run it in Emacs. Can you explain the result? 
+[fn:14]You could try and run it in Emacs. Can you explain the result?
 
 [fn:13]Python e.g. is white-space sensitive: the indentation level is
 significant, it denotes code blocks, and needs to be consistent. The
@@ -910,7 +962,7 @@ than its actual weight. It is for this reason that most airlines and
 other transport providers evaluate both dimensional weight & actual
 weight, and then use the greater of the two weights to bill you for
 the transportation costs. The greater of the two weights is also
-commonly referred to as ‘chargeable weight’." ([[unirelo][UniRelo, 2020]])
+commonly referred to as ‘chargeable weight’." (UniRelo 2020)
 #+end_quote
 
 [fn:7]The declaration must precede the use of the variable.

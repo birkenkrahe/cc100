@@ -143,7 +143,7 @@
 
    | HOW      | WHAT                                  |
    |----------+---------------------------------------|
-   | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] (see [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]]) |
+   | Review   | [[file:c:/Users/birkenkrahe/Documents/GitHub/Documents/GitHub/org/FAQ.org][GitHub Hello World exercise]] (see [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]]) |
    | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]]                     |
    | Practice | Install C compiler ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]])          |
    |          | Set PATH environment variable         |
@@ -174,8 +174,8 @@
    |----------+------------------------------------+------|
    | Review   | Quiz on last week's content        | 15'  |
    |          | Quiz: feedback discussion          | 5'   |
-   | Lecture  | [[file:1_introduction/README.org::What will you learn?][Introduction to C]] (cont'd)([[https://github.com/birkenkrahe/cc100/tree/main/1_introduction][gh]])     | 10'  |
-   |          | [[~/Documents/GitHub/cc100/2_installation/README.org::What are you going to learn?][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
+   | Lecture  | [[file:1_introduction/README.org][Introduction to C]] (cont'd)([[https://github.com/birkenkrahe/cc100/tree/main/1_introduction][gh]])     | 10'  |
+   |          | [[~/Documents/GitHub/cc100/2_installation/README.org][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
    | Practice | Install C compiler[fn:1] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
    |          | Set PATH environment variable      |      |
    |          | Test C compiler                    |      |
@@ -201,7 +201,7 @@
 
    | HOW      | WHAT                               | TIME |
    |----------+------------------------------------+------|
-   | Lecture  | [[~/Documents/GitHub/cc100/2_installation/README.org::What are you going to learn?][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
+   | Lecture  | [[~/Documents/GitHub/cc100/2_installation/README.org][Installation of tools]] ([[https://github.com/birkenkrahe/cc100/tree/main/2_installation][gh]])         |      |
    | Practice | Install C compiler[fn:2] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-a-c-compiler-under-windows-and-macos][see FAQ]]) |      |
    |          | Test C compiler ~gcc --version~    |      |
    |          | GNU Emacs tutorial in class ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][gh]])   |      |
@@ -263,9 +263,9 @@
 
   1) We continue where we left it on Wednesday (w3s6)
 
-  2) [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem on Windows lab computers][Fixing the .emacs problem]] (FAQ)
+  2) [[file:c:/Users/birkenkrahe/Documents/GitHub/Documents/GitHub/org/FAQ.org][Fixing the .emacs problem]] (FAQ)
 
-  3) Finish [[file:assignments/1_orgmode/README.org::Creating and running C inside an Org-mode file][Org-mode assignment]] ([[https://github.com/birkenkrahe/cc100/blob/main/assignments/1_org-mode/README.org][GitHub]])
+  3) Finish [[file:assignments/1_orgmode/README.org][Org-mode assignment]] ([[https://github.com/birkenkrahe/cc100/blob/main/assignments/1_org-mode/README.org][GitHub]])
 
   4) Submit results [[https://github.com/birkenkrahe/cc100/issues][to GitHub as issue]] (ZIP) - by 11.59PM tonight
 
@@ -641,11 +641,12 @@
 
    * The following program should print out ~3.0~ but it does not even
      compile! Find all mistakes, fix them and run the program in Emacs!
+
      #+name: 022122_err
-     #+begin_src C
+     #+begin_example C
        float int1=1.f, int2=2.f, int;
        printf("%.2f\n"; int = int 1 + int 2);
-     #+end_src
+     #+end_example
 
    * SOLUTION: see class notes.
 
@@ -657,7 +658,7 @@
    * If you check your phone instead, you're *not* active
    * If you could not attend, submit *late*
 
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Volume][Programming assignment review]]
+** [[file:c:/Users/birkenkrahe/Documents/GitHub/Documents/GitHub/admin/spring22/cc100/org/assignments.org][Programming assignment review]]
 
    * I left detailed comments for most of you: use them or ask me! Use
      them by modifying your submission accordingly.
@@ -676,6 +677,7 @@
      have to check your results line-by-line but can just run it.
 
    * Org-mode meta data were often not correct (file will still run)
+
      #+begin_example
      #+AUTHOR: name
 
@@ -694,7 +696,7 @@
      to try things out if you're flummoxed by Emacs Org-mode (at this
      point, you shouldn't be but Windows can be toxic...)
 
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Hello world function][Challenge review]]
+** Challenge review
 
    * User-defined functions are where programming really begins
 
@@ -755,7 +757,7 @@
      is an important shell process. It uses both ~stdin~ and
      ~stdout~. [[https://www.gnu.org/software/bash/manual/html_node/Redirections.html][See GNU bash manual for details]].
 
-** [[file:~/Documents/GitHub/admin/spring22/cc100/org/assignments.org::Phone number conversion][Programming assignment]] (until +Monday, 28-Feb+ Tuesday, 1-Mar, 11 AM)
+** [[file:c:/Users/birkenkrahe/Documents/GitHub/Documents/GitHub/admin/spring22/cc100/org/assignments.org][Programming assignment]] (until +Monday, 28-Feb+ Tuesday, 1-Mar, 11 AM)
 
    * Write a program that prompts the user to enter a telephone number
      in the form ~(xxx) xxx-xxxx~, and then displays the number in the
