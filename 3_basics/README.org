@@ -761,7 +761,7 @@
     #+name: tokenization
     #+begin_example
      printf ( "Height: %d\n"   ,   height )  ;
-       1    2        3         4     5    6  7
+       1    2        3         2     5    6  7
     #+end_example
 
     |   | TOKEN          | MEANING                              |
