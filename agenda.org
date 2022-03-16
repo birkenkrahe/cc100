@@ -1039,7 +1039,7 @@
 
    * Interactive notebook to code along (GDrive) - ~io_printf_nb.org~
 
-* Scanf conversion - w921 (03/09/22)
+* Scanf conversion - w9s21 (03/09/22)
 ** Preparations for test 2 (Monday, 14-Mar)
 
    * Test 2 will only cover questions from quiz 4-6 + new questions.
@@ -1110,6 +1110,19 @@
      this class!
 
    * This exercise originally came from Joyce (2018).
+
+* NEXT Pgm 6, Expressions - w10s23 (03/16/22)
+
+** Agenda
+
+   * [ ] Review: programming assignment 6
+   * [ ] C expressions
+
+** Harry's HTML 
+
+   #+caption: Harry's submission rendered from Org-mode as HTML file
+   #+attr_html: :width 500px
+   [[./img/htmlharry.png]]
 
 * References
   * For some of the programming projects, see: King (2011). C
