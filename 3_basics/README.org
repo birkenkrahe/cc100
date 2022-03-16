@@ -1,7 +1,6 @@
 #+TITLE:C Basics
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++
-#+STARTUP:overview hideblocks
 #+STARTUP: overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 #+PROPERTY: header-args:C :main yes

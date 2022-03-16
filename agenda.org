@@ -1115,8 +1115,9 @@
 
 ** Agenda
 
-   * [ ] Review: programming assignment 6
-   * [ ] C expressions
+   * [X] Review: programming assignment 6 & Harry's HTML
+   * [X] Outlook: C++ Basics (planned video series)
+   * [ ] C conditions - operators/pseudocode/flowcharts
 
 ** Harry's HTML 
 
