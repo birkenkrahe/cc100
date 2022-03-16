@@ -39,7 +39,6 @@
    * This exercise originally came from Joyce (2018).
 
 ** Solution
-
 *** Meta data
     The meta data can also be added as an Org-mode example block [[meta_data]]:
 
@@ -98,6 +97,39 @@
       #+RESULTS: div4
       : (1610 + 2004)/(2005 + 360) = 1.528118
 
+*** Truncation
+
+    * What happens if we accidentally declare the variables to be
+      ~int~ rather than ~float~?
+    * The code in [[divint3]] reads test data in via the file ~divint3~
+    * The test data are formatted as ~int~ numbers
+    * The input file is created with a shell command in [[divint3input]]
+
+      #+name: divint3input
+      #+begin_src bash example :results silent
+        echo "1610 2004 2365" > divint3
+      #+end_src
+
+    #+name: divint3
+    #+begin_src C :main yes :includes <stdio.h> :cmdline < div3 :results output
+      int i,j,k, result;
+
+      scanf("%d %d %d", &i, &j, &k);
+
+      printf("(%d + %d)/%d = %d\n",
+             i, j, k, result = (i+j)/k);
+
+      printf("1610./4200000. = %f\n",1610./4200000.);
+    #+end_src
+
+    #+RESULTS: divint3
+    : (1610 + 0)/4200032 = 0
+    : 1610./4200000. = 0.000383
+
+    * We see that the result is truncated to 0, which is wrong.
+    * The last line gives the result that is computed, but it cannot
+      be displayed as an ~int~, only as a ~float~.
+    
 * References
 
   * Joyce (2018). Numerical C. Springer Apress.
