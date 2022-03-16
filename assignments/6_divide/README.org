@@ -1,0 +1,108 @@
+#+TITLE: C Programming
+#+AUTHOR: Marcus Birkenkrahe
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :results output
+* Divide numbers
+** Problem
+
+   * Write a program ~div3~ that reads in three floating point
+     numbers, adds the first two and divides the total by the third
+     number. Test with these data:
+     #+begin_example
+     (1610 + 2004) / 2365
+     #+end_example
+
+   * Bonus program for extra credit points: change the program to
+     ~div4~. This program should read in four floating point
+     numbers. Add the first two together, then add the second two
+     together. Divide your first sum by your second sum. Test with
+     these data:
+     #+begin_example
+     (1610 + 2004) / (2005 + 360)
+     #+end_example
+
+   * Submit in Schoology as an Org file with your name and ~#+HONOR:
+     pledged~ in the header. The code blocks should be run and the
+     ~#+Result:~ should show the correct answer.
+
+   * To get full points, submit the Org file with some comments
+     outside of the code blocks - explaining what you do, what the
+     code is about, or anything else really that you want to
+     share[fn:5]. Use [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified.org]] as an inspiration.
+
+   * A comment could look this is: I absolutely, and unreservedly LOVE
+     this class!
+
+   * This exercise originally came from Joyce (2018).
+
+** Solution
+
+*** Meta data
+    The meta data can also be added as an Org-mode example block [[meta_data]]:
+
+    #+name: meta_data
+    #+begin_example org
+      #+TITLE: Divide numbers
+      #+AUTHOR: Marcus Birkenkrahe
+      #+HONOR: Pledged
+    #+end_example
+
+*** Add and divide 3 numbers
+
+    * We want to divide three floating point numbers x, y and z.
+    * The code in [[div3]] reads test data in via the file ~div3~
+    * The test data are formatted as ~float~ numbers
+    * The input file is created with a shell command in [[div3input]]
+
+      #+name: div3input
+      #+begin_src bash example :results silent
+        echo "1610. 2004. 2365." > div3
+      #+end_src
+
+    #+name: div3
+    #+begin_src C :main yes :includes <stdio.h> :cmdline < div3
+      float x,y,z, result;
+
+      scanf("%f %f %f", &x, &y, &z);
+
+      printf("(%.0f + %.0f)/%.0f = %f\n",
+             x, y, z, result = (x+y)/z);
+    #+end_src
+
+    #+RESULTS: div3
+    : (1610 + 2004)/2365 = 1.528118
+
+*** Add and divide 4 numbers
+
+    * In [[div4]], we now read four numbers from the file ~div4~
+    * The input file is created with a shell command in [[div4input]]
+
+      #+name: div4input
+      #+begin_src bash example :results silent
+        echo "1610. 2004. 2005. 360." > div4
+      #+end_src
+
+      #+name: div4
+      #+begin_src C :main yes :includes <stdio.h> :cmdline < div4
+        float x,y,z,u, result;
+
+        scanf("%f %f %f %f", &x, &y, &z, &u);
+
+        printf("(%.0f + %.0f)/(%.0f + %.0f) = %f\n",
+               x, y, z, u, result = (x+y)/(z+u));
+      #+end_src
+
+      #+RESULTS: div4
+      : (1610 + 2004)/(2005 + 360) = 1.528118
+
+* References
+
+  * Joyce (2018). Numerical C. Springer Apress.
+  * Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The ~C~
+    Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice
+    Hall. ISBN 0-13-110163-3. [[https://archive.org/details/TheCProgrammingLanguageFirstEdition][URL: archive.org]].
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]
