@@ -63,116 +63,122 @@
     (logical)
 
 * Pseudocode
+** Overview
 
-  * Pseudocode is a method to quickly write down/analyze an algorithm
-    or a heuristic
+   * Pseudocode is a method to quickly write down/analyze an algorithm
+     or a heuristic
 
-  * The prefix pseudo- comes from Ancient Greek [[https://en.wiktionary.org/wiki/%CF%88%CE%B5%CF%85%CE%B4%CE%AE%CF%82][ψευδής]], meaning
-    "lying", "false" or "untrue", as in "pseudoscience" or "pseudonym"
+   * The prefix pseudo- comes from Ancient Greek [[https://en.wiktionary.org/wiki/%CF%88%CE%B5%CF%85%CE%B4%CE%AE%CF%82][ψευδής]], meaning
+     "lying", "false" or "untrue", as in "pseudoscience" or "pseudonym"
 
 ** Example
 
-  * Example: player [[problem]] statement:
-    
-    #+name: problem
-    #+begin_quote
-    "Drink a health potion when a character's health is 100 or
-    less. If health reaches 100 or more, resume battle."
-    #+end_quote
+   * Example: player [[problem]] statement:
 
-  * Given the [[problem]], this is the [[pseudocode]][fn:1]:
+     #+name: problem
+     #+begin_quote
+     "Drink a health potion when a character's health is 100 or
+     less. If health reaches 100 or more, resume battle."
+     #+end_quote
 
-    #+name: pseudocode
-    #+begin_example C
-    if health <= 100
-      Drink health potion
-    else
-      Resume battle
-    end if
-    #+end_example
+   * Given the [[problem]], this is the [[pseudocode]][fn:1]:
 
-  * The code in [[pseudocode]] would not compile as a C program (you can
-    test yourself: which mistakes would the compiler find?[fn:2])
+     #+name: pseudocode
+     #+begin_example C
+     if health <= 100
+       Drink health potion
+     else
+       Resume battle
+     end if
+     #+end_example
+
+   * The code in [[pseudocode]] would not compile as a C program (you can
+     test yourself: which mistakes would the compiler find?[fn:2])
+
+   * The conceptual "trick" with generating pseudocode from a prose
+     description is to identify the condition so that you can perform a
+     comparison (= apply a conditional operator) and act accordingly
 
 ** Practice
 
-  * [ ] Turn the following problem [[gold1]] into pseudocode!
+   * [ ] Turn the following problem [[gold1]] into pseudocode!
 
-    #+name: gold1
-    #+begin_quote
-    "Allow a player to deposit or withdraw gold from a game bank
-    account."
-    #+end_quote
+     #+name: gold1
+     #+begin_quote
+     "Allow a player to deposit or withdraw gold from a game bank
+     account."
+     #+end_quote
 
-  * [X] Given the problem [[gold1]], the pseudocode could be [[pseudogold1]]:
+   * [X] Given the problem [[gold1]], the pseudocode could be [[pseudogold1]]:
 
-    #+name: pseudogold1
-    #+begin_example C
-    if action == deposit
-       Deposit gold into account
-    else
-       Withdraw gold from account
-    end if
-    #+end_example
+     #+name: pseudogold1
+     #+begin_example C
+     if action == deposit
+        Deposit gold into account
+     else
+        Withdraw gold from account
+     end if
+     #+end_example
 
-  * [ ] The problem from [[gold1]] is refined in [[gold2]]:
+   * [ ] The problem from [[gold1]] is refined in [[gold2]]:
 
-    #+name: gold2
-    #+begin_quote
-    "Allow a player to deposit or withdraw gold from a game bank
-    account. If a player elects to withdraw gold, ensure that
-    sufficient funds exist."
-    #+end_quote
+     #+name: gold2
+     #+begin_quote
+     "Allow a player to deposit or withdraw gold from a game bank
+     account. If a player elects to withdraw gold, ensure that
+     sufficient funds exist."
+     #+end_quote
 
-  * [ ] Given the refined problem [[gold2]], the pseudocode could be:
+   * [ ] Given the refined problem [[gold2]], the pseudocode could be:
 
-    #+name: pseudogold2
-    #+begin_example C
-    if action == deposit
-       Deposit gold into account
-    else
-       if balance < amount requested
-          Insufficient funds
-       else
-          Withdraw gold
-       end if
-    end if
-    #+end_example
+     #+name: pseudogold2
+     #+begin_example C
+     if action == deposit
+        Deposit gold into account
+     else
+        if balance < amount requested
+           Insufficient funds
+        else
+           Withdraw gold
+        end if
+     end if
+     #+end_example
 
-    Or it could be [[pseudogold3]]:
+     Or it could be [[pseudogold3]]:
 
-    #+name: pseudogold2
-    #+begin_example C
-    if action == deposit
-       Deposit gold into account
-    else
-       if balance >= amount requested
-          Withdraw gold
-       else
-          Insufficient funds
-       end if
-    end if
-    #+end_example
-    
-    * Pseudocode does not need to compile or run so it is closer to a
-      heuristic than to an exact algorithm.
+     #+name: pseudogold3
+     #+begin_example C
+     if action == deposit
+        Deposit gold into account
+     else
+        if balance >= amount requested
+           Withdraw gold
+        else
+           Insufficient funds
+        end if
+     end if
+     #+end_example
 
-    * Code however needs to be exact and is always algorithmic
-      
+     * Pseudocode does not need to compile or run so it is closer to a
+       heuristic than to an exact algorithm.
+
+     * Code however needs to be exact and is always algorithmic
+
 * Flowcharts
+** Overview
 
-  * Flowcharts are popular among computing analysts and programmers
+   * Flowcharts are popular among computing analysts and programmers
 
-  * Flowcharts are a special case of process models
+   * Flowcharts are a special case of process models
 
-  * Process modeling is a key 21st century skill
+   * Process modeling is a key 21st century skill
 
-  * Rather than use flowcharts, we use BPMN - Business Process Model
-    and Notation
+   * Rather than use flowcharts, we use BPMN - Business Process Model
+     and Notation
 
-   #+attr_html: :width 500px
-   #+caption: (Free) BPMN 2.0 poster from SAP Signavio
-   [[./img/bpmn.png]]
+     #+attr_html: :width 500px
+     #+caption: (Free) BPMN 2.0 poster from SAP Signavio
+     [[./img/bpmn.png]]
 
 ** SAP Signavio
 
@@ -180,7 +186,7 @@
 
    * It includes process mining and workflow management tools
 
-   #+attr_html: :width 500px  
+   #+attr_html: :width 500px
    #+caption: SAP Signavio dashboard / explorer
    [[./img/signavio.png]]
 
@@ -192,12 +198,131 @@
 
    * [ ] Open Signavio Process Manager
 
-   * [ ] Follow along as I create a simple BPMN
+   * [ ] Create a simple BPMN based on the battle [[problem]].
 
-   * [ ] Create a flowchart based on [[pseudogold1]]
-  
+     #+attr_html: :width 500px
+     #+caption: Health potion algorithm (battle problem) as BPMN diagram
+     [[./img/battle.png]]
 
-* TODO Simple if structures
+   * [ ] In the next models, change "Insufficient funds" to "Do not
+     withdraw gold" (tasks need to be articulated as active).
+
+   * [ ] Create a model based on [[pseudogold1]].
+
+     #+attr_html: :width 500px
+     #+caption: Gold deposit algorithm as BPMN diagram - version 1
+     [[./img/gold1.png]]
+
+   * [ ] Create a model based on [[pseudogold2]]
+
+     #+attr_html: :width 500px
+     #+caption: Gold deposit algorithm as BPMN diagram - version 2
+     [[./img/gold2.png]]
+
+   * What changes if you use [[pseudogold3]] instead?
+
+     #+attr_html: :width 500px
+     #+caption: Gold deposit algorithm as BPMN diagram - version 3
+     [[./img/gold3.png]]
+
+** Points to remember
+
+   * Every model needs a pool = process owner
+   * Conditions become gateways
+   * Use active sentences for tasks
+   * When the flow is split, it must be rejoined
+   * All elements must be named
+   * Do not change the size of elements
+   * All elements can be "overloaded"
+
+** BPMN elements
+
+   * Roles (pools, lanes, participants)
+   * Tasks (things to do)
+   * Events (status)
+   * Flow (between tasks or events)
+   * Gateways (decision points, condition check)
+
+* Simple if structures
+
+** Overview and example
+
+   * If structure in C is very similar to pseudocode
+
+   * [[battle1]] is the C version of the pseudocode [[problem]] from earlier.
+
+     #+name: battle1
+     #+begin_example C
+     if (health <= 100)
+       // drink health potion
+     else
+       //resume battle
+     #+end_example
+
+   * Differences: condition needs parentheses; no "end if" statement
+
+   * The health check results in a Boolean answer: ~true~ or ~false~
+
+   * To run, the program needs a declaration of the ~health~ variable
+
+   * Multiple statements need to be included in braces
+
+   * Here is a version that will run. The variable has been initialized
+
+     #+name: battle2
+     #+begin_src C :main yes :includes <stdio.h> :results output
+       int health = 99;
+
+       if (health <= 100) {
+         // drink health potion
+         printf("\nDrinking health potion!\n");
+        }
+        else {
+          // resume battle
+          printf("\nResuming battle!\n");
+        }
+     #+end_src
+
+     #+RESULTS: battle2
+     :
+     : Drinking health potion!
+
+** Battle by numbers
+
+   * The last version [[battle3]] below reads input from a file.
+
+     #+name: battleinput
+     #+begin_src bash :results silent
+       echo "1" > drink
+     #+end_src
+
+     #+name: battle3
+     #+begin_src C :tangle battle.c :main yes :includes <stdio.h> :cmdline < drink :results output
+       int response = 0; // initialize response
+
+       puts("\n\tIn-Battle Healing\n\n1:\tDrink health potion\n\n2:\tResume battle\n");
+
+       printf("\nEnter your selection: ");
+       scanf("%d", &response);
+
+       if (response == 1)
+	 printf("\nDrinking health potion!\n");
+
+       if (response == 2)
+	 printf("\nResuming battle!\n");
+     #+end_src
+
+   * You can also tangle the file and run ~battle.c~ from the
+     commandline:
+     
+     #+begin_example bash
+       C-c C-v t
+       gcc -o battle battle.c
+       battle
+     #+end_example
+
+   * Modify this program to take character input instead of number
+     input for a programming assignment 
 
 * TODO Nested if structures
 
