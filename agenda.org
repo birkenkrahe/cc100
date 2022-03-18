@@ -1129,10 +1129,10 @@
    * Harry's code
 
    #+begin_src html
-     ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
-     ,#+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
-     ,#+OPTIONS: html-style:nil
-     ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+     #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
+     #+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
+     #+OPTIONS: html-style:nil
+     #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
    #+end_src
 
 ** Conditions/Pseudocode
