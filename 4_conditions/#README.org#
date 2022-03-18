@@ -1,0 +1,355 @@
+#+TITLE:Conditions
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both
+#+PROPERTY: header-args:C :results output
+#+PROPERTY: header-args:C :comments both
+#+INFOJS_OPT: :view:info
+* README
+
+  * Algorithms are the core of programming
+
+  * Example for an algorithm: "When you come to a STOP sign, stop."
+
+  * The human form of algorithm is heuristics
+
+  * Example for a heuristic: "To get to the college, go straight."
+
+  * For programming, you need both algorithms and heuristics
+
+  * Useful tools to master = design algorithms (and heuristics)
+    - Pseudocode (task flow description)
+    - Flow charts (task flow visualization)
+
+  * In this chapter, we go beyond simple statements and include
+    conditions (like in the algorithm example above)
+
+  * This section follows chapter 3 in Davenport/Vine (2015)
+
+* Conditional operators in C
+
+  * Mathematically, operators are really functions: ~f(i,j)=i+j~
+
+  * C has many operators, both unary (~-1~) and binary (~1+1~)
+
+  * Different programming languages differ greatly rgd. operators
+
+  * Types of operators in C:
+
+    | OPERATOR            | WHY                | EXAMPLES  | EXPRESSION |
+    |---------------------+--------------------+-----------+------------|
+    | Arithmetic          | To compute         | * + - / % | i * j + k  |
+    | Relational          | To compare         | < > ==    | i > j      |
+    | Logical             | To confirm (truth) | && !      | i && j     |
+    | Assignment          | To change          | =         | i = j      |
+    | Increment/decrement | To change stepwise | ++, +-    | ++i        |
+
+  * Conditional operators used in C:
+
+    | OPERATOR | DESCRIPTION              | EXPRESSION | VALUE |
+    |----------+--------------------------+------------+-------|
+    | ==       | Equal                    | 5 == 5     | true  |
+    | !=       | Not equal                | 5 != 5     | false |
+    | >        | Greater than             | 5 > 5      | false |
+    | <        | Less than                | 5 < 5      | false |
+    | >=       | Greater than or equal to | 5 >= 5     | true  |
+    | <=       | Less than or equal to    | 5 <= 5     | true  |
+
+  * The value of an evaluated conditional operator is *Boolean*
+    (logical)
+
+* Pseudocode
+** Overview
+
+   * Pseudocode is a method to quickly write down/analyze an algorithm
+     or a heuristic
+
+   * The prefix pseudo- comes from Ancient Greek [[https://en.wiktionary.org/wiki/%CF%88%CE%B5%CF%85%CE%B4%CE%AE%CF%82][ψευδής]], meaning
+     "lying", "false" or "untrue", as in "pseudoscience" or "pseudonym"
+
+** Example
+
+   * Example: player [[problem]] statement:
+
+     #+name: problem
+     #+begin_quote
+     "Drink a health potion when a character's health is 100 or
+     less. If health reaches 100 or more, resume battle."
+     #+end_quote
+
+   * Given the [[problem]], this is the [[pseudocode]][fn:1]:
+
+     #+name: pseudocode
+     #+begin_example C
+     if health <= 100
+       Drink health potion
+     else
+       Resume battle
+     end if
+     #+end_example
+
+   * The code in [[pseudocode]] would not compile as a C program (you can
+     test yourself: which mistakes would the compiler find?[fn:2])
+
+   * The conceptual "trick" with generating pseudocode from a prose
+     description is to identify the condition so that you can perform a
+     comparison (= apply a conditional operator) and act accordingly
+
+** Practice
+
+   * [ ] Turn the following problem [[gold1]] into pseudocode!
+
+     #+name: gold1
+     #+begin_quote
+     "Allow a player to deposit or withdraw gold from a game bank
+     account."
+     #+end_quote
+
+   * [X] Given the problem [[gold1]], the pseudocode could be [[pseudogold1]]:
+
+     #+name: pseudogold1
+     #+begin_example C
+     if action == deposit
+        Deposit gold into account
+     else
+        Withdraw gold from account
+     end if
+     #+end_example
+
+   * [ ] The problem from [[gold1]] is refined in [[gold2]]:
+
+     #+name: gold2
+     #+begin_quote
+     "Allow a player to deposit or withdraw gold from a game bank
+     account. If a player elects to withdraw gold, ensure that
+     sufficient funds exist."
+     #+end_quote
+
+   * [ ] Given the refined problem [[gold2]], the pseudocode could be:
+
+     #+name: pseudogold2
+     #+begin_example C
+     if action == deposit
+        Deposit gold into account
+     else
+        if balance < amount requested
+           Insufficient funds
+        else
+           Withdraw gold
+        end if
+     end if
+     #+end_example
+
+     Or it could be [[pseudogold3]]:
+
+     #+name: pseudogold3
+     #+begin_example C
+     if action == deposit
+        Deposit gold into account
+     else
+        if balance >= amount requested
+           Withdraw gold
+        else
+           Insufficient funds
+        end if
+     end if
+     #+end_example
+
+     * Pseudocode does not need to compile or run so it is closer to a
+       heuristic than to an exact algorithm.
+
+     * Code however needs to be exact and is always algorithmic
+
+* Flowcharts
+** Overview
+
+   * Flowcharts are popular among computing analysts and programmers
+
+   * Flowcharts are a special case of process models
+
+   * Process modeling is a key 21st century skill
+
+   * Rather than use flowcharts, we use BPMN - Business Process Model
+     and Notation
+
+     #+attr_html: :width 500px
+     #+caption: (Free) BPMN 2.0 poster from SAP Signavio
+     [[./img/bpmn.png]]
+
+** SAP Signavio
+
+   * [[https://signavio.com][SAP Signavio]] is a state-of-the-art process modeling environment
+
+   * It includes process mining and workflow management tools
+
+   #+attr_html: :width 500px
+   #+caption: SAP Signavio dashboard / explorer
+   [[./img/signavio.png]]
+
+   * Register in my Signavio workspace if you haven't done it yet
+
+   * Use the link in Schoology to register
+
+** Practice
+
+   * [X] Open Signavio Process Manager
+
+   * [X] Create a simple BPMN based on the battle [[problem]].
+
+     #+attr_html: :width 500px
+     #+caption: Health potion algorithm (battle problem) as BPMN diagram
+     [[./img/battle.png]]
+
+   * [X] In the next models, change "Insufficient funds" to "Do not
+     withdraw gold" (tasks need to be articulated as active).
+
+   * [X] Create a model based on [[pseudogold1]].
+
+     #+attr_html: :width 500px
+     #+caption: Gold deposit algorithm as BPMN diagram - version 1
+     [[./img/gold1.png]]
+
+   * [X] Create a model based on [[pseudogold2]]
+
+     #+attr_html: :width 500px
+     #+caption: Gold deposit algorithm as BPMN diagram - version 2
+     [[./img/gold2.png]]
+
+   * What changes if you use [[pseudogold3]] instead?
+
+     #+attr_html: :width 500px
+     #+caption: Gold deposit algorithm as BPMN diagram - version 3
+     [[./img/gold3.png]]
+
+** Points to remember
+
+   * Every model needs a pool = process owner
+   * Conditions become gateways
+   * Use active sentences for tasks
+   * When the flow is split, it must be rejoined
+   * All elements must be named
+   * Do not change the size of elements
+   * All elements can be "overloaded"
+
+** BPMN elements
+
+   * Roles (pools, lanes, participants)
+   * Tasks (things to do)
+   * Events (status)
+   * Flow (between tasks or events)
+   * Gateways (decision points, condition check)
+
+* Simple if structures
+
+** Overview and example
+
+   * If structure in C is very similar to pseudocode
+
+   * [[battle1]] is the C version of the pseudocode [[problem]] from earlier.
+
+     #+name: battle1
+     #+begin_example C
+     if (health <= 100)
+       // drink health potion
+     else
+       //resume battle
+     #+end_example
+
+   * Differences: condition needs parentheses; no "end if" statement
+
+   * The health check results in a Boolean answer: ~true~ or ~false~
+
+   * To run, the program needs a declaration of the ~health~ variable
+
+   * Multiple statements need to be included in braces
+
+   * Here is a version that will run. The variable has been initialized
+
+     #+name: battle2
+     #+begin_src C :main yes :includes <stdio.h> :results output
+       int health = 99;
+
+       if (health <= 100) {
+         // drink health potion
+         printf("\nDrinking health potion!\n");
+        }
+        else {
+          // resume battle
+          printf("\nResuming battle!\n");
+        }
+     #+end_src
+
+     #+RESULTS: battle2
+     :
+     : Drinking health potion!
+
+** Battle by numbers
+
+   * The last version [[battle3]] below reads input from a file.
+
+     #+name: battleinput
+     #+begin_src bash :results silent
+       echo "1" > drink
+     #+end_src
+
+     #+name: battle3
+     #+begin_src C :tangle battle.c :main yes :includes <stdio.h> :cmdline < drink :results output
+       int response = 0; // initialize response
+
+       puts("\n\tIn-Battle Healing\n\n1:\tDrink health potion\n\n2:\tResume battle\n");
+
+       printf("\nEnter your selection: ");
+       scanf("%d", &response);
+
+       if (response == 1)
+	 printf("\nDrinking health potion!\n");
+
+       if (response == 2)
+	 printf("\nResuming battle!\n");
+     #+end_src
+
+   * You can also tangle the file and run ~battle.c~ from the
+     commandline:
+     
+     #+begin_example bash
+       C-c C-v t
+       gcc -o battle battle.c
+       battle
+     #+end_example
+
+   * Modify this program to take character input instead of number
+     input for a programming assignment 
+
+* TODO Nested if structures
+
+* TODO Boolean algebra
+
+* TODO Compound if structures and input validation
+
+* TODO Switch structure
+
+* TODO Random numbers
+
+* TODO Program: fortune cookie
+
+* References
+
+  * Davenport/Vine (2015) C Programming for the Absolute Beginner
+    (3ed). Cengage Learning.
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]
+
+* Footnotes
+
+[fn:2]Undeclared variable ~health~, missing closure semi-colons after
+the statements, functions ~Drink~ and ~Resume~ not known, and more.
+
+[fn:1]In Org mode, you can use the language as an example header
+argument to enable syntax highlighting. For pseudocode, this will of
+course not work perfectly, since most syntax elements are not in C.
