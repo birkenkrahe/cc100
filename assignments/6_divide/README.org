@@ -31,7 +31,7 @@
    * To get full points, submit the Org file with some comments
      outside of the code blocks - explaining what you do, what the
      code is about, or anything else really that you want to
-     share[fn:5]. Use [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified.org]] as an inspiration.
+     share. Use [[https://github.com/birkenkrahe/cc100/blob/main/practice/NoppeLayoutModified.org][NoppeLayoutModified.org]] as an inspiration.
 
    * A comment could look this is: I absolutely, and unreservedly LOVE
      this class!
