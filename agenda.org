@@ -1111,19 +1111,116 @@
 
    * This exercise originally came from Joyce (2018).
 
-* NEXT Pgm 6, Expressions - w10s23 (03/16/22)
-
+*  Pgm 6, Operators, Pseudocode - w10s23 (03/16/22)
 ** Agenda
 
    * [X] Review: programming assignment 6 & Harry's HTML
    * [X] Outlook: C++ Basics (planned video series)
-   * [ ] C conditions - operators/pseudocode/flowcharts
+   * [X] C conditions - operators/pseudocode/flowcharts
 
-** Harry's HTML 
+** Harry's HTML
+
+   * Fancy looking HTML
 
    #+caption: Harry's submission rendered from Org-mode as HTML file
    #+attr_html: :width 500px
    [[./img/htmlharry.png]]
+
+   * Harry's code
+
+   #+begin_src html
+     ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
+     ,#+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
+     ,#+OPTIONS: html-style:nil
+     ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+   #+end_src
+
+** Conditions/Pseudocode
+
+   See [[c:/Users/birkenkrahe/Documents/GitHub/cc100/4_conditions/README.org::README][README.org]] in [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
+
+* Character conversion, Flowcharts, BPMN, IF - w10s24 (03/18/22)
+** Warming up with pseudocode
+
+   * Turn the following sentence into pseudocode:
+
+     #+name: spring break
+     #+begin_quote
+     "On March 19, spring break starts."
+     #+end_quote
+
+   * To do this, you need a condition check
+
+   * The condition check requires a variable and an operator
+
+   * You do not necessarily need an alternative
+
+   * Sample solution
+
+     #+name: spring break pseudocode
+     #+begin_example C
+     if date == March 19
+        start spring break
+     #+end_example
+
+** Flowcharts and IF statements
+
+   See [[c:/Users/birkenkrahe/Documents/GitHub/cc100/4_conditions/README.org::README][README.org]] in [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
+
+** Program  assignment 7 - deadline Friday April 1
+
+*** Problem
+
+    * Modify the code from class ("Battle by numbers" [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions#simple-if-structures][in GitHub]]) to
+      use characters as menu choices instead of numbers.
+    * To do this, you need to change from an integer data type to a
+      character data type.
+    * Both ~scanf~ functions and ~if~ structure have to be changed to
+      accommodate this change.
+    * The conversion specification for characters is ~%c~.
+
+*** Character conversion
+
+    * Create an input file with one character ~'a'~ in it.
+
+      #+name: char input
+      #+begin_src bash :results silent
+        echo "y" > input
+      #+end_src
+      
+    * Declare a variable ~response~, scan the character from the input
+      file ~input~, and print it.
+
+      #+name: scan char
+      #+begin_src C :cmdline < input :main yes :includes <stdio.h> :results output
+        char response = '\0';
+        scanf("%c", &response);
+        printf("The character input was: %c\n", response);
+      #+end_src
+
+      #+RESULTS: scan char
+      : The character input was: y
+    
+
+* w11s25 (03/28/22)
+
+** [[https://francescocirillo.com/products/the-anti-if-campaign][Anti-IF campaign]] (Francesco Cirillo)
+
+   #+begin_quote
+   "The Campaign is against the use of the IF statement as a regular
+   design strategy to deal with growth, change and complexity ("Let's
+   Put an IF Syndrome") in an evolutionary context. Despite being an
+   "easy," and apparently effective, way of delivering the value
+   requested by the customer, this "design strategy" has negative
+   repercussions when applied regularly as the main strategy to deal
+   with change, growth and complexity. By applying the "IF Strategy"
+   in an evolutionary context, software systems becomes more complex
+   to be read, tested, even debugged. It becomes easier to duplicate
+   code, accumulate technical debt and spend more time fixing bugs. In
+   the result, the software system become more complex. New features
+   and changes will cost more and more." ([[https://francescocirillo.com/products/the-anti-if-campaign][Francesco Cirillo]])
+   #+end_quote
+
 
 * References
   * For some of the programming projects, see: King (2011). C
