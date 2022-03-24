@@ -1111,7 +1111,7 @@
 
    * This exercise originally came from Joyce (2018).
 
-*  Pgm 6, Operators, Pseudocode - w10s23 (03/16/22)
+* Pgm 6, Operators, Pseudocode - w10s23 (03/16/22)
 ** Agenda
 
    * [X] Review: programming assignment 6 & Harry's HTML
@@ -1202,7 +1202,7 @@
       : The character input was: y
     
 
-* w11s25 (03/28/22)
+* Pgm 7, w11s25 (03/28/22)
 
 ** [[https://francescocirillo.com/products/the-anti-if-campaign][Anti-IF campaign]] (Francesco Cirillo)
 
