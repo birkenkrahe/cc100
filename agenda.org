@@ -1169,6 +1169,8 @@
 
 ** Program  assignment 7 - deadline Friday April 1
 
+   [[https://lyon.schoology.com/assignment/5828898993/info][Link to assignment in Schoology]]
+
 *** Problem
 
     * Modify the code from class ("Battle by numbers" [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions#simple-if-structures][in GitHub]]) to
