@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++
 #+STARTUP: overview hideblocks
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:1 ^:nil
 #+PROPERTY: header-args:C :main yes
 #+PROPERTY: header-args:C :includes <stdio.h>
 #+PROPERTY: header-args:C :exports both
@@ -10,11 +10,6 @@
 #+PROPERTY: header-args:C :comments both
 #+INFOJS_OPT: :view:info
 * README
-
-  #+begin_quote
-  Note on the Org file: if you read this file on GitHub, names to the
-  code blocks will not work as links in the GitHub version.
-  #+end_quote
 
   * Algorithms are the core of programming
 
@@ -78,17 +73,17 @@
 
 ** Example
 
-   * Example: player [[problem]] statement:
+   * Example: player problem statement in [[problem1]] below:
 
-     #+name: problem
+     #+name: problem1
      #+begin_quote
      "Drink a health potion when a character's health is 100 or
      less. If health reaches 100 or more, resume battle."
      #+end_quote
 
-   * Given the [[problem]], this is the [[pseudocode]][fn:1]:
+   * Given the problem [[problem1]], this is the pseudocode [[pseudocode1]][fn:1]:
 
-     #+name: pseudocode
+     #+name: pseudocode1
      #+begin_example C
      if health <= 100
        Drink health potion
@@ -97,7 +92,7 @@
      end if
      #+end_example
 
-   * The code in [[pseudocode]] would not compile as a C program (you can
+   * The code in [[pseudocode1]] would not compile as a C program (you can
      test yourself: which mistakes would the compiler find?[fn:2])
 
    * The conceptual "trick" with generating pseudocode from a prose
@@ -106,7 +101,7 @@
 
 ** Practice
 
-   * [ ] Turn the following problem [[gold1]] into pseudocode!
+   * [X] Turn the following problem [[gold1]] into pseudocode!
 
      #+name: gold1
      #+begin_quote
@@ -134,7 +129,8 @@
      sufficient funds exist."
      #+end_quote
 
-   * [ ] Given the refined problem [[gold2]], the pseudocode could be:
+   * [ ] Given the refined problem [[gold2]], the pseudocode could be
+     [[pseudogold2]]:
 
      #+name: pseudogold2
      #+begin_example C
@@ -168,7 +164,7 @@
        heuristic than to an exact algorithm.
 
      * Code however needs to be exact and is always algorithmic
-
+       
 * Flowcharts
 ** Overview
 
@@ -179,8 +175,10 @@
    * Process modeling is a key 21st century skill
 
    * Rather than use flowcharts, we use BPMN - Business Process Model
-     and Notation
+     and Notation - see figure [[bpmnfig]] below for an overview of the
+     whole language (you can get this poster at [[https://www.signavio.com/downloads/short-reads/free-bpmn-2-0-poster/][SAP Signavio]]).
 
+     #+name: bpmnfig
      #+attr_html: :width 500px
      #+caption: (Free) BPMN 2.0 poster from SAP Signavio
      [[./img/bpmn.png]]
@@ -189,11 +187,13 @@
 
    * [[https://signavio.com][SAP Signavio]] is a state-of-the-art process modeling environment
 
-   * It includes process mining and workflow management tools
+   * It includes process mining and workflow management tools. The
+     figure [[signavio]] below shows the app dashboard.
 
-   #+attr_html: :width 500px
-   #+caption: SAP Signavio dashboard / explorer
-   [[./img/signavio.png]]
+     #+name: signavio
+     #+attr_html: :width 500px
+     #+caption: SAP Signavio dashboard / explorer
+     [[./img/signavio.png]]
 
    * Register in my Signavio workspace if you haven't done it yet
 
@@ -203,7 +203,7 @@
 
    * [X] Open Signavio Process Manager
 
-   * [X] Create a simple BPMN based on the battle [[problem]].
+   * [X] Create a simple BPMN based on the battle [[problem1]].
 
      #+attr_html: :width 500px
      #+caption: Health potion algorithm (battle problem) as BPMN diagram
@@ -254,7 +254,7 @@
 
    * If structure in C is very similar to pseudocode
 
-   * [[battle1]] is the C version of the pseudocode [[problem]] from earlier.
+   * [[battle1]] is the C version of the pseudocode [[problem1]] from earlier.
 
      #+name: battle1
      #+begin_example C
