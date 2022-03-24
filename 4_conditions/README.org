@@ -196,24 +196,24 @@
 
 ** Practice
 
-   * [ ] Open Signavio Process Manager
+   * [X] Open Signavio Process Manager
 
-   * [ ] Create a simple BPMN based on the battle [[problem]].
+   * [X] Create a simple BPMN based on the battle [[problem]].
 
      #+attr_html: :width 500px
      #+caption: Health potion algorithm (battle problem) as BPMN diagram
      [[./img/battle.png]]
 
-   * [ ] In the next models, change "Insufficient funds" to "Do not
+   * [X] In the next models, change "Insufficient funds" to "Do not
      withdraw gold" (tasks need to be articulated as active).
 
-   * [ ] Create a model based on [[pseudogold1]].
+   * [X] Create a model based on [[pseudogold1]].
 
      #+attr_html: :width 500px
      #+caption: Gold deposit algorithm as BPMN diagram - version 1
      [[./img/gold1.png]]
 
-   * [ ] Create a model based on [[pseudogold2]]
+   * [X] Create a model based on [[pseudogold2]]
 
      #+attr_html: :width 500px
      #+caption: Gold deposit algorithm as BPMN diagram - version 2
