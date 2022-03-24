@@ -11,6 +11,11 @@
 #+INFOJS_OPT: :view:info
 * README
 
+  #+begin_quote
+  Note on the Org file: if you read this file on GitHub, names to the
+  code blocks will not work as links in the GitHub version.
+  #+end_quote
+
   * Algorithms are the core of programming
 
   * Example for an algorithm: "When you come to a STOP sign, stop."
@@ -306,15 +311,15 @@
        scanf("%d", &response);
 
        if (response == 1)
-	 printf("\nDrinking health potion!\n");
+         printf("\nDrinking health potion!\n");
 
        if (response == 2)
-	 printf("\nResuming battle!\n");
+         printf("\nResuming battle!\n");
      #+end_src
 
    * You can also tangle the file and run ~battle.c~ from the
      commandline:
-     
+
      #+begin_example bash
        C-c C-v t
        gcc -o battle battle.c
@@ -322,7 +327,7 @@
      #+end_example
 
    * Modify this program to take character input instead of number
-     input for a programming assignment 
+     input for a programming assignment
 
 * TODO Nested if structures
 
