@@ -1203,6 +1203,18 @@
       #+RESULTS: scan char
       : The character input was: y
     
+*** Submission
+
+    * Submit the code as a C source code file.
+    * Make sure that the C code compiles and runs properly before
+      submitting.
+    * Late submissions will not be accepted for this assignment.
+    * Extra credit (5 pts) for submitting a commented Org mode file
+      (with the usual meta data in the header, and the results of a
+      trial run).
+    * Extra credit (5 pts) for submitting an Org mode file with a BPMN
+      diagram of the algorithm included (send both files to me via
+      email).
 
 * Pgm 7, w11s25 (03/28/22)
 
