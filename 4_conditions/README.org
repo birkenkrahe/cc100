@@ -26,11 +26,12 @@
     - Flow charts (task flow visualization)
 
   * In this chapter, we go beyond simple statements and include
-    conditions (like in the algorithm example above)
+    logical conditions (like in the algorithm example above)
 
-  * This section follows chapter 3 in Davenport/Vine (2015)
+  * This section follows chapter 3 in Davenport/Vine (2015) and
+    chapters 4 and 5 in King (2008).
 
-* Conditional operators in C
+* Operators in C
 
   * Mathematically, operators are really functions: ~f(i,j)=i+j~
 
@@ -40,13 +41,14 @@
 
   * Types of operators in C:
 
-    | OPERATOR            | WHY                | EXAMPLES  | EXPRESSION |
-    |---------------------+--------------------+-----------+------------|
-    | Arithmetic          | To compute         | * + - / % | i * j + k  |
-    | Relational          | To compare         | < > ==    | i > j      |
-    | Logical             | To confirm (truth) | && !      | i && j     |
-    | Assignment          | To change          | =         | i = j      |
-    | Increment/decrement | To change stepwise | ++, +-    | ++i        |
+    | OPERATOR            | WHY                      | EXAMPLES  | EXPRESSION |
+    |---------------------+--------------------------+-----------+------------|
+    | Arithmetic          | To compute               | * + - / % | i * j + k  |
+    | Relational          | To compare               | < > <= >= | i > j      |
+    | Equality            | To compare (in/equality) | == !=     | i == j     |
+    | Logical             | To confirm (truth)       | && !      | i && j     |
+    | Assignment          | To change                | =         | i = j      |
+    | Increment/decrement | To change stepwise       | ++, +-    | ++i        |
 
   * Conditional operators used in C:
 
@@ -164,7 +166,7 @@
        heuristic than to an exact algorithm.
 
      * Code however needs to be exact and is always algorithmic
-       
+
 * Flowcharts
 ** Overview
 
@@ -248,8 +250,7 @@
    * Flow (between tasks or events)
    * Gateways (decision points, condition check)
 
-* Simple if structures
-
+* Simple and nested 'if' structures
 ** Overview and example
 
    * If structure in C is very similar to pseudocode
@@ -301,6 +302,8 @@
        echo "1" > drink
      #+end_src
 
+   * We only have two simple if structures, and no nesting.
+
      #+name: battle3
      #+begin_src C :tangle battle.c :main yes :includes <stdio.h> :cmdline < drink :results output
        int response = 0; // initialize response
@@ -315,6 +318,7 @@
 
        if (response == 2)
          printf("\nResuming battle!\n");
+
      #+end_src
 
    * You can also tangle the file and run ~battle.c~ from the
@@ -326,15 +330,201 @@
        battle
      #+end_example
 
-   * Modify this program to take character input instead of number
-     input for a programming assignment
+* Boolean algebra
 
-* TODO Nested if structures
+  * [ ] What is algebra about?[fn:3]
 
-* TODO Boolean algebra
+  * Algebra allows you to form small worlds with fixed laws so that
+    you know exactly what's going on - what the output must be for a
+    given input. This certainty is what is responsible for much of the
+    magic of mathematics.
 
+  * Boole's (or Boolean) algebra, or the algebra of logic, uses the
+    values of TRUE (or 1) and FALSE (or 0) and the operators AND (or
+    "conjunction"), OR (or "disjunction"), and NOT (or "negation").
+
+  * Truth tables are the traditional way of showing Boolean scenarios:
+
+    #+name: AND
+    | p     | q     | p AND q   |
+    |-------+-------+-----------|
+    | TRUE  | TRUE  | TRUE      |
+    | TRUE  | FALSE | FALSE     |
+    | FALSE | TRUE  | FALSE     |
+    | FALSE | FALSE | FALSE     |
+
+    #+name: OR
+    | p     | q     | p OR q     |
+    |-------+-------+-----------|
+    | TRUE  | TRUE  | TRUE      |
+    | TRUE  | FALSE | TRUE      |
+    | FALSE | TRUE  | TRUE      |
+    | FALSE | FALSE | FALSE     |
+
+    #+name: NOT
+    | p     | NOT p    |
+    |-------+----------|
+    | TRUE  | FALSE    |
+    | FALSE | TRUE     |
+
+  * Using the three basic operators, other operators can be built. In
+    electronics, and modeling, the "exclusive OR" operator or "XOR",
+    is e.g. equivalent to (p AND NOT q) OR (NOT p AND q)
+
+    #+name: XOR
+    | p     | q     | p XOR q | P = p AND (NOT q) | Q = (NOT p) AND q | P OR Q |
+    |-------+-------+---------+-------------------+-------------------+--------|
+    | TRUE  | TRUE  | TRUE    | FALSE             | FALSE             | FALSE  |
+    | TRUE  | FALSE | FALSE   | TRUE              | FALSE             | TRUE   |
+    | FALSE | TRUE  | FALSE   | FALSE             | TRUE              | TRUE   |
+    | FALSE | FALSE | TRUE    | FALSE             | FALSE             | FALSE  |
+
+  * XOR is the operator that we've used in our BPMN models for
+    pseudocode as a gateway operator - only one of its outcomes can be
+    true but never both of them
+
+  * [ ] What is the result of each of the following expressions?
+
+    | Expression        | Result |
+    |-------------------+--------|
+    | 3 == 3 AND 4 == 4 |        |
+    |-------------------+--------|
+    | 3 == 4 AND 4 == 4 |        |
+    |-------------------+--------|
+    | 4 == 3 OR 4 == 4  |        |
+    |-------------------+--------|
+    | NOT ( 4 == 4 )    |        |
+    |-------------------+--------|
+    | NOT ( 3 == 4 )    |        |
+    |-------------------+--------|
+
+  * C evaluates all non-zero values as TRUE, and all zero values as
+    FALSE, as the code [[boolean]] shows
+
+    #+name: boolean
+    #+begin_src C :results output
+      if (3) puts("3 is TRUE");
+      if (!0) puts("0 is FALSE");
+    #+end_src
+
+    #+RESULTS:
+    : 3 is TRUE
+    : 0 is FALSE
+
+  * The Boolean operators AND, OR and NOT are represented in C by
+    the logical operators ~&&~, ~||~ and ~!~, respectively
+    
+* Order of operator operations
+
+  * In compound operations (multiple operators), you need to know the
+    order of operator precedence
+
+  * C has almost 50 operators. The most unusual are compound
+    increment/decrement operators[fn:4]:
+
+    | STATEMENT  | COMPOUND | PREFIX | POSTFIX |
+    |------------+----------+--------+---------|
+    | i = i + 1; | i += 1;  | ++i;   | i++;    |
+    | j = j - 1; | j -= 1;  | --i;   | i--;    |
+
+  * ++ and -- have side effects: they modify the values of their
+    operands: ++i yields i+1 and increments i:
+
+    #+name: prefix
+    #+begin_src C :results output
+      int i = 1;
+      printf("i is %d\n", ++i);  // prints "i is 2"
+      printf("i is %d\n", i);  // prints "i is 2"
+    #+end_src
+
+    #+RESULTS:
+    : i is 2
+    : i is 2
+
+    #+name: postfix
+    #+begin_src C :results output
+      int j = 1;
+      printf("j is %d\n", j++);  // prints "j is 1"
+      printf("j is %d\n", j);  // prints "j is 2"
+    #+end_src
+
+    #+RESULTS: postfix
+    : j is 1
+    : j is 2
+
+  * The table [[precedence]] shows a partial list of operators and their
+    order of precedence from 1 (highest precedence, i.e. evaluated
+    first) to 5 (lowest precedence, i.e. evaluated last)
+
+    #+name: order
+    | ORDER | OPERATOR            | SYMBOL           | ASSOCIATIVITY |
+    |-------+---------------------+------------------+---------------|
+    |     1 | increment (postfix) | ++               | left          |
+    |       | decrement (postfix) | --               |               |
+    |-------+---------------------+------------------+---------------|
+    |     2 | increment (prefix)  | ++               | right         |
+    |       | decrement (prefix)  | --               |               |
+    |       | unary plus          | +                |               |
+    |       | unary minus         | -                |               |
+    |-------+---------------------+------------------+---------------|
+    |     3 | multiplicative      | * / %            | left          |
+    |-------+---------------------+------------------+---------------|
+    |     4 | additive            | + -              | left          |
+    |-------+---------------------+------------------+---------------|
+    |     5 | assignment          | = *= /= %= += -= | right         |
+
+  * Left/right associativity means that the operator groups from
+    left/right. Examples:
+
+    #+name: associativity
+    | EXPRESSION | EQUIVALENCE | ASSOCIATIVITY |
+    |------------+-------------+---------------|
+    | i - j - k  | (i - j) - k | left          |
+    | i * j / k  | (i * j) / k | left          |
+    | -+j        | - (+j)      | right         |
+    | i %=j      | i = (i % j) | right         |
+    | i +=j      | i = (j + 1) | right         |
+    
+  * [ ] Using the table [[order]], parenthesize the following expression:
+
+    #+name: simplify
+    #+begin_example C
+    a = b += c++ -d + --e / -f
+    #+end_example
+
+    Group 1:
+    #+begin_example C
+    a = b += (c++) -d + --e / -f 
+    #+end_example
+
+    Group 2:
+    #+begin_example C
+    a = b += (c++) -d + (--e) / (-f) 
+    #+end_example
+
+    Group 3:
+    #+begin_example C
+    a = b += ((c++) -d) + ((--e) / (-f))  // -,+ group from left to right
+    #+end_example
+
+    Group 4:
+    #+begin_example C
+    (a = (b += ((c++) -d) + ((--e) / (-f))))) // =, += group from right to left
+    #+end_example
+
+    Much better to write this like as a series of commands:
+    #+begin_example C
+    c++;  // c = c + 1
+    e--;  // e = e - 1
+    -f;   // f = -f
+    c = c - d;
+    e = e / f;
+    b = b + c + e;
+    a = b;
+    #+end_example
+  
+* Logical operators
 * TODO Compound if structures and input validation
-
 * TODO Switch structure
 
 * TODO Random numbers
@@ -351,6 +541,16 @@
     orgmode.org]]
 
 * Footnotes
+
+[fn:4]These operators were inherited from Ken Thompson's earlier B
+language. They are not faster just shorter and more convenient.
+
+[fn:3]Algebra is the branch of mathematics that allows you to
+represent problems in the form of abstract, or formal,
+expressions. The abstraction is encapsulated in the notion of a
+variable (an expression of changing value), and of an operator acting
+on one or more variables (a function having the variable as an
+argument, and using it to compute something).
 
 [fn:2]Undeclared variable ~health~, missing closure semi-colons after
 the statements, functions ~Drink~ and ~Resume~ not known, and more.
