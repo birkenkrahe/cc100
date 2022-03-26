@@ -1042,7 +1042,7 @@
 * Scanf conversion - w9s21 (03/09/22)
 ** Preparations for test 2 (Monday, 14-Mar)
 
-   * Test 2 will only cover questions from quiz 4-6�+ new questions.
+   * Test 2 will only cover questions from quiz 4-6 + new questions.
    * You can find quiz 4-6 with solutions + feedback as PDF
    * I will create an update of content Org files ([[https://github.com/birkenkrahe/os420/tree/main/pdf][in pdf/]])
 
@@ -1129,17 +1129,17 @@
    * Harry's code
 
    #+begin_src html
-     #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
-     #+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
-     #+OPTIONS: html-style:nil
-     #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+     ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
+     ,#+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
+     ,#+OPTIONS: html-style:nil
+     ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
    #+end_src
 
 ** Conditions/Pseudocode
 
    See [[c:/Users/birkenkrahe/Documents/GitHub/cc100/4_conditions/README.org::README][README.org]] in [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
 
-* Character conversion, Flowcharts, BPMN, IF - w10s24 (03/18/22)
+* Character conversion, Flowcharts, BPMN, if structures - w10s24 (03/18/22)
 ** Warming up with pseudocode
 
    * Turn the following sentence into pseudocode:
@@ -1180,6 +1180,8 @@
     * Both ~scanf~ functions and ~if~ structure have to be changed to
       accommodate this change.
     * The conversion specification for characters is ~%c~.
+    * Note that character variables should be defined and used with
+      single quotes, e.g. ~response = 'a'~ or ~response == 'a'~.
 
 *** Character conversion
 
@@ -1187,22 +1189,27 @@
 
       #+name: char input
       #+begin_src bash :results silent
-        echo "y" > input
+        echo 'a' > input
       #+end_src
-      
+
     * Declare a variable ~response~, scan the character from the input
       file ~input~, and print it.
 
       #+name: scan char
-      #+begin_src C :cmdline < input :main yes :includes <stdio.h> :results output
+      #+begin_src C :cmdline < input :main yes :includes <stdio.h> :results output :exports both
         char response = '\0';
         scanf("%c", &response);
         printf("The character input was: %c\n", response);
       #+end_src
 
-      #+RESULTS: scan char
-      : The character input was: y
-    
+    #+begin_example
+       The character input was: a
+    #+end_example
+
+    * To check the value of a ~character~ variable, use logical
+      operators like ~==~. E.g. if ~char r = 'y'~, then ~r == 'y'~ is
+      ~true~, and ~r != 'y'~ is ~false~.
+
 *** Submission
 
     * Submit the code as a C source code file.
@@ -1216,7 +1223,27 @@
       diagram of the algorithm included (send both files to me via
       email).
 
-* Pgm 7, w11s25 (03/28/22)
+* Boolean algebra, Anti-IF campaign - w11s25 (03/28/22)
+** C statements
+
+   * Though C has many operators, it has few statements: they fall in
+     three categories, depending on how they affect the order in which
+     statements are executed.
+
+     1) Selection statements: ~if~ and ~switch~ statements allow a
+        program to select a particular execution path from a set of
+        alternatives.
+
+        #+begin_src C :results output
+   	  if (0) printf("1"); else printf("0");
+        #+end_src
+
+     2) Iteration statements: ~while~, ~do~ and ~for~ statements
+        support iteration ("looping").
+
+     3) Jump  statements: ~break~,  ~continue~, and  ~goto~ statements
+        cause  an  unconditional  jump  to some  other  place  in  the
+        program. The ~return~ statement does this, too.
 
 ** [[https://francescocirillo.com/products/the-anti-if-campaign][Anti-IF campaign]] (Francesco Cirillo)
 
@@ -1235,7 +1262,33 @@
    and changes will cost more and more." ([[https://francescocirillo.com/products/the-anti-if-campaign][Francesco Cirillo]])
    #+end_quote
 
+** TODO Warming up - quiz 7
 
+   * [ ] Algorithm vs heuristic
+     - “When you come to a YIELD sign, you must yield”
+     - “To get to the bank, keep going straight”
+
+   * [ ] Pseudocode creation:
+     - Which pseudocode represents “stop the car at a stop sign”.
+
+   * [ ] Complete the BPMN model
+
+     #+name: tax_deadline
+     #+attr_html: :width 500px
+     #+caption: BPMN model
+     [[./img/tax.png]]
+
+   * [ ] What does the statement do?
+     #+begin_src C
+       int i = 1, j = 2;
+       i * j - 1; // what does this statement do?
+     #+end_src
+
+** Boolean algebra
+* w11s26 (03/30/22)
+* Pgm 7 - w11s27 (04/01/22)
+** Programming assignment 7 (review)
+** Programming assignment 8 (deadline 08-Apr)
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
