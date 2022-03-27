@@ -853,11 +853,6 @@
     #+RESULTS: layout
     : Variable1=1,variable2=100
 
-* Formatted I/O
-
-  * Interactive notebooks ~io_printf.org~ and ~io_scanf.org~ for self
-    study in GDrive.
-
 * Glossary of terms and commands
 
   | TERM             | EXPLANATION                                                          |

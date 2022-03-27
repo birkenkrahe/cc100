@@ -1,0 +1,2 @@
+This directory contains details on formatting output with ~printf~ and
+input with ~scanf~.

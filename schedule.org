@@ -26,7 +26,7 @@
    | 13 |      | Wed-16-Feb   | Formatting, C constants (1)   | Dimensional weight 1   |                |                                |              |
    | 14 |      | Fri-18-Feb   | C constants (2), naming rules |                        |                |                                |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------------+--------------|
-   | 15 |    7 | Mon-21-Feb   | Reading input with scanf()    | iscan/fscan program    |                | Program 5 (phone)              | Quiz 4       |
+   | 15 |    7 | Mon-21-Feb   | Reading input with scanf()    | iscan/fscan program    | 4_io           | Program 5 (phone)              | Quiz 4       |
    | 16 |      | Wed-23-Feb   | Reading input in Emacs        | scanf with redirection |                |                                |              |
    |    |      | +Fri-25-Feb+ | CANCELLED (Weather)           |                        |                |                                |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------------+--------------|
@@ -38,12 +38,12 @@
    | 20 |      | Wed-09-Mar   |                               | io_scanf_nb.org        |                | Program 6 (divide)             |              |
    | 21 |      | Fri-11-Mar   | Quiz rehearsal                |                        |                |                                |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------------+--------------|
-   | 22 |   10 | Mon-14-Mar   | Test 2                        |                        | 4_conditions   |                                | Test 2       |
+   | 22 |   10 | Mon-14-Mar   | Test 2                        |                        | 5_selection    |                                | Test 2       |
    | 23 |      | Wed-16-Mar   | Operators / Pseudocode        |                        |                |                                |              |
    | 24 |      | Fri-18-Mar   | BPMN models and IF statements |                        |                | Program 7 (battle)             |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------------+--------------|
    |    |   11 | Mon-28-Mar   |                               | compound_if.org        |                |                                | Quiz 7       |
-   |    |      | Wed-30-Mar   |                               | switch.org             | 5_switch       |                                |              |
+   |    |      | Wed-30-Mar   |                               | switch.org             |                |                                |              |
    |    |      | Fri-01-Apr   |                               |                        |                | Program 8 (grade)              |              |
    |----+------+--------------+-------------------------------+------------------------+----------------+--------------------------------+--------------|
    |    |   12 | Mon-04-Apr   |                               |                        | 6_loops        |                                | Quiz 8       |
