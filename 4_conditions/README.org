@@ -479,6 +479,18 @@
       printf("i was 10 and is now %d = 10 %% 5\n", i); 
     #+end_src
 
+  * For completeness, [[compound]] is a table with examples for the
+    different compound operators:
+
+    #+name: compound
+    | OPERATOR | EXAMPLE | EQUIVALENT TO |
+    |----------+---------+---------------|
+    | +=       | a += b  | a = a + b     |
+    | -=       | a -= b  | a = a - b     |
+    | *=       | a *= b  | a = a * b     |
+    | /=       | a /= b  | a = a / b     |
+    | %=       | a %= b  | a = a % b     |
+  
   * [ ] Using the table [[order]], parenthesize the following expression:
 
     #+name: simplify
