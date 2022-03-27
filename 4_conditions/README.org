@@ -398,22 +398,10 @@
     | NOT ( 3 == 4 )    |        |
     |-------------------+--------|
 
-  * C evaluates all non-zero values as TRUE, and all zero values as
-    FALSE, as the code [[boolean]] shows
+  * Algebraic operations are more elegant and insightful than truth
+    tables. Watch "Proving Logical Equivalences without Truth Tables"
+    [[logic][(2012)]] as an example.
 
-    #+name: boolean
-    #+begin_src C :results output
-      if (3) puts("3 is TRUE");
-      if (!0) puts("0 is FALSE");
-    #+end_src
-
-    #+RESULTS:
-    : 3 is TRUE
-    : 0 is FALSE
-
-  * The Boolean operators AND, OR and NOT are represented in C by
-    the logical operators ~&&~, ~||~ and ~!~, respectively
-    
 * Order of operator operations
 
   * In compound operations (multiple operators), you need to know the
@@ -431,28 +419,20 @@
     operands: ++i yields i+1 and increments i:
 
     #+name: prefix
-    #+begin_src C :results output
+    #+begin_src C :results output :exports both
       int i = 1;
       printf("i is %d\n", ++i);  // prints "i is 2"
       printf("i is %d\n", i);  // prints "i is 2"
     #+end_src
 
-    #+RESULTS:
-    : i is 2
-    : i is 2
-
     #+name: postfix
-    #+begin_src C :results output
+    #+begin_src C :results output :exports both
       int j = 1;
       printf("j is %d\n", j++);  // prints "j is 1"
       printf("j is %d\n", j);  // prints "j is 2"
     #+end_src
 
-    #+RESULTS: postfix
-    : j is 1
-    : j is 2
-
-  * The table [[precedence]] shows a partial list of operators and their
+  * The table [[order]] shows a partial list of operators and their
     order of precedence from 1 (highest precedence, i.e. evaluated
     first) to 5 (lowest precedence, i.e. evaluated last)
 
@@ -484,7 +464,21 @@
     | -+j        | - (+j)      | right         |
     | i %=j      | i = (i % j) | right         |
     | i +=j      | i = (j + 1) | right         |
-    
+
+  * [ ] Make sure to write some of these out yourself and run
+    examples. I found ~%=~ quite challenging: a modulus and assignment
+    operator. ~i %= j~ computes ~i%j~ (i modulus j) and assigns it to
+    ~i~.
+
+    What is the value of ~i~ after running the code below?
+
+    #+name: %=
+    #+begin_src C
+      int i = 10, j = 5;
+      i%=j;
+      printf("i was 10 and is now %d = 10 %% 5\n", i); 
+    #+end_src
+
   * [ ] Using the table [[order]], parenthesize the following expression:
 
     #+name: simplify
@@ -494,12 +488,12 @@
 
     Group 1:
     #+begin_example C
-    a = b += (c++) -d + --e / -f 
+    a = b += (c++) -d + --e / -f
     #+end_example
 
     Group 2:
     #+begin_example C
-    a = b += (c++) -d + (--e) / (-f) 
+    a = b += (c++) -d + (--e) / (-f)
     #+end_example
 
     Group 3:
@@ -522,25 +516,166 @@
     b = b + c + e;
     a = b;
     #+end_example
-  
-* Logical operators
-* TODO Compound if structures and input validation
-* TODO Switch structure
 
-* TODO Random numbers
+* Compound if structures and input validation
+** Booleans in C
 
-* TODO Program: fortune cookie
+   * C evaluates all non-zero values as TRUE, and all zero values as
+     FALSE:
+
+     #+name: boolean
+     #+begin_src C :results output :exports both
+       if (3) puts("3 is TRUE"); // non-zero expression
+       if (!0) puts("0 is FALSE"); // !0 is literally non-zero
+     #+end_src
+
+   * The Boolean operators AND, OR and NOT are represented in C by
+     the logical operators ~&&~, ~||~ and ~!~, respectively
+
+** ! operator
+
+   * The ! operator is a unary operator that is evaluated from the
+     left. It is TRUE when its argument is FALSE, and vice versa.
+
+   * [ ] If ~i = 100~, what is ~!i~?
+
+   * [ ] If ~j = 0.5e-15~, what is ~!i~?
+
+   * Let's check!
+
+     #+name: negation
+     #+begin_src C :results output :exports both
+       int i = 100;
+       double j = 1.e-15;
+       printf("!%d is %d because %d is non-zero!\n", i, !i, i);
+       printf("!(%.1e) is %d because %.1e is non-zero!\n", j, !j, j);
+     #+end_src
+
+** && operator
+
+   * Evaluates a Boolean expression from left to right
+
+   * Value is TRUE if and only if both sides of the operator are TRUE
+
+   * Examples:
+
+     #+name: &&_op_true
+     #+begin_src C :exports both
+       if ( 3 > 1 && 5 < 10 ) // = TRUE AND TRUE = TRUE
+         printf("The entire expression is true.\n");
+     #+end_src
+
+     #+name: &&_op_false
+     #+begin_src C :exports both
+       if (!(3 > 5 && 5 < 5) ) // = NOT (FALSE AND FALSE) = TRUE
+         printf("The entire expression is false.\n");
+     #+end_src
+
+** || operator
+
+   * Evaluates a Boolean expression from left to right
+
+   * It is FALSE if and only if both sides of the operator are FALSE
+
+   * It is TRUE if either side of the operator is TRUE
+
+   * Examples:
+
+     #+name: ||_op_true
+     #+begin_src C :exports both
+       if ( 3 > 5 || 5 <= 5 ) // TRUE OR TRUE = TRUE
+         printf("The entire expression is true.\n");
+     #+end_src
+
+     #+name: ||_op_false
+     #+begin_src C :exports both
+       if ( 3 > 5 || 6 < 5 ) { }// = FALSE OR FALSE = FALSE
+       else printf("The entire expression is false.\n");
+     #+end_src
+
+   * Practice that using the GDrive notebook!
+
+** Checking for upper and lower case
+
+   * Characters are represented by ASCII[fn:5] character sets
+
+   * E.g. ~a~ and ~A~ are represented by the ASCII codes 97 and 65,
+     resp.
+
+   * [ ] Let's check that.
+
+     #+name: ascii_input
+     #+begin_src bash :results silent
+       echo "a A" > ascii
+     #+end_src
+
+     #+name: ascii
+     #+begin_src C :cmdline < ascii :results output :export both
+       char a, A;
+       scanf("%c %c", &a, &A);
+       printf("The ASCII value of %c is %d\n", a, a);
+       printf("The ASCII value of %c is %d\n", A, A);
+     #+end_src
+
+   * User-friendly programs should use compound conditions to check
+     for both lower and upper case letters:
+
+     #+name: ascii_both
+     #+begin_example C
+     if (response == 'A' || response == 'a')
+     #+end_example
+
+   * Practice that using the GDrive notebook!
+
+** Checking for a range of values
+
+   * To validate input, you often need to check a range of values
+
+   * This is a common use of compound conditions, logical and
+     relational operators
+
+   * We first create an input file ~num~.
+
+     #+name: valid_input
+     #+begin_src bash :results silent
+       echo 5 > num
+     #+end_src
+
+   * [ ] What does the code in [[validate]] do? Will it run? What will the
+     output be for our choice of input? 
+
+     #+name: validate
+     #+begin_src C :cmdline < num :exports both
+
+       int response = 0;
+
+       scanf("%d", &response);
+
+       if ( response < 1 || response > 10 ) {
+	 puts("Number not in range.");
+	} else {
+	 puts("Number in range.");
+       }
+     #+end_src
+
+   * Head to the practice notebook for some challenging exercises!
 
 * References
 
   * Davenport/Vine (2015) C Programming for the Absolute Beginner
     (3ed). Cengage Learning.
+  * <<logic>> GVSUmath (Aug 10, 2012). Proving Logical Equivalences
+    without Truth Tables [video]. [[https://youtu.be/iPbLzl2kMHA][URL: youtu.be/iPbLzl2kMHA]].
   * Kernighan/Ritchie (1978). The C Programming Language
     (1st). Prentice Hall.
+  * King (2008). C Programming - A modern approach (2e). W A Norton.
   * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
     orgmode.org]]
 
 * Footnotes
+
+[fn:5] ASCII stands for the [[https://en.wikipedia.org/wiki/ASCII][American Standard Code for Information
+Interchange]]. 
 
 [fn:4]These operators were inherited from Ken Thompson's earlier B
 language. They are not faster just shorter and more convenient.

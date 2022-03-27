@@ -1,0 +1,213 @@
+#+TITLE:Compound if structures
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:1 ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both
+#+PROPERTY: header-args:C :results output
+#+PROPERTY: header-args:C :comments both
+* README
+
+  * [X] Work through this notebook at your own pace. When you're done,
+    check a task off by typing ~C-c C-c~ on the line with the ~[
+    ]~. Check this task off for practice! You can close bullet points
+    with the ~<TAB>~  key on your keyboard
+
+  * [X] Make sure that you can run C where you are by executing the
+    code block below (~C-c C-c~) and then saving the file (~C-x C-s~)
+    #+name: helloworld
+    #+begin_src C :main yes :includes <stdio.h>
+      puts("hello world");
+    #+end_src
+
+  * [X] If this does not lead to the output ~hello world~, try to
+    analyze the problem by yourself first. Typical sources of errors:
+    - Can you write to the directory?
+    - Is this file an Org-file?
+    - Did you use the correct key sequence?
+    - Do you have the right code block header arguments?
+
+  * This section follows chapter 3 in Davenport/Vine (2015) and
+    chapters 4 and 5 in King (2008).
+
+* Logical operators &&, ||, !
+
+  Show the output produced by each of the following expressions with
+  the given values - calculate the result in your head before you run
+  the code!
+
+  * [ ] Check if NOT ~i~ is smaller than ~j~, for ~i=10~ and ~j=5~.
+
+    #+name: logical1
+    #+begin_src C
+      int i = 10, j = 5;
+      printf("%d\n", !i < j); // !10 is 0, and 5 > 0 is TRUE (1)
+    #+end_src
+
+  * [ ] Check the value of ~!!i + !j~, for ~i=2~ and ~j=1~.
+
+    #+name: logical2
+    #+begin_src C :exports both
+      int i = ?, j = ?;
+      printf("%d\n", ??? );
+    #+end_src
+
+  * [ ] Compute ~i~ AND ~j~ OR ~k~, for ~i=5~, ~j=0~, ~k=-5~.
+
+    #+name: logical3
+    #+begin_src C :exports both
+      int i = ?, j = ?, k = ?;
+      printf("%d\n", ??? );
+    #+end_src
+
+
+  * [ ] Compute ~i < j~ OR  ~k~, for ~i=1~, ~j=2~, ~k=3~.
+
+    #+name: logical4
+    #+begin_src C :exports both
+      int i = ?, j = ?, k = ?;
+      printf("%d\n",  ??? );
+    #+end_src
+
+* Checking for upper and lower case
+
+  * Replace the ??? in the code [[ascii_input]] by the letter a. Run the
+    block and check that the file ~ascii~ contains the letter a.
+
+    #+name: ascii_input
+    #+begin_src bash :results silent
+      echo ??? > ascii
+    #+end_src
+
+  * [ ] Run the code [[ascii]] below. You see that a is not recognized as A.
+
+    #+name: ascii
+    #+begin_src C :cmdline < ascii :results output
+      char letter;
+      scanf("%c", &letter);
+
+      if ( letter == 'A' )
+        printf("\nOkay! Input %c recognized as a or A.\n", letter);
+       else
+         printf("\nNot okay! Input %c not recognized as a or A.\n", letter);
+    #+end_src
+
+  * [ ] Change the code in [[ascii1]] so that both lower and upper case
+    letters a, A are recognized as A! If you want, you can change the
+    input by changing and running the code block [[ascii_input]] above.
+
+    #+name: ascii1
+    #+begin_src C :cmdline < ascii :results output
+      char letter;
+      scanf("%c", &letter);
+
+      if ( letter == 'A' )
+        printf("\nOkay! Input %c recognized as a or A.\n", letter);
+       else
+         printf("\nNot okay! Input %c not recognized as a or A.\n", letter);
+    #+end_src
+
+* Checking for a range of values
+
+  * [ ] Run the code block [[range_input]] below. It creates a file ~num~
+    that contains the number 5.
+
+    #+name: range_input
+    #+begin_src bash :results silent :exports both
+      echo "5 0 10" > num
+    #+end_src
+
+
+  * [ ] Replace the expression ??? in the code block [[range]] to check if
+    the input value 5 for ~i~ is in the interval [m,n) = [0,10).
+
+    #+name: range
+    #+begin_src C :cmdline < num :results output :exports both
+      int i, m, n;
+      scanf("%d %d %d", &i, &m, &n);
+
+      if ( ??? ) {
+        printf("%d is in the interval [%d,%d)\n", i, m, n);
+       } else {
+        printf("%d is NOT in the interval [%d,%d)\n", i, m, n);
+       }
+    #+end_src
+
+
+  * [ ] Run [[range]] for different input values in [[range_input]]:
+
+    | i = -5 | m = 0 | n = 10 |
+    | i = 11 | m = 0 | n = 10 |
+    | i = 0  | m = 0 | n = 10 |
+    | i = 10 | m = 0 | n = 10 |
+
+    Remember that you have to run [[range_input]] with the new values if
+    you want to change the input file.
+
+  * [ ] How would you have to change the condition to check if the
+    input variable ~i~ is OUTSIDE of [m,n)?
+
+    - Change the input values in [[range_input]] back to 5 0 10
+
+    - Modify the code in [[range1]] below to test if 5 is OUTSIDE of the
+      interval [0,10) and run it.
+
+    #+name: range1
+    #+begin_src C :cmdline < num :results output :exports both
+      int i, m, n;
+      scanf("%d %d %d", &i, &m, &n);
+
+      if ( ??? ) {
+        printf("%d is in the interval [%d,%d)\n", i, m, n);
+       } else {
+        printf("%d is NOT in the interval [%d,%d)\n", i, m, n);
+       }
+    #+end_src
+
+
+* Caveat: i < j < k
+
+  * In C, the expression ~i < j < k~ is perfectly legal but it does
+    NOT check if ~j~ is between ~i~ and ~k~.
+
+  * The relational operator ~<~ is evaluated from the left. First the
+    Boolean value of ~i < j~ is computed. It is either 0 or 1.
+
+  * Next, the check ~0 < k~ or ~1 < k~ is performed. The following
+    example shows how this can go wrong. Run it for illustration.
+
+    #+name: caveat
+    #+begin_src C :results output
+      int i = 5, j = 1, k = 100;
+      if (i < j < k) {
+        printf("TRUE: %d < %d < %d\n", i, j, k);
+       } else {
+        printf("NOT TRUE: %d < %d < %d\n", i, j, k);
+       }
+    #+end_src
+
+
+  * [ ] Fix the the code [[caveat1]] so that the output is correct. Test
+    it for different values of i, j, k.
+
+    #+name: caveat1
+    #+begin_src C :results output
+      int i = 5, j = 1, k = 100;
+      if (i < j < k) {
+        printf("TRUE: %d < %d < %d\n", i, j, k);
+       } else {
+        printf("NOT TRUE: %d < %d < %d\n", i, j, k);
+       }
+        #+end_src
+
+* References
+
+  * Davenport/Vine (2015) C Programming for the Absolute Beginner
+    (3ed). Cengage Learning.
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * King (2008). C Programming - A modern approach (2e). W A Norton.
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]

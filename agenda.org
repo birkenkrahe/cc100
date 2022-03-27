@@ -892,7 +892,6 @@
       #+end_src
 
       #+RESULTS:
-      : 444 555
 
 * Compiling, LitProg, Program Layout - w8s19 (03/04/22)
 ** News
@@ -1223,70 +1222,160 @@
       diagram of the algorithm included (send both files to me via
       email).
 
-* Boolean algebra, Anti-IF campaign - w11s25 (03/28/22)
-** C statements
+* Booleans, operator precedence, compound if else - w11s25 (03/28/22)
+** Term plan
+
+   The plan for the rest of the term:
+
+   * week 11 - ~switch~ and ~break~ statements, random numbers
+
+   * week 12 - iteration statements (~for~, ~while do~ loops)
+
+   * week 13 - structured programming with functions
+
+   * week 14 - grouping variables with arrays
+
+   * week 15 - memory manipulation with pointers
+
+   * week 16 - text manipulation with string functions
+
+   * Includes some do-it-yourself reading (covered in weekly quiz 7-11)
+
+   * Weekly programming assignments 8-13 (submit C or Org versions)
+
+** Review and warming up: if statements
 
    * Though C has many operators, it has few statements: they fall in
      three categories, depending on how they affect the order in which
-     statements are executed.
+     statements are executed: selection, iteration and jump statements.
 
-     1) Selection statements: ~if~ and ~switch~ statements allow a
-        program to select a particular execution path from a set of
-        alternatives.
+*** Selection statements
 
-        #+begin_src C :results output
-   	  if (0) printf("1"); else printf("0");
-        #+end_src
+    * ~if~ and ~switch~ statements allow a program to select a
+      particular execution path from a set of alternatives.
 
-     2) Iteration statements: ~while~, ~do~ and ~for~ statements
-        support iteration ("looping").
+    * What is the output in this code?
 
-     3) Jump  statements: ~break~,  ~continue~, and  ~goto~ statements
-        cause  an  unconditional  jump  to some  other  place  in  the
-        program. The ~return~ statement does this, too.
+      #+name: if1
+      #+begin_src C :results output
 
-** [[https://francescocirillo.com/products/the-anti-if-campaign][Anti-IF campaign]] (Francesco Cirillo)
+        if (0) printf("1"); else printf("0");
 
-   #+begin_quote
-   "The Campaign is against the use of the IF statement as a regular
-   design strategy to deal with growth, change and complexity ("Let's
-   Put an IF Syndrome") in an evolutionary context. Despite being an
-   "easy," and apparently effective, way of delivering the value
-   requested by the customer, this "design strategy" has negative
-   repercussions when applied regularly as the main strategy to deal
-   with change, growth and complexity. By applying the "IF Strategy"
-   in an evolutionary context, software systems becomes more complex
-   to be read, tested, even debugged. It becomes easier to duplicate
-   code, accumulate technical debt and spend more time fixing bugs. In
-   the result, the software system become more complex. New features
-   and changes will cost more and more." ([[https://francescocirillo.com/products/the-anti-if-campaign][Francesco Cirillo]])
-   #+end_quote
+      #+end_src
 
-** TODO Warming up - quiz 7
+      The following if statements have the same output:
+      #+name: if2
+      #+begin_src C :results output
 
-   * [ ] Algorithm vs heuristic
-     - “When you come to a YIELD sign, you must yield”
-     - “To get to the bank, keep going straight”
+        if (5 < 2) printf("1"); else printf("0\n");
 
-   * [ ] Pseudocode creation:
-     - Which pseudocode represents “stop the car at a stop sign”.
+        if (!(2 * 2) && 1) printf("1"); else printf("0\n");
 
-   * [ ] Complete the BPMN model
+        if (!'A') printf("1"); else printf("0\n");
 
-     #+name: tax_deadline
-     #+attr_html: :width 500px
-     #+caption: BPMN model
-     [[./img/tax.png]]
+      #+end_src
 
-   * [ ] What does the statement do?
-     #+begin_src C
-       int i = 1, j = 2;
-       i * j - 1; // what does this statement do?
-     #+end_src
+    * Which alternative is chosen depends on the value of the
+      expression in parentheses:
 
-** Boolean algebra
-* w11s26 (03/30/22)
-* Pgm 7 - w11s27 (04/01/22)
+      | EXPRESSION    | BOOLEAN   | WHY                                |
+      |---------------+-----------+------------------------------------|
+      | 5 < 2         | FALSE (0) | 5 is smaller than 2                |
+      | !(2 * 2) && 1 | FALSE (0) | !4 is 0                            |
+      | !'A'          | FALSE (0) | A is converted to non-zero integer |
+
+*** The "dangling else" problem
+
+    * The following example illustrates the importance of braces: to
+      which of the two statements does the ~else~ clause belong?
+
+      #+name: dangling1
+      #+begin_example C
+        if (y != 0)
+          if (x != 0)
+            result = x / y;
+          else
+            printf("Error: y is equal to 0\n");
+      #+end_example
+
+    * If ~y~ is non-zero, the second if clause is entered, and if ~x~
+      is also non-zero, the variable ~result~ is computed.
+
+    * The rule in C is that an ~else~ clause belongs to the nearest
+      ~if~ statement that has not already been paired with another
+      ~else~. This is what Emacs does, too.
+
+    * Alas: if y is non-zero and x is zero, we are told that y
+      is 0. The print statement should be aligned with the first if,
+      not with the second.
+
+    * To make the clause part of the outer statement, use braces:
+
+      #+name: dangling2
+      #+begin_example C
+        if (y != 0) {
+          if (x != 0)
+            result = x / y;
+         } else
+          printf("Error: y is equal to 0\n");
+      #+end_example
+
+*** Code template, pseudocode and BPMN model
+
+    The key to critical thinking is to be able to look at a problem
+    from different sides without prejudice and with perseverance.
+
+**** Code template for if statements (=standard):
+
+     #+name: template
+     #+begin_quote C
+     if ( expression )
+     statement
+     else
+     statement
+     #+end_quote
+
+**** Pseudocode (=subjective) for if statements
+
+     #+name: pseudocode
+     #+begin_example
+       if (true)
+          do one thing
+       else
+          do another thing
+     #+end_example
+
+**** BPMN model
+
+     #+attr_html: :width 550px
+     #+caption: BPMN model of if else
+     [[./img/ifelse.png]]
+
+** Boolean algebra - do it yourself!
+
+   The text for this section is on GitHub.
+
+   * [ ] What algebra is really about
+   * [ ] Truth tables
+   * [ ] Compound logical expressions
+
+** Operator precedence - do it yourself!
+
+   * [ ] increment/decrement operators
+   * [ ] order of precedence table
+   * [ ] parenthesizing compound expressions
+
+** In-class: compound if structures and input validation
+
+   * [ ] && and || operators
+   * [ ] Checking for lower- and upper case
+   * [ ] Checking a range of numbers
+   * [ ] The isdigit() function
+
+   With practice notebook ~compound_if.org~ in GDrive.
+
+* NEXT switch, case, break, random numbers - w11s26 (03/30/22)
+* NEXT Review Pgm 7, pgm 8,  - w11s27 (04/01/22)
 ** Programming assignment 7 (review)
 ** Programming assignment 8 (deadline 08-Apr)
 * References
