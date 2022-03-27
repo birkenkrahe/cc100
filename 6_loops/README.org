@@ -1,4 +1,4 @@
-#+TITLE:Switch, case, break
+#+TITLE:Loops
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++
 #+STARTUP: overview hideblocks
@@ -11,8 +11,8 @@
 #+INFOJS_OPT: :view:info
 * README
 
-  * This section follows chapter 3 in Davenport/Vine (2015) and
-    chapters 4 and 5 in King (2008).
+  * This section is based on chapter 4 in Davenport/Vine (2015) and
+    chapter 6 in King (2008).
 
 * References
 
