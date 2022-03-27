@@ -473,14 +473,15 @@
     What is the value of ~i~ after running the code below?
 
     #+name: %=
-    #+begin_src C
+    #+begin_src C :exports both
       int i = 10, j = 5;
       i%=j;
-      printf("i was 10 and is now %d = 10 %% 5\n", i); 
+      printf("i was 10 and is now %d = 10 %% 5\n", i);
     #+end_src
 
-  * For completeness, [[compound]] is a table with examples for the
-    different compound operators:
+    
+  * [ ] Let's write a program [[compound_check]] to check the equivalence
+    claimed in the table [[compound]].
 
     #+name: compound
     | OPERATOR | EXAMPLE | EQUIVALENT TO |
@@ -490,7 +491,19 @@
     | *=       | a *= b  | a = a * b     |
     | /=       | a /= b  | a = a / b     |
     | %=       | a %= b  | a = a % b     |
-  
+
+    #+name: compound_check
+    #+begin_src C :results output :exports both
+      int a = 10, b = 2;
+
+      printf("10 += 2 is %d\n", a += b); a = 10; b = 2;
+      printf("10 -= 2 is %d\n", a -= b); a = 10; b = 2;
+      printf("10 *= 2 is %d\n", a *= b); a = 10; b = 2;
+      printf("10 /= 2 is %d\n", a /= b); a = 10; b = 2;
+      printf("10 %%= 2 is %d\n", a %= b);
+    #+end_src
+
+
   * [ ] Using the table [[order]], parenthesize the following expression:
 
     #+name: simplify
@@ -602,7 +615,7 @@
      #+name: ||_op_false
      #+begin_src C :exports both
        if ( 3 > 5 || 6 < 5 ) { }// = FALSE OR FALSE = FALSE
-       else printf("The entire expression is false.\n");
+        else printf("The entire expression is false.\n");
      #+end_src
 
    * Practice that using the GDrive notebook!
@@ -654,7 +667,7 @@
      #+end_src
 
    * [ ] What does the code in [[validate]] do? Will it run? What will the
-     output be for our choice of input? 
+     output be for our choice of input?
 
      #+name: validate
      #+begin_src C :cmdline < num :exports both
@@ -664,10 +677,10 @@
        scanf("%d", &response);
 
        if ( response < 1 || response > 10 ) {
-	 puts("Number not in range.");
-	} else {
-	 puts("Number in range.");
-       }
+         puts("Number not in range.");
+        } else {
+         puts("Number in range.");
+        }
      #+end_src
 
    * Head to the practice notebook for some challenging exercises!
@@ -687,7 +700,7 @@
 * Footnotes
 
 [fn:5] ASCII stands for the [[https://en.wikipedia.org/wiki/ASCII][American Standard Code for Information
-Interchange]]. 
+Interchange]].
 
 [fn:4]These operators were inherited from Ken Thompson's earlier B
 language. They are not faster just shorter and more convenient.
