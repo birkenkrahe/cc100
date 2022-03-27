@@ -432,6 +432,22 @@
       printf("j is %d\n", j);  // prints "j is 2"
     #+end_src
 
+  * Here is another illustration with an assignment of post and prefix
+    increment operators:
+
+    #+name: postfixprefix
+    #+begin_src C :exports both :results output
+      int num1 = 10, num2 = 0;
+      puts("start: num1 = 10, num2 =0");
+
+      num2 = num1++;
+      printf("num2 = num1++, so num2 = %d, num1 = %d\n", num2, num1);
+
+      num1 = 10;
+      num2 = ++num1;
+      printf("num2 = ++num1, so num2 = %d, num1 = %d\n", num2, num1);
+    #+end_src
+   
   * The table [[order]] shows a partial list of operators and their
     order of precedence from 1 (highest precedence, i.e. evaluated
     first) to 5 (lowest precedence, i.e. evaluated last)
