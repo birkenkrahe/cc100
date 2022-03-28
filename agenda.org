@@ -1227,7 +1227,7 @@
 
    The plan for the rest of the term:
 
-   * week 11 - ~switch~ and ~break~ statements, random numbers
+   * week 11 - ~switch~ and ~break~ statements
    * week 12 - iteration statements (~for~, ~while do~ loops)
    * week 13 - structured programming with functions
    * week 14 - grouping variables with arrays
@@ -1248,7 +1248,7 @@
     * ~if~ and ~switch~ statements allow a program to select a
       particular execution path from a set of alternatives.
 
-    * What is the output in this code?
+    * What is the output of this code?
 
       #+name: if1
       #+begin_src C :results output
@@ -1256,6 +1256,9 @@
         if (0) printf("1"); else printf("0");
 
       #+end_src
+
+      #+RESULTS: if1
+      : 0
 
       The following if statements have the same output:
       #+name: if2
@@ -1268,6 +1271,11 @@
         if (!'A') printf("1"); else printf("0\n");
 
       #+end_src
+
+      #+RESULTS: if2
+      : 0
+      : 0
+      : 0
 
     * Which alternative is chosen depends on the value of the
       expression in parentheses:
@@ -1316,8 +1324,10 @@
 
 *** Code template, pseudocode and BPMN model
 
-    The key to critical thinking is to be able to look at a problem
+    The key to "critical thinking" is to be able to look at a problem
     from different sides without prejudice and with perseverance.
+
+    Remember: if all you have is a hammer, everything looks like nail.
 
 **** Code template for if statements (=standard):
 
@@ -1364,7 +1374,6 @@
    * [ ] && and || operators
    * [ ] Checking for lower- and upper case
    * [ ] Checking a range of numbers
-   * [ ] The isdigit() function
 
    With practice notebook ~compound_if.org~ in GDrive.
 
