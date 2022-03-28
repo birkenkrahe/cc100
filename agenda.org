@@ -1228,20 +1228,14 @@
    The plan for the rest of the term:
 
    * week 11 - ~switch~ and ~break~ statements, random numbers
-
    * week 12 - iteration statements (~for~, ~while do~ loops)
-
    * week 13 - structured programming with functions
-
    * week 14 - grouping variables with arrays
-
    * week 15 - memory manipulation with pointers
-
    * week 16 - text manipulation with string functions
-
    * Includes some do-it-yourself reading (covered in weekly quiz 7-11)
-
    * Weekly programming assignments 8-13 (submit C or Org versions)
+   * Final exam (TBC) on Monday May 9, 10:30-12:30 hrs in Lyon 104.
 
 ** Review and warming up: if statements
 

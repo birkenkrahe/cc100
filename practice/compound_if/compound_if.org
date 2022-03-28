@@ -166,7 +166,6 @@
        }
     #+end_src
 
-
 * Caveat: i < j < k
 
   * In C, the expression ~i < j < k~ is perfectly legal but it does
