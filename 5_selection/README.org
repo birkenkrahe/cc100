@@ -660,9 +660,6 @@
          printf("The entire expression is false.\n");
      #+end_src
 
-     #+RESULTS: &&_op_false
-     : The entire expression is false.
-
 ** || operator
 
    * Evaluates a Boolean expression from left to right
@@ -688,9 +685,6 @@
         else printf("The entire expression is false.\n");
      #+end_src
 
-     #+RESULTS: ||_op_false
-     : The entire expression is false.
-
    * Practice that using the GDrive notebook!
 
 ** Checking for upper and lower case
@@ -714,10 +708,6 @@
        printf("The ASCII value of %c is %d\n", a, a);
        printf("The ASCII value of %c is %d\n", A, A);
      #+end_src
-
-     #+RESULTS: ascii
-     : The ASCII value of a is 97
-     : The ASCII value of A is 65
 
    * User-friendly programs should use compound conditions to check
      for both lower and upper case letters:
@@ -760,12 +750,9 @@
         }
      #+end_src
 
-     #+RESULTS: validate
-     : Number in range.
-
    * Head to the practice notebook for some challenging exercises!
 
-* IN PROGRESS The switch structure
+* The switch structure
 
   * The ~switch~ statement is fairly complex: it combines conditional
     expressions, constant expressions, default and break statements.
@@ -823,9 +810,6 @@
         }
      #+end_src
 
-     #+RESULTS: switch
-     : Passing
-
    * [ ] Q: What does this program implement?
 
      #+begin_quote
@@ -854,9 +838,6 @@
           break;
         }
      #+end_src
-
-     #+RESULTS: switch1
-     : Passing
 
    * It is not possible to write a case label for a range of values.
 
@@ -888,9 +869,6 @@
           printf("Illegal grade");
         }
      #+end_src
-
-     #+RESULTS: switch2
-     : PassingFailingIllegal grade
 
    * [ ] What happens without the ~break~ statements?
 
