@@ -401,7 +401,7 @@
 
     | Expression        | Result |
     |-------------------+--------|
-    | 3 == 3 AND 4 == 4 |        |
+    | 3 == 3 AND 4 == 4 |TRUE    |
     |-------------------+--------|
     | 3 == 4 AND 4 == 4 |        |
     |-------------------+--------|
@@ -610,18 +610,18 @@
      #+RESULTS: boolean
      : 3 is TRUE
      : 0 is FALSE
-
+ 
    * The Boolean operators AND, OR and NOT are represented in C by
      the logical operators ~&&~, ~||~ and ~!~, respectively
 
 ** ! operator
 
-   * The ! operator is a unary operator that is evaluated from the
+   * The ! operator is a "unary" operator that is evaluated from the
      left. It is TRUE when its argument is FALSE, and vice versa.
 
-   * [ ] If ~i = 100~, what is ~!i~?
+   * [X] If ~i = 100~, what is ~!i~?
 
-   * [ ] If ~j = 0.5e-15~, what is ~!i~?
+   * [X] If ~j = 1.0e-15~, what is ~!i~?
 
    * Let's check!
 
