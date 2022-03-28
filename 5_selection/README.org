@@ -290,7 +290,7 @@
      #+end_src
 
      #+RESULTS: battle2
-     :
+     : 
      : Drinking health potion!
 
 ** Battle by numbers
@@ -320,6 +320,20 @@
          printf("\nResuming battle!\n");
 
      #+end_src
+
+     #+RESULTS: battle3
+     #+begin_example
+
+	     In-Battle Healing
+
+     1:	Drink health potion
+
+     2:	Resume battle
+
+
+     Enter your selection: 
+     Drinking health potion!
+     #+end_example
 
    * You can also tangle the file and run ~battle.c~ from the
      commandline:
@@ -425,12 +439,20 @@
       printf("i is %d\n", i);  // prints "i is 2"
     #+end_src
 
+    #+RESULTS: prefix
+    : i is 2
+    : i is 2
+
     #+name: postfix
     #+begin_src C :results output :exports both
       int j = 1;
       printf("j is %d\n", j++);  // prints "j is 1"
       printf("j is %d\n", j);  // prints "j is 2"
     #+end_src
+
+    #+RESULTS: postfix
+    : j is 1
+    : j is 2
 
   * Here is another illustration with an assignment of post and prefix
     increment operators:
@@ -447,7 +469,12 @@
       num2 = ++num1;
       printf("num2 = ++num1, so num2 = %d, num1 = %d\n", num2, num1);
     #+end_src
-   
+
+    #+RESULTS: postfixprefix
+    : start: num1 = 10, num2 =0
+    : num2 = num1++, so num2 = 10, num1 = 11
+    : num2 = ++num1, so num2 = 11, num1 = 11
+
   * The table [[order]] shows a partial list of operators and their
     order of precedence from 1 (highest precedence, i.e. evaluated
     first) to 5 (lowest precedence, i.e. evaluated last)
@@ -495,7 +522,10 @@
       printf("i was 10 and is now %d = 10 %% 5\n", i);
     #+end_src
 
-    
+    #+RESULTS: %=
+    : i was 10 and is now 0 = 10 % 5
+
+
   * [ ] Let's write a program [[compound_check]] to check the equivalence
     claimed in the table [[compound]].
 
@@ -518,6 +548,13 @@
       printf("10 /= 2 is %d\n", a /= b); a = 10; b = 2;
       printf("10 %%= 2 is %d\n", a %= b);
     #+end_src
+
+    #+RESULTS: compound_check
+    : 10 += 2 is 12
+    : 10 -= 2 is 8
+    : 10 *= 2 is 20
+    : 10 /= 2 is 5
+    : 10 %= 2 is 0
 
 
   * [ ] Using the table [[order]], parenthesize the following expression:
@@ -570,6 +607,10 @@
        if (!0) puts("0 is FALSE"); // !0 is literally non-zero
      #+end_src
 
+     #+RESULTS: boolean
+     : 3 is TRUE
+     : 0 is FALSE
+
    * The Boolean operators AND, OR and NOT are represented in C by
      the logical operators ~&&~, ~||~ and ~!~, respectively
 
@@ -592,6 +633,10 @@
        printf("!(%.1e) is %d because %.1e is non-zero!\n", j, !j, j);
      #+end_src
 
+     #+RESULTS: negation
+     : !100 is 0 because 100 is non-zero!
+     : !(1.0e-015) is 0 because 1.0e-015 is non-zero!
+
 ** && operator
 
    * Evaluates a Boolean expression from left to right
@@ -606,11 +651,17 @@
          printf("The entire expression is true.\n");
      #+end_src
 
+     #+RESULTS: &&_op_true
+     : The entire expression is true.
+
      #+name: &&_op_false
      #+begin_src C :exports both
        if (!(3 > 5 && 5 < 5) ) // = NOT (FALSE AND FALSE) = TRUE
          printf("The entire expression is false.\n");
      #+end_src
+
+     #+RESULTS: &&_op_false
+     : The entire expression is false.
 
 ** || operator
 
@@ -628,11 +679,17 @@
          printf("The entire expression is true.\n");
      #+end_src
 
+     #+RESULTS: ||_op_true
+     : The entire expression is true.
+
      #+name: ||_op_false
      #+begin_src C :exports both
        if ( 3 > 5 || 6 < 5 ) { }// = FALSE OR FALSE = FALSE
         else printf("The entire expression is false.\n");
      #+end_src
+
+     #+RESULTS: ||_op_false
+     : The entire expression is false.
 
    * Practice that using the GDrive notebook!
 
@@ -657,6 +714,10 @@
        printf("The ASCII value of %c is %d\n", a, a);
        printf("The ASCII value of %c is %d\n", A, A);
      #+end_src
+
+     #+RESULTS: ascii
+     : The ASCII value of a is 97
+     : The ASCII value of A is 65
 
    * User-friendly programs should use compound conditions to check
      for both lower and upper case letters:
@@ -699,11 +760,151 @@
         }
      #+end_src
 
+     #+RESULTS: validate
+     : Number in range.
+
    * Head to the practice notebook for some challenging exercises!
 
 * IN PROGRESS The switch structure
 
-  
+  * The ~switch~ statement is fairly complex: it combines conditional
+    expressions, constant expressions, default and break statements.
+
+  #+begin_example C
+    switch ( expression ) {
+    case constant expression : statements
+    ...
+    case constant expression : statements
+    default : statements
+    }
+  #+end_example
+
+  1. *Controlling expression:* an integer expression in
+     parentheses. Characters are treated as integers in C and cannot be
+     tested.
+
+  2. *Case labels:* each case begins with a constant expression - this
+     is like any other expression except that it cannot contain
+     variables or function calls.
+
+  3. *Statements:* any number of statements. No braces required around
+     the statements. The last statement is usually ~break~ to close
+     the ~case~.
+
+** Simple example
+
+   * In the example code [[switch]], the ~grade~ is set in the variable
+     declaration. Depending on the value, a ~case~ is triggered and
+     the corresponding statements are executed.
+
+   * [ ] What is the output of the code in [[switch]] for different
+     values: 5,3,0,-1,0.5?
+
+     What does the program implement?
+
+     #+name: switch
+     #+begin_src C :results output :exports both
+       int grade = 3;
+
+       switch (grade) {
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+          printf("Passing");
+          break;
+        case 5:
+        case 6:
+          printf("Failing");
+          break;
+        default:
+          printf("Illegal grade");
+          break;
+        }
+     #+end_src
+
+     #+RESULTS: switch
+     : Passing
+
+   * [ ] Q: What does this program implement?
+
+     #+begin_quote
+     Answer: The program reflects "passing" grades 4,3,2,1, and "failing"
+     grade 0. Any other grade value is not allowed. (This happens to be
+     the European grade scale, which is A = 1 to D = 4, and F = 5 or 6.)
+     #+end_quote
+
+   * You can also put several case labels on the same line as in
+     [[switch1]], which is otherwise identical to [[switch]].
+
+     #+name: switch1
+     #+begin_src C :results output :exports both
+       int grade = 3;
+
+       switch (grade) {
+        case 4: case 3: case 2: case 1:
+          printf("Passing");
+          break;
+        case 5:
+        case 6:
+          printf("Failing");
+          break;
+        default:
+          printf("Illegal grade");
+          break;
+        }
+     #+end_src
+
+     #+RESULTS: switch1
+     : Passing
+
+   * It is not possible to write a case label for a range of values.
+
+   * The default case (when none of the case expressions apply) is
+     optional, and it does not have to come last.
+
+** The role of the ~break~ statement
+
+   * The ~switch~ statement is a controlled jump. The case label is
+     but a marker indicating a position within the switch.
+
+   * [ ] Let's run the previous program again, without the ~break~
+     statements. What do you think the output will be?
+
+     #+name: switch2
+     #+begin_src C :results output :exports both
+       int grade = 3;
+
+       switch (grade) {
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+          printf("Passing");
+        case 5:
+        case 6:
+          printf("Failing");
+        default:
+          printf("Illegal grade");
+        }
+     #+end_src
+
+     #+RESULTS: switch2
+     : PassingFailingIllegal grade
+
+   * [ ] What happens without the ~break~ statements?
+
+     #+begin_quote
+     Answer: When the last statement in a case has been executed,
+     control falls through to the first statement in the following
+     case; its case label is ignored. Without ~break~ (or some other
+     jump statement, like ~return~ or ~goto~, control flows from one
+     case to the next.
+     #+end_quote
+
+   * Deliberate falling through (omission of ~break~) should be
+     indicated with an explicit comment.
+     
 * References
 
   * Davenport/Vine (2015) C Programming for the Absolute Beginner
