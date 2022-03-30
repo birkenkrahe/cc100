@@ -1377,7 +1377,7 @@
 
    With practice notebook ~compound_if.org~ in GDrive.
 
-* NEXT Compound if structures, input validation  - w11s27 (04/01/22)
+* Compound if structures, input validation  - w11s27 (04/01/22)
 
   In this session, we mix lecture and interactive exercises for
   compound if structures (i.e. conditions with more than one logical
@@ -1385,8 +1385,9 @@
 
   * [ ] Download the updated practice file [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][config_if.org from GDrive]]
 
-* Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
-** Programming assignment 7 (review)
+* TODO Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
+** Warming up: compound if conditions, i < j < k  
+** Programming assignment 7 (review, deadline 01-Apr)
 ** Programming assignment 8 (deadline 08-Apr)
 * References
   * For some of the programming projects, see: King (2011). C
