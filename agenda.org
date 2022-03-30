@@ -899,7 +899,7 @@
    * [X] Mid-term grade speech / Improve grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][FAQ]])
    * [X] Program assignment *for extra credit*: [[https://github.com/birkenkrahe/cc100/blob/main/practice/dweight_new.pdf][~PDF~]] ([[https://github.com/birkenkrahe/cc100/tree/main/assignments/3_dweight][GitHub]])
    * [X] Practice material/notebooks now [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]] (~reading_input~)
-   * [ ] PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
+   * [X] PDFs of the quizzes with solutions [[https://github.com/birkenkrahe/cc100/tree/main/quizzes][now in GitHub]]
 
 ** Improve your grade with a project
 
@@ -1222,7 +1222,7 @@
       diagram of the algorithm included (send both files to me via
       email).
 
-* Booleans, operator precedence, compound if else - w11s25 (03/28/22)
+* Booleans, operator precedence - w11s25 (03/28/22)
 ** Term plan
 
    The plan for the rest of the term:
@@ -1233,8 +1233,8 @@
    * week 14 - grouping variables with arrays
    * week 15 - memory manipulation with pointers
    * week 16 - text manipulation with string functions
-   * Includes some do-it-yourself reading (covered in weekly quiz 7-11)
-   * Weekly programming assignments 8-13 (submit C or Org versions)
+   * Includes some do-it-yourself reading (covered in weekly quiz 7-10)
+   * Weekly programming assignments 8-12 (submit C or Org versions)
    * Final exam (TBC) on Monday May 9, 10:30-12:30 hrs in Lyon 104.
 
 ** Review and warming up: if statements
@@ -1377,8 +1377,15 @@
 
    With practice notebook ~compound_if.org~ in GDrive.
 
-* NEXT switch, case, break, random numbers - w11s26 (03/30/22)
-* NEXT Review Pgm 7, pgm 8,  - w11s27 (04/01/22)
+* NEXT Compound if structures, input validation  - w11s27 (04/01/22)
+
+  In this session, we mix lecture and interactive exercises for
+  compound if structures (i.e. conditions with more than one logical
+  condition and logical operators).
+
+  * [ ] Download the updated practice file [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][config_if.org from GDrive]]
+
+* Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
 ** Programming assignment 7 (review)
 ** Programming assignment 8 (deadline 08-Apr)
 * References
