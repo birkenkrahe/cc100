@@ -1,0 +1,154 @@
+#+TITLE:Switch, case, break
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:1 ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both
+#+PROPERTY: header-args:C :results output
+#+PROPERTY: header-args:C :comments both
+* README
+
+  * [X] Work through this notebook at your own pace. When you're done,
+    check a task off by typing ~C-c C-c~ on the line with the ~[
+    ]~. Check this task off for practice! You can close bullet points
+    with the ~<TAB>~  key on your keyboard
+
+  * [X] Make sure that you can run C where you are by executing the
+    code block below (~C-c C-c~) and then saving the file (~C-x C-s~)
+    #+name: helloworld
+    #+begin_src C :main yes :includes <stdio.h>
+      puts("hello world");
+    #+end_src
+
+  * [X] If this does not lead to the output ~hello world~, try to
+    analyze the problem by yourself first. Typical sources of errors:
+    - Can you write to the directory?
+    - Is this file an Org-file?
+    - Did you use the correct key sequence?
+    - Do you have the right code block header arguments?
+
+  * This section follows the exercises in chapter 5 in King (2008).
+
+* Switch output example
+
+  * [ ] What output does the following switch program fragment produce
+    if ~i=1~?
+
+    % is the modulo operator - i%j returns the remainder of
+    i/j. E.g. 5 % 4 = 4/4 + 1 = 1, and 3 % 4 = 3 [fn:1].
+
+    Guess the answer first, then replace the ??? by 1 and run the block.
+
+    #+name: switch1
+    #+begin_src C
+      int i = ???;
+      switch ( i % 3 ) {
+       case 0: printf("zero");
+       case 1: printf("one");
+       case 2: printf("two");
+       }
+    #+end_src
+
+  * [ ] Fix the code in [[switch1]] so that the output for i=1,2, or 3 is
+    "one", "two", or "three". Test your result.
+
+    #+name: switch2
+    #+begin_src C
+      int i = 1;
+      switch ( i % 3 ) {
+       case 0: printf("zero");
+       case 1: printf("one");
+       case 2: printf("two");
+       }
+    #+end_src
+
+* Write a switch statement
+
+  * The following table shows a few of the telephone area codes in GA
+    along with the largest city in the area.
+
+    | AREA CODE | MAJOR CITY |
+    |-----------+------------|
+    |       229 | Albany     |
+    |       404 | Atlanta    |
+    |       470 | Atlanta    |
+    |       478 | Macon      |
+    |       678 | Atlanta    |
+    |       912 | Savannah   |
+
+  * [ ] Write a ~switch~ statement whose controlling expression is the
+    variable ~area_code~ - if the value of ~area_code~ is in the
+    table, the ~switch~ statement should print the corresponding city
+    name. Otherwise, it should print the message "Area code not
+    recognized".
+
+    In the code block [[area_code]], the variables and input statements
+    have already been written for you, and the switch statement has
+    been started - all you need to do is complete the ~switch~
+    statement.
+
+    /Tip: to save space, you can place ~case~ labels leading to the
+    same statement on one line./
+
+    #+name: area_code
+    #+begin_src C :tangle code.c :cmdline < areacode :includes <stdio.h>
+      int area_code;
+
+      scanf("%d", &area_code);
+
+      switch (area_code) {
+
+        printf("Atlanta");
+        break;
+
+        printf("Albany");
+        break;
+
+         printf("Macon");
+         break;
+
+         printf("Area code not recognized");
+         break;
+       }
+    #+end_src
+
+    #+RESULTS: area_code
+    : Albany
+
+  * [ ] Run and test the file right here with the input file
+    areacode. The following code block initializes the file with 229 -
+    replace it and run the block to try other input numbers.
+
+    #+begin_src bash :results silent
+      echo 229 > areacode
+    #+end_src
+
+    #+RESULTS:
+
+  * [ ] Bonus question: why did we define ~area_code~ as a integer
+    even though you don't perform arithmetic operations with area
+    codes?
+
+    #+name: answer
+    #+begin_quote
+    Answer: ...
+    #+end_quote
+
+* References
+
+  * Davenport/Vine (2015) C Programming for the Absolute Beginner
+    (3ed). Cengage Learning.
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * King (2008). C Programming - A modern approach (2e). W A Norton.
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]
+
+* Footnotes
+
+[fn:1] If this puzzles you: to find 3%4, we first find the highest
+multiple of the divisor (4) that is equal or less than the dividend
+(3) - this is 0. Then we subtract the highest multiple from the
+dividend to get the answer: 3 - 0 = 3.

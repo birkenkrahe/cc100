@@ -22,6 +22,9 @@
       puts("hello world");
     #+end_src
 
+    #+RESULTS: helloworld
+    : hello world
+
   * [X] If this does not lead to the output ~hello world~, try to
     analyze the problem by yourself first. Typical sources of errors:
     - Can you write to the directory?
@@ -38,7 +41,7 @@
   the given values - calculate the result in your head before you run
   the code!
 
-  * [ ] Check if NOT ~i~ is smaller than ~j~, for ~i=10~ and ~j=5~.
+  * [X] Check if NOT ~i~ is smaller than ~j~, for ~i=10~ and ~j=5~.
 
     #+name: logical1
     #+begin_src C
@@ -46,30 +49,41 @@
       printf("%d\n", !i < j); // !10 is 0, and 5 > 0 is TRUE (1)
     #+end_src
 
+    #+RESULTS: logical1
+    : 1
+
   * [ ] Check the value of ~!!i + !j~, for ~i=2~ and ~j=1~.
 
     #+name: logical2
     #+begin_src C :exports both
-      int i = ?, j = ?;
-      printf("%d\n", ??? );
+      int i = 2, j = 1;
+      printf("%d\n", !!i + !j ); // !!2 = !(!1) = !0 = 1, !1 = 0 => 1 + 0 = 0
     #+end_src
+
+    #+RESULTS: logical2
+    : 1
 
   * [ ] Compute ~i~ AND ~j~ OR ~k~, for ~i=5~, ~j=0~, ~k=-5~.
 
     #+name: logical3
     #+begin_src C :exports both
-      int i = ?, j = ?, k = ?;
-      printf("%d\n", ??? );
+      int i = 5, j = 0, k = -5;
+      printf("%d\n", i && j || k ); // 5 && 0 == 0, 0 || -5 == 1
     #+end_src
 
+    #+RESULTS: logical3
+    : 1
 
   * [ ] Compute ~i < j~ OR  ~k~, for ~i=1~, ~j=2~, ~k=3~.
 
     #+name: logical4
     #+begin_src C :exports both
-      int i = ?, j = ?, k = ?;
-      printf("%d\n",  ??? );
+      int i = 1, j = 2, k = 3;
+      printf("%d\n",  i < j || k); // 1 < 2 == TRUE == 1, 1 || 3 == 1
     #+end_src
+
+    #+RESULTS: logical4
+    : 1
 
 * Checking for upper and lower case
 
@@ -78,10 +92,10 @@
 
     #+name: ascii_input
     #+begin_src bash :results silent
-      echo ??? > ascii
+      echo 'a' > ascii
     #+end_src
 
-  * [ ] Run the code [[ascii]] below. You see that a is not recognized as A.
+  * [X] Run the code [[ascii]] below. You see that a is not recognized as A.
 
     #+name: ascii
     #+begin_src C :cmdline < ascii :results output
@@ -94,6 +108,10 @@
          printf("\nNot okay! Input %c not recognized as a or A.\n", letter);
     #+end_src
 
+    #+RESULTS: ascii
+    : 
+    : Not okay! Input a not recognized as a or A.
+
   * [ ] Change the code in [[ascii1]] so that both lower and upper case
     letters a, A are recognized as A! If you want, you can change the
     input by changing and running the code block [[ascii_input]] above.
@@ -103,11 +121,15 @@
       char letter;
       scanf("%c", &letter);
 
-      if ( letter == 'A' )
+      if ( letter == 'A' || letter == 'a' )
         printf("\nOkay! Input %c recognized as a or A.\n", letter);
        else
          printf("\nNot okay! Input %c not recognized as a or A.\n", letter);
     #+end_src
+
+    #+RESULTS: ascii1
+    : 
+    : Okay! Input a recognized as a or A.
 
 * Checking for a range of values
 
@@ -128,13 +150,12 @@
       int i, m, n;
       scanf("%d %d %d", &i, &m, &n);
 
-      if ( ??? ) {
+      if ( ??? ) { // is i in (m
         printf("%d is in the interval [%d,%d)\n", i, m, n);
        } else {
         printf("%d is NOT in the interval [%d,%d)\n", i, m, n);
        }
     #+end_src
-
 
   * [ ] Run [[range]] for different input values in [[range_input]]:
 
@@ -174,7 +195,7 @@
   * The relational operator ~<~ is evaluated from the left. First the
     Boolean value of ~i < j~ is computed. It is either 0 or 1.
 
-  * Next, the check ~0 < k~ or ~1 < k~ is performed. The following
+  * [ ] Next, the check ~0 < k~ or ~1 < k~ is performed. The following
     example shows how this can go wrong. Run it for illustration.
 
     #+name: caveat

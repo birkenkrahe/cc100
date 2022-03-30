@@ -637,7 +637,7 @@
      : !100 is 0 because 100 is non-zero!
      : !(1.0e-015) is 0 because 1.0e-015 is non-zero!
 
-** && operator
+** && operator (logical AND)
 
    * Evaluates a Boolean expression from left to right
 
@@ -657,10 +657,13 @@
      #+name: &&_op_false
      #+begin_src C :exports both
        if (!(3 > 5 && 5 < 5) ) // = NOT (FALSE AND FALSE) = TRUE
-         printf("The entire expression is false.\n");
+         printf("The entire expression (except the !) is false.\n");
      #+end_src
 
-** || operator
+     #+RESULTS: &&_op_false
+     : The entire expression (except the !) is false.
+
+** || operator (logical OR)
 
    * Evaluates a Boolean expression from left to right
 
@@ -672,19 +675,22 @@
 
      #+name: ||_op_true
      #+begin_src C :exports both
-       if ( 3 > 5 || 5 <= 5 ) // TRUE OR TRUE = TRUE
+       if ( 3 > 5 || 5 == 5 ) // TRUE OR TRUE = TRUE
          printf("The entire expression is true.\n");
      #+end_src
 
      #+RESULTS: ||_op_true
      : The entire expression is true.
 
+     Remember to use the logical comparison operator ==, and not the
+     assignment operator =
+     
      #+name: ||_op_false
      #+begin_src C :exports both
        if ( 3 > 5 || 6 < 5 ) { }// = FALSE OR FALSE = FALSE
         else printf("The entire expression is false.\n");
      #+end_src
-
+     
    * Practice that using the GDrive notebook!
 
 ** Checking for upper and lower case
@@ -708,6 +714,10 @@
        printf("The ASCII value of %c is %d\n", a, a);
        printf("The ASCII value of %c is %d\n", A, A);
      #+end_src
+
+     #+RESULTS: ascii
+     : The ASCII value of a is 97
+     : The ASCII value of A is 65
 
    * User-friendly programs should use compound conditions to check
      for both lower and upper case letters:
@@ -749,6 +759,9 @@
          puts("Number in range.");
         }
      #+end_src
+
+     #+RESULTS: validate
+     : Number in range.
 
    * Head to the practice notebook for some challenging exercises!
 
@@ -882,6 +895,9 @@
 
    * Deliberate falling through (omission of ~break~) should be
      indicated with an explicit comment.
+
+   * Let's practice - head over to switch.org in GDrive for some
+     exercises.
      
 * References
 
