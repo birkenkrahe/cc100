@@ -1,0 +1,36 @@
+
+* Battle by numbers
+
+  For the code block [[battle3]] to work, you have to have a file called
+  "drink" with a number in it: 1 or 2.
+
+     #+name: battle3
+     #+begin_src C :tangle battle.c :main yes :includes <stdio.h> :cmdline < drink :results output
+       int response = 0; // initialize response
+
+       puts("\n\tIn-Battle Healing\n\n1:\tDrink health potion\n\n2:\tResume battle\n");
+
+       printf("\nEnter your selection: ");
+       scanf("%d", &response);
+
+       if (response == 1)
+         printf("\nDrinking health potion!\n");
+
+       if (response == 2)
+         printf("\nResuming battle!\n");
+
+     #+end_src
+
+     #+RESULTS: battle3
+     #+begin_example
+
+	     In-Battle Healing
+
+     1:	Drink health potion
+
+     2:	Resume battle
+
+
+     Enter your selection: 
+     Drinking health potion!
+     #+end_example
