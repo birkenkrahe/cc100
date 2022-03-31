@@ -1386,9 +1386,48 @@
   * [ ] Download the updated practice file [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][config_if.org from GDrive]]
 
 * TODO Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
-** Warming up: compound if conditions, i < j < k  
-** Programming assignment 7 (review, deadline 01-Apr)
-** Programming assignment 8 (deadline 08-Apr)
+** Warming up: compound if conditions, i < j < k
+
+   * [ ] Problem last time: I used the wrong operator!
+
+     - To test if i in [m,n), use (m <= i && i < n)
+     - To test if i is NOT in [m,n), use (i < m || n >= i)
+
+     #+attr_html: :width 500px
+     #+caption: whiteboard screenshot (corrected)
+     [[./img/interval.jpg]]
+
+   * [ ] Warming up exercise: how would you test if
+
+     1) j=1 is in the interval (-5,5]
+     2) k=100 is NOT in the interval (1,100)
+     3) l=2 is NOT in the interval [0.5,0.9]
+     4) what data type does l have to be?
+
+   * Let's check your answers!
+
+     #+name: intervalCheck
+     #+begin_src C :results output :exports both
+       int i;
+       int j=1;
+       int k=100;
+       float l=0.1;
+
+       if ( -5 < j && j <= 5 ) printf("%d is in (5,-5]\n", j);
+       if ( k <= 1 || k >= 100 ) printf("%d is NOT in (1,100)\n",k);
+       if ( l < 0.5 || l > 0.9 ) printf("%g is NOT in [0.5,0.9]\n",l);
+
+     #+end_src
+
+     #+RESULTS: intervalCheck
+     : 1 is in (5,-5]
+     : 100 is NOT in (1,100)
+     : 0.1 is NOT in [0.5,0.9]
+
+   * Tricky: i < j < k (see practice file)
+
+** TODO Programming assignment 7 (review, deadline 01-Apr)
+** TODO Programming assignment 8 (deadline 08-Apr)
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
