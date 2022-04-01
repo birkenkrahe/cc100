@@ -202,11 +202,14 @@
     #+begin_src C :results output
       int i = 5, j = 1, k = 100;
       if (i < j < k) {
-        printf("TRUE: %d < %d < %d\n", i, j, k);
+	printf("TRUE: %d < %d < %d\n", i, j, k);
        } else {
-        printf("NOT TRUE: %d < %d < %d\n", i, j, k);
+	printf("NOT TRUE: %d < %d < %d\n", i, j, k);
        }
     #+end_src
+
+    #+RESULTS: caveat
+    : TRUE: 5 < 1 < 100
 
 
   * [ ] Fix the the code [[caveat1]] so that the output is correct. Test
@@ -216,11 +219,11 @@
     #+begin_src C :results output
       int i = 5, j = 1, k = 100;
       if (i < j < k) {
-        printf("TRUE: %d < %d < %d\n", i, j, k);
+	printf("TRUE: %d < %d < %d\n", i, j, k);
        } else {
-        printf("NOT TRUE: %d < %d < %d\n", i, j, k);
+	printf("NOT TRUE: %d < %d < %d\n", i, j, k);
        }
-        #+end_src
+    #+end_src
 
 * References
 

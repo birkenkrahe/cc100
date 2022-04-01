@@ -1385,7 +1385,7 @@
 
   * [ ] Download the updated practice file [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][config_if.org from GDrive]]
 
-* TODO Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
+* Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
 ** Warming up: compound if conditions, i < j < k
 
    * [ ] Problem last time: I used the wrong operator!
@@ -1400,7 +1400,9 @@
    * [ ] Warming up exercise: how would you test if
 
      1) j=1 is in the interval (-5,5]
+	(-5 < j && j <= 5): j=1 => TRUE (1)
      2) k=100 is NOT in the interval (1,100)
+        (k <= 1 ||  100 <= k)
      3) l=2 is NOT in the interval [0.5,0.9]
      4) what data type does l have to be?
 
@@ -1408,7 +1410,6 @@
 
      #+name: intervalCheck
      #+begin_src C :results output :exports both
-       int i;
        int j=1;
        int k=100;
        float l=0.1;
@@ -1426,8 +1427,141 @@
 
    * Tricky: i < j < k (see practice file)
 
-** TODO Programming assignment 7 (review, deadline 01-Apr)
-** TODO Programming assignment 8 (deadline 08-Apr)
+** Programming assignment 7 (review, deadline 01-Apr)
+
+    Here is the template, the code in [[ibattle]] for number input from
+    the file created in [[ibattleinput]] first, then the solution for
+    character input in [[cbattle]], including the bonus solution (inline
+    image of the BPMN model for the algorithm).
+
+*** Battle by numbers
+
+    The code in [[ibattle]] below reads input from a file [[idrink]] (the file
+    contains the number ~1~, one of the two possible responses to
+    the battle question). You can change the input to ~2~ to get
+    the other response.
+
+    #+name: ibattleinput
+    #+begin_src bash :results silent
+      echo "1" > idrink
+    #+end_src
+
+    #+name: ibattle
+    #+begin_src C :tangle ibattle.c :main yes :includes <stdio.h> :cmdline < idrink :results output
+      int response = 0; // initialize response
+
+      puts("\n\tIn-Battle Healing\n\n1:\tDrink health potion\n\n2:\tResume battle\n");
+
+      printf("\nEnter your selection: ");
+      scanf("%d", &response);
+
+      if (response == 1)
+        printf("\nYou entered \"%d\":\nDrinking health potion!\n", response);
+
+      if (response == 2)
+        printf("\nYou entered \"%d\":\nResuming battle!\n", response);
+    #+end_src
+
+    #+RESULTS: ibattle
+    #+begin_example
+
+            In-Battle Healing
+
+    1: Drink health potion
+
+    2: Resume battle
+
+
+    Enter your selection:
+    You entered "1":
+    Drinking health potion!
+    #+end_example
+
+*** Battle with character
+
+    The code in [[cbattle]] below reads input from a file [[cdrink]] (the
+    file contains the character ~a~, one of the two possible
+    responses to the battle question). You can change the input to
+    ~b~ to get the other response.
+
+    #+name: cbattleinput
+    #+begin_src bash :results silent
+      echo "b" > cdrink
+    #+end_src
+
+    #+name: cbattle
+    #+begin_src C :tangle cbattle.c :main yes :includes <stdio.h> :cmdline < cdrink :results output
+      char cresponse = '\0'; // initialize response
+
+      puts("\n\tIn-Battle Healing\n\na:\tDrink health potion\n\nb:\tResume battle\n");
+
+      printf("\nEnter your selection: ");
+      scanf("%c", &cresponse);
+
+      if (cresponse == 'a')
+        printf("\nYou entered \"%c\":\nDrinking health potion!\n", cresponse);
+
+      if (cresponse == 'b')
+        printf("\nYou entered \"%c\":\nResuming battle!\n", cresponse);
+    #+end_src
+
+    #+RESULTS: cbattle
+    #+begin_example
+
+            In-Battle Healing
+
+    a: Drink health potion
+
+    b: Resume battle
+
+
+    Enter your selection:
+    You entered "b":
+    Resuming battle!
+    #+end_example
+
+** Programming assignment 8 (deadline 08-Apr)
+*** Problem
+
+    * Using the ~switch~ statement or cascaded ~if~ statements, write a
+      program that converts a numerical grade into a letter grade.
+
+    * Example run:
+
+      #+name: n2l_example
+      #+begin_example
+	Enter numerical grade: 84
+	Letter grade: B
+      #+end_example
+
+    * Use the following grading scale:
+
+      | Numerical grade | Letter grade |
+      |-----------------+--------------|
+      |          90-100 | A            |
+      |           80-89 | B            |
+      |           70-79 | C            |
+      |           60-69 | D            |
+      |            0-59 | F            |
+
+    * Print an error message if the grade is larger than 100 or less
+      than 0.
+
+    * /Hint:/ You can break the grade into two digits, then use a
+      ~switch~ statement to test the ten's digit.
+
+*** Tip: how to analyse a programming problem
+
+    * A programming solution requires identifying
+      - problem (given in the text - is it clear?)
+      - constants (which values do not change?)
+      - variables (which values do change?)
+      - statements (what needs computing?)
+
+    * For any but trivial problems, spending time on gathering and
+      structuring this information before beginning to code will save
+      you lots of debugging time
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
