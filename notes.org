@@ -941,6 +941,20 @@
       (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
     #+end_src
 
+* Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
+
+** How do you attack a (non-trivial) programming exercise?
+
+   Victor's process:
+   1) What type of variables do I need to declare?
+   2) Which control flow would I need? (if, switch)
+   3) Start coding!
+
+   Gaven's process:
+   1) Read problem carefully
+   2) Show what should come out
+   3) What is input and what is output
+   4) Decide variables...and continue with Victor's process
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell

@@ -10,19 +10,19 @@
 #+PROPERTY: header-args:C :comments both
 * README
 
-  * [X] Work through this notebook at your own pace. When you're done,
+  * [ ] Work through this notebook at your own pace. When you're done,
     check a task off by typing ~C-c C-c~ on the line with the ~[
     ]~. Check this task off for practice! You can close bullet points
     with the ~<TAB>~  key on your keyboard
 
-  * [X] Make sure that you can run C where you are by executing the
+  * [ ] Make sure that you can run C where you are by executing the
     code block below (~C-c C-c~) and then saving the file (~C-x C-s~)
     #+name: helloworld
     #+begin_src C :main yes :includes <stdio.h>
       puts("hello world");
     #+end_src
 
-  * [X] If this does not lead to the output ~hello world~, try to
+  * [ ] If this does not lead to the output ~hello world~, try to
     analyze the problem by yourself first. Typical sources of errors:
     - Can you write to the directory?
     - Is this file an Org-file?
@@ -33,7 +33,7 @@
 
 * Switch output example
 
-  * [ ] What output does the following switch program fragment produce
+  * [X] What output does the following switch program fragment produce
     if ~i=1~?
 
     % is the modulo operator - i%j returns the remainder of
@@ -51,8 +51,8 @@
        }
     #+end_src
 
-  * [ ] Fix the code in [[switch1]] so that the output for i=1,2, or 3 is
-    "one", "two", or "three". Test your result.
+  * [ ] Fix the code in [[switch2]] below so that the output for i=1,2, or
+    3 is "one", "two", or "three". Test your result.
 
     #+name: switch2
     #+begin_src C
@@ -124,8 +124,6 @@
     #+begin_src bash :results silent
       echo 229 > areacode
     #+end_src
-
-    #+RESULTS:
 
   * [ ] Bonus question: why did we define ~area_code~ as a integer
     even though you don't perform arithmetic operations with area
