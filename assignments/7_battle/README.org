@@ -1,0 +1,156 @@
+#+TITLE: Programming assignment 7
+#+AUTHOR: Marcus Birkenkrahe
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes
+#+PROPERTY: header-args:C :includes <stdio.h>
+#+PROPERTY: header-args:C :results output
+* README
+
+  [[https://lyon.schoology.com/assignment/5828898993/info][Link to assignment in Schoology]]
+
+*** Problem
+
+    * Modify the code from class ("Battle by numbers" [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions#simple-if-structures][in GitHub]]) to
+      use characters as menu choices instead of numbers.
+    * To do this, you need to change from an integer data type to a
+      character data type.
+    * Both ~scanf~ functions and ~if~ structure have to be changed to
+      accommodate this change.
+    * The conversion specification for characters is ~%c~.
+    * Note that character variables should be defined and used with
+      single quotes, e.g. ~response = 'a'~ or ~response == 'a'~.
+
+*** Character conversion
+
+    * Create an input file with one character ~'a'~ in it.
+
+      #+name: char input
+      #+begin_src bash :results silent
+        echo 'y'> input
+      #+end_src
+
+    * Declare a variable ~response~, scan the character from the input
+      file ~input~, and print it.
+
+      #+name: scan char
+      #+begin_src C :cmdline < input :main yes :includes <stdio.h> :results output :exports both
+        char response = '\0';
+        scanf("%c", &response);
+        printf("The character input was: %c\n", response);
+      #+end_src
+
+      #+RESULTS: scan char
+      : The character input was: y
+
+    * To check the value of a ~character~ variable, use logical
+      operators like ~==~. E.g. if ~char r = 'y'~, then ~r == 'y'~ is
+      ~true~, and ~r != 'y'~ is ~false~.
+
+*** Submission
+
+    * Submit the code as a C source code file.
+    * Make sure that the C code compiles and runs properly before
+      submitting.
+    * Late submissions will not be accepted for this assignment.
+    * Extra credit (5 pts) for submitting a commented Org mode file
+      (with the usual meta data in the header, and the results of a
+      trial run).
+    * Extra credit (5 pts) for submitting an Org mode file with a BPMN
+      diagram of the algorithm included (send both files to me via
+      email).
+
+*** Solution
+
+    Here is the template, the code in [[ibattle]] for number input from
+    the file created in [[ibattleinput]] first, then the solution for
+    character input in [[cbattle]], including the bonus solution (inline
+    image of the BPMN model for the algorithm).
+
+**** Battle by numbers
+
+     The code in [[ibattle]] below reads input from a file [[idrink]] (the file
+     contains the number ~1~, one of the two possible responses to
+     the battle question). You can change the input to ~2~ to get
+     the other response.
+
+     #+name: ibattleinput
+     #+begin_src bash :results silent
+       echo "1" > idrink
+     #+end_src
+
+     #+name: ibattle
+     #+begin_src C :tangle ibattle.c :main yes :includes <stdio.h> :cmdline < idrink :results output
+       int response = 0; // initialize response
+
+       puts("\n\tIn-Battle Healing\n\n1:\tDrink health potion\n\n2:\tResume battle\n");
+
+       printf("\nEnter your selection: ");
+       scanf("%d", &response);
+
+       if (response == 1)
+         printf("\nYou entered \"%d\":\nDrinking health potion!\n", response);
+
+       if (response == 2)
+         printf("\nYou entered \"%d\":\nResuming battle!\n", response);
+     #+end_src
+
+     #+RESULTS: ibattle
+     #+begin_example
+
+             In-Battle Healing
+
+     1: Drink health potion
+
+     2: Resume battle
+
+
+     Enter your selection:
+     You entered "1":
+     Drinking health potion!
+     #+end_example
+
+**** Battle with character
+
+     The code in [[cbattle]] below reads input from a file [[cdrink]] (the
+     file contains the character ~a~, one of the two possible
+     responses to the battle question). You can change the input to
+     ~b~ to get the other response.
+
+     #+name: cbattleinput
+     #+begin_src bash :results silent
+       echo "b" > cdrink
+     #+end_src
+
+     #+name: cbattle
+     #+begin_src C :tangle cbattle.c :main yes :includes <stdio.h> :cmdline < cdrink :results output
+       char cresponse = '\0'; // initialize response
+
+       puts("\n\tIn-Battle Healing\n\na:\tDrink health potion\n\nb:\tResume battle\n");
+
+       printf("\nEnter your selection: ");
+       scanf("%c", &cresponse);
+
+       if (cresponse == 'a')
+         printf("\nYou entered \"%c\":\nDrinking health potion!\n", cresponse);
+
+       if (cresponse == 'b')
+         printf("\nYou entered \"%c\":\nResuming battle!\n", cresponse);
+     #+end_src
+
+     #+RESULTS: cbattle
+     #+begin_example
+
+             In-Battle Healing
+
+     a: Drink health potion
+
+     b: Resume battle
+
+
+     Enter your selection:
+     You entered "b":
+     Resuming battle!
+     #+end_example
+
+
