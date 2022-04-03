@@ -52,7 +52,7 @@
    * Submit the code as a C source code file.
    * Make sure that the C code compiles and runs properly before
      submitting.
-   * Late submissions will not be accepted for this assignment.
+   * +Late submissions will not be accepted for this assignment.+
    * Extra credit (5 pts) for submitting a commented Org mode file
      (with the usual meta data in the header, and the results of a
      trial run).
