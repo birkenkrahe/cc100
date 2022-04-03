@@ -69,10 +69,10 @@
 
 *** Battle by numbers
 
-    The code in [[ibattle]] below reads input from a file [[idrink]] (the file
-    contains the number ~1~, one of the two possible responses to
-    the battle question). You can change the input to ~2~ to get
-    the other response.
+    The code in [[ibattle]] below reads input from a file idrink (the file
+    contains the number ~1~, one of the two possible responses to the
+    battle question). You can change the input to ~2~ to get the other
+    response.
 
     #+name: ibattleinput
     #+begin_src bash :results silent
@@ -112,10 +112,10 @@
 
 *** Battle with character
 
-    The code in [[cbattle]] below reads input from a file [[cdrink]] (the
-    file contains the character ~a~, one of the two possible
-    responses to the battle question). You can change the input to
-    ~b~ to get the other response.
+    The code in [[cbattle]] below reads input from a file cdrink (the file
+    contains the character ~a~, one of the two possible responses to
+    the battle question). You can change the input to ~b~ to get the
+    other response.
 
     #+name: cbattleinput
     #+begin_src bash :results silent
