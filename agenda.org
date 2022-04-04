@@ -1377,7 +1377,7 @@
 
    With practice notebook ~compound_if.org~ in GDrive.
 
-* Compound if structures, input validation  - w11s27 (04/01/22)
+* Compound if structures, input validation  - w11s26 (04/01/22)
 
   In this session, we mix lecture and interactive exercises for
   compound if structures (i.e. conditions with more than one logical
@@ -1385,7 +1385,7 @@
 
   * [ ] Download the updated practice file [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][config_if.org from GDrive]]
 
-* Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
+* Switch, case, break, pgm 7, pgm 8 - w11s27 (04/01/22)
 ** Warming up: compound if conditions, i < j < k
 
    * [ ] Problem last time: I used the wrong operator!
@@ -1561,6 +1561,20 @@
     * For any but trivial problems, spending time on gathering and
       structuring this information before beginning to code will save
       you lots of debugging time
+
+* Iteration: while and do loops - w12.s28-30 (04/04-08/22)
+
+  * [ ] ~while~ , ~do~ and ~for~ statements
+
+  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~ 
+
+  * [ ] Practice workbooks in GDrive
+
+  * [ ] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~
+
+  * [ ] Review program assignment 7 (~if~ and ~switch~)
+
+  * [ ] New program assignment 8
 
 * References
   * For some of the programming projects, see: King (2011). C

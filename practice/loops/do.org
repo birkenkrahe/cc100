@@ -1,0 +1,46 @@
+#+TITLE:Practicing ~do~ ... ~while~ loops
+#+STARTUP: overview hideblocks
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * Practice workbook for ~do..while~ loops in C.
+  * See ~cc100/6_loops/README.org~ in GitHub for script/solutions
+
+* The ~do~ statement
+** Countdown example
+
+   1) Rewrite the countdown code [[counting]] below using ~do...while~.
+   2) Run the code block.
+   3) How would the concise version of the code look like? Try it.
+
+   #+name: counting
+   #+begin_src C
+     int i = 10;
+     while ( i > 0 ) {
+       printf("T minus %d and counting\n", i);
+       i--;
+      }
+     printf("i = %d\n", i);
+   #+end_src
+
+** Summing numbers
+
+   1) Rewrite the summing numbers code [[sum]] below using ~do...while~
+      instead of ~while~.
+   2) Remember that the first ~scanf~ statement is only needed because
+      we start with a check if ~n~ is non-zero.
+   3) Run the code block.
+
+   #+name: sum
+   #+begin_src C :cmdline < data/sum_input :tangle src/sum.c
+        int n, sum = 0;
+
+        printf("Enter integers (0 to terminate).\n");
+        scanf("%d", &n);
+        while ( n != 0 ) {
+          sum += n;         // sum = sum + n
+          scanf("%d", &n);
+         }
+
+        printf("The sum is %d\n", sum);
+   #+end_src
