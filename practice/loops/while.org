@@ -1,0 +1,104 @@
+#+TITLE:Practicing ~while~ loops
+#+STARTUP: overview hideblocks
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * Practice workbook for ~while~ loops in C.
+  * Practice workbook for ~do..while~ loops in C.
+  * See ~cc100/6_loops/README.org~ in GitHub for script/solutions
+
+* The ~while~ statement
+** Simple example
+
+   Run the program with different values of ~n~.
+
+   #+name: trace
+   #+begin_src C
+     int i = 1, n = 10;
+     while ( i < n ) {
+       i = i * 2;
+       printf("%d < %d ?\n", i, n);
+      }
+   #+end_src
+
+** Countdown example
+
+   #+name: counting
+   #+begin_src C
+     int i = 10;
+     while ( i > 0 ) {
+       printf("T minus %d and counting\n", i);
+       i--;
+      }
+     printf("i = %d\n", i);
+   #+end_src
+
+   * What does this program do?
+   * What's the difference between ~--i~ and ~i--~?
+
+   * Create a more concise version of the code:
+
+   #+name: counting1
+   #+begin_src C
+     int i = 10;
+     while ( i > 0 ) {
+       printf("T minus %d and counting\n", i);
+       i--;
+      }
+     printf("i = %d\n", i);
+   #+end_src
+
+** Infinite loops
+
+   #+name: inf
+   #+begin_src C :tangle inf.c
+     while (1)
+       puts("Still running...\n");
+   #+end_src
+
+   * Tangle the code, compile and run it on the CMD line
+   * Why don't you see any output in Emacs?
+
+** Printing table of square
+
+   1) Declare integer variables ~i~ and ~n~ 
+   2) Scan ~n~
+   3) Initialize ~i~ to ~1~
+   4) Write a ~while~ statement that
+      - prints ~i~ and ~i * i~
+      - increments ~i~ by one
+   5) Run the program (input file is already there)
+   
+   #+name: square
+   #+begin_src C :cmdline < square_input
+
+
+
+   #+end_src
+   
+** Summing numbers
+
+   * The program [[sum]] below is only missing the ~while~ statement.
+
+     1) Use ~n !=0~ as the controlling expression
+     2) Inside the loop,
+	- sum um with ~sum += n~
+	- scan the next number ~n~
+     3) Run the code block with the preset input file
+     4) Tangle the file, compile and run it on the CMD line
+
+     #+name: sum
+     #+begin_src C :cmdline < sum_input :tangle sum.c
+       int n, sum = 0;
+
+       printf("Enter integers (0 to terminate).\n");
+       scanf("%d", &n);
+	 _______________ // sum up
+	 _______________ // scan n 
+    	}
+
+       printf("The sum is %d\n", sum);
+     #+end_src
+   	  
+
+   

@@ -8,7 +8,6 @@
 #+PROPERTY: header-args:C :exports both
 #+PROPERTY: header-args:C :results output
 #+PROPERTY: header-args:C :comments both
-#+INFOJS_OPT: :view:info
 * README
 
   * Algorithms are the core of programming
@@ -45,7 +44,7 @@
     |---------------------+--------------------------+-----------+------------|
     | Arithmetic          | To compute               | * + - / % | i * j + k  |
     | Relational          | To compare               | < > <= >= | i > j      |
-    | Equality            | To compare (in/equality) | == !=     | i == j     |
+    | Equality            | To compare (in/equality) | == !=       | i == j     |
     | Logical             | To confirm (truth)       | && !      | i && j     |
     | Assignment          | To change                | =         | i = j      |
     | Increment/decrement | To change stepwise       | ++, +-    | ++i        |
@@ -122,7 +121,7 @@
      end if
      #+end_example
 
-   * [ ] The problem from [[gold1]] is refined in [[gold2]]:
+   * [X] The problem from [[gold1]] is refined in [[gold2]]:
 
      #+name: gold2
      #+begin_quote
@@ -131,7 +130,7 @@
      sufficient funds exist."
      #+end_quote
 
-   * [ ] Given the refined problem [[gold2]], the pseudocode could be
+   * [X] Given the refined problem [[gold2]], the pseudocode could be
      [[pseudogold2]]:
 
      #+name: pseudogold2
@@ -181,7 +180,7 @@
      whole language (you can get this poster at [[https://www.signavio.com/downloads/short-reads/free-bpmn-2-0-poster/][SAP Signavio]]).
 
      #+name: bpmnfig
-     #+attr_html: :width 500px
+     #+attr_html: :width 500
      #+caption: (Free) BPMN 2.0 poster from SAP Signavio
      [[./img/bpmn.png]]
 
