@@ -1562,7 +1562,7 @@
       structuring this information before beginning to code will save
       you lots of debugging time
 
-* Iteration: while and do loops - w12.s28-30 (04/04-08/22)
+* Iteration: while and do loops - w12.s28-30 (04/06-08/22)
 
   * [ ] ~while~ , ~do~ and ~for~ statements
 
@@ -1576,7 +1576,7 @@
 
   * [ ] New program assignment 8
 
-** Emacs tip
+** Emacs tip: hide emphatic characters
 
    To *not* see the emphatic characters like ~ or * or / in the Org file
    text, run the following code chunk (or put the code in your ~/.emacs~
@@ -1588,6 +1588,15 @@
 
    If you don't put it in your ~/.emacs~ file, the command will only work
    for the current Emacs session.
+
+* Comma operator, Null...
+
+** Emacs tip: change theme to "Leuven"
+
+   * In Emacs, open the theme selector with ~M-x custom-themes~
+   * Select ~Leuven~ and click on ~Save theme settings~
+   * Your code blocks are now more clearly visible
+     
 
 * References
   * For some of the programming projects, see: King (2011). C
