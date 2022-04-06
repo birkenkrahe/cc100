@@ -1576,6 +1576,19 @@
 
   * [ ] New program assignment 8
 
+** Emacs tip
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   If you don't put it in your ~/.emacs~ file, the command will only work
+   for the current Emacs session.
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.

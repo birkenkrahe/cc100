@@ -6,6 +6,20 @@
   * Practice workbook for ~do..while~ loops in C.
   * See ~cc100/6_loops/README.org~ in GitHub for script/solutions
 
+** Emacs tip
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   If you don't put it in your ~/.emacs~ file, the command will only work
+   for the current Emacs session.
+
+
 * The ~do~ statement
 ** Countdown example
 

@@ -56,7 +56,7 @@
 
    * Braces ~{ }~ are used for multi-line statements
 
-   * [ ] What does the code in [[double]] do?
+   * [X] What does the code in [[double]] do?
 
    * We can [[trace]] what happens.
 
@@ -75,7 +75,7 @@
      : 8 < 10 ?
      : 16 < 10 ?
 
-   * [ ] What would the pseudocode look like?
+   * [X] What would the pseudocode look like?
 
      #+begin_example
      While i is smaller than n
@@ -83,7 +83,7 @@
      loop
      #+end_example
 
-   * [ ] What would a BPMN model look like?
+   * [X] What would a BPMN model look like?
 
      #+attr_html: :width 500px
      #+caption: Simple while example
@@ -97,7 +97,7 @@
 
 ** Countdown example
 
-   * [ ] What does the following statement do?
+   * [X] What does the following statement do?
 
      #+name: counting
      #+begin_src C
@@ -124,11 +124,11 @@
      i = 0
      #+end_example
 
-   * [ ] Why are we using ~i--~ and not ~--i~ ?[fn:1]
+   * [X] Why are we using ~i--~ and not ~--i~ ?[fn:1]
 
-   * [ ] When will the statements be bypassed completely?[fn:2]
+   * [X] When will the statements be bypassed completely?[fn:2]
 
-   * [ ] [[counting]] could be made more concise - can you guess how?
+   * [X] [[counting]] could be made more concise - can you guess how?
 
      #+name: concise_counting
      #+begin_src C
@@ -169,9 +169,9 @@
 //         puts("Still running...\n");
      #+end_src
 
-   * [ ] Tangle it, compile and run ~inf.c~ on the CMD line.
+   * [X] Tangle it, compile and run ~inf.c~ on the CMD line.
 
-   * [ ] Why don't you see any output in Emacs? [fn:3]
+   * [X] Why don't you see any output in Emacs? [fn:3]
 
    * To stop infinite loops from within, you need to provide ~break~,
      ~goto~ or ~return~ statements.
@@ -279,7 +279,7 @@
 
       while integer non-zero
         sum integer
-        scan integer
+        scan next integer
 
       print the sum
       #+end_example
@@ -303,6 +303,7 @@
       #+RESULTS: sum
       : Enter integers (0 to terminate).
       : The sum is 107
+
 
     * There are two identical calls to ~scanf~, because we need a
       non-zero number to enter the ~while~ loop in the first place.
@@ -427,6 +428,7 @@
      T minus 2 and counting
      T minus 1 and counting
      #+end_example
+
 
    * ~for~ loops can be replaced by ~while~ loops:
 
