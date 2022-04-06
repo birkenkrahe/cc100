@@ -7,6 +7,20 @@
   * Practice workbook for ~do..while~ loops in C.
   * See ~cc100/6_loops/README.org~ in GitHub for script/solutions
 
+** Emacs tip
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   If you don't put it in your ~/.emacs~ file, the command will only work
+   for the current Emacs session.
+
+
 * The ~while~ statement
 ** Simple example
 
@@ -20,6 +34,12 @@
        printf("%d < %d ?\n", i, n);
       }
    #+end_src
+
+   #+RESULTS: trace
+   : 2 < 10 ?
+   : 4 < 10 ?
+   : 8 < 10 ?
+   : 16 < 10 ?
 
 ** Countdown example
 
@@ -57,33 +77,34 @@
    #+end_src
 
    * Tangle the code, compile and run it on the CMD line
+   * C-c C-v t => tangling
    * Why don't you see any output in Emacs?
 
 ** Printing table of square
 
-   1) Declare integer variables ~i~ and ~n~ 
+   1) Declare integer variables ~i~ and ~n~
    2) Scan ~n~
    3) Initialize ~i~ to ~1~
    4) Write a ~while~ statement that
       - prints ~i~ and ~i * i~
       - increments ~i~ by one
    5) Run the program (input file is already there)
-   
+
    #+name: square
    #+begin_src C :cmdline < square_input
 
 
 
    #+end_src
-   
+
 ** Summing numbers
 
    * The program [[sum]] below is only missing the ~while~ statement.
 
      1) Use ~n !=0~ as the controlling expression
      2) Inside the loop,
-	- sum um with ~sum += n~
-	- scan the next number ~n~
+        - sum um with ~sum += n~
+        - scan the next number ~n~
      3) Run the code block with the preset input file
      4) Tangle the file, compile and run it on the CMD line
 
@@ -93,12 +114,9 @@
 
        printf("Enter integers (0 to terminate).\n");
        scanf("%d", &n);
-	 _______________ // sum up
-	 _______________ // scan n 
-    	}
+       _______________ // sum up
+       _______________ // scan n
+       }
 
        printf("The sum is %d\n", sum);
      #+end_src
-   	  
-
-   
