@@ -429,7 +429,6 @@
      T minus 1 and counting
      #+end_example
 
-
    * ~for~ loops can be replaced by ~while~ loops:
 
      #+begin_example C
@@ -460,6 +459,32 @@
    * Note that the controlling expression does *not* use ~==~ but ~=~
      instead - we're not looking for Boolean/truth values but for
      beginning numerical values.
+
+   * This is cool (but also dangerous): you can initialize the
+     counting variable inside the first expression:
+
+     #+name: init
+     #+begin_src C
+//       int i;
+
+       for ( int i = 10 ; i > 0 ; i--)
+         printf("T minus %d and counting\n", i);
+     #+end_src
+
+     #+RESULTS: init
+     #+begin_example
+     T minus 10 and counting
+     T minus 9 and counting
+     T minus 8 and counting
+     T minus 7 and counting
+     T minus 6 and counting
+     T minus 5 and counting
+     T minus 4 and counting
+     T minus 3 and counting
+     T minus 2 and counting
+     T minus 1 and counting
+     #+end_example
+     
 
 ** Omitting expressions
 
