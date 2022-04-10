@@ -1,0 +1,131 @@
+#+TITLE:Practicing ~for~ loops
+#+STARTUP: overview hideblocks
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * Practice workbook for ~for~ loops in C.
+  * See ~cc100/6_loops/README.org~ in GitHub for script/solutions
+
+** Emacs tip for better layout
+*** Hide emphatic characters like ~, *
+
+    To *not* see the emphatic characters like ~ or * or / in the Org file
+    text, run the following code chunk (or put the code in your ~/.emacs~
+    file): if successful, you should see ~"t"~ in the minibuffer.
+
+    #+begin_src emacs-lisp :results silent
+      (setq-default org-hide-emphasis-markers t)
+    #+end_src
+
+    This will only work for new buffers. If you don't put it in your
+    ~/.emacs~ file, the command will only work for the current Emacs
+    session.
+*** Change your theme
+
+    * In Emacs, type ~M-x custom-themes~
+    * In the buffer that appears, select ~Leuven~
+    * Select ~Apply and Save Setting~
+
+* The ~for~ statement
+** Countdown example
+
+   * You can always convert a ~for~ loop into a ~while~ loop and vice
+     versa.
+
+   * [ ] Rewrite the countdown code [[counting]] below using a ~for~ loop.
+
+   * So as not to lose the original code, use the code block below
+     this one.
+
+   *PROBLEM: WHILE LOOP*
+   #+name: counting
+   #+begin_src C
+     int i = 10;
+     while ( i > 0 ) {
+       printf("T minus %d and counting\n", i);
+       i--;
+      }
+     printf("i = %d\n", i);
+   #+end_src
+
+   *SOLUTION: FOR LOOP*
+   #+name: counting_solution_1
+   #+begin_src C
+
+
+
+
+
+   #+end_src
+
+** ~for~ statement patterns
+
+   * ~for~ statements are especially useful to count up or down
+
+   * [ ] Print ~"hello world"~ 10 times using a ~for~ loop and counting up
+     from ~i = 0~ to ~i = 9~.
+
+     #+name: hello
+     #+begin_src C
+
+
+     #+end_src
+
+** Omitting controlling expressions
+   
+   * You can omit some or all of the expressions in a ~for~ loop.
+
+   * I've omitted the third expression in the code block below.
+
+   * When you run the block you will realize that it does not end.
+
+   * [ ] Fix the error *without* changing the controlling expressions
+     so that you can see the countdown from 10 to 1 as output!
+
+   * Put the correct code into the *SOLUTION* code block below this one
+     so as not to lose the example code.
+
+     #+name: omit2
+     #+begin_src C
+       for ( int i = 10 ; i > 0 ; )
+         printf("T minus %d and counting\n");
+     #+end_src
+
+     *SOLUTION*:
+     #+name: omit2_solution
+     #+begin_src C
+
+
+     #+end_src
+
+** Summing numbers
+
+   * [ ] Rewrite the summing numbers code [[sum]] below with ~for~ instead
+     of ~do...while~.
+
+   * Put your solution into the *SOLUTION* block below so as not to lose
+     the sample code.
+
+   #+name: sum
+   #+begin_src C :cmdline < sum_input :tangle src/sum.c
+     int n = 0, sum = 0;
+
+     printf("Enter integers (0 to terminate).\n");
+
+     do {
+       sum += n;         // sum = sum + n
+       scanf("%d", &n);
+      } while ( n != 0 );
+
+     printf("The sum is %d\n", sum);
+   #+end_src
+
+   *SOLUTION:*
+   #+name: sum_solution
+   #+begin_src C :cmdline < sum_input :tangle src/sum.c
+
+
+
+
+     #+end_src
+
