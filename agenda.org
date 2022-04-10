@@ -1400,7 +1400,7 @@
    * [ ] Warming up exercise: how would you test if
 
      1) j=1 is in the interval (-5,5]
-	(-5 < j && j <= 5): j=1 => TRUE (1)
+        (-5 < j && j <= 5): j=1 => TRUE (1)
      2) k=100 is NOT in the interval (1,100)
         (k <= 1 ||  100 <= k)
      3) l=2 is NOT in the interval [0.5,0.9]
@@ -1429,10 +1429,10 @@
 
 ** Programming assignment 7 (review, deadline 01-Apr)
 
-    Here is the template, the code in [[ibattle]] for number input from
-    the file created in [[ibattleinput]] first, then the solution for
-    character input in [[cbattle]], including the bonus solution (inline
-    image of the BPMN model for the algorithm).
+   Here is the template, the code in [[ibattle]] for number input from
+   the file created in [[ibattleinput]] first, then the solution for
+   character input in [[cbattle]], including the bonus solution (inline
+   image of the BPMN model for the algorithm).
 
 *** Battle by numbers
 
@@ -1530,8 +1530,8 @@
 
       #+name: n2l_example
       #+begin_example
-	Enter numerical grade: 84
-	Letter grade: B
+        Enter numerical grade: 84
+        Letter grade: B
       #+end_example
 
     * Use the following grading scale:
@@ -1564,17 +1564,17 @@
 
 * Iteration: while and do loops - w12.s28-30 (04/06-08/22)
 
-  * [ ] ~while~ , ~do~ and ~for~ statements
+  * [X] ~while~ , ~do~ and ~for~ statements
 
-  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~ 
+  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~
 
-  * [ ] Practice workbooks in GDrive
+  * [X] Practice workbooks in GDrive
 
-  * [ ] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~
+  * [X] Add ~(setq-default org-hide-emphasis-markers t)~ to ~.emacs~
 
-  * [ ] Review program assignment 7 (~if~ and ~switch~)
+  * [X] Review program assignment 7 (~if~ and ~switch~)
 
-  * [ ] New program assignment 8
+  * [X] New program assignment 8
 
 ** Emacs tip: hide emphatic characters
 
@@ -1589,14 +1589,18 @@
    If you don't put it in your ~/.emacs~ file, the command will only work
    for the current Emacs session.
 
-* Comma operator, Null...
-
 ** Emacs tip: change theme to "Leuven"
 
    * In Emacs, open the theme selector with ~M-x custom-themes~
    * Select ~Leuven~ and click on ~Save theme settings~
    * Your code blocks are now more clearly visible
-     
+* Review pgm 7, ~for~ practice, exiting loops
+
+  * [ ] Review of [[https://github.com/birkenkrahe/cc100/tree/main/assignments/8_grades][programming assignment 8 (grades)]]
+
+  * [ ] Review of ~for~ statement [[https://github.com/birkenkrahe/cc100/blob/main/practice/loops/for.org][practice assignment]]
+
+  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~
 
 * References
   * For some of the programming projects, see: King (2011). C

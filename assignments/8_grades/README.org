@@ -117,11 +117,11 @@
 
       #+name: n2l_input
       #+begin_src bash :results silent
-        echo 84 > grade
+        echo 84 > grade_if_1
       #+end_src
 
       #+name: n2l_code
-      #+begin_src C :cmdline < grade :main yes :includes <stdio.h>
+      #+begin_src C :cmdline < grade_if_1 :main yes :includes <stdio.h> 
         int i = 0;
         scanf("%d", &i);
 
@@ -158,11 +158,11 @@
 
       #+name: n2l_input_err
       #+begin_src bash :results silent
-        echo -5 > grade1
+        echo 84 > grade_if_2
       #+end_src
 
-      #+name: n2l_code_err
-      #+begin_src C :cmdline < grade1 :main yes :includes <stdio.h>
+      #+name: n2l_code_2
+      #+begin_src C :cmdline < grade_if_2 :main yes :includes <stdio.h>
         int i = 0;
         scanf("%d", &i);
 
@@ -192,8 +192,9 @@
 
       #+end_src
 
-      #+RESULTS: n2l_code_err
-      : Input -5 not valid
+      #+RESULTS: n2l_code_2
+      : Numerical grade 84
+      : Letter grade B
 
 ** Solution with switch and break statements
 *** Pseudocode
@@ -228,10 +229,10 @@
        identify the exact range of the statements.
 
      #+begin_src bash :results silent
-       echo 84 > score
+       echo 84 > grade_switch
      #+end_src
 
-     #+begin_src C :cmdline < score :exports both :results output
+     #+begin_src C :cmdline < grade_switch :exports both :results output
        int score;
 
        printf("Enter score (0-100): \n");
