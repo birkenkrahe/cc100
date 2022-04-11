@@ -165,8 +165,8 @@
 
      #+name: inf
      #+begin_src C :tangle src/inf.c
-//       while (1)
-//         puts("Still running...\n");
+       //       while (1)
+       //         puts("Still running...\n");
      #+end_src
 
    * [X] Tangle it, compile and run ~inf.c~ on the CMD line.
@@ -230,16 +230,16 @@
       #+RESULTS: square
       #+begin_example
       Enter number of rows:
-	       1         1
-	       2         4
-	       3         9
-	       4        16
-	       5        25
-	       6        36
-	       7        49
-	       8        64
-	       9        81
-	      10       100
+               1         1
+               2         4
+               3         9
+               4        16
+               5        25
+               6        36
+               7        49
+               8        64
+               9        81
+              10       100
       #+end_example
 
 ** Summing numbers
@@ -446,12 +446,12 @@
 
    * ~for~ loops are best when counting up or down
 
-   | PATTERN / IDIOM             | CODE                         |
-   |-----------------------------+------------------------------|
-   | Counting up from ~0~ to ~n-1~   | ~for ( i = 0; i < n; i++ )~    |
-   | Counting up from ~1~ to ~n~     | ~for ( i = 1; i <= n; i++ )~   |
+   | PATTERN / IDIOM             | CODE                           |
+   |-----------------------------+--------------------------------|
+   | Counting up from ~0~ to ~n-1~   | ~for ( i = 0; i < n; i++ )~      |
+   | Counting up from ~1~ to ~n~     | ~for ( i = 1; i <= n; i++ )~     |
    | Counting down from ~n-1~ to ~0~ | ~for ( i = n-1; i >= 0; i-- )~ |
-   | Counting down from ~n~ to ~1~   | ~for ( i = n; i > 0; i-- )~    |
+   | Counting down from ~n~ to ~1~   | ~for ( i = n; i > 0; i-- )~      |
 
    * Counting up loops rely on ~<~ and ~<=~, while counting down loops
      rely on ~>~ and ~>=~ operators.
@@ -465,7 +465,7 @@
 
      #+name: init
      #+begin_src C
-//       int i;
+       //       int i;
 
        for ( int i = 10 ; i > 0 ; i--)
          printf("T minus %d and counting\n", i);
@@ -484,7 +484,7 @@
      T minus 2 and counting
      T minus 1 and counting
      #+end_example
-     
+
 
 ** Omitting expressions
 
@@ -598,13 +598,145 @@
      #+begin_src C :results silent
        int i;
 
-//      for ( i=10 ; ; i-- )
-//         printf("T minus %d and counting\n", i);        
+       //      for ( i=10 ; ; i-- )
+       //         printf("T minus %d and counting\n", i);
      #+end_src
 
-* TODO The comma operator
-* TODO Exiting from a loop
-* TODO The Null statement
+* Exiting from a loop
+** Overview
+
+   * Loops can have exit points before (~while~, ~for~) or after (~do~) the
+     loop body.
+
+   * You can exit a loop (or any other statement) in the middle,
+     too using: ~break~, ~continue~, and ~goto~.
+
+** The ~break~ statement
+
+   * Remember the use of ~break~ after a ~switch~ statement:
+
+     #+begin_example C
+       switch (...) {
+         case 1:
+           ...
+           break;
+         case 2:
+         ...
+       }
+     #+end_example
+
+   * Likewise, ~break~ can be used to jump out of a ~while~, ~do~ or ~for~
+     loop.
+
+   * Especially useful when breaking a loop as soon as a particular
+     value is entered:
+
+     #+begin_src bash :results silent
+       echo 10 9 8 7 6 5 4 3 2 1 0 > break
+     #+end_src
+
+   * [ ] Example: first we need to get the program to compile.
+     - What's wrong with the code below?
+     - What would happen without the ~break~ statement?
+
+   #+begin_src C :cmdline < break
+     for (;;) {
+       scanf("%d", &n);
+       if (n == 0) break;
+       printf("n is %d\n", n);
+      }
+   #+end_src
+
+   * *Important:* the ~break~ statement only breaks out of the *innermost*
+     loop statement. If statements are nested, it can only escape one
+     level of nesting.
+
+   * Example: The ~break~ only gets you out of the ~switch~ but not the
+     ~while~ statement.
+
+     #+begin_example C
+       while (...) {
+         switch (...) {
+          ...
+          break;
+          ...
+          }
+       }
+     #+end_example
+
+** The ~continue~ statement
+
+   * The ~continue~ statement does not exit from a loop. It brings you
+     to a point just before the end of the loop body.
+
+   * With ~break~, control leaves the loop, with ~continue~, control
+     remains inside the loop.
+
+   * ~continue~ is limited to loops, it does not work with ~switch~.
+
+   * Example: summing up numbers.
+
+     The loop terminates when 10 non-zero numbers have been
+     read. Whenever the number 0 is read, ~continue~ is executed, the
+     rest of the loop body is skipped, but we're still inside the
+     loop.
+
+     #+begin_src bash :results silent
+       echo 1 1 1 1 1 1 1 1 0 1 1 > continue
+     #+end_src
+
+     #+begin_src C :cmdline < continue
+       int n=0, sum = 0;
+       int i;
+       while ( n < 10 ) {
+         scanf("%d", &i);
+         if ( i == 0 )
+           continue;
+         sum += i;
+         n++;
+         /* continue jumps to here */
+        } printf("sum is %d\n", sum);
+     #+end_src
+
+     #+RESULTS:
+     : sum is 10
+
+   * [ ] What would you have to do for this program if there was no
+     ~continue~ available?[fn:4]
+
+** The ~goto~ statement
+
+   * The ~goto~ statement can jump to /any/ statement in a function
+     provided the function has a /label/.
+
+   * A /label/ is an identifier placed at the beginning of a statement:
+
+     ~identifier : statement~
+
+     A statement can have more than one label. The ~goto~ statement
+     looks like this:
+
+     ~goto identifier ;~
+
+   * Here is an example using ~goto~ to exit prematurely from a loop:
+
+     #+begin_src C
+       int d, n = 3;
+       for (d = 2; d < n; d++ )
+         printf("%d\n", d);
+	 if (n % d == 0 )
+	   goto done;
+	done:
+	 if (d < n)
+	   printf("%d is divisible by %d\n", n, d);
+	 else
+	   printf("%d is prime\n", n, d);
+     #+end_src
+
+     #+RESULTS:
+     : 2
+     : 3 is prime
+
 * References
 
   * Davenport/Vine (2015) C Programming for the Absolute Beginner
@@ -616,6 +748,14 @@
     orgmode.org]]
 
 * Footnotes
+
+[fn:4]Answer: change the ~if~ statement so that the summing is bypassed.
+#+begin_example C
+  if ( i != 0 ) {
+     sum += i;
+     n++;
+     }
+#+end_example
 
 [fn:3]Because the program never reaches the end, it never gets to
 ~return 0;~

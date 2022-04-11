@@ -942,7 +942,6 @@
     #+end_src
 
 * Switch, case, break, pgm 7, pgm 8 - w11s26 (04/01/22)
-
 ** How do you attack a (non-trivial) programming exercise?
 
    Victor's process:
@@ -955,6 +954,7 @@
    2) Show what should come out
    3) What is input and what is output
    4) Decide variables...and continue with Victor's process
+
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell
