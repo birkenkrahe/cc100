@@ -1596,11 +1596,17 @@
    * Your code blocks are now more clearly visible
 * Review pgm 7, ~for~ practice, exiting loops
 
+  * [ ] Last quiz no. 9 - review on Apr-25, Test 3 on Apr-27 to Apr-28
+    (24 hrs)
+
+  * [ ] The final exam on May 9 will contain 10 new questions from the
+    topics of the next few weeks (but we will discuss them in class)
+
   * [ ] Review of [[https://github.com/birkenkrahe/cc100/tree/main/assignments/8_grades][programming assignment 8 (grades)]]
 
   * [ ] Review of ~for~ statement [[https://github.com/birkenkrahe/cc100/blob/main/practice/loops/for.org][practice assignment]]
 
-  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~
+  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~ (~exit.org~)
 
 * References
   * For some of the programming projects, see: King (2011). C
