@@ -640,12 +640,27 @@
      - What would happen without the ~break~ statement?
 
    #+begin_src C :cmdline < break
+     int n;
      for (;;) {
        scanf("%d", &n);
        if (n == 0) break;
        printf("n is %d\n", n);
       }
    #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   n is 10
+   n is 9
+   n is 8
+   n is 7
+   n is 6
+   n is 5
+   n is 4
+   n is 3
+   n is 2
+   n is 1
+   #+end_example
 
    * *Important:* the ~break~ statement only breaks out of the *innermost*
      loop statement. If statements are nested, it can only escape one
@@ -688,14 +703,15 @@
      #+begin_src C :cmdline < continue
        int n=0, sum = 0;
        int i;
+
        while ( n < 10 ) {
-         scanf("%d", &i);
-         if ( i == 0 )
-           continue;
-         sum += i;
-         n++;
-         /* continue jumps to here */
-        } printf("sum is %d\n", sum);
+	 scanf("%d", &i);
+	 if ( i == 0 )
+	   continue;
+	 sum += i;
+	 n++;
+	 /* continue jumps to here */
+	} printf("sum is %d\n", sum);
      #+end_src
 
      #+RESULTS:

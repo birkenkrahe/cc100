@@ -1611,14 +1611,14 @@
 
 * Arrays - w13s30 (04/13/22)
 
-  * [ ] Book recommendation for the holidays! [[https://www.amazon.com/How-Solve-Mathematical-Penguin-Science/dp/0140124993/]["How to solve it"]] by
+  * [X] Book recommendation for the holidays! [[https://www.amazon.com/How-Solve-Mathematical-Penguin-Science/dp/0140124993/]["How to solve it"]] by
     George Pólya (1990 - see also [[https://www.wtamu.edu/academic/anns/mps/math/mathlab/int_algebra/int_alg_tut8_probsol.htm][application example]]).
 
     #+attr_html: :width 200px
     #+caption: Perennial classic: Pólya's HOW TO SOLVE IT
     [[./img/polya.jpg]]
 
-  * [ ] Change of plan: there will be *2 more quizzes* before the final
+  * [X] Change of plan: there will be *2 more quizzes* before the final
     exam, and one more before the Test 3, but no new questions on
     either Test 3 or final exam, so you can use all tests to prepare
     100%.
