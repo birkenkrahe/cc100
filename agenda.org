@@ -1562,7 +1562,7 @@
       structuring this information before beginning to code will save
       you lots of debugging time
 
-* Iteration: while and do loops - w12.s28-30 (04/06-08/22)
+* Iteration: while and do loops - w12s28-30 (04/06-08/22)
 
   * [X] ~while~ , ~do~ and ~for~ statements
 
@@ -1594,19 +1594,45 @@
    * In Emacs, open the theme selector with ~M-x custom-themes~
    * Select ~Leuven~ and click on ~Save theme settings~
    * Your code blocks are now more clearly visible
-* Review pgm 7, ~for~ practice, exiting loops
+* Review pgm 8, ~for~ practice, exiting loops - w13s29 (04/11/22)
 
-  * [ ] Last quiz no. 9 - review on Apr-25, Test 3 on Apr-27 to Apr-28
-    (24 hrs)
+  * [X] Last quiz no. 9 - review on Apr-25, Test 3 on Apr-27 to Apr-28
+    (24 hrs) - unless I find time to make a last (ungraded) quiz...
 
-  * [ ] The final exam on May 9 will contain 10 new questions from the
+  * [X] The final exam on May 9 will contain 10 new questions from the
     topics of the next few weeks (but we will discuss them in class)
 
-  * [ ] Review of [[https://github.com/birkenkrahe/cc100/tree/main/assignments/8_grades][programming assignment 8 (grades)]]
+  * [X] Review of [[https://github.com/birkenkrahe/cc100/tree/main/assignments/8_grades][programming assignment 8 (grades)]]
 
-  * [ ] Review of ~for~ statement [[https://github.com/birkenkrahe/cc100/blob/main/practice/loops/for.org][practice assignment]]
+  * [X] Review of ~for~ statement [[https://github.com/birkenkrahe/cc100/blob/main/practice/loops/for.org][practice assignment]]
 
-  * [ ] Exiting loops with ~continue~, ~goto~, and ~Null~ (~exit.org~)
+  * [X] Exiting loops with ~break~, ~continue~, ~goto~
+
+
+* Arrays - w13s30 (04/13/22)
+
+  * [ ] Book recommendation for the holidays! [[https://www.amazon.com/How-Solve-Mathematical-Penguin-Science/dp/0140124993/]["How to solve it"]] by
+    George Pólya (1990 - see also [[https://www.wtamu.edu/academic/anns/mps/math/mathlab/int_algebra/int_alg_tut8_probsol.htm][application example]]).
+
+    #+attr_html: :width 200px
+    #+caption: Perennial classic: Pólya's HOW TO SOLVE IT
+    [[./img/polya.jpg]]
+
+  * [ ] Change of plan: there will be *2 more quizzes* before the final
+    exam, and one more before the Test 3, but no new questions on
+    either Test 3 or final exam, so you can use all tests to prepare
+    100%.
+
+  * [ ] As promised there will be some [optional] *C++ training
+    material* available after the end of term: it will consist of a
+    series of notebooks introducing the C++ equivalents of the topics
+    that we covered in this course.
+
+  * [ ] If you are going to take *data structures* (CSC 240) next, you
+    should probably take a stab at this material. You can (and
+    should!) contact me at any time if you have trouble with it.
+
+  * [ ] Today: "arrays" script in GitHub and Emacs workbook in GDrive.
 
 * References
   * For some of the programming projects, see: King (2011). C

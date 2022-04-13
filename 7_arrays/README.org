@@ -1,0 +1,239 @@
+#+TITLE:Arrays
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 / Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil ^:nil num:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * This script introduces C arrays.
+
+  * Practice workbooks and input files [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]]
+
+  * PDF version of this file and of the completed practice workbooks
+    is available [[https://github.com/birkenkrahe/cc100/tree/main/pdf][in GitHub]].
+
+  * This section is based on chapter 6 in Davenport/Vine (2015) and
+    chapter 8 in King (2008).
+
+* Overview
+
+  * Variables that can hold only a single data item (a number or a
+    character, which is a number, too) are called *scalars*
+
+  * In mathematics, ordered tuples of data are called *vectors*[fn:1]:
+
+    #+begin_src R :exports both :session :results output
+      v <- c(1,2,3)  ## create a vector of three numbers
+      print(v)
+    #+end_src
+
+    #+RESULTS:
+    : [1] 1 2 3
+
+  * In C there are two *aggregate* stuctures that can store collections
+    of values: *arrays* and *structures*.
+
+  * *structures* are the forerunners of classes, a concept that becomes
+    central in C++ ([[https://www.tutorialspoint.com/cprogramming/c_structures.htm][more on structures]]).
+
+** What is an array?
+
+   * An *array* is a /data structure/ containing a number of data values,
+     all of which have the same type (like ~int~, ~char~ or ~float~).
+
+   * You can visualize arrays as box collections.
+
+     #+attr_html: :width 600px
+     #+caption: Arrays of different dimensions with values in them
+     [[./img/arrays.png]]
+
+   * The computer stores them differently - sequentially as a set of
+     memory addresses.
+
+     #+name: fig:storage
+     #+attr_html: :width 600px
+     #+caption: Memory representation of a 2D character array (Source: TheCguru.com)
+     [[./img/storage.png]]
+
+* One-dimensional arrays
+
+  * The simplest kind of array has one dimension - conceptually
+    arranged visually in a single row (or column).
+
+    #+attr_html: :width 600px
+    #+caption: Visualization of a 1-dim array 'a' (Source: King)
+    [[./img/one.png]]
+
+* Declaring arrays
+
+  * To declare an array, we must specify the /type/ and /number/ of its
+    elements, e.g. for an array of 10 elements:
+
+    #+begin_src C
+      int a[10];           // declare array a of 10 integers
+      printf("%d", a[9]);  // print one array element
+    #+end_src
+
+    #+RESULTS:
+    : 13971188
+
+    - If you run this block repeatedly, you see what the computer
+      stores in the respective memory location - random integers
+
+  * The array must be initialized, just like any scalar variable, to
+    be of use to us.
+
+  * You can initialize arrays explicitly using ~{...}~:
+
+    #+begin_src C
+      int intarray[5] = {1,2,3,4,5};
+      double doublearray[] = {2.1, 2.3, 2.4, 2.5};
+      char chararray[] = {'h','e','l','l','o','\0'};
+    #+end_src
+
+    This is how ~chararray~ looks like (the last character ~\0~ is only a
+    terminating character):
+
+    #+attr_html: :width 600px
+    [[./img/hello.png]]
+  
+* Array length
+
+  * An array can have any length. Since the length may have to be
+    adjusted, it can be useful to define it as a macro with ~#define~.
+
+    #+begin_src C :results silent
+      #define N 10
+      // ...
+      int a[N];
+    #+end_src
+
+    - Remember that now ~N~ will be blindly replaced by ~10~ everywhere in
+      the program.
+
+* Array subscripting
+
+  * /Subscripting/ or /indexing/ means accessing a particular array
+    element.
+
+  * Array elements in C are always numbered starting from 0, so the
+    elements of an array of length ~n~ are /indexed/ from ~0~ to ~n-1~.
+
+    #+attr_html: :width 600px
+    #+caption: Indexing of an 1-dim array 'a' (Source: King)
+    [[./img/index.png]]
+
+  * Index expressions ~a[i]~ can be used like other variables:
+
+    #+begin_src C
+      int a[10];  // declare array
+
+      a[0] = 1;   // assign value to array element
+      a[5] = 2 * 2; // assign operation result to array element
+
+      printf("%d\n", a[5]); // print array element
+      printf("%d\n", a[5] - 4);
+      printf("%d\n", ++a[0]);
+    #+end_src
+
+    #+RESULTS:
+    : 4
+    : 0
+    : 2
+
+* Side effects
+
+  * C does not require that the subscript bounds be checked.
+
+  * If a subscript goes out of bounds, the program's behavior is
+    undefined.
+
+  * An array subscript may be an integer expression:
+    #+begin_example C
+      foo[i+j*10] = 0; // e.g. i=-10, j=1 => foo[0]
+      bar[i++];        // e.g. i = -1 => bar[0]
+    #+end_example
+
+  * Trace this code:
+
+    #+name: trace
+    #+begin_example C
+      i = 0;
+      while ( i < N )
+         a[i++] = 0;
+    #+end_example
+
+    - After ~i~ is set to ~0~, the ~while~ statement checks whether ~i~ is
+      less than ~N~.
+    - If it is, ~0~ is assigned to ~a[i]~, ~i~ is incremented, and the loop
+      repeats.
+    - Note that ~a[++i]~ would not be right, because ~0~ would be assigned
+      to ~a[0]~ during the first loop iteration.
+    
+  * Be careful when an array subscript has a side effect. Example: the
+    following loop to copy all elements of ~foo~ into ~bar~ may not work
+    properly:
+
+    #+name: copy1
+    #+begin_example C
+      i = 0;
+      while (i < N)
+        a[i] = b[i++];
+    #+end_example
+
+    The statement in the loop accesses the value of ~i~ and modifies
+    ~i~. This causes undefined behavior. To do it right, use this code:
+
+    #+name: copy2
+    #+begin_example C
+    for (i = 0; i < N; i++)
+        a[i] = b[i];
+    #+end_example
+  
+* Iterating over arrays
+
+  * ~for~ loops are made for arrays. Here are a few examples. Can you
+    see what each of them does?
+
+    #+name: for_array_1
+    #+begin_example C
+      for (i = 0; i < 10 ; i++ )
+        a[i] = 0;  // initialize a with 0s 
+    #+end_example
+
+    #+name: for_array_2
+    #+begin_example C
+      for (i = 0; i < 10 ; i++ )
+        scanf("%d", &a[i]);
+    #+end_example
+
+    #+name: for_array_3
+    #+begin_example C
+      for (i = 0; i < 10 ; i++ )
+        sum += a[i];
+    #+end_example
+
+* Let's practice!
+
+  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
+     
+* References
+
+  * Davenport/Vine (2015) C Programming for the Absolute Beginner
+    (3ed). Cengage Learning.
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * King (2008). C Programming - A modern approach (2e). W A Norton.
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]
+  * Image [[fig:storage]] from: [[https://overiq.com/media/uploads/memory-representation-of-array-of-strings-1504599913892.png][TheCguru.com]]
+
+* Footnotes
+
+[fn:1]The code block is an example of the statistical programming
+language R, which is especially strong when it comes to vector
+manipulation. ~c()~ is R's concatenation function that chains elements
+together to form a vector.
+
+

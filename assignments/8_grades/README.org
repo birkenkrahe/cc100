@@ -84,15 +84,15 @@
    #+name: n2l_pseudocode
    #+begin_quote C
    if 90 <= grade <= 100
-   letter grade is A
+     letter grade is A
    else if 80 <= grade <= 89
-   letter grade is B
+     letter grade is B
    else if 70 <= grade <= 79
-   letter grade is C
+     letter grade is C
    else if 60 <= grade <= 69
-   letter grade is D
+     letter grade is D
    else if 59 <= grade <= 0
-   letter grade is F
+    letter grade is F
    end if
    #+end_quote
 
