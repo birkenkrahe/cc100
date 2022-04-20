@@ -13,8 +13,8 @@
   * PDF version of this file and of the completed practice workbooks
     is available [[https://github.com/birkenkrahe/cc100/tree/main/pdf][in GitHub]].
 
-  * This section is based on chapter 6 in Davenport/Vine (2015) and
-    chapter 8 in King (2008).
+  * This section, including some sample code, is based on chapter 6 in
+    Davenport/Vine (2015) and chapter 8 in King (2008).
 
 * Overview
 
@@ -97,7 +97,7 @@
 
     #+attr_html: :width 600px
     [[./img/hello.png]]
-  
+
 * Array length
 
   * An array can have any length. Since the length may have to be
@@ -170,7 +170,7 @@
       repeats.
     - Note that ~a[++i]~ would not be right, because ~0~ would be assigned
       to ~a[0]~ during the first loop iteration.
-    
+
   * Be careful when an array subscript has a side effect. Example: the
     following loop to copy all elements of ~foo~ into ~bar~ may not work
     properly:
@@ -190,7 +190,7 @@
     for (i = 0; i < N; i++)
         a[i] = b[i];
     #+end_example
-  
+
 * Iterating over arrays
 
   * ~for~ loops are made for arrays. Here are a few examples. Can you
@@ -199,7 +199,7 @@
     #+name: for_array_1
     #+begin_example C
       for (i = 0; i < 10 ; i++ )
-        a[i] = 0;  // initialize a with 0s 
+        a[i] = 0;  // initialize a with 0s
     #+end_example
 
     #+name: for_array_2
@@ -217,9 +217,123 @@
 * Let's practice!
 
   * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
-     
+
 * Multi-dimensional arrays
+
+** Setup
+
+   * An array may have any number of dimensions.
+
+   * Example: the following array declares a 5 x 9 matrix of 5 rows and
+     9 columns.
+
+     #+begin_src C
+       int m [5] [9]
+     #+end_src
+
+     #+attr_html: :width 500px
+     #+name: matrix
+     #+caption: Matrix indexes in a 2-dim C array (Source: King)
+     [[./img/matrix.png]]
+
+** Accessing arrays
+
+   * To access the element in row ~i~ and column ~j~, we must write ~m[i][j]~.
+
+   * To access row ~i~ of ~m~, we write ~m[i]~
+
+   * The expression ~m[i,j]~ is the same as ~m[j]~ (don't use it)
+
+   * C stores arrays not in 2 dim but in row-major order:
+
+     #+attr_html: :width 500px
+     #+name: matrix
+     #+caption: Row-major memory storage in C (Source: King)
+     [[./img/stored.png]]
+
+
+   * Multi-dimensional arrays play a lesser role in C than in many
+     other programming languages because C has a more flexible way to
+     store multi-dimensional data, namely /arrays of pointers/.
+
+** Accessing arrays with nested ~for~ loops
+
+   * Nested ~for~ loops are ideal for processing multi-dimensional arrays.
+
+   * Here is the code to initialize a 10x10 /identity/ matrix.
+
+     #+begin_src C :results silent
+       #define N 10
+
+       double ident[N][N];
+       int row, col;
+
+       for (row = 0; row < N; row++)
+         {
+           for (col = 0; col < N; col++)
+             {
+               if (row == col) {
+                 ident[row][col] = 1.0;
+               } else {
+                 ident[row][col] = 0.0;
+               }
+             }
+         }
+     #+end_src
+
+   * To initialize an array, you can use brackets as in the 1-dim case.
+
+     #+begin_src C
+       int m[3][3] = {1,2,3,4,5,6,7,8,9};
+
+       for (int i=0;i<3;i++) {
+         for(int j=0;j<3;j++) {
+           printf("%d", m[i][j]);
+         }
+         printf("\n");
+        }
+     #+end_src
+
+     #+RESULTS:
+     : 123
+     : 456
+     : 789
+
 * The size of arrays
+
+  * The ~sizeof~ operator can determine the size of arrays (in bytes).
+
+  * If ~a~ is an array of ~10~ integers, then ~sizeof(a)~ is 40 provided
+    each integer requires 4 bytes of storage[fn:2].
+
+    #+begin_src C
+      int a[10] = {0};
+      printf("%d", sizeof(a));
+    #+end_src
+
+    #+RESULTS:
+    : 40
+
+  * You can use the operator also to measure the size of an array
+    element: dividing the array size by the element size gives you the
+    length of the array:
+
+    #+begin_src C
+      int a[10] = {0};
+      printf("%d", sizeof(a)/sizeof(a[0])); // prints length of array a
+    #+end_src
+
+    #+RESULTS:
+    : 10
+
+  * You can use this last fact to write a ~for~ loop that goes over the
+    whole /length/ of an array - then the array does not have to be
+    modified if its length changes.
+
+* Let's practice!
+
+  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the second workbook ~array2.org~.
+
 * References
 
   * Davenport/Vine (2015) C Programming for the Absolute Beginner
@@ -233,9 +347,10 @@
 
 * Footnotes
 
+[fn:2]On a 32-bit computer, an ~int~ ranges from -32,768 to 32,767 and
+only requires 2 bytes of storage.
+
 [fn:1]The code block is an example of the statistical programming
 language R, which is especially strong when it comes to vector
 manipulation. ~c()~ is R's concatenation function that chains elements
 together to form a vector.
-
-

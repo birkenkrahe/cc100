@@ -1653,13 +1653,14 @@
      #+end_src
 
    * [ ] You can also initialize an array with a ~for~ loop. Find all
-     mistakes in the following code block.
+     mistakes in the following code block, which should initialize the
+     array ~iArray[5]~.
 
      #+begin_src C
        int i;
        int iArray[5];
 
-       for (int i == 0; i <= 5; i++ ) {
+       for (int i == 0, i <= 5, i++ ) {
          iArray[i] == 0;
      #+end_src
 
@@ -1673,6 +1674,15 @@
          printf("%d %d\n",i, iArray[i]);
         }
      #+end_src
+
+
+** Topics
+
+   * [ ] Multidimensional arrays: definition, declaration,
+     initialization
+   * [ ] Size of arrays and ~sizeof~ operator
+   * [ ] Practice notebook ~array2.org~ in GDrive
+   * [ ] Script in GitHub
 
 * References
   * For some of the programming projects, see: King (2011). C
