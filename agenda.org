@@ -1594,7 +1594,7 @@
    * In Emacs, open the theme selector with ~M-x custom-themes~
    * Select ~Leuven~ and click on ~Save theme settings~
    * Your code blocks are now more clearly visible
-* Review pgm 8, ~for~ practice, exiting loops - w13s29 (04/11/22)
+* Review pgm 8, ~for~ practice, exiting loops - w13s31 (04/11/22)
 
   * [X] Last quiz no. 9 - review on Apr-25, Test 3 on Apr-27 to Apr-28
     (24 hrs) - unless I find time to make a last (ungraded) quiz...
@@ -1608,8 +1608,7 @@
 
   * [X] Exiting loops with ~break~, ~continue~, ~goto~
 
-
-* Arrays - w13s30 (04/13/22)
+* One-dimensional arrays - w13s32 (04/13/22)
 
   * [ ] Book recommendation for the holidays! [[https://www.amazon.com/How-Solve-Mathematical-Penguin-Science/dp/0140124993/]["How to solve it"]] by
     George Pólya (1990 - see also [[https://www.wtamu.edu/academic/anns/mps/math/mathlab/int_algebra/int_alg_tut8_probsol.htm][application example]]).
@@ -1630,9 +1629,50 @@
 
   * [ ] If you are going to take *data structures* (CSC 240) next, you
     should probably take a stab at this material. You can (and
-    should!) contact me at any time if you have trouble with it.
+    should!) contact me at any time if you have ouble with it.
 
   * [ ] Today: "arrays" script in GitHub and Emacs workbook in GDrive.
+
+* Multidimensional arrays, sizeof - w14s33
+** Housekeeping
+
+   * [ ] Play *[[https://lyon.schoology.com/course/5516220826/materials#!filter_type=assessments][quiz 7-9]]*- review next week
+   * [ ] *Test 3* will be online only Thu 28-Apr 4pm to Fri 29-Apr 4pm
+   * [ ] Final exam will cover all quizzes, all tests only
+   * [ ] C++ overview planned for the last week (not in final exam)
+
+** Warming up with 1-dim arrays
+
+   * [ ] An array can be initialized with a single value. Complete the
+     statements to print out the first and the last element of an
+     array of 5 elements.
+
+     #+begin_src C
+       int iArray[?] = {0};
+       printf("first: %d, last: %d", iArray[?], iArray[?]);
+     #+end_src
+
+   * [ ] You can also initialize an array with a ~for~ loop. Find all
+     mistakes in the following code block.
+
+     #+begin_src C
+       int i;
+       int iArray[5];
+
+       for (int i == 0; i <= 5; i++ ) {
+         iArray[i] == 0;
+     #+end_src
+
+   * Solution:
+
+     #+begin_src C
+       int iArray[5];
+
+       for (int i = 0; i < 5; i++ ) {
+         iArray[i] = 0;
+         printf("%d %d\n",i, iArray[i]);
+        }
+     #+end_src
 
 * References
   * For some of the programming projects, see: King (2011). C
