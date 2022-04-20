@@ -1,11 +1,11 @@
-#+TITLE:Practicing arrays 1
+#+TITLE:Practicing one-dimensional arrays
 #+STARTUP: overview hideblocks
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
 * README
 
-  * Practice workbook for arrays in C
+  * Practice workbook for one-dimensional arrays in C
   * See GitHub for script/solutions
-* Setup
+* Emacs setup (optional)
 ** Hide emphatic characters like ~, *
 
    To *not* see the emphatic characters like ~ or * or / in the Org file
