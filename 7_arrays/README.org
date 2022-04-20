@@ -218,6 +218,8 @@
 
   * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
      
+* Multi-dimensional arrays
+* The size of arrays
 * References
 
   * Davenport/Vine (2015) C Programming for the Absolute Beginner
