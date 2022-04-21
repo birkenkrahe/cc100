@@ -219,7 +219,6 @@
   * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
 
 * Multi-dimensional arrays
-
 ** Setup
 
    * An array may have any number of dimensions.
@@ -228,7 +227,7 @@
      9 columns.
 
      #+begin_src C
-       int m [5] [9]
+       int m[5][9]
      #+end_src
 
      #+attr_html: :width 500px
@@ -250,7 +249,6 @@
      #+name: matrix
      #+caption: Row-major memory storage in C (Source: King)
      [[./img/stored.png]]
-
 
    * Multi-dimensional arrays play a lesser role in C than in many
      other programming languages because C has a more flexible way to
@@ -332,7 +330,7 @@
 
 * Let's practice!
 
-  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the second workbook ~array2.org~.
+  * [X] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the second workbook ~array2.org~.
 
 * References
 
