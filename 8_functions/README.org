@@ -1,0 +1,207 @@
+#+TITLE:Functions
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 / Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:1 ^:nil num:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * This script introduces C functions.
+
+  * Practice workbooks and input files [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]].
+
+  * PDF version of this file and of the completed practice workbooks
+    is available [[https://github.com/birkenkrahe/cc100/tree/main/pdf][in GitHub]].
+
+  * This section, including some sample code, is based on chapter 9 in
+    King (2008).
+
+* Overview
+
+  * C functions do not always resemble math functions ~f(x)~
+
+    - C functions don't need to have arguments (e.g. ~main(void)~)
+
+    - C functions need not compute a value (e.g. ~void hello()~)
+
+  * A function is a small program with its own declarations and
+    statements
+
+  * Functions allow us to
+
+    - *reuse* functions in other programs
+
+    - *recall* functions instead of duplicating code
+
+    - *modularize*, and easier understand and modify programs
+
+  * Once upon a time, programs didn't use to have functions!
+
+    #+attr_html: :width 600px
+    #+caption: BASIC program snippet (Source: Collingbourne, 2022).
+    [[./img/basic.png]]
+
+* Recap: ~hello_world~ function: mostly ~void~
+
+  #+begin_src C
+    // reusable function definition
+    void hello_world(void)
+    {
+      printf("Hello world\n");
+    }
+    // reusable function call
+    hello_world();
+    hello_world();
+    hello_world();
+  #+end_src
+
+  - doubly ~void~: no return value, no argument
+
+  - function code can be reused elsewhere
+
+  - function can be recalled at will
+
+* Functions are everywhere in C!
+
+  How many functions do you see in this code block?
+
+  #+begin_src C
+    #include <math.h>
+    #include <stdio.h>
+
+    int main(void)
+    {
+      const double E=2.7182818;
+
+      printf("%g\n", log(E));
+      return 0;
+    }
+  #+end_src
+
+  Answer:
+  #+begin_quote
+  | FUNCTION | DEFINITION           |
+  |----------+----------------------|
+  | ~main()~   | main function        |
+  | ~printf()~ | printing function    |
+  | ~log()~    | logarithmic function |
+  #+end_quote
+
+* Example program: computing averages
+** Function definition
+
+   * We want to compute the average of two ~double~ values, we can define
+     a function to do it:
+
+     #+begin_src C :results silent
+       double average ( double a, double b)
+       {
+         return (a + b) / 2;
+       }
+     #+end_src
+
+   * Here, ~double~ is /return type/ and /argument data type/.
+
+   * ~a~ and ~b~ are /function parameters/ - their values are supplied when
+     the function is called
+
+   * The /function body/ is the executable part, enclosed in ~{...}~
+
+   * [ ] What's being executed in the body of the function ~average~?
+
+     Answer:
+     #+begin_quote
+     1) computing the average of two ~double~ numbers
+     2) returning the result as a ~double~ number
+     #+end_quote
+
+** Function call
+
+   * To call a function, write the /function name/ followed by a list of
+     /function arguments/.
+
+   * The arguments are assigned to the function parameters.
+
+   * The argument can be any /expression/.
+
+   * Functions can be called by other functions.
+
+     #+begin_src C
+       // function definition
+       double average (double a,double b){return (a+b)/2;}
+
+       // function call
+       average(5.1, 8.9);
+
+       // function call with expression
+       double x=5.1, y=8.9;
+       average(x/2, y/2);
+
+       // function call inside function
+       printf("Average: %g\n", average(x,y));
+     #+end_src
+
+   * What's happening in the last line exactly?
+     1. The ~average~ function is called with ~x~ and ~y~ as arguments.
+     2. ~average~ executes its ~return~ statement, returning ~(a+b)/2~.
+     3. ~printf~ prints the value that ~average~ returns.
+     4. The ~return~ value of ~average~ becomes an argument of ~printf~.
+
+   * The value of ~average~ is not saved anywhere. It is printed and
+     then discarded.
+
+   * If we had needed to keep the value, we'd have to capture it in a
+     variable.
+
+** Using a function in a program
+
+   * The following program reads three numbers and computes their
+     averages, one pair at a time.
+
+     Sample input:
+     #+begin_src bash :results silent
+       echo 3.5 9.6 10.2 > input
+     #+end_src
+
+     Sample output:
+     #+begin_example
+     : Enter three numbers: 3.5 9.6 10.2
+     : Average of 3.5 and 9.6: 6.55
+     : Average of 9.6 and 10.2: 9.9
+     : Average of 3.5 and 10.2: 6.85
+     #+end_example
+
+     Code:
+     #+begin_src C :cmdline < input :tangle avg.c
+       // function definition
+       double average (double a,double b){return (a+b)/2;}
+
+       int main (void)
+       {
+         double x, y, z;
+         printf("Enter three numbers: \n");
+         scanf("%lf %lf %lf", &x, &y, &z);  // input
+
+         // print averages
+         printf("Average of %g and %g: %g\n", x, y, average(x,y));
+         printf("Average of %g and %g: %g\n", y, z, average(y,z));
+         printf("Average of %g and %g: %g\n", x, z, average(x,z));
+
+         return 0;
+       }
+     #+end_src
+
+   * Note: the definition of ~average~ needs to be put before ~main~ -
+     otherwise the function needs to be declared.
+
+* Let's practice!
+
+  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
+
+* References
+
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * King (2008). C Programming - A modern approach (2e). W A Norton.
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]

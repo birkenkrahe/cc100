@@ -1,0 +1,34 @@
+#+TITLE:Pointers
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 / Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil ^:nil num:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * This script introduces C pointers.
+
+  * Practice workbooks and input files [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]].
+
+  * PDF version of this file and of the completed practice workbooks
+    is available [[https://github.com/birkenkrahe/cc100/tree/main/pdf][in GitHub]].
+
+  * This section, including some sample code, is based on chapters
+    11 + 12 in King (2008).
+
+* Overview
+
+* Let's practice!
+
+  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
+
+* References
+
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * King (2008). C Programming - A modern approach (2e). W A Norton.
+    [[http://knking.com/books/c2/][URL: knking.com]].
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]
+  * Image [[fig:storage]] from: [[https://overiq.com/media/uploads/memory-representation-of-array-of-strings-1504599913892.png][TheCguru.com]]
+
