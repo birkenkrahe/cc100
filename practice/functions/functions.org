@@ -1,0 +1,98 @@
+#+TITLE:C functions practice
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+* README
+
+  * Practice workbook for functions in C
+  * See GitHub for script/solutions
+
+* Emacs setup (optional)
+** Hide emphatic characters like ~, *
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   This will only work for new buffers. If you don't put it in your
+   ~/.emacs~ file, the command will only work for the current Emacs
+   session.
+
+   *Close and reopen this file to see an effect.*
+
+** Change your theme
+
+   * In Emacs, type ~M-x custom-themes~
+   * In the buffer that appears, select ~Leuven~
+   * Select ~Apply and Save Setting~
+   * This will work immediately
+
+* Recap: ~hello_world~ function
+
+  * [ ] The ~hello_world~ function does not have a ~return~ value, and it
+    takes no arguments. Fix the code so that it compiles and runs.
+
+  #+begin_src C
+    // function definition
+    ___ hello_world(___)
+    {
+      printf("Hello world\n");
+    }
+    // function call
+    hello_world();
+  #+end_src
+
+
+* Save a function return value
+
+  * [ ] Run the ~average~ function below, save and print its value.
+
+    The function is already defined at the top of the code block, and
+    two ~double~ values are declared and defined, too.
+
+    #+begin_src C
+      // function definition
+      double average (double a,double b){return (a+b)/2;}
+
+      // Input variable declaration and definition
+      double x = 5.1, y = 8.9;
+
+      // Save the average of x and y in a variable avg
+      ____
+      // Print the variable avg
+      ____
+
+          #+end_src
+
+
+  * /Tip: remember to declare your variable. Use ~%g~ for the output./
+
+* Write a simple function
+
+  * [ ] Write a function ~add~ that adds two integer numbers ~num1~ and
+    ~num2~. In the same code block, call the function for the values ~2~
+    and ~2~, and print the ~return~ value.
+
+    #+begin_src C
+      // function definition
+
+      // function call and print
+
+    #+end_src
+
+* Use a simple function
+
+  * [ ] Put the definition of ~add~ in the code block below, then use
+    the function inside a ~main~ function body.
+
+    #+begin_src C
+      // function definition
+
+      // main function
+
+    #+end_src
+

@@ -1633,7 +1633,7 @@
 
   * [ ] Today: "arrays" script in GitHub and Emacs workbook in GDrive.
 
-* Multidimensional arrays, sizeof - w14s33
+* Multidimensional arrays, sizeof - w14s33 (04/20/22)
 ** Housekeeping
 
    * [X] Play *[[https://lyon.schoology.com/course/5516220826/materials#!filter_type=assessments][quiz 7-9]]* - review next week
@@ -1690,6 +1690,16 @@
 
 ** Next: functions > pointers > strings > C++
 
+* Functions - w14s34 (04/22/22)
+
+  * [ ] Programming assignment 10: Fibonacci sequence (by V. Noppe)
+
+* Pointers - w15s35 04/25/22
+* Strings - w15s36 (04/27/22)
+* Review Quiz 7-9 - w15s37 (04/29/22)
+* C++ basics 1 - w16s38 (05/02/22)
+* C++ basics 2 - w16s39 (05/04/22)
+* Final exam - w17s40 (05/09/22)
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
