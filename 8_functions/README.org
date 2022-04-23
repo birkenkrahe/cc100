@@ -55,6 +55,11 @@
     hello_world();
   #+end_src
 
+  #+RESULTS:
+  : Hello world
+  : Hello world
+  : Hello world
+
   - doubly ~void~: no return value, no argument
 
   - function code can be reused elsewhere
@@ -63,20 +68,22 @@
 
 * Functions are everywhere in C!
 
-  How many functions do you see in this code block?
+  * [ ] How many functions do you see in this code block?
 
   #+begin_src C
-    #include <math.h>
     #include <stdio.h>
 
     int main(void)
     {
-      const double E=2.7182818;
+      const double E = 2.7182818;
 
       printf("%g\n", log(E));
       return 0;
     }
   #+end_src
+
+  #+RESULTS:
+  : 1
 
   Answer:
   #+begin_quote
@@ -135,6 +142,7 @@
 
        // function call with expression
        double x=5.1, y=8.9;
+       average(x, y);
        average(x/2, y/2);
 
        // function call inside function
