@@ -46,15 +46,15 @@
    | 26 |      | Wed-30-Mar | Compound if, input validation | compound_if.org        |                |                                  |                |
    | 27 |      | Fri-01-Apr | Switch, case, break           | switch.org             |                | Program 8 (grade)                |                |
    |----+------+------------+-------------------------------+------------------------+----------------+----------------------------------+----------------|
-   | 28 |   12 | Mon-04-Apr | Iteration: looping structures |                        | 6_loops        |                                  | Quiz 8         |
-   | 29 |      | Wed-06-Apr | While and Do loops            |                        |                | Program 9 (multiplication table) |                |
-   | 30 |      | Fri-08-Apr | For loops                     |                        |                |                                  |                |
+   | 28 |   12 | Mon-04-Apr | Iteration: looping structures | while.org              | 6_loops        |                                  | Quiz 8         |
+   | 29 |      | Wed-06-Apr | While and Do loops            | do.org                 |                | Program 9 (multiplication table) |                |
+   | 30 |      | Fri-08-Apr | For loops                     | for.org                |                |                                  |                |
    |----+------+------------+-------------------------------+------------------------+----------------+----------------------------------+----------------|
    | 31 |   13 | Mon-11-Apr | Continue, goto, Null          |                        |                |                                  | Quiz 9         |
-   | 32 |      | Wed-13-Apr | One-dimensional arrays        |                        | 7_arrays       |                                  |                |
+   | 32 |      | Wed-13-Apr | One-dimensional arrays        | array_1.org            | 7_arrays       |                                  |                |
    |----+------+------------+-------------------------------+------------------------+----------------+----------------------------------+----------------|
-   | 33 |   14 | Wed-20-Apr | Multidim. arrays, sizeof()    |                        |                |                                  |                |
-   | 34 |      | Fri-22-Apr | Functions                     |                        |                | Program 10 (Fibonacci)           | Quiz 10        |
+   | 33 |   14 | Wed-20-Apr | Multidim. arrays, sizeof()    | array_2.org            |                |                                  |                |
+   | 34 |      | Fri-22-Apr | Functions                     | functions_practice.org |                | Program 10 (Fibonacci)           | Quiz 10        |
    |----+------+------------+-------------------------------+------------------------+----------------+----------------------------------+----------------|
    | 35 |   15 | Mon-25-Apr | Pointers                      |                        |                |                                  |                |
    | 36 |      | Wed-27-Apr | Strings                       |                        |                |                                  | Quiz 11        |
