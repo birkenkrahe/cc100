@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 / Introduction to programming in C/C++
 #+STARTUP: overview hideblocks
-#+OPTIONS: toc:nil ^:nil num:nil
+#+OPTIONS: ^:nil num:nil
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
 * README
 
