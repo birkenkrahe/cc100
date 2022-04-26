@@ -1009,7 +1009,7 @@
 
 ** Program layout
 
-   * See GitHub folder [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org#program-layout][3_basics/]]
+   * See GitHub folder [[https://github.com/birkenkrahe/cc100/blob/main/3_basics/README.org][3_basics/]]
 
 ** Next
 
@@ -1136,7 +1136,7 @@
 
 ** Conditions/Pseudocode
 
-   See [[c:/Users/birkenkrahe/Documents/GitHub/cc100/4_conditions/README.org::README][README.org]] in [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
+   See README.orgin ~4_conditions/~ [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
 
 * Character conversion, Flowcharts, BPMN, if structures - w10s24 (03/18/22)
 ** Warming up with pseudocode
@@ -1164,7 +1164,7 @@
 
 ** Flowcharts and IF statements
 
-   See [[c:/Users/birkenkrahe/Documents/GitHub/cc100/4_conditions/README.org::README][README.org]] in [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
+   See README.orgin ~4_conditions/~ [[https://github.com/birkenkrahe/cc100/tree/main/4_conditions][GitHub]]
 
 ** Program  assignment 7 - deadline Friday April 1
 
@@ -1436,10 +1436,10 @@
 
 *** Battle by numbers
 
-    The code in [[ibattle]] below reads input from a file [[idrink]] (the file
-    contains the number ~1~, one of the two possible responses to
-    the battle question). You can change the input to ~2~ to get
-    the other response.
+    The code in [[ibattle]] below reads input from a file ~idrink~ (the file
+    contains the number ~1~, one of the two possible responses to the
+    battle question). You can change the input to ~2~ to get the other
+    response.
 
     #+name: ibattleinput
     #+begin_src bash :results silent
@@ -1479,10 +1479,10 @@
 
 *** Battle with character
 
-    The code in [[cbattle]] below reads input from a file [[cdrink]] (the
-    file contains the character ~a~, one of the two possible
-    responses to the battle question). You can change the input to
-    ~b~ to get the other response.
+    The code in [[cbattle]] below reads input from a file ~cdrink~ (the file
+    contains the character ~a~, one of the two possible responses to the
+    battle question). You can change the input to ~b~ to get the other
+    response.
 
     #+name: cbattleinput
     #+begin_src bash :results silent
@@ -1694,9 +1694,32 @@
 
   * [ ] Programming assignment 10: Fibonacci sequence (by V. Noppe)
 
-* Pointers - w15s35 04/25/22
-* Strings - w15s36 (04/27/22)
-* Review Quiz 7-9 - w15s37 (04/29/22)
+* Review Quiz 7-9 - w15s35 (04/25/22)
+
+  * FREE PIZZA + ORGANIC CHEMISTRY!
+
+    #+begin_quote
+    Interesting Topics in Organic Chemistry Seminars - On April 27th
+    at noon in Derby 16. Pizza will be provided. The short seminars
+    will be conducted by CHM 220 students and the content is geared to
+    freshmen-sophomore and/or a general audience. (Prof. Narawathne)
+    #+end_quote
+
+  * [ ] Who is interested? (headcount = 0 )
+
+  * *Test 3 will run from Thursday 6 pm to Saturday 8 am:*
+    - You have 30 minutes for 15 questions
+    - *You cannot resume your submission*
+    - Let me know if there are any difficulties during the test
+      (cell (501) 422 4725 or email)
+
+* Pointers - w15s36 04/27/22
+
+  * Topic: pointers - C's memory fingers. 
+    - See ~pointers_practice.org~ in GDrive
+    - See script in ~9_pointers/~ in GitHub
+
+* Strings - w15s37 (04/29/22)
 * C++ basics 1 - w16s38 (05/02/22)
 * C++ basics 2 - w16s39 (05/04/22)
 * Final exam - w17s40 (05/09/22)

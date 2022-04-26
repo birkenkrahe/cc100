@@ -954,7 +954,7 @@
    2) Show what should come out
    3) What is input and what is output
    4) Decide variables...and continue with Victor's process
-
+  
 * References
 
   * <<birkenkrahe>> Birkenkrahe (Jan 11, 2022). Interactive shell

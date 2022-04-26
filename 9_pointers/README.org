@@ -6,17 +6,96 @@
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
 * README
 
-  * This script introduces C pointers.
+  * This script introduces C pointers in theory and practice.
 
   * Practice workbooks and input files [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]].
 
   * PDF version of this file and of the completed practice workbooks
     is available [[https://github.com/birkenkrahe/cc100/tree/main/pdf][in GitHub]].
 
-  * This section, including some sample code, is based on chapters
-    11 + 12 in King (2008).
+  * This section, including some sample code, is based on: chapter 11
+    in King (2008), and chapter 7 in Davenport/Vine.
 
 * Overview
+
+  * Computer memory is like a list of /locations/
+    
+  * Each chunk of memory has an /address/ to a location
+
+  * /Pointers/ point to these addresses
+
+  * The /address/ is not the house, it's a /reference/ 
+
+    #+attr_html: :width 300px
+    #+caption: envelope = pointer to an address
+    [[./img/letter.png]]
+  
+  * C#, Java, Pascal, Python...do not offer pointers
+
+  * C and C++ offer pointer variables and operators
+
+  * This gives you a lot more control over the computer
+
+  * E.g. string manipulation, dynamic memory allocation
+  
+* Indirection (concept)
+  
+  * Imagine you have a /variable/ ~iResult~ that contains the /value/ ~75~.
+
+  * The variable is /located/ at a memory address ~6422216~.
+
+  * Imagine you have a /pointer variable/ ~myPointer~ that contains the
+    address ~6422216~ of the variable ~iResult~.
+
+  * This means that ~myPointer~ /indirectly/ points to the value ~75~. 
+
+  * You already worked with pointers: an array name ~a~ is a pointer to
+    the start of the array, the address of ~a[0]~.
+
+* Indirection (code)
+
+  * The unary /address/ operator ~&~ returns a computer memory address,
+    e.g. ~&iResult = 6422216~
+
+  * The unary /indirection/ operator ~*~ returns a value, e.g. ~*myPointer
+    = 75~ if ~myPointer~ points at ~&iResult~.
+
+    #+begin_src C
+    int iResult = 75;  // iResult has the value 75
+
+    int *myPointer = &iResult; // direct myPointer at iResult's address
+
+    printf("iResult = %d and lives at &iResult = %d\n",
+	   iResult, &iResult);
+
+    printf("myPointer = %d points to iResult = %d\n",
+	   myPointer, *myPointer);
+
+    printf("Inversions: %d %d\n", iResult, *&iResult);
+    printf("Inversions: %d %d\n", myPointer, &*myPointer);
+    #+end_src
+
+    #+RESULTS:
+    : iResult = 75 and lives at &iResult = 6422216
+    : myPointer = 6422216 points to iResult = 75
+    : Inversions: 75 75
+    : Inversions: 6422216 6422216
+
+* ~*~ and ~&~ are inverse to one another
+
+      #+begin_src C
+	int iResult = 75;  
+	int *myPointer = &iResult;
+
+	printf("iResult=%d => *&iResult=%d\n",
+	       iResult, *&iResult);
+	printf("myPointer=%d => &*myPointer=%d\n",
+	       myPointer, &*myPointer);
+    #+end_src
+
+    #+RESULTS:
+    : iResult=75, *&iResult=75
+    : myPointer=6422216, &*myPointer=6422216
 
 * Let's practice!
 
@@ -24,6 +103,8 @@
 
 * References
 
+  * Davenport/Vine (2015) C Programming for the Absolute Beginner
+    (3ed). Cengage Learning.
   * Kernighan/Ritchie (1978). The C Programming Language
     (1st). Prentice Hall.
   * King (2008). C Programming - A modern approach (2e). W A Norton.
