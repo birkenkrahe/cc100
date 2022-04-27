@@ -19,87 +19,174 @@
 * Overview
 
   * Computer memory is like a list of /locations/
-    
+
   * Each chunk of memory has an /address/ to a location
 
   * /Pointers/ point to these addresses
 
-  * The /address/ is not the house, it's a /reference/ 
+    #+caption: pointer p points to address of i
+    [[./img/pointer.png]]
+
+  * The /address/ is not the house, it's a /reference/
 
     #+attr_html: :width 300px
     #+caption: envelope = pointer to an address
     [[./img/letter.png]]
-  
-  * C#, Java, Pascal, Python...do not offer pointers
 
-  * C and C++ offer pointer variables and operators
+  * C#, Java, Pascal, Python...do not offer pointers (easily)[fn:1]
+
+  * C and C++ offer pointer variables and operators naturally
 
   * This gives you a lot more control over the computer
 
-  * E.g. string manipulation, dynamic memory allocation
-  
+  * Examples:
+    - *String manipulation* (working with text - e.g. when creating
+    fast-performing chat bots or AI agents)
+    - *Dynamic memory allocation* - the process of assigning memory
+      during the execution time (when a program typically competes
+      with thousands of other processes)
+
+  * It's mind control: You can essentially decide what the computer
+    should think with which part of its "brain" (great potential to
+    mess up, too), e.g. when you mis-allocate resources.
+
 * Indirection (concept)
-  
+
   * Imagine you have a /variable/ ~iResult~ that contains the /value/ ~75~.
 
-  * The variable is /located/ at a memory address ~6422216~.
+  * The variable is /located/ at a memory address ~0061FEC8~.
 
   * Imagine you have a /pointer variable/ ~myPointer~ that contains the
-    address ~6422216~ of the variable ~iResult~.
+    address ~0061FEC8~ of the variable ~iResult~.
 
-  * This means that ~myPointer~ /indirectly/ points to the value ~75~. 
+  * This means that ~myPointer~ /indirectly/ points to the value ~75~.
 
-  * You already worked with pointers: an array name ~a~ is a pointer to
+  * You already worked with pointers: an /array name/ ~a~ is a pointer to
     the start of the array, the address of ~a[0]~.
+
+    #+begin_src C
+      int a[2] = {0,1};
+      printf("a[0]=%d\na[1]=%d\n&a=%d\n", a[0], a[1], &a);
+    #+end_src
+
+  * You already worked with pointers: arguments in the call of ~scanf~~
+    are /pointers/: without the ~&~, the function would be supplied with
+    the /value/ of ~i~, not the /address/.
+
+    #+begin_example C
+    int i;
+    scanf("%d", &i);
+    #+end_example
 
 * Indirection (code)
 
+  * There are two /unary/ pointer operators:
+    - the /address/ (or referencing) operator ~&~
+    - the /indirection/ (or dereferencing) operator ~*~
+
   * The unary /address/ operator ~&~ returns a computer memory address,
-    e.g. ~&iResult = 6422216~
+    e.g. ~&iResult = 6422216~ - it /references/ the memory location
 
   * The unary /indirection/ operator ~*~ returns a value, e.g. ~*myPointer
-    = 75~ if ~myPointer~ points at ~&iResult~.
+    = 75~ if ~myPointer~ points at ~&iResult~. T
 
     #+begin_src C
-    int iResult = 75;  // iResult has the value 75
+      int iResult; // declare an integer variable
+      iResult = 75; // iResult now has the value 75
 
-    int *myPointer = &iResult; // direct myPointer at iResult's address
+      int *myPointer; // declare an integer pointer variable
+      myPointer = &iResult; // myPointer points at iResult's address
 
-    printf("iResult = %d and lives at &iResult = %d\n",
-	   iResult, &iResult);
+      printf("iResult = %d and lives at &iResult = %p\n",
+             iResult, &iResult);
 
-    printf("myPointer = %d points to iResult = %d\n",
-	   myPointer, *myPointer);
-
-    printf("Inversions: %d %d\n", iResult, *&iResult);
-    printf("Inversions: %d %d\n", myPointer, &*myPointer);
+      printf("myPointer = %p points to iResult = %d\n",
+             myPointer, *myPointer);
     #+end_src
 
-    #+RESULTS:
-    : iResult = 75 and lives at &iResult = 6422216
-    : myPointer = 6422216 points to iResult = 75
-    : Inversions: 75 75
-    : Inversions: 6422216 6422216
+    #+attr_html: :width 500px
+    #+caption: Graphical illustration of the indirection operator (Source: King)
+    [[./img/indirection.png]]
 
 * ~*~ and ~&~ are inverse to one another
 
-      #+begin_src C
-	int iResult = 75;  
-	int *myPointer = &iResult;
+  * Adress and indirection operator are /inverse/ to one another
+    (i.e. they reverse each other's operation - applying both amounts
+    to doing nothing).
 
-	printf("iResult=%d => *&iResult=%d\n",
-	       iResult, *&iResult);
-	printf("myPointer=%d => &*myPointer=%d\n",
-	       myPointer, &*myPointer);
+    #+begin_src C
+      int iResult = 75, *myPointer = &iResult; // declaring and initializing
+
+      // print variable and dereferenced pointer
+      printf("iResult=%d => *&iResult=%d\n",
+             iResult, *&iResult);
+      // print pointer and address of pointer
+      printf("myPointer=%p => &*myPointer=%p\n",
+             myPointer, &*myPointer);
     #+end_src
 
-    #+RESULTS:
-    : iResult=75, *&iResult=75
-    : myPointer=6422216, &*myPointer=6422216
+  * Applying ~&~ to a variable produces a pointer to the variable
+
+  * Applying ~*~ to the pointer takes us back to the original variable
+
+    #+begin_example C
+      j = *&i  // same as j = i
+    #+end_example
+
+* Pointers  must be initialized
+
+  * Not initialized pointers lead to invalid data or expressions.
+
+  * Pointer variables should always be initialized with:
+    - another variable's memory address (e.g. ~&i~), or
+    - with 0, or
+    - with the keyword ~NULL~.
+
+  * Here are some /valid/ pointer initializations - ~printf~ uses the
+    format specifier ~%p~ for pointers.
+
+    #+begin_src C
+      int *ptr1;  // declarations
+      int *ptr2;
+      int *ptr3;
+      double x = 3.14; // initialize variable
+
+      ptr1 = &x; // initialize with address
+      ptr2 = 0;  // initialize with 0
+      ptr3 = NULL; // initialize with NULL
+
+      printf("%p %p %p\n", ptr1, ptr2, ptr3);
+    #+end_src
+
+  * [ ] Here are a few non-valid initializations:
+    - can you tell why?
+    - can you right the wrongs?
+
+    #+begin_src C :results silent
+      int i = 5; // declare and initialize i
+      int *iPtr; // declare pointer iPtr
+
+      iPtr = i;   // wrong because...
+      iPtr = 7;   // wrong because...
+    #+end_src
+
+  * Solution:
+    
+    #+begin_src C :results output
+      int i = 5; // 
+      int *iPtr;
+
+      iPtr = &i;   // pointer initialized with memory address
+      *iPtr = 7;   // value of i indirectly changed
+
+      printf("%p %p %d\n", iPtr, &i, i);
+    #+end_src
 
 * Let's practice!
 
-  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
+  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the Emacs Org workbook
+    ~pointers_practice.org~. Download also the image file
+    ~indirection.png~.
 
 * References
 
@@ -111,5 +198,11 @@
     [[http://knking.com/books/c2/][URL: knking.com]].
   * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
     orgmode.org]]
-  * Image [[fig:storage]] from: [[https://overiq.com/media/uploads/memory-representation-of-array-of-strings-1504599913892.png][TheCguru.com]]
 
+* Footnotes
+
+[fn:1] Python e.g. is actually written in C - its default
+implementation is called [[https://realpython.com/cpython-source-code-guide/#part-1-introduction-to-cpython][CPython]]. However, in Python, usability was
+favored over machine performance, so pointers are not implemented at
+the user level. C underlies most of the much-used modern programming
+languages and their (internal) memory management.
