@@ -1715,19 +1715,19 @@
 
 * Pointers - w15s36 04/27/22
 
-  * [ ] Evaluate this course! Help Lyon decide if I stay or if I go!
+  * [X] Evaluate this course! Help Lyon decide if I stay or if I go!
 
      *Extra credit* for evaluating! - Don't forget to click the box.
 
      [[./img/survey.png]]
   
-  * [ ] Topic: pointers - C's memory fingers. 
+  * [X] Topic: pointers - C's memory fingers. 
     - See ~pointers_practice.org~ in GDrive
     - See script in ~9_pointers/~ in GitHub
 
-  * [ ] Quiz 10 (w/e) will cover: arrays, functions, and pointers
+  * [X] Quiz 10 (w/e) will cover: arrays, functions, and pointers
 
-  * [ ] Pgm 11 (Org-file, BONUS only) will cover pointers
+  * [ ] Pgm 11 (w/e, Org-file, BONUS only) will cover pointers
 
     #+attr_html: :width 500px
     #+caption: Another pointer (Photo: N Spehner on Unsplash)
