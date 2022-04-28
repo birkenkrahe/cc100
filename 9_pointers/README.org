@@ -65,9 +65,14 @@
     the start of the array, the address of ~a[0]~.
 
     #+begin_src C
-      int a[2] = {0,1};
-      printf("a[0]=%d\na[1]=%d\n&a=%d\n", a[0], a[1], &a);
+      int a[2] = {100,1000};
+      printf("a[0]=%d\na[1]=%d\n&a=%p\n", a[0], a[1], &a);
     #+end_src
+
+    #+RESULTS:
+    : a[0]=100
+    : a[1]=1000
+    : &a=0061FEC8
 
   * You already worked with pointers: arguments in the call of ~scanf~~
     are /pointers/: without the ~&~, the function would be supplied with
@@ -104,6 +109,10 @@
              myPointer, *myPointer);
     #+end_src
 
+    #+RESULTS:
+    : iResult = 75 and lives at &iResult = 0061FEC8
+    : myPointer = 0061FEC8 points to iResult = 75
+
     #+attr_html: :width 500px
     #+caption: Graphical illustration of the indirection operator (Source: King)
     [[./img/indirection.png]]
@@ -124,6 +133,10 @@
       printf("myPointer=%p => &*myPointer=%p\n",
              myPointer, &*myPointer);
     #+end_src
+
+    #+RESULTS:
+    : iResult=75 => *&iResult=75
+    : myPointer=0061FEC8 => &*myPointer=0061FEC8
 
   * Applying ~&~ to a variable produces a pointer to the variable
 
@@ -158,6 +171,9 @@
       printf("%p %p %p\n", ptr1, ptr2, ptr3);
     #+end_src
 
+    #+RESULTS:
+    : 0061FEB8 00000000 00000000
+
   * [ ] Here are a few non-valid initializations:
     - can you tell why?
     - can you right the wrongs?
@@ -166,8 +182,8 @@
       int i = 5; // declare and initialize i
       int *iPtr; // declare pointer iPtr
 
-      iPtr = i;   // wrong because...
-      iPtr = 7;   // wrong because...
+      iPtr = &i;   // wrong because i is a variable not an address
+      *iPtr = 7;   // wrong because iPtr cannot hold a variable value
     #+end_src
 
   * Solution:
@@ -181,6 +197,9 @@
 
       printf("%p %p %d\n", iPtr, &i, i);
     #+end_src
+
+    #+RESULTS:
+    : 0061FEC8 0061FEC8 7
 
 * Let's practice!
 
