@@ -149,6 +149,9 @@
        printf("Average: %g\n", average(x,y));
      #+end_src
 
+     #+RESULTS:
+     : Average: 7
+
    * What's happening in the last line exactly?
      1. The ~average~ function is called with ~x~ and ~y~ as arguments.
      2. ~average~ executes its ~return~ statement, returning ~(a+b)/2~.
@@ -198,6 +201,12 @@
          return 0;
        }
      #+end_src
+
+     #+RESULTS:
+     : Enter three numbers: 
+     : Average of 3.5 and 9.6: 6.55
+     : Average of 9.6 and 10.2: 9.9
+     : Average of 3.5 and 10.2: 6.85
 
    * Note: the definition of ~average~ needs to be put before ~main~ -
      otherwise the function needs to be declared.

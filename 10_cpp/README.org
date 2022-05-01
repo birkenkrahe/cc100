@@ -1,0 +1,75 @@
+#+TITLE:C++ vs. C and C++ Basics
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 / Introduction to programming in C/C++
+#+STARTUP: overview hideblocks
+#+OPTIONS: toc:nil ^:nil num:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :comments both
+#+PROPERTY: header-args:C++ :main yes :includes "c:/Users/birkenkrahe/Documents/GitHub/cc100/10_cpp/header/std_lib_facilities.h" :exports both :results output :comments both
+* README
+
+  * This script introduces the basics of C++ and compares C and C++.
+
+  * Practice workbooks and input files [[https://drive.google.com/drive/folders/12FZkGSRdzfxFd1-QEMxMkw0Q-Alz4F3U?usp=sharing][in GDrive]].
+
+  * PDF version of this file and of the completed practice workbooks
+    is available [[https://github.com/birkenkrahe/cc100/tree/main/pdf][in GitHub]].
+
+  * This section, including some sample code, is based on Stroustrup,
+
+* Overview
+
+  * It all begins with ~Hello World~, of course.
+    
+  #+begin_src C++ :tangle hello.cpp 
+    #include <iostream>
+
+    int main()
+    {
+      std::cout << "Hello World!\n";
+      return 0;
+    }
+  #+end_src
+
+  #+RESULTS:
+
+  * Similarities and the differences:
+
+    | C               | C++                        | Difference  |
+    |-----------------+----------------------------+-------------|
+    | ~stdlib.h~        | ~iostream~                   | Header file |
+    |                 | ~std_lib_facilities.h~[fn:1] |             |
+    | ~printf("...\n);~ | ~cout << "...\n";~           |             |
+
+
+  * Compilation: the tangled code can be compiled and run using ~g++~ 
+
+    #+begin_example bash
+    $ g++ -o hello.exe hello.cpp
+    $ hello
+    #+end_example
+
+  
+  
+  
+* Let's practice!
+
+  * [ ] Head over [[https://drive.google.com/drive/folders/1mJ4HN7_Gq27LgXJBkcB_w3Aam3YjI5u_?usp=sharing][to GDrive]] for the first workbook ~array1.org~.
+
+* References
+
+  * Kernighan/Ritchie (1978). The C Programming Language
+    (1st). Prentice Hall.
+  * Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+    orgmode.org]]
+  * Stroustrup (2014). Programming -- Principles and Practice Using
+    C++. Addison Wesley. [[https://www.stroustrup.com/programming.html][URL: stroustrup.com]].
+
+* Footnotes
+
+[fn:1] Stroustrup (2014) recommends ~std_lib_facilities.h~ instead.
+  #+begin_src C++ :tangle hello1.cpp :includes "c:/Users/birkenkrahe/Documents/GitHub/cc100/10_cpp/header/std_lib_facilities.h"
+    cout << "Hello World!\n";
+    #+end_src
+
+
+
