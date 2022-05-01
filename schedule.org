@@ -58,7 +58,7 @@
    |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
    | 35 |   15 | Mon-25-Apr  | Review: Quiz 7-9              |                  |                        |                                  |                |
    | 36 |      | Wed-27-Apr  | Pointers                      |                  | pointers_practice.org  |                                  | 8_pointers     |
-   | 37 |      | Fri-29-Apr  | Strings                       | Test 3 (THU-SAT) |                        | Program 11 (Pointers) - BONUS    |                |
+   | 37 |      | Fri-29-Apr  |                               | Test 3 (THU-SAT) |                        | Program 11 (Pointers) - BONUS    |                |
    |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
    | 38 |   16 | Mon- 02-May | C++ Basics                    | Quiz 10          | cpp_practice.org       |                                  |                |
    | 39 |      | Wed-04-May  | C++ Sample programs           |                  |                        | Program 12 (C++) - BONUS         |                |
