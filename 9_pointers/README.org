@@ -182,8 +182,8 @@
       int i = 5; // declare and initialize i
       int *iPtr; // declare pointer iPtr
 
-      iPtr = &i;   // wrong because i is a variable not an address
-      *iPtr = 7;   // wrong because iPtr cannot hold a variable value
+      iPtr = i;   // wrong because i is a variable not an address
+      iPtr = 7;   // wrong because iPtr cannot hold a variable value
     #+end_src
 
   * Solution:
