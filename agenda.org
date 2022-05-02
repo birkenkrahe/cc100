@@ -1746,13 +1746,18 @@
 
 ** C++ basics
 
-   
-   
+  * [ ] Overview / history
+  * [ ] Basics of the language
+  * [ ] Object orientation
 
 * Last Rites / final exam review - w16s38 (05/04/22)
 
   * [ ] Your final exam questions
   * [ ] Going through the exam questions
+
+  * [ ] *Please take 10 minutes to complete the course evaluation now*
+
+    [[./img/evaluation.jpg]]
 
 * Final exam (PROCTORED) - w17s39 (05/09/22)
 

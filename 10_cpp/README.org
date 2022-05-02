@@ -23,7 +23,7 @@
    * Historically, modern C and C++ are siblings: both descend from
      classic C.
 
-     #+attr_html: :width 500px
+     #+attr_html: :width 400px
      #+caption: History of C++ 1967-2014 (Source: Stroustrup, 2014)
      [[./img/history.png]]
 
@@ -39,7 +39,7 @@
      #+end_src
 
      #+name: sizeofAinC++
-     #+begin_src C++ :includes <iostream>
+     #+begin_src C++ :includes <iostream> :exports both
        using namespace std;
        int s = sizeof('a');
        cout << s;
@@ -52,7 +52,7 @@
 
    * It all begins with ~Hello World~, of course.
 
-     #+begin_src C++ :tangle hello.cpp
+     #+begin_src C++ :tangle hello.cpp :exports both
        #include <iostream>
 
        int main()
@@ -101,6 +101,205 @@
    | Function overloading | give each function a distinctive name |
    | References           | use pointers                          |
    | ~bool~ data type       | use ~int~                               |
+
+* C++ Basics
+
+** Variables
+
+   * Types of variables / data types
+
+     #+name: tab:types
+     | ~int~    | Short for integer; stores whole numbers                                                       |
+     | ~char~   | Short for character; stores a single leer, digit, or symbol                                  |
+     | ~bool~   | Short for Boolean; stores true or false                                                       |
+     | ~float~  | Short for floating point number; stores numbers with fractional parts                         |
+     | ~double~ | Short for double precision floating point number; stores bigger numbers with bigger fractions |
+
+   * Declaring and initializing variables
+
+     #+begin_src C++ :includes <iostream> :results silent :exports both
+       using namespace std;
+
+       int myVariable = 1;
+       double a = 2.2;
+     #+end_src
+
+** Constants
+
+   * Declaring a constant as a /literal/ (non-variable)
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std;
+
+       const float pi = 3.14;  // pi is the constant, 3.14 is the literal
+       float radius = 5, area;
+
+       area = radius * radius * pi;
+       cout << area;
+     #+end_src
+
+** Assignments
+
+   * When a variable is set with ~=~ the left side is the ~lvalue~
+   * The thing on the right that's assigned is the ~rvalue~
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std;
+
+       int myVal, myVal1;
+
+       myVal = 0;        // assigning 0 to myVal
+       myVal1 = myVal;   // assigning myVal to myVal1
+     #+end_src
+
+   * Not allowed, because the ~lvalue~ does not refer to a place where
+     we can store a value:
+
+     #+begin_example C++
+     5 + 6 = myVal;  // illegal assigment
+     #+end_example
+
+   * What do C and C++ do when we try to add an integer to a string?
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std;
+
+       int myValue = 4;
+       int yourVal;
+       string myString = "word";
+
+       yourVal = myValue + myString;
+     #+end_src
+
+     Error output:
+     #+begin_example
+     error: no match for 'operator+'
+     (operand types are 'int' and 'std::__cxx11::string'
+     yourVal = myValue + myString
+          ~~~~~~~~^~~~~~~~~~
+     #+end_example
+
+     And in C: no error!
+
+     #+begin_src C :exports both
+       int myValue = 4;
+       int yourVal;
+       char myString = "word";
+
+       yourVal = myValue + myString;
+       printf("%d\n", yourVal);
+     #+end_src
+
+     #+RESULTS:
+     : 72
+
+** Output
+
+   * Output in C is done with the object ~cout~ ("console output"),
+     which prints information to the screen.
+
+   * ~<<~ is the /insertion operator/
+
+   * ~endl~ (end line) is the equivalent of ~"\n"~
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std;
+
+       int myVariable = 1;
+       double a = 2.2;
+
+       cout << myVariable << endl;
+       cout << a;
+     #+end_src
+
+   * Pipelining console output:
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std; int myVal = 1000;
+
+       cout << "Go Scots! " << "You can do it!" << endl << myVal;
+     #+end_src
+
+     #+RESULTS:
+     : Go Scots! You can do it!
+     : 1000
+
+   * You can still use ~\n~.
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std; int myVal = 1000;
+
+       cout << "Go Scots!\nYou can do it!" << endl << myVal;
+     #+end_src
+
+     #+RESULTS:
+     : Go Scots!
+     : You can do it!
+     : 1000
+
+   * Formatted print example.
+
+     #+begin_src C++ :includes <iostream> :results output :exports both
+       using namespace std; int myVal = 1000;
+
+       cout << "Lyon" << endl;
+       cout.width(16);
+       cout << "College" << endl;
+       cout << "****************" << endl;
+       cout << left << "Freshmen/juniors" << endl;
+     #+end_src
+
+     #+RESULTS:
+     : Lyon
+     :          College
+     : ****************
+     : Freshmen/juniors
+
+** Input
+
+   * To generate input, use the ~cin~ (pronounced 'see-in', "console
+     input") object with the extraction operator ~>>~.
+
+     #+begin_src C++ :includes <iostream> :results output :cmdline < input  :exports both
+       using namespace std;
+
+       int x = 0;
+       cout << "Please enter a value for x " << endl;
+
+       cin >> x;
+
+       cout << "You entered: " << x << endl;
+     #+end_src
+
+
+   * Checking failed input with ~cin.fail~. This time, no input was provided.
+
+     #+begin_src C++ :includes <iostream> :results output :exports both 
+       using namespace std;
+
+       int x = 0;
+
+       cout << "Please enter a value for x " << endl;
+
+       cin >> x;
+       if (cin.fail())
+         {
+           cout << "That is not a valid input" << endl;
+         }
+     #+end_src
+
+     #+RESULTS:
+     : Please enter a value for x 
+     : That is not a valid input
+
+** TODO Arithmetic
+** TODO Comments
+** TODO Conditionals
+** TODO Strings
+** TODO Loops
+** TODO Arrays
+** TODO Functions
+** TODO Pointers
 
 * Object Oriented Programming (OOP)
 ** Procedural programming
@@ -270,6 +469,15 @@
   * Udemy offers [[https://www.udemy.com/share/101Wd43@VVDq7Xu-El5toweZoxI7ovhqZDPvMYEA9Od8ZszDF_9IJoTerhoclV6qa_L9fhw=/][this 46-hour video-based course]] (2022) which is very
     nicely presented, contains exercises, but costs a little money (I
     got it for $10).
+
+  * See also "[[https://norvig.com/21-days.html][How to teach yourself programming in 10 years]]", or "Why
+    is everyone in such a rush?" by [[https://norvig.com/][Peter Norvig]] (director of research
+    at Google and author of the standard [[http://aima.cs.berkeley.edu/][textbook on AI]], 2021).
+
+  * History and context: listen to the 2 hour podcast/interview with
+    creator of C++ - [[https://youtu.be/uTxRF5ag27A][Bjarne Stroustrup: C++ | Lex Fridman Podcast #48]]
+    (2020), which contains a wide range of C++ and programming related
+    issues. (Lex Fridman is an AI/ML professor at MIT.)
 
 * References
 
