@@ -2,66 +2,66 @@
 #+startup: hideblocks overview
 * Schedule
 
-   | NO | WEEK | DATE        | TOPIC                         | TEST[fn:1]       | CLASS ASSIGNMENT       | ASSIGNMENT (LAB PROJECT)[fn:3]   | GITHUB         |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   |  1 |    1 | Wed-12-Jan  | Welcome                       | Entry survey     |                        | Survey                           | org/systems    |
-   |  2 |      | Fri-14-Jan  | Git, GitHub, History of C     |                  | GitHub Hello World     | GitHub Hello World               | 1_introduction |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   |  3 |    2 | Wed-19-Jan  | Introdution to C and C++      | Quiz 1           |                        | Emacs online tutorial            | 2_installation |
-   |  4 |      | Fri-21-Jan  | Install C compiler, set PATH  |                  |                        |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   |  4 |    3 | Mon-24-Jan  | Install GNU Emacs             | Quiz 2           |                        | Program  1 (Org-mode)            | 3_basics       |
-   |  5 |      | Wed-26-Jan  | Create GNU Emacs Org-mode     |                  | Create .emacs file     |                                  |                |
-   |  6 |      | Fri-28-Jan  | GNU Emacs initialization file |                  | Run C code in Emacs    |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   |  7 |    4 | Mon-31-Jan  | GCC lab session               |                  |                        | Program 2 (checkmarks)           |                |
-   |  8 |      | Wed-02-Feb  | Structure of a C program      | Quiz 3           |                        |                                  |                |
-   |    |      | Fri-04-Feb  | CANCELLED (weather)           |                  |                        |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   |  9 |    5 | Mon-07-Feb  | Variable types, assignments   |                  |                        | Program 3 (dweight) X            |                |
-   | 10 |      | Wed-09-Feb  | Formatting printout           |                  |                        |                                  |                |
-   | 11 |      | Fri-11-Feb  | Writing test 1                | Test 1           |                        |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 12 |    6 | Mon-14-Feb  | Review of test 1              |                  |                        | Program 4 (volume)               |                |
-   | 13 |      | Wed-16-Feb  | Formatting, C constants (1)   |                  | Dimensional weight 1   |                                  |                |
-   | 14 |      | Fri-18-Feb  | C constants (2), naming rules |                  |                        |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 15 |    7 | Mon-21-Feb  | Reading input with scanf()    | Quiz 4           | iscan/fscan program    | Program 5 (phone)                | 4_io           |
-   | 16 |      | Wed-23-Feb  | Reading input in Emacs        |                  | scanf with redirection |                                  |                |
-   |    |      | +Fri-25-Feb+  | CANCELLED (Weather)           |                  |                        |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 17 |    8 | Mon-28-Feb  | Reading input lab session     | Quiz 5           | scanf.org              |                                  |                |
-   |    |      | +Wed-02-Mar+  | CANCELLED                     |                  |                        |                                  |                |
-   | 18 |      | Fri-04-Mar  | Program layout and tangling   |                  |                        | Layout program                   |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 19 |    9 | Mon-07-Mar  | Conversion with printf        | Quiz 6           | io_printf_nb.org       |                                  |                |
-   | 20 |      | Wed-09-Mar  |                               |                  | io_scanf_nb.org        | Program 6 (divide)               |                |
-   | 21 |      | Fri-11-Mar  | Quiz rehearsal                |                  |                        |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 22 |   10 | Mon-14-Mar  | Test 2                        | Test 2           |                        |                                  | 5_selection    |
-   | 23 |      | Wed-16-Mar  | Operators / Pseudocode        |                  |                        |                                  |                |
-   | 24 |      | Fri-18-Mar  | BPMN models and IF statements |                  |                        | Program 7 (battle)               |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 25 |   11 | Mon-28-Mar  | Booleans, operator precedence | Quiz 7           |                        |                                  |                |
-   | 26 |      | Wed-30-Mar  | Compound if, input validation |                  | compound_if.org        |                                  |                |
-   | 27 |      | Fri-01-Apr  | Switch, case, break           |                  | switch.org             | Program 8 (grade)                |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 28 |   12 | Mon-04-Apr  | Iteration: looping structures | Quiz 8           | while.org              |                                  | 6_loops        |
-   | 29 |      | Wed-06-Apr  | While and Do loops            |                  | do.org                 | Program 9 (multiplication table) |                |
-   | 30 |      | Fri-08-Apr  | For loops                     |                  | for.org                |                                  |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 31 |   13 | Mon-11-Apr  | Continue, goto, Null          | Quiz 9           |                        |                                  |                |
-   | 32 |      | Wed-13-Apr  | One-dimensional arrays        |                  | array_1.org            |                                  | 7_arrays       |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 33 |   14 | Wed-20-Apr  | Multidim. arrays, sizeof()    |                  | array_2.org            |                                  |                |
-   | 34 |      | Fri-22-Apr  | Functions                     |                  | functions_practice.org | Program 10 (Fibonacci)           |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 35 |   15 | Mon-25-Apr  | Review: Quiz 7-9              |                  |                        |                                  |                |
-   | 36 |      | Wed-27-Apr  | Pointers                      |                  | pointers_practice.org  |                                  | 8_pointers     |
-   | 37 |      | Fri-29-Apr  |                               | Test 3 (THU-SAT) |                        | Program 11 (Pointers) - BONUS    |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 38 |   16 | Mon- 02-May | C++ Basics                    | Quiz 10          | cpp_practice.org       |                                  |                |
-   | 39 |      | Wed-04-May  | C++ Sample programs           |                  |                        | Program 12 (C++) - BONUS         |                |
-   |----+------+-------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
-   | 40 |   17 | Mon-09-May  | FINAL EXAM MON 10.30-12.30    |                  |                        |                                  |                |
+   | NO | WEEK | DATE       | TOPIC                         | TEST[fn:1]       | CLASS ASSIGNMENT       | ASSIGNMENT (LAB PROJECT)[fn:3]   | GITHUB         |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   |  1 |    1 | Wed-12-Jan | Welcome                       | Entry survey     |                        | Survey                           | org/systems    |
+   |  2 |      | Fri-14-Jan | Git, GitHub, History of C     |                  | GitHub Hello World     | GitHub Hello World               | 1_introduction |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   |  3 |    2 | Wed-19-Jan | Introdution to C and C++      | Quiz 1           |                        | Emacs online tutorial            | 2_installation |
+   |  4 |      | Fri-21-Jan | Install C compiler, set PATH  |                  |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   |  4 |    3 | Mon-24-Jan | Install GNU Emacs             | Quiz 2           |                        | Program  1 (Org-mode)            | 3_basics       |
+   |  5 |      | Wed-26-Jan | Create GNU Emacs Org-mode     |                  | Create .emacs file     |                                  |                |
+   |  6 |      | Fri-28-Jan | GNU Emacs initialization file |                  | Run C code in Emacs    |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   |  7 |    4 | Mon-31-Jan | GCC lab session               |                  |                        | Program 2 (checkmarks)           |                |
+   |  8 |      | Wed-02-Feb | Structure of a C program      | Quiz 3           |                        |                                  |                |
+   |    |      | Fri-04-Feb | CANCELLED (weather)           |                  |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   |  9 |    5 | Mon-07-Feb | Variable types, assignments   |                  |                        | Program 3 (dweight) X            |                |
+   | 10 |      | Wed-09-Feb | Formatting printout           |                  |                        |                                  |                |
+   | 11 |      | Fri-11-Feb | Writing test 1                | Test 1           |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 12 |    6 | Mon-14-Feb | Review of test 1              |                  |                        | Program 4 (volume)               |                |
+   | 13 |      | Wed-16-Feb | Formatting, C constants (1)   |                  | Dimensional weight 1   |                                  |                |
+   | 14 |      | Fri-18-Feb | C constants (2), naming rules |                  |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 15 |    7 | Mon-21-Feb | Reading input with scanf()    | Quiz 4           | iscan/fscan program    | Program 5 (phone)                | 4_io           |
+   | 16 |      | Wed-23-Feb | Reading input in Emacs        |                  | scanf with redirection |                                  |                |
+   |    |      | +Fri-25-Feb+ | CANCELLED (Weather)           |                  |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 17 |    8 | Mon-28-Feb | Reading input lab session     | Quiz 5           | scanf.org              |                                  |                |
+   |    |      | +Wed-02-Mar+ | CANCELLED                     |                  |                        |                                  |                |
+   | 18 |      | Fri-04-Mar | Program layout and tangling   |                  |                        | Layout program                   |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 19 |    9 | Mon-07-Mar | Conversion with printf        | Quiz 6           | io_printf_nb.org       |                                  |                |
+   | 20 |      | Wed-09-Mar |                               |                  | io_scanf_nb.org        | Program 6 (divide)               |                |
+   | 21 |      | Fri-11-Mar | Quiz rehearsal                |                  |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 22 |   10 | Mon-14-Mar | Test 2                        | Test 2           |                        |                                  | 5_selection    |
+   | 23 |      | Wed-16-Mar | Operators / Pseudocode        |                  |                        |                                  |                |
+   | 24 |      | Fri-18-Mar | BPMN models and IF statements |                  |                        | Program 7 (battle)               |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 25 |   11 | Mon-28-Mar | Booleans, operator precedence | Quiz 7           |                        |                                  |                |
+   | 26 |      | Wed-30-Mar | Compound if, input validation |                  | compound_if.org        |                                  |                |
+   | 27 |      | Fri-01-Apr | Switch, case, break           |                  | switch.org             | Program 8 (grade)                |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 28 |   12 | Mon-04-Apr | Iteration: looping structures | Quiz 8           | while.org              |                                  | 6_loops        |
+   | 29 |      | Wed-06-Apr | While and Do loops            |                  | do.org                 | Program 9 (multiplication table) |                |
+   | 30 |      | Fri-08-Apr | For loops                     |                  | for.org                |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 31 |   13 | Mon-11-Apr | Continue, goto, Null          | Quiz 9           |                        |                                  |                |
+   | 32 |      | Wed-13-Apr | One-dimensional arrays        |                  | array_1.org            |                                  | 7_arrays       |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 33 |   14 | Wed-20-Apr | Multidim. arrays, sizeof()    |                  | array_2.org            |                                  |                |
+   | 34 |      | Fri-22-Apr | Functions                     |                  | functions_practice.org | Program 10 (Fibonacci)           |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 35 |   15 | Mon-25-Apr | Review: Quiz 7-9              |                  |                        |                                  |                |
+   | 36 |      | Wed-27-Apr | Pointers                      |                  | pointers_practice.org  |                                  | 8_pointers     |
+   | 37 |      | Fri-29-Apr |                               | Test 3 (THU-SAT) |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 38 |   16 | Mon-02-May | C++ Basics                    | Quiz 10          |                        |                                  |                |
+   | 39 |      | Wed-04-May | C++ Sample programs           |                  |                        |                                  |                |
+   |----+------+------------+-------------------------------+------------------+------------------------+----------------------------------+----------------|
+   | 40 |   17 | Mon-09-May | FINAL EXAM MON 10.30-12.30    |                  |                        |                                  |                |
 

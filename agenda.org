@@ -1717,11 +1717,11 @@
 
   * [X] Evaluate this course! Help Lyon decide if I stay or if I go!
 
-     *Extra credit* for evaluating! - Don't forget to click the box.
+    *Extra credit* for evaluating! - Don't forget to click the box.
 
-     [[./img/survey.png]]
-  
-  * [X] Topic: pointers - C's memory fingers. 
+    [[./img/survey.png]]
+
+  * [X] Topic: pointers - C's memory fingers.
     - See ~pointers_practice.org~ in GDrive
     - See script in ~9_pointers/~ in GitHub
 
@@ -1733,10 +1733,44 @@
     #+caption: Another pointer (Photo: N Spehner on Unsplash)
     [[./img/pointer.jpg]]
 
-* Strings - w15s37 (04/29/22)
-* C++ basics 1 - w16s38 (05/02/22)
-* C++ basics 2 - w16s39 (05/04/22)
-* Final exam - w17s40 (05/09/22)
+* C++ basics - w16s37 (05/02/22)
+
+** Housekeeping
+
+  * [ ] Quiz 10 is live (unlimited play from today)
+  * [ ] No more program assignments, alas (ran out of time)
+  * [ ] Fibonacci program assignments: corrections by mid-week
+  * [ ] *Any outstanding work must be finished by Monday May 9*
+  * [ ] Wednesday: final exam questions, summary & outlook
+  * [ ] I will go through the individual questions with you
+
+** C++ basics
+
+   
+   
+
+* Last Rites / final exam review - w16s38 (05/04/22)
+
+  * [ ] Your final exam questions
+  * [ ] Going through the exam questions
+
+* Final exam (PROCTORED) - w17s39 (05/09/22)
+
+  #+begin_quote
+  The final exam will be in room 104 of the Lyon building (our usual
+  classroom) on Monday, May 9 from 8-10 AM ([[https://assets.speakcdn.com/assets/2433/sp22_final_exam_schedule_final-2022042203012665.pdf][see exam schedule]]).
+
+  The exam will consist of 40 questions drawn at random from the pool
+  of quiz and test questions. Completing the various quizzes and tests
+  until you've reached 100%, and revisiting your past tests should
+  enable you to pass this exam with flying colors!
+
+  If you are a senior, you need to take the exam earlier - I'm going
+  to offer additional slots on Friday, 6 May. *Please reach out to me*
+  if this applies to you, or if you want to write the exam on Friday
+  for any other reason. ([[https://lyon.schoology.com/event/5916450093/profile][Schoology event]])
+  #+end_quote
+
 * References
   * For some of the programming projects, see: King (2011). C
     Programming. W Norton & Co.
