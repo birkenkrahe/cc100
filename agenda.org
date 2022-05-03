@@ -1734,24 +1734,43 @@
     [[./img/pointer.jpg]]
 
 * C++ basics - w16s37 (05/02/22)
-
 ** Housekeeping
 
-  * [ ] Quiz 10 is live (unlimited play from today)
-  * [ ] No more program assignments, alas (ran out of time)
-  * [ ] Fibonacci program assignments: corrections by mid-week
-  * [ ] *Any outstanding work must be finished by Monday May 9*
-  * [ ] Wednesday: final exam questions, summary & outlook
-  * [ ] I will go through the individual questions with you
+  * [X] Quiz 10 is live (unlimited play from today)
+  * [X] No more program assignments, alas (ran out of time)
+  * [X] Fibonacci program assignments: corrections by mid-week
+  * [X] *Any outstanding work must be finished by Monday May 9*
+  * [X] Wednesday: final exam questions, summary & outlook
+  * [X] I will go through the individual questions with you
 
 ** C++ basics
 
-  * [ ] Overview / history
-  * [ ] Basics of the language
-  * [ ] Object orientation
+  * [X] Overview / history
+  * [X] Basics of the language
+  * [X] Object orientation
+
+** Final exam scheduled
+
+    The final exam will be *in room 104 of the Lyon building* (our usual
+    classroom) on *Monday, May 9 from 8-10 AM* ([[https://assets.speakcdn.com/assets/2433/sp22_final_exam_schedule_final-2022042203012665.pdf][see exam schedule]]). You
+    will complete the exam in Schoology.
+
+    The exam will consist of 40 questions drawn at random from the
+    pool of quiz and test questions. Completing the various quizzes
+    and tests until you've reached 100%, and revisiting your past
+    tests should enable you to pass this exam with flying colors!
+
+    If you are a senior, you need to take the exam earlier - I'm going
+    to offer additional slots on Friday, 6 May. Please reach out to me
+    if this applies to you, or if you want to write the exam on Friday
+    for any other reason.
+
+    #+caption: sunset
+    [[./img/sunset.gif]]
 
 * Last Rites / final exam review - w16s38 (05/04/22)
 
+  * [ ] Object orientation (part 2)
   * [ ] Your final exam questions
   * [ ] Going through the exam questions
 

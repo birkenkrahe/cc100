@@ -38,12 +38,18 @@
        printf("%d\n", s);
      #+end_src
 
+     #+RESULTS: sizeofAinC
+     : 4
+
      #+name: sizeofAinC++
      #+begin_src C++ :includes <iostream> :exports both
        using namespace std;
        int s = sizeof('a');
        cout << s;
      #+end_src
+
+     #+RESULTS: sizeofAinC++
+     : 1
 
    * C++ employs stricter type checking: the language doesn't quite
      let you get away with as much.
@@ -62,11 +68,14 @@
        }
      #+end_src
 
+     #+RESULTS:
+     : Hello World!
+
    * Similarities and the differences between C and C++:
 
      | C               | C++                        | Difference  |
      |-----------------+----------------------------+-------------|
-     | ~stdlib.h~        | ~iostream~                   | Header file |
+     | ~stdio.h~         | ~iostream~                   | Header file |
      |                 | ~std_lib_facilities.h~[fn:1] |             |
      | ~printf("...\n);~ | ~cout << "...\n";~           |             |
 
@@ -103,14 +112,13 @@
    | ~bool~ data type       | use ~int~                               |
 
 * C++ Basics
-
 ** Variables
 
    * Types of variables / data types
 
      #+name: tab:types
      | ~int~    | Short for integer; stores whole numbers                                                       |
-     | ~char~   | Short for character; stores a single leer, digit, or symbol                                  |
+     | ~char~   | Short for character; stores a single letter, digit, or symbol                                 |
      | ~bool~   | Short for Boolean; stores true or false                                                       |
      | ~float~  | Short for floating point number; stores numbers with fractional parts                         |
      | ~double~ | Short for double precision floating point number; stores bigger numbers with bigger fractions |
@@ -143,7 +151,7 @@
    * When a variable is set with ~=~ the left side is the ~lvalue~
    * The thing on the right that's assigned is the ~rvalue~
 
-     #+begin_src C++ :includes <iostream> :results output :exports both
+     #+begin_src C++ :includes <iostream> :results silent :exports both 
        using namespace std;
 
        int myVal, myVal1;
@@ -212,6 +220,10 @@
        cout << a;
      #+end_src
 
+     #+RESULTS:
+     : 1
+     : 2.2
+
    * Pipelining console output:
 
      #+begin_src C++ :includes <iostream> :results output :exports both
@@ -236,7 +248,7 @@
      : Go Scots!
      : You can do it!
      : 1000
-
+ 
    * Formatted print example.
 
      #+begin_src C++ :includes <iostream> :results output :exports both
@@ -266,11 +278,14 @@
        int x = 0;
        cout << "Please enter a value for x " << endl;
 
-       cin >> x;
+       cin >> x;   // this is equivalent scanf("%d", &x);
 
        cout << "You entered: " << x << endl;
      #+end_src
 
+     #+RESULTS:
+     : Please enter a value for x 
+     : You entered: 1000
 
    * Checking failed input with ~cin.fail~. This time, no input was provided.
 
@@ -304,7 +319,7 @@
 * Object Oriented Programming (OOP)
 ** Procedural programming
 
-   * Procedural programming is what you know:
+   * *Procedural* programming is what you know:
 
      - Programs are collection of functions
      - Data is declared separately
@@ -315,7 +330,7 @@
 
      - Functions need to know the structure of the data
 
-     - [ ] Can you think of an example?
+     - [X] Can you think of an example?
 
        #+begin_src C
          int add (int x, int y)
