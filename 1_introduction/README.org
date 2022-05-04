@@ -220,6 +220,7 @@
   library of multigrid functions (numerical method for lattice gauge
   theory simulations in theoretical particle physics).
   #+end_quote
+
 * What will happen to C/C++ in the next 20 years?
 
   Whatever happens, good new for learning C.
