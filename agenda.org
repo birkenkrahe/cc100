@@ -1768,11 +1768,14 @@
     #+caption: sunset
     [[./img/sunset.gif]]
 
-* Last Rites / final exam review - w16s38 (05/04/22)
+N* Last Rites / final exam review - w16s38 (05/04/22)
 
   * [ ] Object orientation (part 2)
   * [ ] Your final exam questions
   * [ ] Going through the exam questions
+
+  #+caption: smooth sailing
+  [[./img/sailing.gif]]
 
 ** Evaluation
 
@@ -1781,7 +1784,7 @@
     * I have *really* missed student projects in this course. Perhaps it
       strikes you as odd to expect absolute beginners to do projects
       but I find it both interesting and instructive.
-    * Example (group or individual) projects could cover any of the
+    * *Example projects* (group or individual) could cover any of the
       many aspects of C programming that we did not cover for lack of
       time. Including:
       - Use of C in cybersecurity
@@ -1796,23 +1799,23 @@
       - Analyzing C programs
       - Using C for Artificial Intelligence and Machine Learning
 
-      I have books or articles on every single one of these topics!
+      /I have books or articles on every single one of these topics!/
 
-    * I would force everyone to complete the (1 hr) Emacs tutorial *in
-      class*. To the very end, I had the impression that 1/2 the class
-      was not really mastering this tool and spent too much time
-      trying to do simple things (like changing buffers, opening,
-      saving and writing files, finding directories, etc.)
+    * I would force everyone to complete the (1 hr) *Emacs tutorial *in
+      class*. To the very end, I had the impression that many were not
+      really mastering this tool and spent too much time trying to do
+      simple things (like changing buffers, opening, saving and
+      writing files, finding directories, etc.)
 
-    * My learning: I need to spend more effort trying to get you to
-      take your *tools* seriously. Without mastery of your tools you are
-      nothing in any discipline but this is especially true for
-      programming. Many tools (like Emacs, liked editors, compilers,
-      IDEs) don't look like tools because clever software engineers
-      have created an environment for you where the food falls from
-      the tree straight into your mouth most of the time. But that's
-      not the real world! In the real world you have to *learn* to use a
-      hammer to drive a nail into wood without hurting yourself!
+    * I need to spend more effort trying to get you to take your *tools*
+      seriously. Without mastery of your tools you are nothing in any
+      discipline but this is especially true for programming. Many
+      tools (like Emacs, liked editors, compilers, IDEs) don't look
+      like tools because clever software engineers have created an
+      environment for you where the food falls from the tree straight
+      into your mouth most of the time. But that's not the real world!
+      In the real world you have to *learn* to use a hammer to drive a
+      nail into wood without hurting yourself!
 
     * This last insight goes for all of my courses this year but
       especially for the introductory programming course. This course
@@ -1835,12 +1838,12 @@
 
 *** Take 10 minutes to evaluate now
 
-
    * [ ] *Please take 10 minutes to complete the course evaluation now*
 
    * [ ] *If possible, make specific suggestions on what (not) to do!*
 
      [[./img/evaluation.jpg]]
+
 
 * Final exam (PROCTORED) - w17s39 (05/09/22)
 
