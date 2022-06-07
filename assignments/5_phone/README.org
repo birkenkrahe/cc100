@@ -41,14 +41,16 @@
    1) (02/25/2022) If you want to test and run your file *inside*
       Emacs, which saves a lot of time, just add this to the header
       arguments (after the ~C~):
+
       #+begin_example
         :cmdline < input
       #+end_example
+
       where ~input~ is a file that contains the phone number as
-      requested for input, ~(xxx) xxx-xxxx~ or ~xxx\xxx\xxxx~. Now
-      ~C-c C-c~ will run and execute the program. Alternatively, you
-      have to tangle the code block, compile and run it by hand on
-      the command line.
+      requested for input, ~(xxx) xxx-xxxx~ or ~xxx\xxx\xxxx~. Now ~C-c C-c~
+      will run and execute the program. Alternatively, you have to
+      tangle the code block, compile and run it by hand on the command
+      line.
 
    2) (02/27/2022) the formatting in ~scanf()~ needs to match the input
       pattern. E.g. if the input is given as
@@ -66,7 +68,8 @@
 
       Example: the file ~inputfile~ contains only: ~444==++//555~. We
       want to only print out ~444~ and ~555~.
-      #+begin_src C :main yes :includes <stdio.h> :cmdline < practice/inputfile
+
+      #+begin_src C :cmdline < practice/inputfile
         int a,b;
         scanf("%d==++//%d", &a, &b);
         printf("%d %d", a,  b);
