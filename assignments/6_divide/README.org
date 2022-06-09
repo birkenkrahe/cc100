@@ -11,6 +11,7 @@
    * Write a program ~div3~ that reads in three floating point
      numbers, adds the first two and divides the total by the third
      number. Test with these data:
+
      #+begin_example
      (1610 + 2004) / 2365
      #+end_example
