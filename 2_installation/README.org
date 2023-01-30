@@ -156,8 +156,8 @@
 * Install GNU CC
 
   * Compiler & linker are usually bundled
-  * [[https://gcc.gnu.org/][~GCC~]] ("GNU cc") is a popular C/C++ compiler
-  * [[https://www.mingw-w64.org/][~MinGW~]] ("Minimalist GNU for Windows") is a port of ~GNU gcc~ to
+  * [[https://gcc.gnu.org/][GCC]] ("GNU cc") is a popular C/C++ compiler
+  * [[https://www.mingw-w64.org/][MinGW]] ("Minimalist GNU for Windows") is a port of ~GNU gcc~ to
     Windows
 
     /Image: Shameless plug for the Free Software Foundation - Source:
